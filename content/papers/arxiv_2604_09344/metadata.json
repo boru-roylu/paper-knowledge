@@ -1,0 +1,52 @@
+{
+  "paper_key": "arxiv_2604_09344",
+  "canonical_id": "arxiv:2604.09344",
+  "arxiv_id": "2604.09344",
+  "version": "v2",
+  "title": "DialogueSidon: Recovering Full-Duplex Dialogue Tracks from In-the-Wild Dialogue Audio",
+  "authors": [
+    "Wataru Nakata",
+    "Yuki Saito",
+    "Kazuki Yamauchi",
+    "Emiru Tsunoo",
+    "Hiroshi Saruwatari"
+  ],
+  "venue": "arXiv preprint",
+  "year": 2026,
+  "urls": {
+    "abs": "https://arxiv.org/abs/2604.09344",
+    "pdf": "https://arxiv.org/pdf/2604.09344",
+    "source": "https://arxiv.org/src/2604.09344",
+    "code": "https://github.com/sarulab-speech/Sidon",
+    "demo": "https://hf.co/spaces/sarulab-speech/DialogueSidon-demo",
+    "samples": "https://hf.co/spaces/Wataru/dsidonsamples"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2604.09344.tar.gz"
+  },
+  "tags": [
+    "speech-llm",
+    "speech-data",
+    "restoration",
+    "separation",
+    "project-full-duplex-data",
+    "project-tts-data-pipeline"
+  ],
+  "status": "read",
+  "created": "2026-05-30",
+  "doi": "10.48550/arXiv.2604.09344",
+  "publication_status": "No formal conference or journal reference found as of 2026-05-30",
+  "bibtex_key": "nakata2026dialoguesidon",
+  "concepts": [
+    "full-duplex dialogue",
+    "spoken dialogue modeling",
+    "SSL-VAE",
+    "latent diffusion",
+    "w2v-BERT 2.0",
+    "dialogue data construction",
+    "turn-taking",
+    "backchannel",
+    "overlap speech"
+  ]
+}

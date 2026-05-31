@@ -1,0 +1,214 @@
+@use "./variables.scss" as *;
+
+// put your custom CSS here!
+
+/* Paper knowledge layout tweaks */
+@media all and (min-width: 900px) {
+  #quartz-body > .left.sidebar {
+    width: 3.25rem;
+    min-width: 3.25rem;
+    overflow: hidden;
+    transition: width 160ms ease, min-width 160ms ease;
+    border-right: 1px solid var(--lightgray);
+    background: var(--light);
+    z-index: 10;
+  }
+
+  #quartz-body > .left.sidebar:hover,
+  #quartz-body > .left.sidebar:focus-within {
+    width: 26rem;
+    min-width: 26rem;
+    overflow: visible;
+  }
+
+  #quartz-body > .left.sidebar .page-title,
+  #quartz-body > .left.sidebar .explorer,
+  #quartz-body > .left.sidebar .search p {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 120ms ease;
+  }
+
+  #quartz-body > .left.sidebar:hover .page-title,
+  #quartz-body > .left.sidebar:hover .explorer,
+  #quartz-body > .left.sidebar:hover .search p,
+  #quartz-body > .left.sidebar:focus-within .page-title,
+  #quartz-body > .left.sidebar:focus-within .explorer,
+  #quartz-body > .left.sidebar:focus-within .search p {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  #quartz-body > .left.sidebar .nav-file-title,
+  #quartz-body > .left.sidebar .folder-title {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+    line-height: 1.25;
+    overflow-wrap: anywhere;
+  }
+
+  #quartz-body > .left.sidebar:not(:hover):not(:focus-within) .nav-file-title,
+  #quartz-body > .left.sidebar:not(:hover):not(:focus-within) .folder-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  #quartz-body > .left.sidebar .folder-container,
+  #quartz-body > .left.sidebar .tree-item-self {
+    align-items: flex-start;
+  }
+
+  #quartz-body > .left.sidebar .folder-icon,
+  #quartz-body > .left.sidebar .collapse-icon {
+    margin-top: 0.2rem;
+    flex-shrink: 0;
+  }
+}
+
+/* Paper knowledge homepage */
+.paper-filter {
+  margin: 0.75rem 0 1rem;
+}
+
+.paper-filter input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  background: var(--light);
+  color: var(--dark);
+  font: inherit;
+}
+
+.paper-filter-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.6rem;
+}
+
+.paper-filter-tags button {
+  border: 1px solid var(--lightgray);
+  border-radius: 999px;
+  padding: 0.22rem 0.55rem;
+  background: var(--light);
+  color: var(--darkgray);
+  font: inherit;
+  font-size: 0.85rem;
+  line-height: 1.2;
+  cursor: pointer;
+}
+
+.paper-filter-tags button.active,
+.paper-filter-tags button:hover {
+  border-color: var(--secondary);
+  color: var(--secondary);
+}
+
+.paper-list {
+  display: grid;
+  gap: 0.85rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.paper-row {
+  display: grid;
+  grid-template-columns: 6.8rem minmax(0, 1fr);
+  gap: 0.25rem 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--lightgray);
+}
+
+.paper-date {
+  color: var(--gray);
+  font-size: 0.86rem;
+  font-family: var(--codeFont);
+  padding-top: 0.08rem;
+}
+
+.paper-main {
+  min-width: 0;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.paper-meta {
+  color: var(--gray);
+  font-weight: 400;
+  font-size: 0.92rem;
+}
+
+.paper-tags {
+  grid-column: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  font-size: 0.83rem;
+  line-height: 1.25;
+}
+
+.paper-tags a.tag-link {
+  margin: 0;
+}
+
+@media all and (max-width: 600px) {
+  .paper-row {
+    grid-template-columns: 1fr;
+  }
+
+  .paper-tags {
+    grid-column: 1;
+  }
+}
+
+.paper-nav {
+  display: flex;
+  gap: 0.45rem;
+  align-items: center;
+  margin: 0.25rem 0 1rem;
+}
+
+.paper-nav a,
+.paper-nav button {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2rem;
+  padding: 0.25rem 0.55rem;
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  background: var(--light);
+  color: var(--darkgray);
+  font: inherit;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.paper-nav a:hover,
+.paper-nav button:hover {
+  border-color: var(--secondary);
+  color: var(--secondary);
+}
+
+.paper-row.filtered-out {
+  display: none !important;
+}
+
+
+/* Paper content spacing */
+.markdown-rendered li + li {
+  margin-top: 0.42rem;
+}
+
+.markdown-rendered li > p {
+  margin: 0.2rem 0;
+}
+
+.markdown-rendered ul,
+.markdown-rendered ol {
+  margin-top: 0.45rem;
+  margin-bottom: 0.8rem;
+}

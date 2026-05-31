@@ -1,0 +1,41 @@
+{
+  "paper_key": "arxiv_2603_25750",
+  "title": "Sommelier: Scalable Open Multi-turn Audio Pre-processing for Full-duplex Speech Language Models",
+  "authors": [
+    "Kyudan Jung",
+    "Jihwan Kim",
+    "Soyoon Kim",
+    "Jeonghoon Kim",
+    "Jaegul Choo",
+    "Cheonbok Park"
+  ],
+  "year": 2026,
+  "venue": "arXiv preprint",
+  "status": "preprint",
+  "arxiv_id": "2603.25750",
+  "arxiv_version": 2,
+  "arxiv_url": "https://arxiv.org/abs/2603.25750",
+  "pdf_url": "https://arxiv.org/pdf/2603.25750.pdf",
+  "doi": "10.48550/arXiv.2603.25750",
+  "canonical_url": "https://arxiv.org/abs/2603.25750",
+  "source_url": "https://arxiv.org/src/2603.25750",
+  "subjects": [
+    "cs.SD",
+    "cs.AI",
+    "eess.AS"
+  ],
+  "tags": [
+    "speech-llm",
+    "audio-data",
+    "diarization",
+    "preprocessing",
+    "project-full-duplex-data",
+    "project-tts-data-pipeline"
+  ],
+  "links": {
+    "arxiv": "https://arxiv.org/abs/2603.25750",
+    "pdf": "https://arxiv.org/pdf/2603.25750.pdf",
+    "project": "https://kyudan1.github.io/sommelier.github.io/"
+  },
+  "created": "2026-05-30"
+}

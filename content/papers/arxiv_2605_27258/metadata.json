@@ -1,0 +1,178 @@
+{
+  "paper_key": "arxiv_2605_27258",
+  "canonical_id": "arxiv:2605.27258",
+  "arxiv_id": "2605.27258",
+  "title": "PilotTTS: A Disciplined Modular Recipe for Competitive Speech Synthesis",
+  "authors": [
+    "Bowen Li",
+    "Shaotong Guo",
+    "Zhen Wang",
+    "Yang Xiang",
+    "Mingli Jin",
+    "Yihang Lin",
+    "Jiahui Zhao",
+    "Weibo Xiong",
+    "Dongrui Zhang",
+    "Keming Chen",
+    "Yunze Gao",
+    "Zeyang Lin",
+    "Yuze Zhou",
+    "Yue Liu"
+  ],
+  "venue": "arXiv",
+  "year": 2026,
+  "abstract": "Building state-of-the-art text-to-speech (TTS) systems typically demands millions of hours of proprietary data and complex multi-stage architectures, creating substantial barriers for resource-constrained research teams. In this report, we present PilotTTS, a lightweight autoregressive TTS system that achieves competitive performance through minimalist architecture and rigorous data engineering. PilotTTS is trained on only 200K hours of data processed entirely with open-source tools. Specifically, our contributions are: (1) a reproducible multi-stage data processing pipeline covering quality assessment, label annotation, and filtering, and (2) a compact model architecture that employs Q-Former-based conditioning to decouple speaker identity from speaking style via cross-sample paired training. Within a unified framework, PilotTTS supports zero-shot voice cloning, emotion synthesis (11 categories), paralinguistic synthesis (4 categories), and Chinese dialect synthesis (14 dialects). On the Seed-TTS Eval benchmark, PilotTTS achieves the lowest WER of 1.50% on test-en, a CER of 0.87% on test-zh, and the highest speaker similarity on both test sets (0.862 and 0.815), outperforming systems trained on significantly larger datasets. We release the complete data pipeline recipe, pretrained weights, and code at https://github.com/AMAPVOICE/PilotTTS.",
+  "primaryClass": "cs.SD",
+  "categories": [
+    "cs.SD",
+    "cs.AI"
+  ],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2605.27258v2",
+    "pdf": "https://arxiv.org/pdf/2605.27258",
+    "source": "https://arxiv.org/src/2605.27258"
+  },
+  "local_paths": {
+    "paper_fetch_json": "../../../cache/paper-fetch/arxiv_2605_27258/10.48550_arxiv.2605.27258v2.both.json",
+    "paper_fetch_markdown": "../../../cache/paper-fetch/arxiv_2605_27258/paper-fetch.md"
+  },
+  "tags": [
+    "speech-llm",
+    "tts",
+    "speech-data",
+    "project-tts-data-pipeline"
+  ],
+  "concepts": [],
+  "status": "read",
+  "created": "2026-05-31",
+  "doi": "10.48550/arxiv.2605.27258v2",
+  "publication_status": "No formal conference or journal reference found as of 2026-05-31",
+  "bibtex_key": "li2026pilotttsadisciplinedmodularr",
+  "fetch_source": "arxiv_html",
+  "quality": {
+    "has_fulltext": true,
+    "token_estimate": 11029,
+    "content_kind": "fulltext",
+    "has_abstract": true,
+    "warnings": [],
+    "source_trail": [
+      "fulltext:arxiv_html_ok",
+      "resolve:url",
+      "resolve:doi_selected",
+      "metadata:crossref_fail",
+      "route:signal_domain_arxiv",
+      "route:signal_doi_arxiv",
+      "route:probe_arxiv_positive",
+      "route:provider_selected_arxiv",
+      "metadata:arxiv_ok",
+      "fulltext:arxiv_attempt",
+      "fulltext:arxiv_article_ok"
+    ],
+    "trace": [
+      {
+        "stage": "fulltext",
+        "component": "arxiv_html",
+        "outcome": "ok",
+        "code": null,
+        "message": null
+      },
+      {
+        "stage": "resolve",
+        "component": "url",
+        "outcome": "info",
+        "code": null,
+        "message": null
+      },
+      {
+        "stage": "resolve",
+        "component": "doi_selected",
+        "outcome": "info",
+        "code": null,
+        "message": null
+      },
+      {
+        "stage": "metadata",
+        "component": "crossref",
+        "outcome": "fail",
+        "code": null,
+        "message": null
+      },
+      {
+        "stage": "route",
+        "component": "signal_domain_arxiv",
+        "outcome": "info",
+        "code": null,
+        "message": null
+      },
+      {
+        "stage": "route",
+        "component": "signal_doi_arxiv",
+        "outcome": "info",
+        "code": null,
+        "message": null
+      },
+      {
+        "stage": "route",
+        "component": "probe_arxiv",
+        "outcome": "positive",
+        "code": null,
+        "message": null
+      },
+      {
+        "stage": "route",
+        "component": "provider_selected_arxiv",
+        "outcome": "info",
+        "code": null,
+        "message": null
+      },
+      {
+        "stage": "metadata",
+        "component": "arxiv",
+        "outcome": "ok",
+        "code": null,
+        "message": null
+      },
+      {
+        "stage": "fulltext",
+        "component": "arxiv",
+        "outcome": "attempt",
+        "code": null,
+        "message": null
+      },
+      {
+        "stage": "fulltext",
+        "component": "arxiv_article",
+        "outcome": "ok",
+        "code": null,
+        "message": null
+      }
+    ],
+    "token_estimate_breakdown": {
+      "abstract": 341,
+      "body": 10688,
+      "refs": 0
+    },
+    "confidence": "high",
+    "flags": [],
+    "body_metrics": {
+      "char_count": 40392,
+      "word_count": 5847,
+      "body_block_count": 26,
+      "body_heading_count": 25,
+      "body_to_abstract_ratio": 29.53030303030303,
+      "explicit_body_container": false,
+      "post_abstract_body_run": false,
+      "figure_count": 0
+    },
+    "semantic_losses": {
+      "table_fallback_count": 0,
+      "table_lossy_count": 0,
+      "table_layout_degraded_count": 0,
+      "table_semantic_loss_count": 0,
+      "formula_fallback_count": 0,
+      "formula_missing_count": 0
+    },
+    "asset_failures": [],
+    "extraction_revision": 2
+  }
+}
