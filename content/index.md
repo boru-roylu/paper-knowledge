@@ -32,6 +32,11 @@ title: Paper Knowledge
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2605_30965/">ImmersiveTTS: Environment-Aware Text-to-Speech with Multimodal Diffusion Transformer and Domain-Specific Representation Alignment</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>
   <div class="paper-tags"><a class="tag-link internal" href="./tags/speech-llm/">#speech-llm</a> <a class="tag-link internal" href="./tags/tts/">#tts</a> <a class="tag-link internal" href="./tags/asr/">#asr</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a></div>
 </div>
+<div class="paper-row" data-tags="speech-llm speech-data project-tts-data-pipeline" data-search="Neon: Negative Extrapolation From Self-Training Improves Image Generation arxiv_2510_03597 2026-06-01 2025 arXiv preprint arxiv:2510.03597 speech-llm speech-data project-tts-data-pipeline">
+  <div class="paper-date">2026-06-01</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2510_03597/">Neon: Negative Extrapolation From Self-Training Improves Image Generation</a> <span class="paper-meta">(2025, arXiv preprint)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/speech-llm/">#speech-llm</a> <a class="tag-link internal" href="./tags/speech-data/">#speech-data</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a></div>
+</div>
 <div class="paper-row" data-tags="speech-llm" data-search="On The Landscape of Spoken Language Models: A Comprehensive Survey arxiv_2504_08528 2026-06-01 2025 arXiv preprint arxiv:2504.08528 speech-llm">
   <div class="paper-date">2026-06-01</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2504_08528/">On The Landscape of Spoken Language Models: A Comprehensive Survey</a> <span class="paper-meta">(2025, arXiv preprint)</span></div>

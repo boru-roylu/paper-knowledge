@@ -1,0 +1,53 @@
+{
+  "paper_key": "arxiv_2510_03597",
+  "canonical_id": "arxiv:2510.03597",
+  "arxiv_id": "2510.03597",
+  "version": "latest",
+  "title": "Neon: Negative Extrapolation From Self-Training Improves Image Generation",
+  "authors": [
+    "Sina Alemohammad",
+    "Zhangyang Wang",
+    "Richard G. Baraniuk"
+  ],
+  "venue": "arXiv preprint",
+  "year": 2025,
+  "abstract": "Scaling generative AI models is bottlenecked by the scarcity of high-quality training data. The ease of synthesizing from a generative model suggests using (unverified) synthetic data to augment a limited corpus of real data for the purpose of fine-tuning in the hope of improving performance. Unfortunately, however, the resulting positive feedback loop leads to model autophagy disorder (MAD, aka model collapse) that results in a rapid degradation in sample quality and/or diversity. In this paper, we introduce Neon (for Negative Extrapolation frOm self-traiNing), a new learning method that turns the degradation from self-training into a powerful signal for self-improvement. Given a base model, Neon first fine-tunes it on its own self-synthesized data but then, counterintuitively, reverses its gradient updates to extrapolate away from the degraded weights. We prove that Neon works because typical inference samplers that favor high-probability regions create a predictable anti-alignment between the synthetic and real data population gradients, which negative extrapolation corrects to better align the model with the true data distribution. Neon is remarkably easy to implement via a simple post-hoc merge that requires no new real data, works effectively with as few as 1k synthetic samples, and typically uses less than 1% additional training compute. We demonstrate Neon's universality across a range of architectures (diffusion, flow matching, autoregressive, and inductive moment matching models) and datasets (ImageNet, CIFAR-10, and FFHQ). In particular, on ImageNet 256x256, Neon elevates the xAR-L model to a new state-of-the-art FID of 1.02 with only 0.36% additional training compute. Code is available at https://github.com/VITA-Group/Neon",
+  "primaryClass": "cs.GR",
+  "categories": [
+    "cs.GR",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2510.03597",
+    "pdf": "https://arxiv.org/pdf/2510.03597",
+    "source": "https://arxiv.org/src/2510.03597"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2510.03597-src.tar.gz",
+    "entrypoint": "source/main.tex"
+  },
+  "tags": [
+    "speech-llm",
+    "speech-data",
+    "project-tts-data-pipeline"
+  ],
+  "concepts": [],
+  "status": "read",
+  "created": "2026-06-01",
+  "doi": "10.48550/arXiv.2510.03597",
+  "publication_status": "No formal conference or journal reference found as of 2026-06-01",
+  "bibtex_key": "alemohammad2025neonnegativeextrapolationfroms",
+  "summary_model": "gpt-5.4-mini",
+  "openreview": {
+    "forum": "kpLRYtPGt3",
+    "url": "https://openreview.net/forum?id=kpLRYtPGt3",
+    "match_score": 1,
+    "notes_count": 22,
+    "local_path": "reviews/openreview.md",
+    "summary_local_path": "reviews/openreview-summary.md",
+    "summary_model": "gpt-5.5"
+  },
+  "citations": []
+}
