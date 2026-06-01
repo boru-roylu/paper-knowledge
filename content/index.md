@@ -27,6 +27,11 @@ title: Paper Knowledge
 </div>
 
 <div class="paper-list">
+<div class="paper-row" data-tags="speech-llm tts project-tts-data-pipeline" data-search="Seed-TTS: A Family of High-Quality Versatile Speech Generation Models arxiv_2406_02430 2026-06-01 2026 arXiv arxiv:2406.02430 speech-llm tts project-tts-data-pipeline">
+  <div class="paper-date">2026-06-01</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2406_02430/">Seed-TTS: A Family of High-Quality Versatile Speech Generation Models</a> <span class="paper-meta">(2026, arXiv)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/speech-llm/">#speech-llm</a> <a class="tag-link internal" href="./tags/tts/">#tts</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a></div>
+</div>
 <div class="paper-row" data-tags="speech-llm asr speech-data project-tts-data-pipeline" data-search="Google USM: Scaling Automatic Speech Recognition Beyond 100 Languages arxiv_2303_01037 2026-06-01 2023 arXiv arxiv:2303.01037 speech-llm asr speech-data project-tts-data-pipeline">
   <div class="paper-date">2026-06-01</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2303_01037/">Google USM: Scaling Automatic Speech Recognition Beyond 100 Languages</a> <span class="paper-meta">(2023, arXiv)</span></div>

@@ -1,0 +1,164 @@
+{
+  "paper_key": "arxiv_2406_02430",
+  "canonical_id": "arxiv:2406.02430",
+  "arxiv_id": "2406.02430",
+  "title": "Seed-TTS: A Family of High-Quality Versatile Speech Generation Models",
+  "authors": [
+    "Seed Team, ByteDance"
+  ],
+  "venue": "arXiv",
+  "year": 2026,
+  "abstract": "We introduce Seed-TTS, a family of large-scale autoregressive text-to-speech (TTS) models capable of generating speech that is virtually indistinguishable from human speech. Seed-TTS serves as a foundation model for speech generation and excels in speech in-context learning, achieving performance in speaker similarity and naturalness that matches ground truth human speech in both objective and subjective evaluations. With fine-tuning, we achieve even higher subjective scores across these metrics. Seed-TTS offers superior controllability over various speech attributes such as emotion and is capable of generating highly expressive and diverse speech for speakers in the wild. Furthermore, we propose a self-distillation method for speech factorization, as well as a reinforcement learning approach to enhance model robustness, speaker similarity, and controllability. We additionally present a non-autoregressive (NAR) variant of the Seed-TTS model, named $\\text{Seed-TTS}_{\\text{DiT}}$, which utilizes a fully diffusion-based architecture. Unlike previous NAR-based TTS systems, $\\text{Seed-TTS}_{\\text{DiT}}$ does not depend on pre-estimated phoneme durations and performs speech generation through end-to-end processing. We demonstrate that this variant achieves comparable performance to the language model-based variant and showcase its effectiveness in speech editing. We encourage readers to listen to demos at https://bytedancespeech.github.io/seedtts_tech_report.",
+  "primaryClass": "",
+  "categories": [],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2401.11053",
+    "pdf": "https://arxiv.org/pdf/2406.02430",
+    "source": "https://arxiv.org/src/2406.02430"
+  },
+  "local_paths": {
+    "paper_fetch_json": "../../../cache/paper-fetch/arxiv_2406_02430/10.48550_arxiv.2401.11053.both.json",
+    "paper_fetch_markdown": "../../../cache/paper-fetch/arxiv_2406_02430/paper-fetch.md"
+  },
+  "tags": [
+    "speech-llm",
+    "tts",
+    "project-tts-data-pipeline"
+  ],
+  "concepts": [],
+  "status": "read",
+  "created": "2026-06-01",
+  "doi": "10.48550/arxiv.2401.11053",
+  "publication_status": "No formal conference or journal reference found as of 2026-06-01",
+  "bibtex_key": "bytedance2026seedttsafamilyofhighqualityv",
+  "fetch_source": "arxiv_html",
+  "quality": {
+    "has_fulltext": true,
+    "token_estimate": 12062,
+    "content_kind": "fulltext",
+    "has_abstract": true,
+    "warnings": [
+      "arXiv API metadata retrieval failed; using official HTML front matter and derived arXiv URLs from identifier 2406.02430 (arXiv API metadata retrieval failed: HTTP 429 for https://export.arxiv.org/api/query?id_list=2406.02430&max_results=1)."
+    ],
+    "source_trail": [
+      "fulltext:arxiv_html_ok",
+      "resolve:url",
+      "resolve:doi_selected",
+      "metadata:crossref_fail",
+      "route:signal_domain_arxiv",
+      "route:signal_doi_arxiv",
+      "route:probe_arxiv_positive",
+      "route:provider_selected_arxiv",
+      "metadata:arxiv_ok",
+      "fulltext:arxiv_attempt",
+      "fulltext:arxiv_article_ok"
+    ],
+    "trace": [
+      {
+        "stage": "fulltext",
+        "component": "arxiv_html",
+        "outcome": "ok",
+        "code": null,
+        "message": null
+      },
+      {
+        "stage": "resolve",
+        "component": "url",
+        "outcome": "info",
+        "code": null,
+        "message": null
+      },
+      {
+        "stage": "resolve",
+        "component": "doi_selected",
+        "outcome": "info",
+        "code": null,
+        "message": null
+      },
+      {
+        "stage": "metadata",
+        "component": "crossref",
+        "outcome": "fail",
+        "code": null,
+        "message": null
+      },
+      {
+        "stage": "route",
+        "component": "signal_domain_arxiv",
+        "outcome": "info",
+        "code": null,
+        "message": null
+      },
+      {
+        "stage": "route",
+        "component": "signal_doi_arxiv",
+        "outcome": "info",
+        "code": null,
+        "message": null
+      },
+      {
+        "stage": "route",
+        "component": "probe_arxiv",
+        "outcome": "positive",
+        "code": null,
+        "message": null
+      },
+      {
+        "stage": "route",
+        "component": "provider_selected_arxiv",
+        "outcome": "info",
+        "code": null,
+        "message": null
+      },
+      {
+        "stage": "metadata",
+        "component": "arxiv",
+        "outcome": "ok",
+        "code": null,
+        "message": null
+      },
+      {
+        "stage": "fulltext",
+        "component": "arxiv",
+        "outcome": "attempt",
+        "code": null,
+        "message": null
+      },
+      {
+        "stage": "fulltext",
+        "component": "arxiv_article",
+        "outcome": "ok",
+        "code": null,
+        "message": null
+      }
+    ],
+    "token_estimate_breakdown": {
+      "abstract": 370,
+      "body": 11692,
+      "refs": 4732
+    },
+    "confidence": "high",
+    "flags": [],
+    "body_metrics": {
+      "char_count": 43845,
+      "word_count": 6775,
+      "body_block_count": 19,
+      "body_heading_count": 19,
+      "body_to_abstract_ratio": 31.36574074074074,
+      "explicit_body_container": false,
+      "post_abstract_body_run": false,
+      "figure_count": 0
+    },
+    "semantic_losses": {
+      "table_fallback_count": 0,
+      "table_lossy_count": 0,
+      "table_layout_degraded_count": 0,
+      "table_semantic_loss_count": 0,
+      "formula_fallback_count": 0,
+      "formula_missing_count": 0
+    },
+    "asset_failures": [],
+    "extraction_revision": 2
+  },
+  "summary_model": "gpt-5.4-mini"
+}
