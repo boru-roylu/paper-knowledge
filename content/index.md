@@ -27,6 +27,11 @@ title: Paper Knowledge
 </div>
 
 <div class="paper-list">
+<div class="paper-row" data-tags="speech-llm asr speech-data project-tts-data-pipeline" data-search="Google USM: Scaling Automatic Speech Recognition Beyond 100 Languages arxiv_2303_01037 2026-06-01 2023 arXiv arxiv:2303.01037 speech-llm asr speech-data project-tts-data-pipeline">
+  <div class="paper-date">2026-06-01</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2303_01037/">Google USM: Scaling Automatic Speech Recognition Beyond 100 Languages</a> <span class="paper-meta">(2023, arXiv)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/speech-llm/">#speech-llm</a> <a class="tag-link internal" href="./tags/asr/">#asr</a> <a class="tag-link internal" href="./tags/speech-data/">#speech-data</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a></div>
+</div>
 <div class="paper-row" data-tags="speech-llm audio-reasoning speech-data project-full-duplex-data project-tts-data-pipeline" data-search="A Survey of Audio Reasoning in Multimodal Foundation Models arxiv_2605_21008 2026-05-31 2026 arXiv arxiv:2605.21008 speech-llm audio-reasoning speech-data project-full-duplex-data project-tts-data-pipeline">
   <div class="paper-date">2026-05-31</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2605_21008/">A Survey of Audio Reasoning in Multimodal Foundation Models</a> <span class="paper-meta">(2026, arXiv)</span></div>
