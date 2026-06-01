@@ -1,0 +1,186 @@
+{
+  "paper_key": "arxiv_2603_14877",
+  "canonical_id": "arxiv:2603.14877",
+  "arxiv_id": "2603.14877",
+  "title": "SoulX-Duplug: Plug-and-Play Streaming State Prediction Module for Realtime Full-Duplex Speech Conversation",
+  "authors": [
+    "Ruiqi Yan",
+    "Wenxi Chen",
+    "Zhanxun Liu",
+    "Ziyang Ma",
+    "Haopeng Lin",
+    "Hanlin Wen",
+    "Hanke Xie",
+    "Jun Wu",
+    "Yuzhe Liang",
+    "Yuxiang Zhao",
+    "Pengchao Feng",
+    "Jiale Qian",
+    "Hao Meng",
+    "Yuhang Dai",
+    "Shunshun Yin",
+    "Ming Tao",
+    "Lei Xie",
+    "Kai Yu",
+    "Xinsheng Wang",
+    "Xie Chen"
+  ],
+  "venue": "arXiv",
+  "year": 2026,
+  "abstract": "Recent advances in spoken dialogue systems have brought increased attention to human-like full-duplex voice interactions. However, our comprehensive review of this field reveals several challenges, including the difficulty in obtaining training data, catastrophic forgetting, and limited scalability. In this work, we propose SoulX-Duplug, a plug-and-play streaming state prediction module for full-duplex spoken dialogue systems. By jointly performing streaming ASR, SoulX-Duplug explicitly leverages textual information to identify user intent, effectively serving as a semantic VAD. To promote fair evaluation, we introduce SoulX-Duplug-Eval, extending widely used benchmarks with improved bilingual coverage. Experimental results show that SoulX-Duplug enables low-latency streaming dialogue state control, and the system built upon it outperforms existing full-duplex models in overall turn management and latency performance. We have open-sourced SoulX-Duplug and SoulX-Duplug-Eval<sup>1</sup> https://github.com/Soul-AILab/SoulX-Duplug.",
+  "primaryClass": "eess.AS",
+  "categories": [
+    "eess.AS"
+  ],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2603.14877v1",
+    "pdf": "https://arxiv.org/pdf/2603.14877",
+    "source": "https://arxiv.org/src/2603.14877"
+  },
+  "local_paths": {
+    "paper_fetch_json": "../../../cache/paper-fetch/arxiv_2603_14877/10.48550_arxiv.2603.14877v1.both.json",
+    "paper_fetch_markdown": "../../../cache/paper-fetch/arxiv_2603_14877/paper-fetch.md"
+  },
+  "tags": [
+    "speech-llm",
+    "asr",
+    "full-duplex",
+    "speech-data",
+    "project-full-duplex-data",
+    "project-tts-data-pipeline"
+  ],
+  "concepts": [],
+  "status": "read",
+  "created": "2026-05-31",
+  "doi": "10.48550/arxiv.2603.14877v1",
+  "publication_status": "No formal conference or journal reference found as of 2026-05-31",
+  "bibtex_key": "yan2026soulxduplugplugandplaystream",
+  "fetch_source": "arxiv_html",
+  "quality": {
+    "has_fulltext": true,
+    "token_estimate": 11391,
+    "content_kind": "fulltext",
+    "has_abstract": true,
+    "warnings": [],
+    "source_trail": [
+      "fulltext:arxiv_html_ok",
+      "resolve:url",
+      "resolve:doi_selected",
+      "metadata:crossref_fail",
+      "route:signal_domain_arxiv",
+      "route:signal_doi_arxiv",
+      "route:probe_arxiv_positive",
+      "route:provider_selected_arxiv",
+      "metadata:arxiv_ok",
+      "fulltext:arxiv_attempt",
+      "fulltext:arxiv_article_ok"
+    ],
+    "trace": [
+      {
+        "stage": "fulltext",
+        "component": "arxiv_html",
+        "outcome": "ok",
+        "code": null,
+        "message": null
+      },
+      {
+        "stage": "resolve",
+        "component": "url",
+        "outcome": "info",
+        "code": null,
+        "message": null
+      },
+      {
+        "stage": "resolve",
+        "component": "doi_selected",
+        "outcome": "info",
+        "code": null,
+        "message": null
+      },
+      {
+        "stage": "metadata",
+        "component": "crossref",
+        "outcome": "fail",
+        "code": null,
+        "message": null
+      },
+      {
+        "stage": "route",
+        "component": "signal_domain_arxiv",
+        "outcome": "info",
+        "code": null,
+        "message": null
+      },
+      {
+        "stage": "route",
+        "component": "signal_doi_arxiv",
+        "outcome": "info",
+        "code": null,
+        "message": null
+      },
+      {
+        "stage": "route",
+        "component": "probe_arxiv",
+        "outcome": "positive",
+        "code": null,
+        "message": null
+      },
+      {
+        "stage": "route",
+        "component": "provider_selected_arxiv",
+        "outcome": "info",
+        "code": null,
+        "message": null
+      },
+      {
+        "stage": "metadata",
+        "component": "arxiv",
+        "outcome": "ok",
+        "code": null,
+        "message": null
+      },
+      {
+        "stage": "fulltext",
+        "component": "arxiv",
+        "outcome": "attempt",
+        "code": null,
+        "message": null
+      },
+      {
+        "stage": "fulltext",
+        "component": "arxiv_article",
+        "outcome": "ok",
+        "code": null,
+        "message": null
+      }
+    ],
+    "token_estimate_breakdown": {
+      "abstract": 261,
+      "body": 11130,
+      "refs": 2793
+    },
+    "confidence": "high",
+    "flags": [],
+    "body_metrics": {
+      "char_count": 41978,
+      "word_count": 6275,
+      "body_block_count": 27,
+      "body_heading_count": 26,
+      "body_to_abstract_ratio": 42.11409395973154,
+      "explicit_body_container": false,
+      "post_abstract_body_run": false,
+      "figure_count": 0
+    },
+    "semantic_losses": {
+      "table_fallback_count": 0,
+      "table_lossy_count": 0,
+      "table_layout_degraded_count": 0,
+      "table_semantic_loss_count": 0,
+      "formula_fallback_count": 0,
+      "formula_missing_count": 0
+    },
+    "asset_failures": [],
+    "extraction_revision": 2
+  },
+  "summary_model": "gpt-5.4-mini"
+}

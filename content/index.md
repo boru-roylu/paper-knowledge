@@ -8,6 +8,7 @@ title: Paper Knowledge
   <input id="paper-filter-input" type="search" placeholder="Filter by title, tag, venue, or arXiv ID" />
   <div class="paper-filter-tags">
     <button type="button" data-paper-tag="">All</button>
+    <button type="button" data-paper-tag="asr">asr</button>
     <button type="button" data-paper-tag="audio-reasoning">audio reasoning</button>
     <button type="button" data-paper-tag="diarization">diarization</button>
     <button type="button" data-paper-tag="full-duplex">full duplex</button>
@@ -40,6 +41,11 @@ title: Paper Knowledge
   <div class="paper-date">2026-05-31</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2605_27258/">PilotTTS: A Disciplined Modular Recipe for Competitive Speech Synthesis</a> <span class="paper-meta">(2026, arXiv)</span></div>
   <div class="paper-tags"><a class="tag-link internal" href="./tags/speech-llm/">#speech-llm</a> <a class="tag-link internal" href="./tags/tts/">#tts</a> <a class="tag-link internal" href="./tags/speech-data/">#speech-data</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a></div>
+</div>
+<div class="paper-row" data-tags="speech-llm asr full-duplex speech-data project-full-duplex-data project-tts-data-pipeline" data-search="SoulX-Duplug: Plug-and-Play Streaming State Prediction Module for Realtime Full-Duplex Speech Conversation arxiv_2603_14877 2026-05-31 2026 arXiv arxiv:2603.14877 speech-llm asr full-duplex speech-data project-full-duplex-data project-tts-data-pipeline">
+  <div class="paper-date">2026-05-31</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2603_14877/">SoulX-Duplug: Plug-and-Play Streaming State Prediction Module for Realtime Full-Duplex Speech Conversation</a> <span class="paper-meta">(2026, arXiv)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/speech-llm/">#speech-llm</a> <a class="tag-link internal" href="./tags/asr/">#asr</a> <a class="tag-link internal" href="./tags/full-duplex/">#full-duplex</a> <a class="tag-link internal" href="./tags/speech-data/">#speech-data</a> <a class="tag-link internal" href="./tags/project-full-duplex-data/">#project-full-duplex-data</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a></div>
 </div>
 <div class="paper-row" data-tags="speech-llm full-duplex turn-taking dialogue project-full-duplex-data" data-search="A Full-duplex Speech Dialogue Scheme Based On Large Language Model arxiv_2405_19487 2026-05-31 2024 Neural Information Processing Systems arxiv:2405.19487 speech-llm full-duplex turn-taking dialogue project-full-duplex-data">
   <div class="paper-date">2026-05-31</div>

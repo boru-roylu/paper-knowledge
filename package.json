@@ -25,7 +25,9 @@
     "paper:process": "node scripts/process-paper-queue.mjs --all",
     "paper:ingest": "node scripts/paper-fetch-ingest.mjs --url",
     "paper:ingest-summary": "node scripts/paper-fetch-ingest.mjs --summarize --url",
-    "paper:summarize": "node scripts/summarize-paper.mjs"
+    "paper:summarize": "node scripts/summarize-paper.mjs",
+    "paper:publish": "node scripts/publish-paper-site.mjs",
+    "paper:process-publish": "node scripts/process-paper-queue.mjs --all && npm run paper:publish -- --no-build"
   },
   "engines": {
     "npm": ">=10.9.2",
