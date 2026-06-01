@@ -1,5 +1,8 @@
 {
   "paper_key": "arxiv_2603_25750",
+  "canonical_id": "arxiv:2603.25750",
+  "arxiv_id": "2603.25750",
+  "version": "latest",
   "title": "Sommelier: Scalable Open Multi-turn Audio Pre-processing for Full-duplex Speech Language Models",
   "authors": [
     "Kyudan Jung",
@@ -9,21 +12,21 @@
     "Jaegul Choo",
     "Cheonbok Park"
   ],
-  "year": 2026,
   "venue": "arXiv preprint",
-  "status": "preprint",
-  "arxiv_id": "2603.25750",
-  "arxiv_version": 2,
-  "arxiv_url": "https://arxiv.org/abs/2603.25750",
-  "pdf_url": "https://arxiv.org/pdf/2603.25750.pdf",
-  "doi": "10.48550/arXiv.2603.25750",
-  "canonical_url": "https://arxiv.org/abs/2603.25750",
-  "source_url": "https://arxiv.org/src/2603.25750",
-  "subjects": [
-    "cs.SD",
-    "cs.AI",
-    "eess.AS"
-  ],
+  "year": 2026,
+  "abstract": "",
+  "primaryClass": "",
+  "categories": [],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2603.25750",
+    "pdf": "https://arxiv.org/pdf/2603.25750",
+    "source": "https://arxiv.org/src/2603.25750"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2603.25750-src.tar.gz",
+    "entrypoint": "source/main_new.tex"
+  },
   "tags": [
     "speech-llm",
     "audio-data",
@@ -32,12 +35,13 @@
     "project-full-duplex-data",
     "project-tts-data-pipeline"
   ],
-  "links": {
-    "arxiv": "https://arxiv.org/abs/2603.25750",
-    "pdf": "https://arxiv.org/pdf/2603.25750.pdf",
-    "project": "https://kyudan1.github.io/sommelier.github.io/"
-  },
+  "concepts": [],
+  "status": "read",
   "created": "2026-05-30",
+  "doi": "10.48550/arXiv.2603.25750",
+  "publication_status": "No formal conference or journal reference found as of 2026-06-01",
+  "bibtex_key": "jung2026sommelierscalableopenmultiturn",
+  "summary_model": "gpt-5.4-mini",
   "citations": [
     {
       "paper_key": "arxiv_2405_19487",
@@ -47,5 +51,14 @@
       "matched_first_author_last": "wang",
       "source_file": "source/main_new.bbl"
     }
-  ]
+  ],
+  "openreview": {
+    "forum": "yc0HOnWubP",
+    "url": "https://openreview.net/forum?id=yc0HOnWubP",
+    "match_score": 1,
+    "notes_count": 0,
+    "local_path": "reviews/openreview.md",
+    "summary_local_path": "reviews/openreview-summary.md",
+    "summary_model": "gpt-5.5"
+  }
 }

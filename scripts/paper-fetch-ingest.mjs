@@ -11,6 +11,7 @@ const url = args.includes("--url") ? args[args.indexOf("--url") + 1] : args.find
 if (!url) throw new Error("Usage: node scripts/paper-fetch-ingest.mjs --url <paper-url>")
 const overwrite = args.includes("--overwrite")
 const doSummarize = args.includes("--summarize")
+const skipOpenReview = args.includes("--skip-openreview")
 const arxiv = parseArxivId(url)
 const paperKey = arxiv ? paperKeyFromArxiv(arxiv.id) : `paper_${Date.now()}`
 const paperDir = path.join(PAPERS, paperKey)
@@ -22,11 +23,22 @@ const fetchDir = path.join(CACHE, "paper-fetch", paperKey)
 fs.mkdirSync(paperDir, { recursive: true })
 fs.mkdirSync(fetchDir, { recursive: true })
 
+if (arxiv) {
+  const forwarded = ["scripts/process-paper-queue.mjs", "--url", url]
+  if (overwrite) forwarded.push("--overwrite")
+  if (doSummarize) forwarded.push("--summarize")
+  if (skipOpenReview) forwarded.push("--skip-openreview")
+  console.log(`arXiv URL detected; using TeX-first ingest for ${arxiv.id}`)
+  run("node", forwarded, { stdio: "inherit" })
+  process.exit(0)
+}
 
 function findOutputJson() {
   const files = fs.readdirSync(fetchDir).filter((f) => f.endsWith(".both.json"))
   if (!files.length) return null
-  return path.join(fetchDir, files.sort()[0])
+  return files
+    .map((f) => path.join(fetchDir, f))
+    .sort((a, b) => fs.statSync(b).mtimeMs - fs.statSync(a).mtimeMs)[0]
 }
 
 function cleanAuthor(a) { return String(a || "").replace(/\*+$/g, "").trim() }
@@ -53,9 +65,23 @@ function inferAuthorsFromMarkdown(markdown) {
 
 function bibtexKey(meta, arxivId) {
   const last = cleanAuthor(meta.authors?.[0] || "paper").split(/\s+/).at(-1)?.toLowerCase().replace(/[^a-z0-9]/g, "") || "paper"
-  const year = String(meta.published || "").slice(0, 4) || new Date().getFullYear()
+  const year = meta.year || String(meta.published || "").slice(0, 4) || new Date().getFullYear()
   const title = String(meta.title || "").toLowerCase().replace(/[^a-z0-9]+/g, "").slice(0, 28)
   return `${last}${year}${title || arxivId?.replace(/\D/g, "") || "paper"}`
+}
+
+function arxivYear(id) {
+  const yy = String(id || "").match(/^(\d{2})\d{2}\./)?.[1]
+  return yy ? 2000 + Number(yy) : 0
+}
+
+function arxivIdFromText(value) {
+  return String(value || "").match(/(?:arxiv[.:/ ]|abs\/|pdf\/)([0-9]{4}\.[0-9]{4,5})(?:v[0-9]+)?/i)?.[1] || ""
+}
+
+function sameArxivId(value, id) {
+  const found = arxivIdFromText(value)
+  return Boolean(found && id && found === id)
 }
 
 const paperNav = '<div class="paper-nav"><a href="../../">&larr; Papers</a></div>\n\n'
@@ -127,13 +153,24 @@ const data = JSON.parse(fs.readFileSync(out, "utf8"))
 const article = data.article || {}
 const md = data.markdown || ""
 const m = article.metadata || {}
-const arxivId = arxiv?.id || String(article.doi || "").match(/arxiv\.([0-9]{4}\.[0-9]{4,5})/i)?.[1] || ""
+const fetchedDoiArxivId = arxivIdFromText(article.doi)
+const fetchedLandingArxivId = arxivIdFromText(m.landing_page_url)
+const arxivId = arxiv?.id || fetchedDoiArxivId || fetchedLandingArxivId || ""
 const inferredTitle = m.title || inferTitleFromMarkdown(md)
 const inferredAuthors = (m.authors && m.authors.length ? m.authors : inferAuthorsFromMarkdown(md)).map(cleanAuthor)
 const tags = shortTags({ title: inferredTitle || "", summary: m.abstract || md.slice(0, 2000) })
-const absUrl = m.landing_page_url || (arxivId ? `https://arxiv.org/abs/${arxivId}` : url)
+const absUrl = arxivId ? `https://arxiv.org/abs/${arxivId}` : (m.landing_page_url || url)
 const pdfUrl = arxivId ? `https://arxiv.org/pdf/${arxivId}` : ""
-const year = Number(String(m.published || "").slice(0, 4)) || new Date().getFullYear()
+const metadataYear = Number(String(m.published || "").slice(0, 4))
+const year = arxivId ? arxivYear(arxivId) || metadataYear || new Date().getFullYear() : metadataYear || new Date().getFullYear()
+const doi = arxivId ? `10.48550/arXiv.${arxivId}` : (article.doi || "")
+const warnings = [...(article.quality?.warnings || [])]
+if (arxiv?.id && fetchedDoiArxivId && fetchedDoiArxivId !== arxiv.id) {
+  warnings.push(`paper-fetch returned DOI for arXiv ${fetchedDoiArxivId}, but input URL is arXiv ${arxiv.id}; canonical DOI/URLs were normalized to the input arXiv ID.`)
+}
+if (arxiv?.id && fetchedLandingArxivId && fetchedLandingArxivId !== arxiv.id) {
+  warnings.push(`paper-fetch returned landing page for arXiv ${fetchedLandingArxivId}, but input URL is arXiv ${arxiv.id}; canonical DOI/URLs were normalized to the input arXiv ID.`)
+}
 const meta = {
   paper_key: paperKey,
   canonical_id: arxivId ? `arxiv:${arxivId}` : (article.doi ? `doi:${article.doi}` : url),
@@ -154,16 +191,23 @@ const meta = {
   concepts: [],
   status: existingMeta?.status === "read" || existingIndexRead ? "read" : "pending-summary",
   created: todayPacific(),
-  doi: article.doi || (arxivId ? `10.48550/arXiv.${arxivId}` : ""),
+  doi,
   publication_status: m.journal === "arXiv" || arxivId ? `No formal conference or journal reference found as of ${todayPacific()}` : "Fetched from provider metadata; verify official venue if needed.",
-  bibtex_key: bibtexKey({ ...m, title: inferredTitle, authors: inferredAuthors }, arxivId),
+  bibtex_key: bibtexKey({ ...m, title: inferredTitle, authors: inferredAuthors, year }, arxivId),
   fetch_source: article.source || "paper-fetch",
-  quality: article.quality || {},
+  quality: { ...(article.quality || {}), warnings },
 }
 writeJson(path.join(paperDir, "metadata.json"), meta)
 fs.writeFileSync(path.join(fetchDir, "paper-fetch.md"), md)
 const indexPath = path.join(paperDir, "index.md")
 if (!fs.existsSync(indexPath) || overwrite) fs.writeFileSync(indexPath, pendingMarkdown(meta, tags))
 console.log(`paper-fetch ingested ${paperKey} from ${meta.fetch_source}`)
-if (doSummarize) run("node", ["scripts/summarize-paper.mjs", paperKey], { stdio: "inherit" })
+if (doSummarize) {
+  run("node", ["scripts/summarize-paper.mjs", paperKey], { stdio: "inherit" })
+  if (!skipOpenReview) {
+    run("node", ["scripts/fetch-openreview-notes.mjs", paperKey], { stdio: "inherit" })
+    run("node", ["scripts/summarize-openreview-notes.mjs", paperKey], { stdio: "inherit" })
+    run("node", ["scripts/summarize-paper.mjs", paperKey], { stdio: "inherit" })
+  }
+}
 run("npm", ["run", "build:papers"], { stdio: "inherit" })

@@ -4,6 +4,7 @@ import {
   ROOT, PAPERS, CACHE, QUEUE,
   ensureDirs, parseArxivId, paperKeyFromArxiv, getArxivMetadata,
   run, extractArchive, findEntrypoint, shortTags, writeJson, yamlString, todayPacific,
+  arxivYear, canonicalArxivUrls,
 } from "./paper-common.mjs"
 
 ensureDirs()
@@ -11,11 +12,34 @@ const args = process.argv.slice(2)
 const urlArg = args.includes("--url") ? args[args.indexOf("--url") + 1] : args.find((a) => /^https?:|arxiv:/i.test(a))
 const processAll = args.includes("--all") || !urlArg
 const doSummarize = args.includes("--summarize")
+const noBuild = args.includes("--no-build")
+const skipOpenReview = args.includes("--skip-openreview")
 
 
 async function download(url, out) {
   if (fs.existsSync(out) && fs.statSync(out).size > 0) return
   run("curl", ["-L", "-f", "--retry", "3", "-o", out, url], { stdio: "inherit" })
+}
+
+function texField(text, command) {
+  const match = String(text || "").match(new RegExp(`\\\\${command}\\s*\\{([\\s\\S]*?)\\}`, "i"))
+  return match ? match[1].replace(/\\\\[a-zA-Z]+\*?(?:\\[[^\\]]*\\])?\\{([^{}]*)\\}/g, "$1").replace(/[{}]/g, "").replace(/\s+/g, " ").trim() : ""
+}
+
+function inferApiFromTex(entrypoint, id, existingMeta) {
+  const text = entrypoint && fs.existsSync(entrypoint) ? fs.readFileSync(entrypoint, "utf8") : ""
+  return {
+    title: texField(text, "title") || existingMeta?.title || id,
+    summary: existingMeta?.abstract || existingMeta?.summary || "",
+    authors: texField(text, "author")
+      .split(/\s+and\s+|\\\\and|,/i)
+      .map((a) => a.replace(/\\\\[a-zA-Z]+/g, "").replace(/\s+/g, " ").trim())
+      .filter(Boolean)
+      .slice(0, 20) || existingMeta?.authors || [],
+    year: arxivYear(id) || existingMeta?.year || new Date().getFullYear(),
+    primaryClass: existingMeta?.primaryClass || "",
+    categories: existingMeta?.categories || [],
+  }
 }
 
 const paperNav = '<div class="paper-nav"><a href="../../">&larr; Papers</a></div>\n\n'
@@ -84,28 +108,48 @@ async function ingest(url) {
   fs.mkdirSync(paperDir, { recursive: true })
 
   const existingMetaPath = path.join(paperDir, "metadata.json")
-  let api
-  try {
-    api = await getArxivMetadata(id)
-  } catch (err) {
-    if (!fs.existsSync(existingMetaPath)) throw err
-    const existing = JSON.parse(fs.readFileSync(existingMetaPath, "utf8"))
-    api = {
-      title: existing.title,
-      summary: existing.abstract || existing.summary || "",
-      authors: existing.authors || [],
-      year: existing.year || new Date().getFullYear(),
-      primaryClass: existing.primaryClass || "",
-      categories: existing.categories || [],
+  const existingMeta = fs.existsSync(existingMetaPath) ? JSON.parse(fs.readFileSync(existingMetaPath, "utf8")) : null
+  const existingIndexPath = path.join(paperDir, "index.md")
+  const existingIndexRead = fs.existsSync(existingIndexPath) && /^status:\s*read\s*$/m.test(fs.readFileSync(existingIndexPath, "utf8"))
+  let api = null
+  const shouldFetchMetadata = args.includes("--refresh-metadata") || !existingMeta
+  if (shouldFetchMetadata) {
+    try {
+      api = await getArxivMetadata(id)
+    } catch (err) {
+      if (!existingMeta) {
+        api = {
+          title: id,
+          summary: "",
+          authors: [],
+          year: arxivYear(id) || new Date().getFullYear(),
+          primaryClass: "",
+          categories: [],
+        }
+      } else {
+        console.warn(`arXiv metadata fetch failed; reused existing metadata for ${id}: ${err.message || err}`)
+      }
     }
-    console.warn(`arXiv metadata fetch failed; reused existing metadata for ${id}: ${err.message || err}`)
+  }
+  if (!api) {
+    api = {
+      title: existingMeta.title,
+      summary: existingMeta.abstract || existingMeta.summary || "",
+      authors: existingMeta.authors || [],
+      year: arxivYear(id) || existingMeta.year || new Date().getFullYear(),
+      primaryClass: existingMeta.primaryClass || "",
+      categories: existingMeta.categories || [],
+    }
   }
   const sourceArchive = path.join(CACHE, "arxiv", `${id}${arxiv.version || ""}-src.tar.gz`)
   await download(`https://arxiv.org/src/${id}${arxiv.version || ""}`, sourceArchive)
   extractArchive(sourceArchive, sourceDir)
   const entrypoint = findEntrypoint(sourceDir)
+  if (!api.title || api.title === id) api = inferApiFromTex(entrypoint, id, existingMeta)
 
-  const tags = shortTags(api)
+  const tags = Array.isArray(existingMeta?.tags) && existingMeta.tags.length ? existingMeta.tags : shortTags(api)
+  const year = api.year || arxivYear(id) || new Date().getFullYear()
+  const urls = canonicalArxivUrls(id)
   const meta = {
     paper_key: paperKey,
     canonical_id: `arxiv:${id}`,
@@ -114,15 +158,11 @@ async function ingest(url) {
     title: api.title,
     authors: api.authors,
     venue: "arXiv preprint",
-    year: api.year,
+    year,
     abstract: api.summary,
     primaryClass: api.primaryClass,
     categories: api.categories,
-    urls: {
-      abs: `https://arxiv.org/abs/${id}`,
-      pdf: `https://arxiv.org/pdf/${id}`,
-      source: `https://arxiv.org/src/${id}`,
-    },
+    urls,
     local_paths: {
       source_dir: "source",
       source_archive: path.relative(paperDir, sourceArchive),
@@ -130,11 +170,11 @@ async function ingest(url) {
     },
     tags,
     concepts: [],
-    status: "pending-summary",
-    created: todayPacific(),
+    status: existingMeta?.status === "read" || existingIndexRead ? "read" : "pending-summary",
+    created: existingMeta?.created || todayPacific(),
     doi: `10.48550/arXiv.${id}`,
     publication_status: `No formal conference or journal reference found as of ${todayPacific()}`,
-    bibtex_key: `${api.authors[0]?.split(/\s+/).at(-1)?.toLowerCase() || "paper"}${api.year}${api.title.toLowerCase().replace(/[^a-z0-9]+/g, "").slice(0, 30)}`,
+    bibtex_key: `${api.authors[0]?.split(/\s+/).at(-1)?.toLowerCase() || "paper"}${year}${api.title.toLowerCase().replace(/[^a-z0-9]+/g, "").slice(0, 30)}`,
   }
 
   writeJson(path.join(paperDir, "metadata.json"), meta)
@@ -171,6 +211,13 @@ if (urlArg) {
 }
 
 if (doSummarize) {
-  for (const key of keys) run("node", ["scripts/summarize-paper.mjs", key], { stdio: "inherit" })
+  for (const key of keys) {
+    run("node", ["scripts/summarize-paper.mjs", key], { stdio: "inherit" })
+    if (!skipOpenReview) {
+      run("node", ["scripts/fetch-openreview-notes.mjs", key], { stdio: "inherit" })
+      run("node", ["scripts/summarize-openreview-notes.mjs", key], { stdio: "inherit" })
+      run("node", ["scripts/summarize-paper.mjs", key], { stdio: "inherit" })
+    }
+  }
 }
-run("npm", ["run", "build:papers"], { stdio: "inherit" })
+if (!noBuild) run("npm", ["run", "build:papers"], { stdio: "inherit" })

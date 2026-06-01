@@ -1,0 +1,75 @@
+{
+  "paper_key": "arxiv_2504_08528",
+  "canonical_id": "arxiv:2504.08528",
+  "arxiv_id": "2504.08528",
+  "version": "latest",
+  "title": "On The Landscape of Spoken Language Models: A Comprehensive Survey",
+  "authors": [
+    "Siddhant Arora",
+    "Kai-Wei Chang",
+    "Chung-Ming Chien",
+    "Yifan Peng",
+    "Haibin Wu",
+    "Yossi Adi",
+    "Emmanuel Dupoux",
+    "Hung-Yi Lee",
+    "Karen Livescu",
+    "Shinji Watanabe"
+  ],
+  "venue": "arXiv preprint",
+  "year": 2025,
+  "abstract": "The field of spoken language processing is undergoing a shift from training custom-built, task-specific models toward using and optimizing spoken language models (SLMs) which act as universal speech processing systems. This trend is similar to the progression toward universal language models that has taken place in the field of (text) natural language processing. SLMs include both \"pure\" language models of speech -- models of the distribution of tokenized speech sequences -- and models that combine speech encoders with text language models, often including both spoken and written input or output. Work in this area is very diverse, with a range of terminology and evaluation settings. This paper aims to contribute an improved understanding of SLMs via a unifying literature survey of recent work in the context of the evolution of the field. Our survey categorizes the work in this area by model architecture, training, and evaluation choices, and describes some key challenges and directions for future work.",
+  "primaryClass": "cs.CL",
+  "categories": [
+    "cs.CL",
+    "cs.SD",
+    "eess.AS"
+  ],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2504.08528",
+    "pdf": "https://arxiv.org/pdf/2504.08528",
+    "source": "https://arxiv.org/src/2504.08528"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2504.08528-src.tar.gz",
+    "entrypoint": "source/tmlr_main.tex"
+  },
+  "tags": [
+    "speech-llm"
+  ],
+  "concepts": [],
+  "status": "read",
+  "created": "2026-06-01",
+  "doi": "10.48550/arXiv.2504.08528",
+  "publication_status": "No formal conference or journal reference found as of 2026-06-01",
+  "bibtex_key": "arora2025onthelandscapeofspokenlanguage",
+  "summary_model": "gpt-5.4-mini",
+  "openreview": {
+    "forum": "S4LauBhcOF",
+    "url": "https://openreview.net/forum?id=S4LauBhcOF",
+    "match_score": 1,
+    "notes_count": 0,
+    "local_path": "reviews/openreview.md",
+    "summary_local_path": "reviews/openreview-summary.md",
+    "summary_model": "gpt-5.5"
+  },
+  "citations": [
+    {
+      "paper_key": "arxiv_2303_01037",
+      "title": "Google USM: Scaling Automatic Speech Recognition Beyond 100 Languages",
+      "score": 1,
+      "matched_title": "Google USM: Scaling automatic speech recognition beyond 100 languages.",
+      "matched_first_author_last": "zhang",
+      "source_file": "source/tmlr_main.bbl"
+    },
+    {
+      "paper_key": "arxiv_2405_19487",
+      "title": "A Full-duplex Speech Dialogue Scheme Based On Large Language Model",
+      "score": 0.97,
+      "matched_title": "A full-duplex speech dialogue scheme based on large language models.",
+      "matched_first_author_last": "wang",
+      "source_file": "source/tmlr_main.bbl"
+    }
+  ]
+}

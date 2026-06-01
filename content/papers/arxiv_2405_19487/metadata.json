@@ -2,7 +2,7 @@
   "paper_key": "arxiv_2405_19487",
   "canonical_id": "arxiv:2405.19487",
   "arxiv_id": "2405.19487",
-  "version": "v2",
+  "version": "latest",
   "title": "A Full-duplex Speech Dialogue Scheme Based On Large Language Model",
   "authors": [
     "Peng Wang",
@@ -12,8 +12,11 @@
     "Wei Xia",
     "Yuanjun Xiong"
   ],
-  "venue": "Neural Information Processing Systems",
+  "venue": "arXiv preprint",
   "year": 2024,
+  "abstract": "",
+  "primaryClass": "",
+  "categories": [],
   "urls": {
     "abs": "https://arxiv.org/abs/2405.19487",
     "pdf": "https://arxiv.org/pdf/2405.19487",
@@ -21,7 +24,8 @@
   },
   "local_paths": {
     "source_dir": "source",
-    "source_archive": "../../../cache/arxiv/2405.19487v2-src.tar.gz"
+    "source_archive": "../../../cache/arxiv/2405.19487-src.tar.gz",
+    "entrypoint": "source/full_duplex.tex"
   },
   "tags": [
     "speech-llm",
@@ -30,19 +34,21 @@
     "dialogue",
     "project-full-duplex-data"
   ],
-  "concepts": [
-    "full-duplex dialogue",
-    "neural finite-state machine",
-    "streaming ASR",
-    "streaming TTS",
-    "interruption handling",
-    "first token emission delay",
-    "duplex-dialogue-3k"
-  ],
+  "concepts": [],
   "status": "read",
   "created": "2026-05-31",
   "doi": "10.48550/arXiv.2405.19487",
-  "publication_status": "Accepted to Neural Information Processing Systems 2024",
-  "bibtex_key": "wang2024fullduplexspeechdialogue",
-  "citations": []
+  "publication_status": "No formal conference or journal reference found as of 2026-06-01",
+  "bibtex_key": "wang2024afullduplexspeechdialogueschem",
+  "summary_model": "gpt-5.4-mini",
+  "citations": [],
+  "openreview": {
+    "forum": "YawXY6mWiK",
+    "url": "https://openreview.net/forum?id=YawXY6mWiK",
+    "match_score": 1,
+    "notes_count": 13,
+    "local_path": "reviews/openreview.md",
+    "summary_local_path": "reviews/openreview-summary.md",
+    "summary_model": "gpt-5.5"
+  }
 }

@@ -3,8 +3,6 @@ import path from "node:path"
 
 const papersDir = path.resolve("content/papers")
 const staticDir = path.resolve("content/static")
-const start = "<!-- citation-graph:start -->"
-const end = "<!-- citation-graph:end -->"
 
 function listFiles(dir) {
   const out = []
@@ -185,37 +183,6 @@ function matchReference(ref, papers, sourceKey) {
   return null
 }
 
-function citationBlock(paper, citedPapers) {
-  const lines = [
-    "## Citation Graph",
-    "",
-    start,
-    "",
-  ]
-  if (citedPapers.length) {
-    lines.push("Cites local papers:")
-    lines.push("")
-    for (const edge of citedPapers) {
-      lines.push(`- [${edge.title}](../${edge.paper_key}/)`)
-    }
-  } else {
-    lines.push("No local paper citations matched yet.")
-  }
-  lines.push("", end, "")
-  return lines.join("\n")
-}
-
-function updateIndex(paper, citedPapers) {
-  if (!fs.existsSync(paper.indexPath)) return
-  let text = fs.readFileSync(paper.indexPath, "utf8")
-  const block = citationBlock(paper, citedPapers)
-  const re = new RegExp(`\\n?## Citation Graph\\n\\n${start.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}[\\s\\S]*?${end.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\n?`, "m")
-  if (re.test(text)) text = text.replace(re, `\n${block}`)
-  else if (/^## Citation\s*$/m.test(text)) text = text.replace(/^## Citation\s*$/m, `${block}\n## Citation`)
-  else text = `${text.trim()}\n\n${block}`
-  fs.writeFileSync(paper.indexPath, text.trim() + "\n")
-}
-
 const papers = readPapers()
 const graph = {}
 const graphData = {
@@ -242,7 +209,6 @@ for (const paper of papers) {
   }
   paper.meta.citations = citations
   fs.writeFileSync(paper.metaPath, JSON.stringify(paper.meta, null, 2) + "\n")
-  updateIndex(paper, citations)
   graph[paper.key] = citations.map((c) => c.paper_key)
   for (const c of citations) graphData.edges.push({ source: paper.key, target: c.paper_key, score: c.score || 1 })
 }

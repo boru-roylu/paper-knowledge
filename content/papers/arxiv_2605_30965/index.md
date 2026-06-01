@@ -3,8 +3,8 @@ paper_key: arxiv_2605_30965
 canonical_id: "arxiv:2605.30965"
 title: "ImmersiveTTS: Environment-Aware Text-to-Speech with Multimodal Diffusion Transformer and Domain-Specific Representation Alignment"
 year: 2026
-venue: "arXiv"
-url: "https://arxiv.org/abs/2605.30965v1"
+venue: "arXiv preprint"
+url: "https://arxiv.org/abs/2605.30965"
 pdf_url: "https://arxiv.org/pdf/2605.30965"
 status: read
 rating: 4
@@ -17,156 +17,167 @@ created: 2026-06-01
 ---
 <div class="paper-nav"><a href="../../">&larr; Papers</a></div>
 
+<div class="generation-note">
+
+- Paper summary model: `gpt-5.4-mini`
+
+</div>
+
 ## Links
-- [arXiv abstract](https://arxiv.org/abs/2605.30965v1)
+- [arXiv abstract](https://arxiv.org/abs/2605.30965)
 - [PDF](https://arxiv.org/pdf/2605.30965)
 
 ## 一句話總結
-ImmersiveTTS 是一個 environment-aware TTS framework，用 dual-stream MM-DiT + domain-specific REPA，讓 speech 與 environmental audio 在同一個生成過程中更自然地融合。
+ImmersiveTTS 用 `MM-DiT` + `flow matching` + domain-specific `representation alignment`，把 `text-to-speech` 和 `environmental audio` 的 joint generation 做得更自然、語意更一致、也更像真實 scene-aware speech。
 
 ## 這篇在解決什麼問題
-這篇在解決「如何同時生成 intelligible speech 與 matching 的 environmental audio」的問題。  
-傳統 TTS 通常只專注 speech，本身不擅長把背景環境一起建模；而現有 environment-aware TTS 雖然能接收 environmental prompt，但常見問題是：
+這篇在解決 **environment-aware TTS** 的核心難題：如何讓模型同時生成「可懂的 speech」與「符合文字描述的環境音景」，而不是把兩者各自生成後再生硬混音。
 
-- speech 和 environment 分開建模，cross-modal interaction 不夠
-- 生成結果容易有 speech-environment mismatch
-- 在保留 linguistic content 的同時，難以維持 acoustic coherence
-- diffusion-based 方法常需要很多 sampling steps，推理成本高
+作者認為現有方法的主要瓶頸是：
+- `speech` 和 `environmental audio` 的 acoustic patterns / temporal dynamics 差異很大
+- 傳統 pipeline 往往把兩種模態分開處理，缺乏真正的 `cross-modal interaction`
+- 只靠 generative objective，模型很容易學到 speech-environment mismatch
+- 對 `linguistic fidelity`、`speaker identity`、`environment coherence` 同時兼顧仍然困難
+
+簡單說，這篇想做的是：**讓 TTS 不只是清楚地念出來，而是像真的存在於某個聲景中。**
 
 ## 核心方法
-ImmersiveTTS 的核心有兩個部分：
+核心是一個以 `MM-DiT` 為 backbone 的 multimodal diffusion / flow-based TTS 架構，外加一個專門為 environment-aware TTS 設計的 alignment loss。
 
-1. **Multimodal Diffusion Transformer (MM-DiT) backbone**
-   - 把輸入拆成兩條 stream：
-     - **speech stream**：處理 transcript-aligned speech latent
-     - **environment context stream**：處理 text-conditioned environmental prompt
-   - 兩條 stream 透過 **joint attention** 互相交換資訊
-   - speech stream 先吸收環境資訊，再進入 single-stream blocks 做 refinement
+### 1) Dual-stream `MM-DiT`
+模型把兩種條件分成兩個 stream：
+- **speech stream**：處理 noisy audio latent，並由 transcript-aligned content feature condition
+- **environment stream**：處理 environment prompt 的 textual tokens
 
-2. **Domain-Specific Representation Alignment (REPA)**
-   - 在 diffusion / flow matching 訓練之外，再加一個 representation alignment objective
-   - 用兩個 specialized SSL teachers：
-     - **WavLM**：對齊 speech / linguistic fidelity
-     - **ATST-Frame**：對齊 environmental acoustics
-   - 透過 intermediate hidden states 與 teacher representations 做 cosine alignment
-   - 目標是減少 speech 與 environment 之間的 domain gap，讓訓練更穩定、semantic consistency 更好
+兩個 stream 在 `double-stream DiT` 階段透過 `joint attention` 交換資訊，之後只保留 speech stream 進入 `single-stream` blocks 精煉輸出。
 
-另外還有幾個實作重點：
+### 2) Dual-granularity environment conditioning
+環境描述不是只用一種 embedding，而是同時用：
+- `CLAP` global embedding：提供 coarse scene conditioning，透過 `AdaLN`
+- `Flan-T5` token-level embeddings：提供 fine-grained environment semantics
 
-- 使用 **flow matching / rectified flow** 作為 generative objective
-- 用 **dual classifier-free guidance (CFG)** 分別控制 content prompt 與 environment prompt
-- content 端用了 alignment / duration modeling（MAS）把 text 變成 frame-level prior mel representation
-- environmental conditioning 同時用了 **CLAP**（global semantics）與 **Flan-T5**（token-level detail）
+這樣做的目標是同時抓到 scene 的全局語意與細節。
+
+### 3) Speaker / content conditioning
+為了保住說話者身分，作者還用 `WavLM-based speaker verification model` 抽 speaker embedding 當額外 conditioning。
+
+### 4) Domain-specific `REPA`
+這是本文的關鍵貢獻之一。
+作者不是只對一個 teacher 做 representation alignment，而是使用不同 `SSL teacher` 分別對齊不同目標：
+- `WavLM-Large`：偏 speech / linguistic fidelity
+- `ATST-Frame-Base`：偏 acoustic scene / environment
+- `USAD-Base`：作為補充的 audio representation
+
+重點是：**speech 和 environment 不共用同一個 alignment target，而是各自對齊最適合的 domain-specific teacher**，用來穩定訓練、減少 domain mismatch。
+
+### 5) `flow matching`
+生成目標採用 `flow matching` / `rectified flow`，在 latent space 中學習從 Gaussian prior 到 data distribution 的 mapping，搭配 diffusion-style sampling 產生 audio latent，再用 vocoder 還原 waveform。
 
 ## Training / Data
-### Training data
-作者用的是**合成 mixture training corpus**：
+### Training objective
+整體訓練結合：
+- `Flow matching` generative loss
+- `domain-specific REPA` alignment loss
 
-- **LibriTTS train-clean-360**：提供 clean speech / transcription content
-- **WavCaps**：提供 environmental sounds
-- 先從 WavCaps 中過濾掉含 speech 的 clip，保留 **340k non-speech clips**
-- speech 與 environmental audio 以 **SNR 2–10 dB** 混合
-- 有 **0.15** 的機率不混背景、直接用 clean speech，避免模型只會處理 noisy scene
+### Conditioning
+- content prompt = transcript
+- environment prompt = background description
+- speaker prompt = reference speaker embedding
 
-### Preprocessing
-- audio downsample 到 **16 kHz**
-- 轉成 **64-bin mel-spectrogram**
-- 再用 frozen **AudioLDM2 VAE** 壓縮到 latent space
+### 主要使用的 frozen components
+- `AudioLDM2` 的 pretrained VAE 做 audio compression
+- `HiFi-GAN` 做 waveform reconstruction
+- `WavLM-Large`、`ATST-Frame-Base`、`USAD-Base` 作為 alignment teacher
 
-### Training setup
-- train **400k steps**
-- optimizer: **AdamW**
-- learning rate: **1e-4**
-- batch size: **8 / GPU**
-- hardware: **2 × NVIDIA RTX A6000**
-- total trainable parameters 約 **450M**
-- CLAP / T5 / teacher SSL encoders 都是 frozen
-- inference 時用 **Euler ODE sampling** 與 dual CFG
+### Data / evaluation setup
+從 excerpts 看，作者在：
+- `real and augmented environment-aware TTS benchmarks`
+- `AudioCaps test`
+- `Seed-TTS test-en`
+上做評估。
+
+另外，`limitations` 也明講：訓練主要依賴 **synthetic mixtures of speech and environmental audio**，也就是不是完全靠大規模真實野外錄音。
 
 ## 主要結果
-作者在 **AudioCaps test set** 與 augmented test set 上和 **VoiceLDM、VoiceDiT** 比較，結果顯示 ImmersiveTTS 明顯更好。
+作者報告的結論是：`ImmersiveTTS` 在 objective metrics 和 human listening tests 都優於既有方法。
 
-### AudioCaps test set
-ImmersiveTTS：
-- **SN-MOS 4.20**，高於 VoiceLDM 3.41、VoiceDiT 3.47
-- **ON-MOS 3.47**，高於 VoiceLDM 2.55、VoiceDiT 2.63
-- **WER 8.06**，低於 VoiceLDM 16.45、VoiceDiT 11.68
-- **FAD 5.80**，低於 VoiceLDM 8.75、VoiceDiT 9.07
-- **CLAP 0.308**，高於 VoiceLDM 0.229、VoiceDiT 0.263
-- 只用 **25 NFEs**，而 baseline 用 **200 NFEs**
+### 主要提升面向
+- `speech naturalness`
+- `intelligibility`
+- `audio fidelity`
+- `speech-environment coherence`
+- `speaker similarity`
 
-### Augmented test set
-ImmersiveTTS 同樣表現最好或接近最好：
-- **SN-MOS 4.18**
-- **ON-MOS 3.23**
-- **WER 4.48**
-- **FAD 3.92**
-- **CLAP 0.207**
-- 仍然只要 **25 NFEs**
+### 從 excerpt 可確認的趨勢
+- `dual-teacher` 的 alignment 明顯比 single teacher 更好
+- 同時用 `WavLM + ATST` 的組合通常表現最佳
+- 在 `MM-DiT` 中間層注入 alignment 比太前或太後更穩定
+- `domain-specific REPA` 對訓練穩定性與 semantic fidelity 有幫助
 
-### Ablation
-- 單一 teacher 時：
-  - **WavLM** 偏向改善 speech intelligibility
-  - **ATST** 偏向改善 environmental alignment
-- 雙 teacher 時效果最好
-- **WavLM + ATST** 的組合最佳，表示 domain-specific teacher pairing 比單一通用 teacher 更有效
+### 與 baselines 的相對觀察
+- 相比 `VoiceLDM` / `VoiceDiT`，作者的方法在 `WER`、`SECS`、`FAD`、`CLAP` 等指標上有競爭力，且聽感更自然
+- 在 speaker similarity 上，`ImmersiveTTS` 大致能維持與強 baseline 接近的水準
 
 ## Project relevance
-- **project-full-duplex-data**: low
-- **project-tts-data-pipeline**: medium
+- **project-tts-data-pipeline**：高度相關
+- **project-full-duplex-data**：不直接相關
+
+## Related papers in my pool
+目前 pool 裡沒有明顯直接相關的已讀 paper。
+
+## OpenReview / reviewer discussion
+未找到公開 OpenReview review/rebuttal context。
 
 ## 我該不該細讀
-**如果你在做 environment-aware TTS、audio generation、或 diffusion-based speech synthesis，值得細讀。**  
-特別是想看：
+**建議細讀。**
 
-- dual-stream MM-DiT 怎麼把 speech / environment 分開又融合
-- REPA 怎麼設計成 domain-specific
-- 如何用較少 NFEs 取得較好 quality-efficiency trade-off
-- 如何把 prompt-conditioned environment control 做得更穩
+如果你關心的是：
+- `environment-aware TTS`
+- `multimodal diffusion / flow matching`
+- `cross-modal alignment`
+- 如何把 `speech` 和 `background audio` 一起生成
 
-如果你主要關心的是 **full-duplex dialogue** 或 **TTS data cleaning pipeline**，這篇是**間接相關**，可以先略讀摘要、方法與 ablation。
+這篇很值得看，因為它不只是換 backbone，而是明確處理了 **speech vs. environment 的 representation mismatch**，而且方法設計有清楚的 modular 分解。
+
+如果你只關心傳統單人 TTS 或純 clean speech synthesis，則這篇可先略過。
 
 ## 可能的弱點 / open questions
-- 主要訓練資料是 **synthetic mixtures**，和真實場景中的自然 interaction 仍可能有差距
-- 對不同 **SNR**、不同 scene complexity 的 robustness 還沒有完整分析
-- 目前缺少對 **prosody / speaking style / emotion** 的明確控制
-- environmental prompt 主要是 text-based，若 prompt 描述不精準，生成品質可能受影響
-- FAD / CLAP / MOS 雖然改善，但對「真的像 immersed speech in the wild」的 generalization 仍需更大規模測試
+- 訓練主要依賴 **synthetic mixtures**，對真實野外錄音的泛化仍可能有限
+- 對不同 `SNR`、不同 scene difficulty 的 robustness 還沒有完全展開
+- 目前沒有明確控制 `prosody`、`emotion`、`speaking style` 等 paralinguistic factors
+- `environment prompt` 的語意品質可能高度依賴文字描述本身，對 prompt engineering 可能敏感
+- `flow matching` + `MM-DiT` + 多 teacher alignment 組合較複雜，實作與推論成本可能不低
+- 對「背景音景與 speech 的物理一致性」是否真能達到可驗證的 realism，仍可再深入檢查
 
 ## Tags
-environment-aware TTS, MM-DiT, flow matching, REPA, multimodal diffusion, speech generation, environmental audio, CLAP, WavLM, ATST-Frame
+`TTS`, `environment-aware TTS`, `multimodal generation`, `MM-DiT`, `flow matching`, `representation alignment`, `audio generation`, `speaker conditioning`, `scene-aware speech`
 
 ## Concepts
-- **Environment-aware TTS**：同時生成 speech 與背景環境聲的 TTS
-- **MM-DiT**：multimodal diffusion transformer，用雙 stream 進行 modality interaction
-- **joint attention**：讓 speech 與 environment token 彼此關注
-- **flow matching / rectified flow**：用 ODE 形式做 generative modeling
-- **REPA**：representation alignment，用 teacher SSL feature 來穩定 diffusion training
-- **WavLM**：speech-focused SSL encoder
-- **ATST-Frame**：audio-focused SSL encoder，擅長 environmental acoustics
-- **CLAP**：text-audio embedding alignment，用來衡量或 conditioning 音訊與文字一致性
-- **MAS**：monotonic alignment search，用於 text-to-speech duration alignment
-- **dual CFG**：分別對 content 與 environment 做 classifier-free guidance
-- **NFEs**：number of function evaluations，衡量 sampling cost
-- **SN-MOS / EC-MOS / ON-MOS**：speech naturalness / environmental consistency / overall naturalness 的主觀評分
-- **WER**：word error rate，評估 intelligibility / content accuracy
-- **FAD**：Frechet audio distance，評估音訊分佈品質
-
-## Citation Graph
-
-<!-- citation-graph:start -->
-
-No local paper citations matched yet.
-
-<!-- citation-graph:end -->
+- `environment-aware TTS`
+- `text-guided audio generation`
+- `cross-modal interaction`
+- `dual-stream transformer`
+- `joint attention`
+- `AdaLN`
+- `CLAP`
+- `Flan-T5`
+- `WavLM`
+- `ATST-Frame`
+- `USAD`
+- `representation alignment (REPA)`
+- `flow matching`
+- `rectified flow`
+- `audio latent`
+- `speaker embedding`
+- `semantic consistency`
+- `speech-environment coherence`
 
 ## Citation
 ```bibtex
-@article{yun2026immersivettsenvironmentaware,
+@article{yun2026immersivettsenvironmentawarete,
   title={ImmersiveTTS: Environment-Aware Text-to-Speech with Multimodal Diffusion Transformer and Domain-Specific Representation Alignment},
   author={Yun, Jun-Hak and Kim, Seung-Bin and Lee, Seong-Whan},
-  journal={arXiv},
   year={2026},
-  doi={10.48550/arxiv.2605.30965v1}
+  journal={arXiv preprint}
 }
 ```

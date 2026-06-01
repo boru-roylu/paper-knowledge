@@ -23,6 +23,19 @@ export function paperKeyFromArxiv(id) {
   return `arxiv_${id.replace(".", "_")}`
 }
 
+export function arxivYear(id) {
+  const m = String(id || "").match(/^(\d{2})\d{2}\./)
+  return m ? 2000 + Number(m[1]) : 0
+}
+
+export function canonicalArxivUrls(id) {
+  return {
+    abs: `https://arxiv.org/abs/${id}`,
+    pdf: `https://arxiv.org/pdf/${id}`,
+    source: `https://arxiv.org/src/${id}`,
+  }
+}
+
 export async function fetchText(url, tries = 3) {
   let last
   for (let i = 0; i < tries; i++) {

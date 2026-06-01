@@ -2,6 +2,7 @@
   "paper_key": "arxiv_2303_01037",
   "canonical_id": "arxiv:2303.01037",
   "arxiv_id": "2303.01037",
+  "version": "latest",
   "title": "Google USM: Scaling Automatic Speech Recognition Beyond 100 Languages",
   "authors": [
     "Yu Zhang",
@@ -32,7 +33,7 @@
     "Françoise Beaufays",
     "Yonghui Wu"
   ],
-  "venue": "arXiv",
+  "venue": "arXiv preprint",
   "year": 2023,
   "abstract": "We introduce the Universal Speech Model (USM), a single large model that performs automatic speech recognition (ASR) across 100+ languages. This is achieved by pre-training the encoder of the model on a large unlabeled multilingual dataset of 12 million (M) hours spanning over 300 languages, and fine-tuning on a smaller labeled dataset. We use multilingual pre-training with random-projection quantization and speech-text modality matching to achieve state-of-the-art performance on downstream multilingual ASR and speech-to-text translation tasks. We also demonstrate that despite using a labeled training set 1/7-th the size of that used for the Whisper model, our model exhibits comparable or better performance on both in-domain and out-of-domain speech recognition tasks across many languages.",
   "primaryClass": "cs.CL",
@@ -42,13 +43,14 @@
     "eess.AS"
   ],
   "urls": {
-    "abs": "https://arxiv.org/abs/2303.01037v3",
+    "abs": "https://arxiv.org/abs/2303.01037",
     "pdf": "https://arxiv.org/pdf/2303.01037",
     "source": "https://arxiv.org/src/2303.01037"
   },
   "local_paths": {
-    "paper_fetch_json": "../../../cache/paper-fetch/arxiv_2303_01037/10.48550_arxiv.2303.01037v3.both.json",
-    "paper_fetch_markdown": "../../../cache/paper-fetch/arxiv_2303_01037/paper-fetch.md"
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2303.01037-src.tar.gz",
+    "entrypoint": "source/main_v1.tex"
   },
   "tags": [
     "speech-llm",
@@ -59,147 +61,9 @@
   "concepts": [],
   "status": "read",
   "created": "2026-06-01",
-  "doi": "10.48550/arxiv.2303.01037v3",
+  "doi": "10.48550/arXiv.2303.01037",
   "publication_status": "No formal conference or journal reference found as of 2026-06-01",
-  "bibtex_key": "zhang2023googleusmscalingautomaticspe",
-  "fetch_source": "arxiv_pdf",
-  "quality": {
-    "has_fulltext": true,
-    "token_estimate": 18207,
-    "content_kind": "fulltext",
-    "has_abstract": true,
-    "warnings": [
-      "arXiv official HTML route was not usable (HTTP 404 for https://arxiv.org/html/2303.01037); attempting PDF fallback.",
-      "Full text was extracted from arXiv PDF fallback after arXiv official HTML was not usable."
-    ],
-    "source_trail": [
-      "fulltext:arxiv_html_fail",
-      "fulltext:arxiv_pdf_fallback_ok",
-      "resolve:url",
-      "resolve:doi_selected",
-      "metadata:crossref_fail",
-      "route:signal_domain_arxiv",
-      "route:signal_doi_arxiv",
-      "route:probe_arxiv_positive",
-      "route:provider_selected_arxiv",
-      "metadata:arxiv_ok",
-      "fulltext:arxiv_attempt",
-      "fulltext:arxiv_article_ok"
-    ],
-    "trace": [
-      {
-        "stage": "fulltext",
-        "component": "arxiv_html",
-        "outcome": "fail",
-        "code": null,
-        "message": null
-      },
-      {
-        "stage": "fulltext",
-        "component": "arxiv_pdf_fallback",
-        "outcome": "ok",
-        "code": null,
-        "message": null
-      },
-      {
-        "stage": "resolve",
-        "component": "url",
-        "outcome": "info",
-        "code": null,
-        "message": null
-      },
-      {
-        "stage": "resolve",
-        "component": "doi_selected",
-        "outcome": "info",
-        "code": null,
-        "message": null
-      },
-      {
-        "stage": "metadata",
-        "component": "crossref",
-        "outcome": "fail",
-        "code": null,
-        "message": null
-      },
-      {
-        "stage": "route",
-        "component": "signal_domain_arxiv",
-        "outcome": "info",
-        "code": null,
-        "message": null
-      },
-      {
-        "stage": "route",
-        "component": "signal_doi_arxiv",
-        "outcome": "info",
-        "code": null,
-        "message": null
-      },
-      {
-        "stage": "route",
-        "component": "probe_arxiv",
-        "outcome": "positive",
-        "code": null,
-        "message": null
-      },
-      {
-        "stage": "route",
-        "component": "provider_selected_arxiv",
-        "outcome": "info",
-        "code": null,
-        "message": null
-      },
-      {
-        "stage": "metadata",
-        "component": "arxiv",
-        "outcome": "ok",
-        "code": null,
-        "message": null
-      },
-      {
-        "stage": "fulltext",
-        "component": "arxiv",
-        "outcome": "attempt",
-        "code": null,
-        "message": null
-      },
-      {
-        "stage": "fulltext",
-        "component": "arxiv_article",
-        "outcome": "ok",
-        "code": null,
-        "message": null
-      }
-    ],
-    "token_estimate_breakdown": {
-      "abstract": 200,
-      "body": 18007,
-      "refs": 0
-    },
-    "confidence": "high",
-    "flags": [],
-    "body_metrics": {
-      "char_count": 71691,
-      "word_count": 11817,
-      "body_block_count": 32,
-      "body_heading_count": 32,
-      "body_to_abstract_ratio": 92.3203125,
-      "explicit_body_container": false,
-      "post_abstract_body_run": false,
-      "figure_count": 0
-    },
-    "semantic_losses": {
-      "table_fallback_count": 0,
-      "table_lossy_count": 0,
-      "table_layout_degraded_count": 0,
-      "table_semantic_loss_count": 0,
-      "formula_fallback_count": 0,
-      "formula_missing_count": 0
-    },
-    "asset_failures": [],
-    "extraction_revision": 2
-  },
+  "bibtex_key": "zhang2023googleusmscalingautomaticspeec",
   "summary_model": "gpt-5.4-mini",
   "citations": []
 }

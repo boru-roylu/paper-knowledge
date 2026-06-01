@@ -93,6 +93,12 @@ function patchExplorerText(text) {
   return text
 }
 
+function patchTocText(text) {
+  return text
+    .replaceAll('title: "Table of Contents"', 'title: "Outline"')
+    .replaceAll('title: "Table of Contents"', 'title: "Outline"')
+}
+
 const files = [
   [".quartz/plugins/graph/src/components/scripts/graph.inline.ts", patchGraphText],
   [".quartz/plugins/graph/dist/index.js", patchGraphText],
@@ -100,6 +106,9 @@ const files = [
   [".quartz/plugins/explorer/src/components/Explorer.tsx", patchExplorerText],
   [".quartz/plugins/explorer/dist/index.js", patchExplorerText],
   [".quartz/plugins/explorer/dist/components/index.js", patchExplorerText],
+  [".quartz/plugins/table-of-contents/src/i18n/locales/en-US.ts", patchTocText],
+  [".quartz/plugins/table-of-contents/dist/index.js", patchTocText],
+  [".quartz/plugins/table-of-contents/dist/components/index.js", patchTocText],
 ]
 
 let found = 0
