@@ -121,6 +121,19 @@
       ]
     },
     {
+      "id": "arxiv_2605_19833",
+      "title": "Mega-ASR: Towards In-the-wild^2 Speech Recognition via Scaling up Real-world Acoustic Simulation",
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "url": "../papers/arxiv_2605_19833/",
+      "tags": [
+        "speech-llm",
+        "asr",
+        "speech-data",
+        "project-tts-data-pipeline"
+      ]
+    },
+    {
       "id": "arxiv_2605_21008",
       "title": "A Survey of Audio Reasoning in Multimodal Foundation Models",
       "year": 2026,

@@ -32,6 +32,11 @@ title: Paper Knowledge
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2605_30965/">ImmersiveTTS: Environment-Aware Text-to-Speech with Multimodal Diffusion Transformer and Domain-Specific Representation Alignment</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>
   <div class="paper-tags"><a class="tag-link internal" href="./tags/speech-llm/">#speech-llm</a> <a class="tag-link internal" href="./tags/tts/">#tts</a> <a class="tag-link internal" href="./tags/asr/">#asr</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a></div>
 </div>
+<div class="paper-row" data-tags="speech-llm asr speech-data project-tts-data-pipeline" data-search="Mega-ASR: Towards In-the-wild^2 Speech Recognition via Scaling up Real-world Acoustic Simulation arxiv_2605_19833 2026-06-01 2026 arXiv preprint arxiv:2605.19833 speech-llm asr speech-data project-tts-data-pipeline">
+  <div class="paper-date">2026-06-01</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2605_19833/">Mega-ASR: Towards In-the-wild^2 Speech Recognition via Scaling up Real-world Acoustic Simulation</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/speech-llm/">#speech-llm</a> <a class="tag-link internal" href="./tags/asr/">#asr</a> <a class="tag-link internal" href="./tags/speech-data/">#speech-data</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a></div>
+</div>
 <div class="paper-row" data-tags="speech-llm speech-data project-tts-data-pipeline" data-search="Neon: Negative Extrapolation From Self-Training Improves Image Generation arxiv_2510_03597 2026-06-01 2025 arXiv preprint arxiv:2510.03597 speech-llm speech-data project-tts-data-pipeline">
   <div class="paper-date">2026-06-01</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2510_03597/">Neon: Negative Extrapolation From Self-Training Improves Image Generation</a> <span class="paper-meta">(2025, arXiv preprint)</span></div>
