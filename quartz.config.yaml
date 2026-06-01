@@ -7,7 +7,7 @@ configuration:
   analytics:
     provider: plausible
   locale: en-US
-  baseUrl: papers.roylu.tw
+  baseUrl: papers.borulu.com
   ignorePatterns:
     - private
     - templates
