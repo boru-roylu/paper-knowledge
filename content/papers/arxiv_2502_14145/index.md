@@ -125,6 +125,14 @@ full-duplex, spoken dialogue system, voice activity detection, dialogue manageme
 ## Concepts
 semantic VAD, dialogue manager (DM), core dialogue engine (CDE), control tokens (<|S-S|>, <|S-L|>, <|C-S|>, <|C-L|>), intentional interruption (Real INT), unintentional interruption (Fake INT), query completion / incomplete query, instruction tuning, full-duplex conversation data generation, data cleaning & filtering, ASR-aware evaluation, real-time decision-making
 
+## Citation Graph
+
+<!-- citation-graph:start -->
+
+No local paper citations matched yet.
+
+<!-- citation-graph:end -->
+
 ## Citation
 ```bibtex
 hao2026llmenhanceddialoguemanagemen

@@ -37,5 +37,15 @@
     "pdf": "https://arxiv.org/pdf/2603.25750.pdf",
     "project": "https://kyudan1.github.io/sommelier.github.io/"
   },
-  "created": "2026-05-30"
+  "created": "2026-05-30",
+  "citations": [
+    {
+      "paper_key": "arxiv_2405_19487",
+      "title": "A Full-duplex Speech Dialogue Scheme Based On Large Language Model",
+      "score": 0.97,
+      "matched_title": "A full-duplex speech dialogue scheme based on large language models, 2024b.",
+      "matched_first_author_last": "wang",
+      "source_file": "source/main_new.bbl"
+    }
+  ]
 }

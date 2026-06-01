@@ -82,8 +82,15 @@ created: 2026-05-31
 
 這是 survey paper，因此沒有新的 benchmark result 或 model ablation。它對很多方向提供 taxonomy 和 open problems，但不會直接告訴我們哪個 architecture 最適合訓練 full-duplex model，或哪種 data pipeline filter 最有效。實作上仍需要回到各個被 survey 的原始 paper。
 
-## Citation
+## Citation Graph
 
+<!-- citation-graph:start -->
+
+No local paper citations matched yet.
+
+<!-- citation-graph:end -->
+
+## Citation
 ```bibtex
 @misc{guo2026surveyaudioreasoning,
   title={A Survey of Audio Reasoning in Multimodal Foundation Models},

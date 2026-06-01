@@ -117,5 +117,13 @@ TTS, zero-shot TTS, autoregressive, Qwen3, Conditional Flow Matching (CFM), DiT,
 - **data engineering pipeline**：SAD/SCD、DNSMOS、SNR、ASR ensemble、OSD、forced alignment、truncation detector、synthetic speech detector
 - **controllability**：emotion control、paralinguistics（LAUGH_SPAN/CRY 等）、dialect synthesis（mixed-prompt sampling）
 
+## Citation Graph
+
+<!-- citation-graph:start -->
+
+No local paper citations matched yet.
+
+<!-- citation-graph:end -->
+
 ## Citation
 paper2026260527258

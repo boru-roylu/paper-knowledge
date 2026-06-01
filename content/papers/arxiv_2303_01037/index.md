@@ -189,6 +189,14 @@ USM 在多個 benchmark 上表現很強，包括：
 - **CTC / LAS / RNN-T**: 常見 ASR decoder / transducer 架構
 - **WER / BLEU**: ASR 與 speech translation 的主要 evaluation metrics
 
+## Citation Graph
+
+<!-- citation-graph:start -->
+
+No local paper citations matched yet.
+
+<!-- citation-graph:end -->
+
 ## Citation
 ```bibtex
 @article{zhang2023googleusmscalingautomaticspe,

@@ -152,6 +152,14 @@ environment-aware TTS, MM-DiT, flow matching, REPA, multimodal diffusion, speech
 - **WER**：word error rate，評估 intelligibility / content accuracy
 - **FAD**：Frechet audio distance，評估音訊分佈品質
 
+## Citation Graph
+
+<!-- citation-graph:start -->
+
+No local paper citations matched yet.
+
+<!-- citation-graph:end -->
+
 ## Citation
 ```bibtex
 @article{yun2026immersivettsenvironmentaware,

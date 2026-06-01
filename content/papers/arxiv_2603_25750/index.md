@@ -87,8 +87,17 @@ Sommelier 把長音訊切成可處理的 segment，接著串接 VAD、Sortformer
 - background music removal
 - turn-taking behavior
 
-## Citation
+## Citation Graph
 
+<!-- citation-graph:start -->
+
+Cites local papers:
+
+- [A Full-duplex Speech Dialogue Scheme Based On Large Language Model](../arxiv_2405_19487/)
+
+<!-- citation-graph:end -->
+
+## Citation
 No formal conference or journal venue was found during this ingest; use the arXiv preprint citation for now.
 
 ```bibtex

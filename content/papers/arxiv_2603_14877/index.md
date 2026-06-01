@@ -210,6 +210,14 @@ full-duplex, streaming ASR, turn-taking, semantic VAD, dialogue state prediction
 - **bilingual benchmark**
 - **dialogue state prediction**
 
+## Citation Graph
+
+<!-- citation-graph:start -->
+
+No local paper citations matched yet.
+
+<!-- citation-graph:end -->
+
 ## Citation
 ```bibtex
 @article{yan2026soulxduplugplugandplaystream,

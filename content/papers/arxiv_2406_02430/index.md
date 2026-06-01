@@ -180,6 +180,14 @@ Seed-TTS 的系統由四個主要模組組成：
 - **flow matching**：與 diffusion 相關的生成訓練策略
 - **streaming processing**：可逐步輸出語音，降低 first packet delay
 
+## Citation Graph
+
+<!-- citation-graph:start -->
+
+No local paper citations matched yet.
+
+<!-- citation-graph:end -->
+
 ## Citation
 ```bibtex
 @article{bytedance2026seedttsafamilyofhighqualityv,

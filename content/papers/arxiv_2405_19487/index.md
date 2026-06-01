@@ -86,8 +86,15 @@ created: 2026-05-31
 - first token emission delay
 - duplex-dialogue-3k
 
-## Citation
+## Citation Graph
 
+<!-- citation-graph:start -->
+
+No local paper citations matched yet.
+
+<!-- citation-graph:end -->
+
+## Citation
 Published at Neural Information Processing Systems 2024 according to the arXiv record.
 
 ```bibtex

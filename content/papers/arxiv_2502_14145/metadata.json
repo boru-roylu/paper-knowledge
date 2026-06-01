@@ -167,5 +167,6 @@
     "asset_failures": [],
     "extraction_revision": 2
   },
-  "summary_model": "gpt-5.4-nano"
+  "summary_model": "gpt-5.4-nano",
+  "citations": []
 }

@@ -139,8 +139,15 @@ latent predictor 不是單純 regression，而是 diffusion model。原因是 de
 - backchannel
 - overlap speech
 
-## Citation
+## Citation Graph
 
+<!-- citation-graph:start -->
+
+No local paper citations matched yet.
+
+<!-- citation-graph:end -->
+
+## Citation
 目前我只找到 arXiv preprint，沒有找到正式 conference / journal proceedings 條目。arXiv 頁面沒有列出 Journal reference；如果之後出現在 ACL Anthology、Interspeech、NeurIPS、OpenReview 或其他正式 proceedings，應該把這裡改成正式 venue citation。
 
 ```bibtex
