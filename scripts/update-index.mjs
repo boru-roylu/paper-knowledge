@@ -113,6 +113,7 @@ lines.push(
   "",
   "- [Project: Full-duplex data and model](./tags/project-full-duplex-data/)",
   "- [Project: TTS data pipeline](./tags/project-tts-data-pipeline/)",
+  "- [Citation graph](./citation-graph/)",
   "",
   "## Core Tags",
   "",

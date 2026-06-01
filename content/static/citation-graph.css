@@ -1,0 +1,92 @@
+body[data-slug="citation-graph"] .right.sidebar {
+  display: none;
+}
+
+body[data-slug="citation-graph"] .center {
+  max-width: min(100%, 78rem);
+}
+
+.citation-graph-shell {
+  margin-top: 1rem;
+}
+
+.citation-graph-toolbar {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.citation-graph-toolbar input,
+.citation-graph-toolbar select {
+  min-height: 2.25rem;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  padding: 0.35rem 0.55rem;
+}
+
+.citation-graph-toolbar input {
+  min-width: min(24rem, 100%);
+  flex: 1;
+}
+
+.citation-graph-toolbar button {
+  min-height: 2.25rem;
+  border: 1px solid var(--lightgray);
+  background: var(--secondary);
+  color: var(--light);
+  padding: 0.35rem 0.75rem;
+}
+
+.citation-graph-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(16rem, 22rem);
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.citation-graph-canvas {
+  min-height: 38rem;
+  border: 1px solid var(--lightgray);
+  background: color-mix(in srgb, var(--light) 94%, var(--secondary));
+}
+
+.citation-graph-detail {
+  min-height: 38rem;
+  border-left: 1px solid var(--lightgray);
+  padding-left: 1rem;
+  overflow-wrap: anywhere;
+}
+
+.citation-graph-detail h2 {
+  font-size: 1.15rem;
+  line-height: 1.25;
+}
+
+.citation-graph-detail h3 {
+  font-size: 0.95rem;
+  margin-top: 1rem;
+}
+
+.citation-meta,
+.citation-empty {
+  color: var(--gray);
+}
+
+@media all and (max-width: 900px) {
+  .citation-graph-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .citation-graph-canvas,
+  .citation-graph-detail {
+    min-height: 26rem;
+  }
+
+  .citation-graph-detail {
+    border-left: 0;
+    padding-left: 0;
+  }
+}

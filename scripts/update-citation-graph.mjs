@@ -2,6 +2,7 @@ import fs from "node:fs"
 import path from "node:path"
 
 const papersDir = path.resolve("content/papers")
+const staticDir = path.resolve("content/static")
 const start = "<!-- citation-graph:start -->"
 const end = "<!-- citation-graph:end -->"
 
@@ -217,6 +218,17 @@ function updateIndex(paper, citedPapers) {
 
 const papers = readPapers()
 const graph = {}
+const graphData = {
+  nodes: papers.map((paper) => ({
+    id: paper.key,
+    title: paper.title,
+    year: paper.meta.year || "",
+    venue: paper.meta.venue || "",
+    url: `../papers/${paper.key}/`,
+    tags: Array.isArray(paper.meta.tags) ? paper.meta.tags : [],
+  })),
+  edges: [],
+}
 for (const paper of papers) {
   const refs = readReferences(paper)
   let citations
@@ -232,6 +244,9 @@ for (const paper of papers) {
   fs.writeFileSync(paper.metaPath, JSON.stringify(paper.meta, null, 2) + "\n")
   updateIndex(paper, citations)
   graph[paper.key] = citations.map((c) => c.paper_key)
+  for (const c of citations) graphData.edges.push({ source: paper.key, target: c.paper_key, score: c.score || 1 })
 }
 fs.writeFileSync(path.resolve("content/citation-graph.json"), JSON.stringify(graph, null, 2) + "\n")
+fs.mkdirSync(staticDir, { recursive: true })
+fs.writeFileSync(path.join(staticDir, "citation-graph-data.json"), JSON.stringify(graphData, null, 2) + "\n")
 console.log(`updated citation graph for ${papers.length} papers`)
