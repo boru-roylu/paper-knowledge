@@ -4,7 +4,7 @@
       "id": "arxiv_2303_01037",
       "title": "Google USM: Scaling Automatic Speech Recognition Beyond 100 Languages",
       "year": 2023,
-      "venue": "arXiv",
+      "venue": "arXiv preprint",
       "url": "../papers/arxiv_2303_01037/",
       "tags": [
         "speech-llm",
@@ -17,7 +17,7 @@
       "id": "arxiv_2405_19487",
       "title": "A Full-duplex Speech Dialogue Scheme Based On Large Language Model",
       "year": 2024,
-      "venue": "Neural Information Processing Systems",
+      "venue": "arXiv preprint",
       "url": "../papers/arxiv_2405_19487/",
       "tags": [
         "speech-llm",
@@ -30,8 +30,8 @@
     {
       "id": "arxiv_2406_02430",
       "title": "Seed-TTS: A Family of High-Quality Versatile Speech Generation Models",
-      "year": 2026,
-      "venue": "arXiv",
+      "year": 2024,
+      "venue": "arXiv preprint",
       "url": "../papers/arxiv_2406_02430/",
       "tags": [
         "speech-llm",
@@ -42,8 +42,8 @@
     {
       "id": "arxiv_2502_14145",
       "title": "LLM-Enhanced Dialogue Management for Full-Duplex Spoken Dialogue Systems",
-      "year": 2026,
-      "venue": "arXiv",
+      "year": 2025,
+      "venue": "arXiv preprint",
       "url": "../papers/arxiv_2502_14145/",
       "tags": [
         "speech-llm",
@@ -57,7 +57,7 @@
       "id": "arxiv_2603_14877",
       "title": "SoulX-Duplug: Plug-and-Play Streaming State Prediction Module for Realtime Full-Duplex Speech Conversation",
       "year": 2026,
-      "venue": "arXiv",
+      "venue": "arXiv preprint",
       "url": "../papers/arxiv_2603_14877/",
       "tags": [
         "speech-llm",
@@ -102,7 +102,7 @@
       "id": "arxiv_2605_21008",
       "title": "A Survey of Audio Reasoning in Multimodal Foundation Models",
       "year": 2026,
-      "venue": "arXiv",
+      "venue": "arXiv preprint",
       "url": "../papers/arxiv_2605_21008/",
       "tags": [
         "speech-llm",
@@ -116,7 +116,7 @@
       "id": "arxiv_2605_27258",
       "title": "PilotTTS: A Disciplined Modular Recipe for Competitive Speech Synthesis",
       "year": 2026,
-      "venue": "arXiv",
+      "venue": "arXiv preprint",
       "url": "../papers/arxiv_2605_27258/",
       "tags": [
         "speech-llm",
@@ -129,7 +129,7 @@
       "id": "arxiv_2605_30965",
       "title": "ImmersiveTTS: Environment-Aware Text-to-Speech with Multimodal Diffusion Transformer and Domain-Specific Representation Alignment",
       "year": 2026,
-      "venue": "arXiv",
+      "venue": "arXiv preprint",
       "url": "../papers/arxiv_2605_30965/",
       "tags": [
         "speech-llm",

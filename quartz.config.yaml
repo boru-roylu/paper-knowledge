@@ -68,7 +68,12 @@ plugins:
     enabled: true
     order: 40
   - source: github:quartz-community/table-of-contents
-    enabled: false
+    enabled: true
+    options:
+      maxDepth: 2
+      minEntries: 2
+      showByDefault: true
+      collapseByDefault: false
     order: 50
     layout:
       position: right

@@ -94,11 +94,13 @@ export default (() => {
         <link rel="icon" href={iconPath} />
         <meta name="description" content={description} />
         <meta name="generator" content="Quartz" />
+        <link rel="stylesheet" href="/static/citation-graph.css?v=7" />
 
         {css.map((resource) => CSSResourceToStyleElement(resource, true))}
         {js
           .filter((resource) => resource.loadTime === "beforeDOMReady")
           .map((res) => JSResourceToScriptElement(res, true))}
+        <script src="/static/citation-graph.js?v=7" defer></script>
         {additionalHead.map((resource) => {
           if (typeof resource === "function") {
             return resource(fileData)

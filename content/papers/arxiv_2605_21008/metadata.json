@@ -2,6 +2,7 @@
   "paper_key": "arxiv_2605_21008",
   "canonical_id": "arxiv:2605.21008",
   "arxiv_id": "2605.21008",
+  "version": "latest",
   "title": "A Survey of Audio Reasoning in Multimodal Foundation Models",
   "authors": [
     "Zhihan Guo",
@@ -16,7 +17,7 @@
     "Jiaya Jia",
     "Irwin King"
   ],
-  "venue": "arXiv",
+  "venue": "arXiv preprint",
   "year": 2026,
   "abstract": "Reasoning has become a defining capability of modern foundation models, yet its development in the audio modality remains limited. Audio poses challenges that are distinct from those of text and vision. It is continuous, temporally dense, and contains linguistic, paralinguistic, and environmental information at multiple time scales. As a result, audio reasoning models must align acoustic signals with the discrete semantic space of large language models, while still preserving fine-grained information needed for reliable inference. Progress is also limited by three major obstacles: the scarcity of genuinely audio-grounded reasoning data, shortcut learning and modality hallucination, and the tension between reasoning depth and real-time latency in spoken interaction. In this paper, we present the first dedicated survey of audio reasoning. We provide a unified formulation that distinguishes direct predictive modeling from reasoning-augmented generation, review the architectural and training foundations of audio reasoning models, and systematically organize recent advances in Audio-to-Text, Audio-to-Speech, Audio-Visual Reasoning and Agentic Audio Reasoning. We further examine emerging paradigms such as Chain-of-Thought prompting, supervised fine-tuning, reinforcement learning, and latency-aware spoken interaction, and discuss evaluation practices, open challenges, and future directions. Our goal is to offer a coherent roadmap for developing robust, efficient, and natively grounded audio reasoning systems.\n\n**Figure 1.** Timeline of representative audio reasoning models. Models are organized chronologically and grouped by major paradigms, including Audio-to-Text, Audio-to-Speech, Audio-Visual, and agentic audio reasoning.",
   "primaryClass": "eess.AS",
@@ -24,13 +25,14 @@
     "eess.AS"
   ],
   "urls": {
-    "abs": "https://arxiv.org/abs/2605.21008v1",
+    "abs": "https://arxiv.org/abs/2605.21008",
     "pdf": "https://arxiv.org/pdf/2605.21008",
     "source": "https://arxiv.org/src/2605.21008"
   },
   "local_paths": {
-    "paper_fetch_json": "../../../cache/paper-fetch/arxiv_2605_21008/10.48550_arxiv.2605.21008v1.both.json",
-    "paper_fetch_markdown": "../../../cache/paper-fetch/arxiv_2605_21008/paper-fetch.md"
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2605.21008-src.tar.gz",
+    "entrypoint": "source/v2.tex"
   },
   "tags": [
     "speech-llm",
@@ -42,137 +44,9 @@
   "concepts": [],
   "status": "read",
   "created": "2026-05-31",
-  "doi": "10.48550/arxiv.2605.21008v1",
-  "publication_status": "No formal conference or journal reference found as of 2026-05-31",
-  "bibtex_key": "guo2026asurveyofaudioreasoninginmul",
-  "fetch_source": "arxiv_html",
-  "quality": {
-    "has_fulltext": true,
-    "token_estimate": 23990,
-    "content_kind": "fulltext",
-    "has_abstract": true,
-    "warnings": [
-      "arXiv API metadata retrieval failed; using official HTML front matter and derived arXiv URLs from identifier 2605.21008 (arXiv API metadata retrieval failed: HTTP 429 for https://export.arxiv.org/api/query?id_list=2605.21008&max_results=1)."
-    ],
-    "source_trail": [
-      "fulltext:arxiv_html_ok",
-      "resolve:url",
-      "resolve:doi_selected",
-      "metadata:crossref_fail",
-      "route:signal_domain_arxiv",
-      "route:signal_doi_arxiv",
-      "route:probe_arxiv_positive",
-      "route:provider_selected_arxiv",
-      "metadata:arxiv_ok",
-      "fulltext:arxiv_attempt",
-      "fulltext:arxiv_article_ok"
-    ],
-    "trace": [
-      {
-        "stage": "fulltext",
-        "component": "arxiv_html",
-        "outcome": "ok",
-        "code": null,
-        "message": null
-      },
-      {
-        "stage": "resolve",
-        "component": "url",
-        "outcome": "info",
-        "code": null,
-        "message": null
-      },
-      {
-        "stage": "resolve",
-        "component": "doi_selected",
-        "outcome": "info",
-        "code": null,
-        "message": null
-      },
-      {
-        "stage": "metadata",
-        "component": "crossref",
-        "outcome": "fail",
-        "code": null,
-        "message": null
-      },
-      {
-        "stage": "route",
-        "component": "signal_domain_arxiv",
-        "outcome": "info",
-        "code": null,
-        "message": null
-      },
-      {
-        "stage": "route",
-        "component": "signal_doi_arxiv",
-        "outcome": "info",
-        "code": null,
-        "message": null
-      },
-      {
-        "stage": "route",
-        "component": "probe_arxiv",
-        "outcome": "positive",
-        "code": null,
-        "message": null
-      },
-      {
-        "stage": "route",
-        "component": "provider_selected_arxiv",
-        "outcome": "info",
-        "code": null,
-        "message": null
-      },
-      {
-        "stage": "metadata",
-        "component": "arxiv",
-        "outcome": "ok",
-        "code": null,
-        "message": null
-      },
-      {
-        "stage": "fulltext",
-        "component": "arxiv",
-        "outcome": "attempt",
-        "code": null,
-        "message": null
-      },
-      {
-        "stage": "fulltext",
-        "component": "arxiv_article",
-        "outcome": "ok",
-        "code": null,
-        "message": null
-      }
-    ],
-    "token_estimate_breakdown": {
-      "abstract": 437,
-      "body": 23553,
-      "refs": 6326
-    },
-    "confidence": "high",
-    "flags": [],
-    "body_metrics": {
-      "char_count": 91092,
-      "word_count": 13085,
-      "body_block_count": 51,
-      "body_heading_count": 51,
-      "body_to_abstract_ratio": 53.8477366255144,
-      "explicit_body_container": false,
-      "post_abstract_body_run": false,
-      "figure_count": 0
-    },
-    "semantic_losses": {
-      "table_fallback_count": 0,
-      "table_lossy_count": 0,
-      "table_layout_degraded_count": 0,
-      "table_semantic_loss_count": 0,
-      "formula_fallback_count": 0,
-      "formula_missing_count": 0
-    },
-    "asset_failures": [],
-    "extraction_revision": 2
-  },
+  "doi": "10.48550/arXiv.2605.21008",
+  "publication_status": "No formal conference or journal reference found as of 2026-06-01",
+  "bibtex_key": "guo2026asurveyofaudioreasoninginmulti",
+  "summary_model": "gpt-5.4-mini",
   "citations": []
 }

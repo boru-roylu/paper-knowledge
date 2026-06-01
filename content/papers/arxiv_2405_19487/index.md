@@ -3,7 +3,7 @@ paper_key: arxiv_2405_19487
 canonical_id: "arxiv:2405.19487"
 title: "A Full-duplex Speech Dialogue Scheme Based On Large Language Model"
 year: 2024
-venue: "Neural Information Processing Systems"
+venue: "arXiv preprint"
 url: "https://arxiv.org/abs/2405.19487"
 pdf_url: "https://arxiv.org/pdf/2405.19487"
 status: read
@@ -16,95 +16,170 @@ tags:
   - project-full-duplex-data
 created: 2026-05-31
 ---
-
 <div class="paper-nav"><a href="../../">&larr; Papers</a></div>
 
+<div class="generation-note">
 
+- Paper summary model: `gpt-5.4-mini`
+- OpenReview summary model: `gpt-5.5`
 
+</div>
 
 ## Links
-
 - [arXiv abstract](https://arxiv.org/abs/2405.19487)
 - [PDF](https://arxiv.org/pdf/2405.19487)
 
 ## 一句話總結
-
-這篇提出一個 LLM-based full-duplex speech dialogue system，用 neural FSM 和 streaming perception / motor modules 讓 LLM 能邊聽邊說，並學會在適當時機 interrupt 或讓出話輪。
+這篇把 full-duplex speech dialogue system 形式化成一個由 LLM 驅動的 neural FSM，讓模型在即時串流對話中同時負責回應、等待、與 interruption 控制，以降低 latency 並提升 turn-taking 精準度。
 
 ## 這篇在解決什麼問題
+作者要解決的是：傳統 LLM-based dialogue 幾乎都是 half-duplex，也就是「你講完我再講」，但真實人類對話需要同時 listening、speaking、判斷是否該插話或讓出話輪。這篇聚焦的痛點包括：
 
-一般 speech dialogue system 多半是 half-duplex：使用者講完、ASR 結束、LLM 回答、TTS 播放，整個流程有明顯 latency，而且很難自然處理 user interruption 或 machine interruption。作者想讓 LLM 不只是產生文字，而是同時成為 dialogue manager，直接控制什麼時候 speak、listen、continue speaking、或 concede。
+- **response latency 太高**：等完整 utterance 結束才回應，互動不自然
+- **turn-taking 不夠靈活**：無法即時處理 user interruption、backchannel、noise
+- **ASR/TTS pipeline 難協同**：語音輸入、生成、輸出之間有額外延遲
+- **要能分辨「該打斷」與「不該打斷」**：例如 user 真正改話題 vs. 噪音或附和
+- **想用現成 open-source models 做出 full-duplex 能力**：避免依賴未公開細節的商用 multimodal model
+
+簡單說，這篇是在做一個「把對話控制變成 next-token prediction 的 full-duplex speech dialogue scheme」。
 
 ## 核心方法
+核心方法是把 full-duplex dialogue 轉成一個 **neural FSM** 問題，並讓 LLM 透過控制 tokens 學會對話狀態轉移。
 
-作者把 full-duplex dialogue 建模成一個 two-state neural finite-state machine：`SPEAK` 與 `LISTEN`。LLM 在每個 timestep 可以輸出一般文字 token，也可以輸出 control token 來表示 state transition，例如繼續說、停止聽、開始說、或繼續聽。Perception module 用 streaming ASR 以 640 ms chunk 將使用者語音轉成文字片段；motor module 用 streaming TTS 把 LLM token 即時轉成語音。這樣 conversation timeline 被序列化成一條 token tape，讓 full-duplex control 變成 next-token prediction 問題。
+### 1) 三模組架構
+系統由三部分組成：
+
+- **perception module**：用 streaming ASR 接收使用者語音，將 audio chunk 轉成 token 並串流給 LLM
+- **full-duplex capable LLM**：負責語意理解、生成回覆，以及決定何時切換狀態
+- **motor function module**：用 TTS 把 LLM 生成的文字轉成語音
+
+### 2) Neural FSM
+LLM 被教導操作一個只有兩個 state 的 FSM：
+
+- `SPEAK`
+- `LISTEN`
+
+並透過四個 control tokens 表示 state transition：
+
+- `[C.SPEAK]`：`SPEAK -> SPEAK`
+- `[S.LISTEN]`：`SPEAK -> LISTEN`
+- `[C.LISTEN]`：`LISTEN -> LISTEN`
+- `[S.SPEAK]`：`LISTEN -> SPEAK`
+
+這個設計讓模型可以在同一個 autoregressive generation 流程中，同時學會：
+
+- 回答內容生成
+- 等待使用者講完
+- 判斷有效 interruption
+- 忽略 fake interruption 或第三方 noise
+
+### 3) Serialized real-time dialogue
+作者把即時對話串成 token 序列，在 streaming input 下做 next token prediction。也就是說，LLM 不只是生成回答文字，還會在序列中插入 state transition token，直接驅動 dialogue manager 行為。
+
+### 4) 以 existing open-source models 實作
+文章強調不依賴端到端專有 multimodal model，而是用現成的 ASR、TTS 與 LLM 組合出 full-duplex 行為，降低實作門檻。
 
 ## Training / Data
-
-基底模型是 Llama-3-8B-Instruct。作者用 GPT-4 生成 1500 組帶有 interruption、denial、affirmation、background noise、topic shifting 等情境的對話 transcript，並標註 neural FSM control tokens。Fine-tuning 使用 8 張 NVIDIA A100，batch size 256，learning rate 1e-5，訓練 20 steps。評估集包含約 3000 筆 duplex-dialogue-3k，其中 machine interruption 約 2000 筆，user interruption 依四種 pattern 各生成 180 筆。
+- 使用 **fine-tuning / SFT** 方式讓 LLM 學會 neural FSM 與 full-duplex interaction patterns
+- 透過 **GPT-4 生成的 synthetic dialogue data** 建構訓練與 benchmark
+- 資料中刻意加入多種情境：
+  - user interruption
+  - denial / dissatisfaction
+  - follow-up question
+  - topic shift
+  - third-party noise
+  - affirmation / backchannel
+  - incomplete user utterance
+  - obvious factual error correction
+- benchmark 規模在文中提到約 **1,000** 筆單輪與多輪口語對話
+- ASR 以 **640 ms chunks** 串流輸入 LLM
+- 文中也提到因為只用 full-duplex conversation data 做 SFT，會影響其他能力，作者認為之後可混入其他資料緩解
 
 ## 主要結果
+作者報告的重點結果是：
 
-- Full-duplex configuration 的 average first token emission delay (FTED) 是 0.68s，baseline half-duplex 是 2.28s，約降低 3 倍以上。
-- 50% interaction 可在 0.41s 內開始回應；90% latency 是 1.60s。
-- Llama-3-8B-Instruct-fd 的 machine interruption precision 是 54.7%，高於 GPT-4o 的 46.6% 與 GPT-3.5-turbo-0125 的 24.7%。
-- User interrupts machine 的平均 proper response rate 是 96.7%，略高於 GPT-4o 的 96.1%。
-- OpenCompass regression 顯示 fine-tuning 對原本 LLM 能力有小幅影響，MMLU 從 68.4 到 67.5，HumanEval 從 55.5 到 50.6。
+- **平均 conversation response latency 比 LLM-based half-duplex systems 降低超過 3 倍**
+- **超過 50% 的互動中，response latency 低於 500 ms**
+- 在 interruption 評估上：
+  - 對 user interruption 的 proper response rate 可達 **96.7%**
+  - machine proper interrupt precision 為 **54.7%**
+  - 文中聲稱比 GPT-4o、GPT-3.5-turbo-0125 更好
+- 以 **8B** 等級 LLM 就能達成這些控制行為，主打 small model 也能做 full-duplex control
 
 ## Project relevance
+project-full-duplex-data
 
-- **Project A: Full-duplex data and model**: 高相關。這篇不是資料清理 paper，而是 full-duplex model/control paper；它提供 neural FSM、control tokens、turn-taking / interruption supervision 的設計，對「如何讓模型知道何時 backchannel、何時 overlap、何時讓出話輪」很有啟發。
-- **Project B: TTS data pipeline**: 低到中相關。它不直接處理 TTS data cleaning，但它定義了 full-duplex interaction 需要的行為標籤與 evaluation metrics，可能可以反過來指導 TTS / spoken dialogue data 的標註與過濾。
+## Related papers in my pool
+- **LLM-Enhanced Dialogue Management for Full-Duplex Spoken Dialogue Systems (2025)**：同樣是 speech-LLM + full-duplex + dialogue management，關心 turn-taking / interruption 控制；相較之下，這篇更偏向把 LLM 做成 dialogue manager，而本篇是用 neural FSM 把 full-duplex control 直接納入 LLM 生成流程。
+- 目前 pool 裡沒有明顯直接相關的已讀 paper。
 
-短評：這篇主要歸到 `#project-full-duplex-data`；若要 deep review，應優先看 control-token schema 和 duplex-dialogue-3k 的 synthetic data construction。
+## OpenReview / reviewer discussion
+- [OpenReview summary](./reviews/openreview-summary/)
+有公開 OpenReview review/rebuttal context。主要討論集中在以下幾點：
 
-這篇對 speech LLM / full-duplex agent 很直接相關。它不是把 audio token 直接丟進 multimodal LLM，而是提供一個可實作的中間路線：用 streaming ASR/TTS 加上一個被 instruction-tuned 的 LLM controller。對你的 agent 來說，最有用的是 neural FSM abstraction、control-token supervision、以及用 simulated interruption data 訓練 turn-taking / interruption behavior 的方法。
+- **weakness: 依賴 ASR/TTS pipeline 而非 unified end-to-end model**
+  - reviewer 擔心 ASR 與 TTS 之間的傳遞會造成 error propagation 與 information loss
+  - authors 回應：當下缺乏可用的 open-source end-to-end multimodal LLM，因此先用現成模組驗證 neural FSM 可行性；他們也認為這個方法未來可移植到 unified model
+- **weakness: evaluation metrics 不夠完整**
+  - reviewer 指出 latency 與 interruption precision 不能充分衡量 dialogue quality，還需要看 helpfulness / relevance
+  - authors 回應偏樂觀，聲稱 current LLM 的 helpfulness / relevance 可被保證，reviewer 明確不買單，認為這是需要在 final draft 中寫成 limitation 的地方
+- **weakness: comparison 與 additional experiments 不夠**
+  - reviewer 認為還需要更多比較與更強證據，才能宣稱 SOTA
+  - authors 在 rebuttal 中強調其方法是首個公開的 LLM + full-duplex 實作，並解釋為何選擇 current setup
+- **整體影響**
+  - reviewer 對方向持正面態度，但對 claim 的範圍與 evaluation 充分性保持保留
+  - 對細讀者來說，這篇更適合當作 **system-level proof-of-concept**，而不是完整解決 dialogue quality 評估的終局方案
 
 ## 我該不該細讀
+**如果你在做 project-full-duplex-data，建議細讀。**  
+特別值得看的是：
 
-值得細讀。它和 Sommelier / DialogueSidon 都在 full-duplex spoken dialogue 這條線上，但這篇更偏 system control 與 dialogue policy，而不是 audio preprocessing 或 data recovery。建議之後用 `deep review` 補看：control token design、duplex-dialogue-3k construction、以及 evaluation metrics 是否能移植到你的 speech LLM benchmark。
+- neural FSM 的狀態設計與 control token formulation
+- GPT-4 synthetic dialogue data 的建構方式
+- interruption / backchannel / noise 的標註與評估設定
+- 這種把 dialogue control 直接轉成 token prediction 的實作思路
+
+但如果你的重點是高品質 speech data curation 或 transcription cleaning，這篇就不是主線，因為它更偏 **full-duplex interaction control**，不是 data pipeline。
 
 ## 可能的弱點 / open questions
-
-- 系統仍依賴 ASR 與 TTS pipeline，還不是 end-to-end speech-to-speech multimodal LLM。
-- Fine-tuning 資料主要由 GPT-4 synthetic transcript 產生，真實互動資料的 coverage 可能不足。
-- 訓練只有 1500 series / 20 steps，scaling behavior 還不清楚。
-- Interruption appropriateness 依賴 GPT-4-turbo 評分，human evaluation 或 cross-evaluator robustness 仍值得檢查。
-- Full-duplex 行為可能強烈依賴 ASR chunking、TTS latency、VAD/endpoint policy 等工程細節。
+- **強依賴 ASR + TTS pipeline**：端到端延遲與錯誤傳遞仍在
+- **評估指標偏窄**：latency / interruption precision 不足以描述整體 dialogue usefulness
+- **synthetic data 偏多**：GPT-4 生成的對話能否覆蓋真實人類互動的複雜性，仍有疑問
+- **machine interrupt precision 只有 54.7%**：表示「何時該打斷」仍不算穩
+- **對 open-source / commercial baseline 的公平性**：不同系統在資料、提示、模組配置上的可比性未必完全一致
+- **unified multimodal model 的未來可行性**：作者說方法可遷移，但尚未實證
+- **helpfulness / relevance 沒有直接量化**：這是 reviewer 明確提出的 limitation
 
 ## Tags
-
-#speech-llm #full-duplex #turn-taking #dialogue #project-full-duplex-data
+full-duplex, speech-llm, dialogue-management, neural-FSM, turn-taking, interruption-detection, ASR, TTS, streaming-inference, synthetic-dialogue-data
 
 ## Concepts
-
-- full-duplex dialogue
-- neural finite-state machine
-- streaming ASR
-- streaming TTS
-- interruption handling
-- first token emission delay
-- duplex-dialogue-3k
-
-## Citation Graph
-
-<!-- citation-graph:start -->
-
-No local paper citations matched yet.
-
-<!-- citation-graph:end -->
+- **full-duplex dialogue**
+- **half-duplex dialogue**
+- **neural FSM**
+- **SPEAK / LISTEN state**
+- **control tokens**
+- **turn-taking**
+- **barge-in / interruption**
+- **backchannel**
+- **streaming ASR**
+- **TTS**
+- **next token prediction**
+- **serialized real-time dialogue**
+- **perception module**
+- **motor function module**
+- **latency**
+- **interruption precision**
+- **semantic-aware dialogue control**
 
 ## Citation
-Published at Neural Information Processing Systems 2024 according to the arXiv record.
-
 ```bibtex
-@inproceedings{wang2024fullduplexspeechdialogue,
-  title     = {A Full-duplex Speech Dialogue Scheme Based On Large Language Model},
-  author    = {Wang, Peng and Lu, Songshuo and Tang, Yaohua and Yan, Sijie and Xia, Wei and Xiong, Yuanjun},
-  booktitle = {Advances in Neural Information Processing Systems},
-  year      = {2024},
-  doi       = {10.48550/arXiv.2405.19487},
-  url       = {https://arxiv.org/abs/2405.19487},
-  note      = {Accepted to Neural Information Processing Systems 2024}
+@article{wang2024afullduplexspeechdialogueschem,
+  title={A Full-duplex Speech Dialogue Scheme Based On Large Language Model},
+  author={Wang, Peng and Lu, Songshuo and Tang, Yaohua and Yan, Sijie and Xia, Wei and Xiong, Yuanjun},
+  journal={arXiv preprint},
+  year={2024},
+  eprint={2405.19487},
+  archivePrefix={arXiv}
 }
 ```

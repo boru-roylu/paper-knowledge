@@ -10,6 +10,10 @@ title: Citation Graph
       <option value="project-full-duplex-data">Full-duplex data and model</option>
       <option value="project-tts-data-pipeline">TTS data pipeline</option>
     </select>
+    <label class="citation-toggle" role="button" aria-pressed="false">
+      <input id="citation-show-isolated" type="checkbox" />
+      Show isolated
+    </label>
     <button type="button" id="citation-reset">Reset</button>
   </div>
   <div class="citation-graph-grid">
@@ -20,7 +24,3 @@ title: Citation Graph
     </aside>
   </div>
 </div>
-
-<script src="https://cdn.jsdelivr.net/npm/cytoscape@3.31.2/dist/cytoscape.min.js" defer></script>
-<link rel="stylesheet" href="./static/citation-graph.css?v=1" />
-<script src="./static/citation-graph.js?v=1" defer></script>

@@ -2,6 +2,7 @@
   "paper_key": "arxiv_2502_14145",
   "canonical_id": "arxiv:2502.14145",
   "arxiv_id": "2502.14145",
+  "version": "latest",
   "title": "LLM-Enhanced Dialogue Management for Full-Duplex Spoken Dialogue Systems",
   "authors": [
     "Hao",
@@ -11,19 +12,20 @@
     "Meng",
     "Dong"
   ],
-  "venue": "arXiv",
-  "year": 2026,
+  "venue": "arXiv preprint",
+  "year": 2025,
   "abstract": "Achieving full-duplex communication in spoken dialogue systems (SDS) requires real-time coordination between listening, speaking, and thinking. This paper proposes a semantic voice activity detection (VAD) module as a dialogue manager (DM) to efficiently manage turn-taking in full-duplex SDS. Implemented as a lightweight (0.5B) LLM fine-tuned on full-duplex conversation data, the semantic VAD predicts four control tokens to regulate turn-switching and turn-keeping, distinguishing between intentional and unintentional barge-ins while detecting query completion for handling user pauses and hesitations. By processing input speech in short intervals, the semantic VAD enables real-time decision-making, while the core dialogue engine (CDE) is only activated for response generation, reducing computational overhead. This design allows independent DM optimization without retraining the CDE, balancing interaction accuracy and inference efficiency for scalable, next-generation full-duplex SDS.",
   "primaryClass": "",
   "categories": [],
   "urls": {
-    "abs": "https://arxiv.org/abs/2405.19487",
+    "abs": "https://arxiv.org/abs/2502.14145",
     "pdf": "https://arxiv.org/pdf/2502.14145",
     "source": "https://arxiv.org/src/2502.14145"
   },
   "local_paths": {
-    "paper_fetch_json": "../../../cache/paper-fetch/arxiv_2502_14145/10.48550_arxiv.2405.19487.both.json",
-    "paper_fetch_markdown": "../../../cache/paper-fetch/arxiv_2502_14145/paper-fetch.md"
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2502.14145-src.tar.gz",
+    "entrypoint": "source/SemanticVAD_v2_021125.tex"
   },
   "tags": [
     "speech-llm",
@@ -35,138 +37,9 @@
   "concepts": [],
   "status": "read",
   "created": "2026-05-31",
-  "doi": "10.48550/arxiv.2405.19487",
-  "publication_status": "No formal conference or journal reference found as of 2026-05-31",
-  "bibtex_key": "hao2026llmenhanceddialoguemanagemen",
-  "fetch_source": "arxiv_html",
-  "quality": {
-    "has_fulltext": true,
-    "token_estimate": 5497,
-    "content_kind": "fulltext",
-    "has_abstract": true,
-    "warnings": [
-      "arXiv API metadata retrieval failed; using official HTML front matter and derived arXiv URLs from identifier 2502.14145 (arXiv API metadata retrieval failed: HTTP 429 for https://export.arxiv.org/api/query?id_list=2502.14145&max_results=1)."
-    ],
-    "source_trail": [
-      "fulltext:arxiv_html_ok",
-      "resolve:url",
-      "resolve:doi_selected",
-      "metadata:crossref_fail",
-      "route:signal_domain_arxiv",
-      "route:signal_doi_arxiv",
-      "route:probe_arxiv_positive",
-      "route:provider_selected_arxiv",
-      "metadata:arxiv_ok",
-      "fulltext:arxiv_attempt",
-      "fulltext:arxiv_article_ok"
-    ],
-    "trace": [
-      {
-        "stage": "fulltext",
-        "component": "arxiv_html",
-        "outcome": "ok",
-        "code": null,
-        "message": null
-      },
-      {
-        "stage": "resolve",
-        "component": "url",
-        "outcome": "info",
-        "code": null,
-        "message": null
-      },
-      {
-        "stage": "resolve",
-        "component": "doi_selected",
-        "outcome": "info",
-        "code": null,
-        "message": null
-      },
-      {
-        "stage": "metadata",
-        "component": "crossref",
-        "outcome": "fail",
-        "code": null,
-        "message": null
-      },
-      {
-        "stage": "route",
-        "component": "signal_domain_arxiv",
-        "outcome": "info",
-        "code": null,
-        "message": null
-      },
-      {
-        "stage": "route",
-        "component": "signal_doi_arxiv",
-        "outcome": "info",
-        "code": null,
-        "message": null
-      },
-      {
-        "stage": "route",
-        "component": "probe_arxiv",
-        "outcome": "positive",
-        "code": null,
-        "message": null
-      },
-      {
-        "stage": "route",
-        "component": "provider_selected_arxiv",
-        "outcome": "info",
-        "code": null,
-        "message": null
-      },
-      {
-        "stage": "metadata",
-        "component": "arxiv",
-        "outcome": "ok",
-        "code": null,
-        "message": null
-      },
-      {
-        "stage": "fulltext",
-        "component": "arxiv",
-        "outcome": "attempt",
-        "code": null,
-        "message": null
-      },
-      {
-        "stage": "fulltext",
-        "component": "arxiv_article",
-        "outcome": "ok",
-        "code": null,
-        "message": null
-      }
-    ],
-    "token_estimate_breakdown": {
-      "abstract": 250,
-      "body": 5247,
-      "refs": 1310
-    },
-    "confidence": "high",
-    "flags": [],
-    "body_metrics": {
-      "char_count": 19505,
-      "word_count": 2874,
-      "body_block_count": 14,
-      "body_heading_count": 13,
-      "body_to_abstract_ratio": 20.52857142857143,
-      "explicit_body_container": false,
-      "post_abstract_body_run": false,
-      "figure_count": 0
-    },
-    "semantic_losses": {
-      "table_fallback_count": 0,
-      "table_lossy_count": 0,
-      "table_layout_degraded_count": 0,
-      "table_semantic_loss_count": 0,
-      "formula_fallback_count": 0,
-      "formula_missing_count": 0
-    },
-    "asset_failures": [],
-    "extraction_revision": 2
-  },
-  "summary_model": "gpt-5.4-nano",
+  "doi": "10.48550/arXiv.2502.14145",
+  "publication_status": "No formal conference or journal reference found as of 2026-06-01",
+  "bibtex_key": "hao2025llmenhanceddialoguemanagementf",
+  "summary_model": "gpt-5.4-mini",
   "citations": []
 }

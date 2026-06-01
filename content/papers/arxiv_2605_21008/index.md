@@ -11,94 +11,204 @@ rating: 4
 tags:
   - speech-llm
   - audio-reasoning
-  - multimodal-foundation-models
-  - spoken-interaction
-  - latency
+  - speech-data
   - project-full-duplex-data
   - project-tts-data-pipeline
 created: 2026-05-31
 ---
-
 <div class="paper-nav"><a href="../../">&larr; Papers</a></div>
 
+<div class="generation-note">
 
+- Paper summary model: `gpt-5.4-mini`
 
+</div>
 
 ## Links
-
 - [arXiv abstract](https://arxiv.org/abs/2605.21008)
 - [PDF](https://arxiv.org/pdf/2605.21008)
 
 ## 一句話總結
-
-這是一篇 audio reasoning survey，整理 multimodal foundation models 如何從 audio input 做推理、如何產生 text 或 speech response，以及為什麼 audio reasoning 不能只靠 ASR transcript 或 text-only CoT 來解決。
+這是一篇首個專注於 **audio reasoning** 的 survey，系統整理 audio foundation models 如何結合 reasoning、grounding、interaction latency 與 evaluation，並提出從 Audio-to-Text、Audio-to-Speech、Audio-Visual 到 Agentic Audio Reasoning 的統一框架。
 
 ## 這篇在解決什麼問題
+這篇在回答：**audio modality 的 reasoning 要怎麼定義、怎麼做、怎麼評估，和 text/vision reasoning 有何不同？**
 
-作者指出目前 foundation model 的 reasoning 主要成熟在 text 和 vision，但 audio 有自己的困難：訊號是 continuous、temporally dense，而且同時包含 linguistic、paralinguistic、speaker state、prosody、overlap、background event 等多層資訊。若模型只把 audio 轉成 transcript 再交給 LLM，很多 acoustic cues 會消失，也容易出現 `shortcut learning` 或 `modality hallucination`：模型看似在做 audio reasoning，其實只是依賴文字先驗猜答案。
+作者指出 audio reasoning 的特殊難點在於：
+- audio 是 **continuous**、**temporally dense**
+- 同時包含 linguistic、paralinguistic、environmental information
+- 需要把 acoustic signals 對齊到 LLM 的 discrete semantic space
+- 但又不能丟掉 fine-grained acoustic cues
+- 目前還受限於三個大瓶頸：
+  - **genuinely audio-grounded reasoning data 稀缺**
+  - **shortcut learning / modality hallucination**
+  - **reasoning depth vs. real-time latency** 的衝突
 
-這篇 survey 的目標是把 audio reasoning 的問題定義、模型架構、training 方法、evaluation 和 open challenges 系統化，讓後續研究可以更清楚地區分「真的 grounded in audio」和「只是 text-surrogate reasoning」。
+所以這篇的目的不是提出單一模型，而是提供一個整理 field 的 roadmap。
 
-## 核心分類
+## 核心方法
+這篇是 survey，核心貢獻是 **taxonomy + unified formulation**，不是新的 model architecture。
 
-作者把 audio reasoning 分成四個主要 paradigms：
+### 1) Unified formulation
+作者把 audio reasoning formalize 成 conditional generation with optional intermediate reasoning trajectory：
 
-1. `Audio-to-Text Reasoning`: audio input，text output。重點是如何用 acoustic / paralinguistic / temporal evidence 回答問題，而不是只讀 transcript。
-2. `Audio-to-Speech Reasoning`: audio input，speech output。這裡除了 reasoning accuracy，還要處理 real-time latency，尤其是 spoken interaction 裡 reasoning depth 與 response delay 的 trade-off。
-3. `Audio-Visual Reasoning`: 同時使用 audio 和 visual evidence，需要 temporal alignment、cross-modal grounding 和 modality disambiguation。
-4. `Agentic Audio Reasoning`: 把 audio task 拆成 perception、planning、tool use、memory、reflection 或 multi-agent collaboration，從單一生成模型擴展到 structured problem solving。
+- input 可包含 `audio (A)`, `text (X)`, `visual (V)`
+- context `C` 是多模態整合後的輸入
+- output `O` 可以是 `text (Y)` 或 `speech tokens (S)`
+- 可選擇顯式 reasoning trajectory `R`
 
-## 主要觀察
+也就是區分：
+- **direct predictive modeling**
+- **reasoning-augmented generation**
 
-- Audio reasoning 的關鍵不是把 CoT 搬到 speech 上，而是要處理 acoustic grounding。模型必須知道哪些 inference 真的來自 waveform，哪些只是 language prior。
-- 現有資料常用 text-only LLM 根據 transcript、caption 或 sound event tags 合成 reasoning chain，但這些 chain 不一定忠實於原始 audio。
-- Real-time spoken reasoning 面臨 accuracy vs. latency trade-off。長 CoT 可能提高答案品質，但會破壞 conversation flow；因此近年的方向包括 `thinking while listening` 和 `thinking while speaking`。
-- Long-context audio reasoning 還不成熟。meeting、podcast、continuous interaction 這類長音訊會帶來 sequence length、memory、event recall 和 multi-hop reasoning 問題。
-- Evaluation 仍然不足，尤其缺少能判斷模型是否真的使用 acoustic cues，而不是依靠 transcript shortcut 的 benchmark。
+### 2) 四大 paradigm taxonomy
+作者把文獻分成四類：
 
-## 跟現有研究的差異
+- **Audio-to-Text Reasoning**
+  - 從 audio 推到 text answer
+  - 強調 acoustic grounding
+  - 討論 `Chain-of-Thought prompting`, `SFT`, `RL`
+  - 也整理 reasoning dataset construction
 
-這篇不是提出新模型，而是整理 field map。它的價值在於把 audio reasoning 從 broader audio LLM / spoken language model / multimodal CoT literature 裡獨立出來，並明確強調幾個以前容易混在一起的問題：
+- **Audio-to-Speech Reasoning**
+  - 在 spoken interaction 中 reasoning
+  - 包含 sequential 和 real-time settings
+  - 特別關注 latency-aware design
+  - 如 `thinking while listening` / `thinking while speaking`
 
-- `audio understanding` 不等於 `audio reasoning`
-- `speech-to-text + LLM` 不等於 native audio reasoning
-- `CoT token` 不代表 reasoning grounded in acoustic signal
-- `real-time spoken interaction` 不能只看 final answer accuracy，也要看 latency、interruptibility 和 turn-level behavior
+- **Audio-Visual Reasoning**
+  - 結合 audio 與 visual evidence
+  - 重點是 temporal alignment、cross-modal grounding、disambiguation
+
+- **Agentic Audio Reasoning**
+  - 把 audio task 拆成 perception、planning、tool use、memory、reflection
+  - 涵蓋 predefined workflow agents 與 dynamic tool-calling agents
+
+### 3) Foundations and training
+作者也整理了兩大基礎：
+- **Large Audio Language Models (LALMs)**
+  - 常見為 `encoder-projector-LLM` pipeline
+- **Spoken Language Models (SLMs)**
+  - 直接處理 speech / spoken tokens
+
+訓練上則分為：
+- **cross-modal alignment pre-training**
+- **post-training**（如 SFT、preference optimization、RL）
+
+## Training / Data
+這篇不是實驗型 paper，但有系統整理 training 與 data 的瓶頸。
+
+### Training aspects
+作者特別提到：
+- `CoT prompting`
+- `supervised fine-tuning (SFT)`
+- `reinforcement learning (RL)`
+- `preference optimization`
+- `parameter-efficient adaptation`
+- `latency-aware spoken interaction`
+
+### Data issues
+作者認為 audio reasoning 的資料主要有三個問題：
+- **high-quality reasoning trajectories 很少**
+- 很多 dataset 是由 text-only LLM 用 transcript 或 sound tags 合成，可能不真的 grounded in audio
+- 對 real-time spoken reasoning 來說，資料還要覆蓋 streaming / latency-aware settings
+
+也就是說，這篇很強調：**audio reasoning 的資料可靠性比一般 text reasoning 更脆弱**。
+
+## 主要結果
+作為 survey，這篇的「結果」主要是綜述結論與 field-level observations：
+
+- audio reasoning 還沒有像 text reasoning 那樣成熟
+- 現有模型常出現 **modality hallucination**，即依賴 text surrogate 而非原始 audio
+- `CoT` 在 audio 模態是否真的提升 grounding，仍不完全清楚
+- `offline reasoning` 和 `real-time spoken interaction` 在性能/延遲上存在明顯落差
+- current methods mostly work on short clips，對 `long-context audio reasoning` 還缺乏穩定解法
+- 未來可能需要把 reasoning objectives 更早放進 pre-training，而不只是後訓練補強
 
 ## Project relevance
+- **project-full-duplex-data**: 相關
+- **project-tts-data-pipeline**: 相關
 
-對 `project-full-duplex-data`，這篇最有用的是它對 real-time `Audio-to-Speech Reasoning` 的整理。full-duplex model 不只是要生成語音，還要在 user 還沒講完時理解 partial audio、保留 acoustic cues，並決定什麼時候 backchannel、interrupt、continue listening 或 start speaking。這跟我們想合成有 overlap / backchannel 的 dual-channel conversation data 很接近：資料不應該只標 transcript，也應該保留 timing、prosody、speaker state 和 interaction policy。
+## Related papers in my pool
+和 pool 裡已讀的 paper 有明顯關聯，尤其是：
 
-對 `project-tts-data-pipeline`，這篇比較間接，但仍然提醒我們 data cleaning 不能只以 transcript correctness 為唯一目標。若 training data 要支援 spoken interaction 或 audio-grounded reasoning，就要知道哪些 acoustic cues 應該保留，哪些 overlap/noise/ASR error 會讓模型學到錯誤 shortcut。它也支持我們把 overlap detection、ASR quality、speaker contamination、latency-aware segmentation 都放進 data pipeline 的品質指標裡。
+- **LLM-Enhanced Dialogue Management for Full-Duplex Spoken Dialogue Systems**
+  - 共同點：都關注 spoken interaction 中的 `latency`, `turn-taking`, `full-duplex` 控制
+  - 差異：那篇是具體 DM 架構；這篇是 survey 層級，提供更廣的 reasoning taxonomy
+  - 對你的啟發：可把 full-duplex control 視為 `Audio-to-Speech Reasoning` 的一部分
 
-## 可以帶走的設計啟發
+- **SoulX-Duplug: Plug-and-Play Streaming State Prediction Module for Realtime Full-Duplex Speech Conversation**
+  - 共同點：都強調 `thinking while listening / speaking`、streaming、latency-aware interaction
+  - 差異：那篇是 state prediction module；這篇把它放進整體 audio reasoning 脈絡
+  - 對你的啟發：可以把 streaming state prediction 與 reasoning grounding、modality hallucination 一起看
 
-- 做 audio / speech model evaluation 時，要加入能測 `acoustic grounding` 的 case，例如只靠 transcript 無法回答、但靠 prosody / overlap / speaker timing 可以回答的題目。
-- 若之後要做 full-duplex synthetic data，除了 transcript 和 speaker turns，也應該顯式產生 timing labels、backchannel labels、interruption labels 和 overlap labels。
-- 對 long-form audio，單純把所有 acoustic tokens 丟進模型很可能不可行，需要 chunking、memory、event indexing 或 retrieval-style compression。
-- 對 real-time systems，應該分開評估 offline accuracy、streaming accuracy、first response latency、interrupt handling 和 conversation naturalness。
+- **DialogueSidon: Recovering Full-Duplex Dialogue Tracks from In-the-Wild Dialogue Audio**
+  - 共同點：都碰到 audio dialogue 的 `overlap`、speaker-wise 互動資料問題
+  - 差異：那篇偏資料重建/分離；這篇偏 reasoning 與 evaluation 的總覽
+  - 對你的啟發：full-duplex data 的品質與 grounding 會直接影響 reasoning / interaction 模型
 
-## 限制
+- **Google USM: Scaling Automatic Speech Recognition Beyond 100 Languages**
+  - 共同點：都提到 audio 模型的基礎訓練、alignment、以及資料稀缺問題
+  - 差異：那篇是 ASR scaling；這篇是 reasoning survey
+  - 對你的啟發：若要做 audio reasoning data pipeline，ASR/SSL backbone 的品質仍是前提
 
-這是 survey paper，因此沒有新的 benchmark result 或 model ablation。它對很多方向提供 taxonomy 和 open problems，但不會直接告訴我們哪個 architecture 最適合訓練 full-duplex model，或哪種 data pipeline filter 最有效。實作上仍需要回到各個被 survey 的原始 paper。
+## OpenReview / reviewer discussion
+未找到公開 OpenReview review/rebuttal context
 
-## Citation Graph
+## 我該不該細讀
+**建議細讀。**
+如果你在做 speech-LLM、spoken dialogue、full-duplex interaction、或 audio data pipeline，這篇很適合作為背景總覽與 taxonomy 入口。它不會直接教你一個新模型，但能幫你：
+- 對齊研究問題定義
+- 分辨 `reasoning`、`grounding`、`latency` 的關係
+- 找到 relevant subfields 與 evaluation gaps
 
-<!-- citation-graph:start -->
+## 可能的弱點 / open questions
+- 這是 survey，**不提供新的實證結果**，對 method selection 的指導仍偏高層次
+- `audio reasoning` 的邊界定義可能還不夠硬，某些 `understanding` 任務和 `reasoning` 任務的切分會有爭議
+- 對 `genuinely audio-grounded` 的判準仍不明確，容易停留在概念層
+- `CoT`、`SFT`、`RL` 在 audio 場景到底各自帶來多少可重現增益，仍需要更系統的 benchmarking
+- `latency-aware spoken interaction` 與高精度 reasoning 的 trade-off 目前沒有明確解法
+- `long-context audio reasoning` 和 multi-hop audio inference 的 benchmark 還很缺
 
-No local paper citations matched yet.
+## Tags
+- audio reasoning
+- multimodal foundation models
+- Chain-of-Thought
+- Audio-to-Text
+- Audio-to-Speech
+- Audio-Visual reasoning
+- Agentic Audio Reasoning
+- spoken language models
+- latency-aware interaction
+- modality hallucination
+- full-duplex
 
-<!-- citation-graph:end -->
+## Concepts
+- `audio grounding`
+- `direct predictive modeling`
+- `reasoning-augmented generation`
+- `Large Audio Language Models (LALMs)`
+- `Spoken Language Models (SLMs)`
+- `encoder-projector-LLM`
+- `cross-modal alignment pre-training`
+- `supervised fine-tuning (SFT)`
+- `reinforcement learning (RL)`
+- `preference optimization`
+- `Chain-of-Thought prompting`
+- `thinking while listening`
+- `thinking while speaking`
+- `modality hallucination`
+- `shortcut learning`
+- `latency-aware spoken interaction`
+- `long-context audio reasoning`
+- `Agentic Audio Reasoning`
 
 ## Citation
 ```bibtex
-@misc{guo2026surveyaudioreasoning,
+@article{guo2026asurveyofaudioreasoninginmulti,
   title={A Survey of Audio Reasoning in Multimodal Foundation Models},
   author={Guo, Zhihan and Cui, Wenqian and Lin, Guan-Ting and Tan, Daxin and Li, Jingyao and Zheng, Qiyong and Wang, Dingdong and Xiong, Jing and Shi, Han and Jia, Jiaya and King, Irwin},
-  year={2026},
-  eprint={2605.21008},
-  archivePrefix={arXiv},
-  primaryClass={eess.AS},
-  doi={10.48550/arXiv.2605.21008}
+  journal={arXiv preprint},
+  year={2026}
 }
 ```
