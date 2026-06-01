@@ -20,7 +20,7 @@
     "profile": "0x -D prof ./quartz/bootstrap-cli.mjs build --concurrency=1",
     "install-plugins": "npx tsx ./quartz/plugins/loader/install-plugins.ts",
     "prebuild": "npm run install-plugins",
-    "build:papers": "node scripts/patch-quartz-plugins.mjs && node scripts/update-index.mjs && npx quartz build && node scripts/fix-tag-routes.mjs && node scripts/prune-graph-index.mjs",
+    "build:papers": "npx tsx scripts/install-quartz-plugins.ts && node scripts/patch-quartz-plugins.mjs && node scripts/update-index.mjs && npx quartz build && node scripts/fix-tag-routes.mjs && node scripts/prune-graph-index.mjs",
     "paper:queue": "node scripts/enqueue-paper.mjs",
     "paper:process": "node scripts/process-paper-queue.mjs --all",
     "paper:ingest": "node scripts/paper-fetch-ingest.mjs --url",
