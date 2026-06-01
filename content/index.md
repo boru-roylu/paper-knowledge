@@ -27,6 +27,11 @@ title: Paper Knowledge
 </div>
 
 <div class="paper-list">
+<div class="paper-row" data-tags="speech-llm tts asr project-tts-data-pipeline" data-search="ImmersiveTTS: Environment-Aware Text-to-Speech with Multimodal Diffusion Transformer and Domain-Specific Representation Alignment arxiv_2605_30965 2026-06-01 2026 arXiv arxiv:2605.30965 speech-llm tts asr project-tts-data-pipeline">
+  <div class="paper-date">2026-06-01</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2605_30965/">ImmersiveTTS: Environment-Aware Text-to-Speech with Multimodal Diffusion Transformer and Domain-Specific Representation Alignment</a> <span class="paper-meta">(2026, arXiv)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/speech-llm/">#speech-llm</a> <a class="tag-link internal" href="./tags/tts/">#tts</a> <a class="tag-link internal" href="./tags/asr/">#asr</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a></div>
+</div>
 <div class="paper-row" data-tags="speech-llm tts project-tts-data-pipeline" data-search="Seed-TTS: A Family of High-Quality Versatile Speech Generation Models arxiv_2406_02430 2026-06-01 2026 arXiv arxiv:2406.02430 speech-llm tts project-tts-data-pipeline">
   <div class="paper-date">2026-06-01</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2406_02430/">Seed-TTS: A Family of High-Quality Versatile Speech Generation Models</a> <span class="paper-meta">(2026, arXiv)</span></div>
