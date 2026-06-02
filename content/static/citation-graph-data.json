@@ -148,6 +148,16 @@
       ]
     },
     {
+      "id": "arxiv_2605_22170",
+      "title": "Do Factual Recall Mechanisms Carry over from Text to Speech in Multimodal Language Models?",
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "url": "../papers/arxiv_2605_22170/",
+      "tags": [
+        "speech-llm"
+      ]
+    },
+    {
       "id": "arxiv_2605_27258",
       "title": "PilotTTS: A Disciplined Modular Recipe for Competitive Speech Synthesis",
       "year": 2026,

@@ -27,6 +27,11 @@ title: Paper Knowledge
 </div>
 
 <div class="paper-list">
+<div class="paper-row" data-tags="speech-llm" data-search="Do Factual Recall Mechanisms Carry over from Text to Speech in Multimodal Language Models? arxiv_2605_22170 2026-06-01 2026 arXiv preprint arxiv:2605.22170 speech-llm">
+  <div class="paper-date">2026-06-01</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2605_22170/">Do Factual Recall Mechanisms Carry over from Text to Speech in Multimodal Language Models?</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/speech-llm/">#speech-llm</a></div>
+</div>
 <div class="paper-row" data-tags="speech-llm tts asr project-tts-data-pipeline" data-search="ImmersiveTTS: Environment-Aware Text-to-Speech with Multimodal Diffusion Transformer and Domain-Specific Representation Alignment arxiv_2605_30965 2026-06-01 2026 arXiv preprint arxiv:2605.30965 speech-llm tts asr project-tts-data-pipeline">
   <div class="paper-date">2026-06-01</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2605_30965/">ImmersiveTTS: Environment-Aware Text-to-Speech with Multimodal Diffusion Transformer and Domain-Specific Representation Alignment</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>
