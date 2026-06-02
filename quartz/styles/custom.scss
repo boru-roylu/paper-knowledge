@@ -193,6 +193,19 @@
   color: var(--secondary);
 }
 
+.paper-copy-button {
+  gap: 0.35rem;
+}
+
+.paper-copy-button svg {
+  flex: 0 0 auto;
+}
+
+.paper-copy-button.copied {
+  border-color: var(--tertiary);
+  color: var(--tertiary);
+}
+
 .paper-row.filtered-out {
   display: none !important;
 }

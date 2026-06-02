@@ -289,6 +289,126 @@ function initPaperOutline() {
   setActive(headings[0].id)
 }
 
+function initPaperCopyButton() {
+  if (!document.body.dataset.slug?.startsWith('papers/')) return
+  const article = document.querySelector('article .markdown-rendered')
+  if (!article || article.querySelector('.paper-copy-button')) return
+
+  const nav = article.querySelector('.paper-nav')
+  const button = document.createElement('button')
+  button.type = 'button'
+  button.className = 'paper-copy-button'
+  button.setAttribute('aria-label', 'Copy paper note')
+  button.innerHTML = `
+    <svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="9" y="9" width="13" height="13" rx="2"></rect>
+      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+    </svg>
+    <span>Copy note</span>
+  `
+
+  button.addEventListener('click', async () => {
+    const originalLabel = button.querySelector('span')?.textContent || 'Copy note'
+    try {
+      await copyText(buildPaperCopyText(article))
+      setCopyButtonState(button, 'Copied')
+    } catch {
+      setCopyButtonState(button, 'Copy failed')
+    } finally {
+      window.setTimeout(() => setCopyButtonState(button, originalLabel), 1600)
+    }
+  })
+
+  if (nav) {
+    nav.appendChild(button)
+  } else {
+    article.insertBefore(button, article.firstChild)
+  }
+}
+
+function buildPaperCopyText(article) {
+  const title = document.querySelector('h1.article-title')?.textContent?.trim()
+    || document.title.replace(/\s+-\s+Paper Knowledge$/, '').trim()
+  const pageUrl = canonicalPageUrl()
+  const links = collectArticleLinks(article)
+  const body = articleToPlainText(article)
+  const parts = [
+    'Paper Knowledge Note',
+    '',
+    `Title: ${title}`,
+    `Page URL: ${pageUrl}`,
+  ]
+
+  if (links.length) {
+    parts.push('', 'Links:')
+    for (const link of links) parts.push(`- ${link.label}: ${link.url}`)
+  }
+
+  parts.push('', 'Summary:', body)
+  return parts.join('\n').replace(/\n{4,}/g, '\n\n\n').trim() + '\n'
+}
+
+function canonicalPageUrl() {
+  const fromMeta = document.querySelector('meta[property="og:url"]')?.content
+    || document.querySelector('meta[property="twitter:url"]')?.content
+  const raw = fromMeta || window.location.href
+  const url = new URL(raw, window.location.origin)
+  url.hash = ''
+  return url.toString()
+}
+
+function collectArticleLinks(article) {
+  const seen = new Set()
+  return Array.from(article.querySelectorAll('a[href]'))
+    .filter((link) => !link.closest('.paper-nav') && link.getAttribute('role') !== 'anchor')
+    .map((link) => {
+      const label = link.textContent.replace(/\s+/g, ' ').trim() || link.getAttribute('href')
+      const url = new URL(link.getAttribute('href'), window.location.href).toString()
+      return { label, url }
+    })
+    .filter((link) => {
+      if (!link.label || !link.url || seen.has(link.url)) return false
+      seen.add(link.url)
+      return true
+    })
+}
+
+function articleToPlainText(article) {
+  const clone = article.cloneNode(true)
+  clone.querySelectorAll('.paper-copy-button, .generated-paper-outline, .paper-nav, a[role="anchor"], svg').forEach((el) => el.remove())
+  return (clone.innerText || clone.textContent)
+    .replace(/\u00a0/g, ' ')
+    .replace(/[ \t]+\n/g, '\n')
+    .replace(/\n[ \t]+/g, '\n')
+    .replace(/[ \t]{2,}/g, ' ')
+    .replace(/\n{3,}/g, '\n\n')
+    .trim()
+}
+
+async function copyText(text) {
+  if (navigator.clipboard?.writeText) {
+    await navigator.clipboard.writeText(text)
+    return
+  }
+  const textarea = document.createElement('textarea')
+  textarea.value = text
+  textarea.setAttribute('readonly', '')
+  textarea.style.position = 'fixed'
+  textarea.style.top = '-1000px'
+  textarea.style.opacity = '0'
+  document.body.appendChild(textarea)
+  textarea.select()
+  const ok = document.execCommand('copy')
+  textarea.remove()
+  if (!ok) throw new Error('copy failed')
+}
+
+function setCopyButtonState(button, label) {
+  const span = button.querySelector('span')
+  if (span) span.textContent = label
+  button.classList.toggle('copied', label === 'Copied')
+}
+
 function loadScriptOnce(src) {
   const existing = document.querySelector(`script[src="${src}"]`)
   if (existing) {
@@ -324,6 +444,7 @@ function escapeHtml(s) {
 function initPaperKnowledgeWidgets() {
   initCitationGraph()
   initPaperOutline()
+  initPaperCopyButton()
 }
 
 document.addEventListener('DOMContentLoaded', initPaperKnowledgeWidgets)

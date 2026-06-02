@@ -100,7 +100,7 @@ export default (() => {
         {js
           .filter((resource) => resource.loadTime === "beforeDOMReady")
           .map((res) => JSResourceToScriptElement(res, true))}
-        <script src="/static/citation-graph.js?v=7" defer></script>
+        <script src="/static/citation-graph.js?v=8" defer></script>
         {additionalHead.map((resource) => {
           if (typeof resource === "function") {
             return resource(fileData)
