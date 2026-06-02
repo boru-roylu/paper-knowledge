@@ -9,12 +9,17 @@ import {
 
 ensureDirs()
 const args = process.argv.slice(2)
-const urlArg = args.includes("--url") ? args[args.indexOf("--url") + 1] : args.find((a) => /^https?:|arxiv:/i.test(a))
+const urlArgs = args.filter((a) => /^https?:|arxiv:/i.test(a))
+const urlArg = args.includes("--url") ? args[args.indexOf("--url") + 1] : urlArgs[0]
 const processAll = args.includes("--all") || !urlArg
 const doSummarize = args.includes("--summarize")
 const noBuild = args.includes("--no-build")
 const skipOpenReview = args.includes("--skip-openreview")
+const llmPaceMs = Number(process.env.PAPER_LLM_STAGE_DELAY_MS || 3000)
 
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms))
+}
 
 async function download(url, out) {
   if (fs.existsSync(out) && fs.statSync(out).size > 0) return
@@ -193,8 +198,8 @@ async function queueRows() {
 const donePath = path.join(QUEUE, "processed.json")
 const done = fs.existsSync(donePath) ? JSON.parse(fs.readFileSync(donePath, "utf8")) : {}
 const keys = []
-if (urlArg) {
-  keys.push(await ingest(urlArg))
+if (urlArgs.length) {
+  for (const oneUrl of urlArgs) keys.push(await ingest(oneUrl))
 } else if (processAll) {
   for (const row of await queueRows()) {
     if (done[row.paper_key]) continue
@@ -214,10 +219,13 @@ if (doSummarize) {
   for (const key of keys) {
     run("node", ["scripts/summarize-paper.mjs", key], { stdio: "inherit" })
     if (!skipOpenReview) {
+      await sleep(llmPaceMs)
       run("node", ["scripts/fetch-openreview-notes.mjs", key], { stdio: "inherit" })
       run("node", ["scripts/summarize-openreview-notes.mjs", key], { stdio: "inherit" })
+      await sleep(llmPaceMs)
       run("node", ["scripts/summarize-paper.mjs", key], { stdio: "inherit" })
     }
+    await sleep(llmPaceMs)
   }
 }
 if (!noBuild) run("npm", ["run", "build:papers"], { stdio: "inherit" })

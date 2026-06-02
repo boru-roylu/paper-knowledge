@@ -7,11 +7,27 @@ import {
 
 ensureDirs()
 const args = process.argv.slice(2)
-const url = args.includes("--url") ? args[args.indexOf("--url") + 1] : args.find((a) => /^https?:|doi:|10\./i.test(a))
+const urlArgs = args.filter((a) => /^https?:|doi:|10\./i.test(a))
+const url = args.includes("--url") ? args[args.indexOf("--url") + 1] : urlArgs[0]
 if (!url) throw new Error("Usage: node scripts/paper-fetch-ingest.mjs --url <paper-url>")
 const overwrite = args.includes("--overwrite")
 const doSummarize = args.includes("--summarize")
 const skipOpenReview = args.includes("--skip-openreview")
+const noBuild = args.includes("--no-build")
+const llmPaceMs = Number(process.env.PAPER_LLM_STAGE_DELAY_MS || 3000)
+
+if (urlArgs.length > 1) {
+  for (const oneUrl of urlArgs) {
+    const forwarded = ["scripts/paper-fetch-ingest.mjs", "--url", oneUrl, "--no-build"]
+    if (overwrite) forwarded.push("--overwrite")
+    if (doSummarize) forwarded.push("--summarize")
+    if (skipOpenReview) forwarded.push("--skip-openreview")
+    run("node", forwarded, { stdio: "inherit" })
+  }
+  if (!noBuild) run("npm", ["run", "build:papers"], { stdio: "inherit" })
+  process.exit(0)
+}
+
 const arxiv = parseArxivId(url)
 const paperKey = arxiv ? paperKeyFromArxiv(arxiv.id) : `paper_${Date.now()}`
 const paperDir = path.join(PAPERS, paperKey)
@@ -23,11 +39,16 @@ const fetchDir = path.join(CACHE, "paper-fetch", paperKey)
 fs.mkdirSync(paperDir, { recursive: true })
 fs.mkdirSync(fetchDir, { recursive: true })
 
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms))
+}
+
 if (arxiv) {
   const forwarded = ["scripts/process-paper-queue.mjs", "--url", url]
   if (overwrite) forwarded.push("--overwrite")
   if (doSummarize) forwarded.push("--summarize")
   if (skipOpenReview) forwarded.push("--skip-openreview")
+  if (noBuild) forwarded.push("--no-build")
   console.log(`arXiv URL detected; using TeX-first ingest for ${arxiv.id}`)
   run("node", forwarded, { stdio: "inherit" })
   process.exit(0)
@@ -205,9 +226,11 @@ console.log(`paper-fetch ingested ${paperKey} from ${meta.fetch_source}`)
 if (doSummarize) {
   run("node", ["scripts/summarize-paper.mjs", paperKey], { stdio: "inherit" })
   if (!skipOpenReview) {
+    await sleep(llmPaceMs)
     run("node", ["scripts/fetch-openreview-notes.mjs", paperKey], { stdio: "inherit" })
     run("node", ["scripts/summarize-openreview-notes.mjs", paperKey], { stdio: "inherit" })
+    await sleep(llmPaceMs)
     run("node", ["scripts/summarize-paper.mjs", paperKey], { stdio: "inherit" })
   }
 }
-run("npm", ["run", "build:papers"], { stdio: "inherit" })
+if (!noBuild) run("npm", ["run", "build:papers"], { stdio: "inherit" })

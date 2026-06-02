@@ -17,21 +17,55 @@ function loadGatewayEnv() {
   }
 }
 
+const retryMax = Number(process.env.PAPER_LLM_RETRY_MAX || 6)
+const retryBaseMs = Number(process.env.PAPER_LLM_RETRY_BASE_MS || 2000)
+
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms))
+}
+
+function retryDelayMs(status, body, headers, attempt) {
+  const retryAfter = Number(headers?.get?.("retry-after") || 0)
+  if (retryAfter > 0) return Math.ceil(retryAfter * 1000)
+  const ms = String(body || "").match(/try again in\s+(\d+)\s*ms/i)?.[1]
+  if (ms) return Number(ms) + 750
+  const seconds = String(body || "").match(/try again in\s+([0-9.]+)\s*s/i)?.[1]
+  if (seconds) return Math.ceil(Number(seconds) * 1000) + 750
+  const exp = retryBaseMs * 2 ** Math.max(0, attempt - 1)
+  const jitter = Math.floor(Math.random() * 750)
+  return Math.min(60000, exp + jitter)
+}
+
+function shouldRetry(status, body) {
+  const text = String(body || "")
+  return status === 429 || status >= 500 || /rate_limit_exceeded|temporarily|overloaded/i.test(text)
+}
+
 async function callOpenAI(input) {
   loadGatewayEnv()
   if (!process.env.OPENAI_API_KEY) throw new Error("OPENAI_API_KEY not available")
-  const res = await fetch("https://api.openai.com/v1/responses", {
-    method: "POST",
-    headers: { "content-type": "application/json", authorization: `Bearer ${process.env.OPENAI_API_KEY}` },
-    body: JSON.stringify({ model, input, max_output_tokens: 1800 }),
-  })
-  const body = await res.text()
-  if (!res.ok) throw new Error(`OpenAI ${res.status}: ${body.slice(0, 500)}`)
-  const json = JSON.parse(body)
-  if (json.output_text) return json.output_text
-  const texts = []
-  for (const item of json.output || []) for (const c of item.content || []) if (c.text) texts.push(c.text)
-  return texts.join("\n").trim()
+  for (let attempt = 1; attempt <= retryMax; attempt++) {
+    const res = await fetch("https://api.openai.com/v1/responses", {
+      method: "POST",
+      headers: { "content-type": "application/json", authorization: `Bearer ${process.env.OPENAI_API_KEY}` },
+      body: JSON.stringify({ model, input, max_output_tokens: 1800 }),
+    })
+    const body = await res.text()
+    if (res.ok) {
+      const json = JSON.parse(body)
+      if (json.output_text) return json.output_text
+      const texts = []
+      for (const item of json.output || []) for (const c of item.content || []) if (c.text) texts.push(c.text)
+      return texts.join("\n").trim()
+    }
+    if (attempt >= retryMax || !shouldRetry(res.status, body)) {
+      throw new Error(`OpenAI ${res.status}: ${body.slice(0, 500)}`)
+    }
+    const delay = retryDelayMs(res.status, body, res.headers, attempt)
+    console.error(`OpenAI ${res.status}; retrying OpenReview summary with ${model} in ${Math.round(delay / 1000)}s (${attempt}/${retryMax})`)
+    await sleep(delay)
+  }
+  throw new Error("OpenAI retry loop exhausted")
 }
 
 function texExcerpt(paperDir, meta) {
