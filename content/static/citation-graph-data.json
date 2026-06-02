@@ -148,6 +148,19 @@
       ]
     },
     {
+      "id": "arxiv_2605_22083",
+      "title": "RobustSpeechFlow: Learning Robust Text-to-Speech Trajectories via Augmentation-based Contrastive Flow Matching",
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "url": "../papers/arxiv_2605_22083/",
+      "tags": [
+        "speech-llm",
+        "tts",
+        "speech-data",
+        "project-tts-data-pipeline"
+      ]
+    },
+    {
       "id": "arxiv_2605_22170",
       "title": "Do Factual Recall Mechanisms Carry over from Text to Speech in Multimodal Language Models?",
       "year": 2026,
