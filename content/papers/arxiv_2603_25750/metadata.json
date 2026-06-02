@@ -44,6 +44,14 @@
   "summary_model": "gpt-5.4-mini",
   "citations": [
     {
+      "paper_key": "arxiv_2602_06053",
+      "title": "PersonaPlex: Voice and Role Control for Full Duplex Conversational Speech Models",
+      "score": 1,
+      "matched_title": "Personaplex: Voice and role control for full duplex conversational speech models.",
+      "matched_first_author_last": "roy",
+      "source_file": "source/main_new.bbl"
+    },
+    {
       "paper_key": "arxiv_2405_19487",
       "title": "A Full-duplex Speech Dialogue Scheme Based On Large Language Model",
       "score": 0.97,

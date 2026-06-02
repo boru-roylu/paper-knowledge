@@ -27,6 +27,11 @@ title: Paper Knowledge
 </div>
 
 <div class="paper-list">
+<div class="paper-row" data-tags="speech-llm full-duplex project-full-duplex-data" data-search="PersonaPlex: Voice and Role Control for Full Duplex Conversational Speech Models arxiv_2602_06053 2026-06-02 2026 arXiv preprint arxiv:2602.06053 speech-llm full-duplex project-full-duplex-data">
+  <div class="paper-date">2026-06-02</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2602_06053/">PersonaPlex: Voice and Role Control for Full Duplex Conversational Speech Models</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/speech-llm/">#speech-llm</a> <a class="tag-link internal" href="./tags/full-duplex/">#full-duplex</a> <a class="tag-link internal" href="./tags/project-full-duplex-data/">#project-full-duplex-data</a></div>
+</div>
 <div class="paper-row" data-tags="speech-llm full-duplex project-full-duplex-data" data-search="SALMONN-omni: A Codec-free Speech LLM\\ for Full-duplex Listening and Speaking arxiv_2505_17060 2026-06-02 2025 arXiv preprint arxiv:2505.17060 speech-llm full-duplex project-full-duplex-data">
   <div class="paper-date">2026-06-02</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2505_17060/">SALMONN-omni: A Codec-free Speech LLM\\ for Full-duplex Listening and Speaking</a> <span class="paper-meta">(2025, arXiv preprint)</span></div>

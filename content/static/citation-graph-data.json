@@ -88,6 +88,18 @@
       ]
     },
     {
+      "id": "arxiv_2602_06053",
+      "title": "PersonaPlex: Voice and Role Control for Full Duplex Conversational Speech Models",
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "url": "../papers/arxiv_2602_06053/",
+      "tags": [
+        "speech-llm",
+        "full-duplex",
+        "project-full-duplex-data"
+      ]
+    },
+    {
       "id": "arxiv_2603_14877",
       "title": "SoulX-Duplug: Plug-and-Play Streaming State Prediction Module for Realtime Full-Duplex Speech Conversation",
       "year": 2026,
@@ -219,6 +231,11 @@
       "source": "arxiv_2504_08528",
       "target": "arxiv_2405_19487",
       "score": 0.97
+    },
+    {
+      "source": "arxiv_2603_25750",
+      "target": "arxiv_2602_06053",
+      "score": 1
     },
     {
       "source": "arxiv_2603_25750",

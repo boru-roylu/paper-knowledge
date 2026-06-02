@@ -1,0 +1,45 @@
+{
+  "paper_key": "arxiv_2602_06053",
+  "canonical_id": "arxiv:2602.06053",
+  "arxiv_id": "2602.06053",
+  "version": "latest",
+  "title": "PersonaPlex: Voice and Role Control for Full Duplex Conversational Speech Models",
+  "authors": [],
+  "venue": "arXiv preprint",
+  "year": 2026,
+  "abstract": "",
+  "primaryClass": "",
+  "categories": [],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2602.06053",
+    "pdf": "https://arxiv.org/pdf/2602.06053",
+    "source": "https://arxiv.org/src/2602.06053"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2602.06053-src.tar.gz",
+    "entrypoint": "source/Template.tex"
+  },
+  "tags": [
+    "speech-llm",
+    "full-duplex",
+    "project-full-duplex-data"
+  ],
+  "concepts": [],
+  "status": "read",
+  "created": "2026-06-02",
+  "doi": "10.48550/arXiv.2602.06053",
+  "publication_status": "No formal conference or journal reference found as of 2026-06-02",
+  "bibtex_key": "paper2026personaplexvoiceandrolecontrol",
+  "summary_model": "gpt-5.4-mini",
+  "openreview": {
+    "forum": "4X2HcJSwSl",
+    "url": "https://openreview.net/forum?id=4X2HcJSwSl",
+    "match_score": 1,
+    "notes_count": 0,
+    "local_path": "reviews/openreview.md",
+    "summary_local_path": "reviews/openreview-summary.md",
+    "summary_model": "gpt-5.5"
+  },
+  "citations": []
+}
