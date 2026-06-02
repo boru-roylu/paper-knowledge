@@ -27,6 +27,11 @@ title: Paper Knowledge
 </div>
 
 <div class="paper-list">
+<div class="paper-row" data-tags="speech-llm full-duplex project-full-duplex-data" data-search="SALMONN-omni: A Codec-free Speech LLM\\ for Full-duplex Listening and Speaking arxiv_2505_17060 2026-06-02 2025 arXiv preprint arxiv:2505.17060 speech-llm full-duplex project-full-duplex-data">
+  <div class="paper-date">2026-06-02</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2505_17060/">SALMONN-omni: A Codec-free Speech LLM\\ for Full-duplex Listening and Speaking</a> <span class="paper-meta">(2025, arXiv preprint)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/speech-llm/">#speech-llm</a> <a class="tag-link internal" href="./tags/full-duplex/">#full-duplex</a> <a class="tag-link internal" href="./tags/project-full-duplex-data/">#project-full-duplex-data</a></div>
+</div>
 <div class="paper-row" data-tags="speech-llm" data-search="Do Factual Recall Mechanisms Carry over from Text to Speech in Multimodal Language Models? arxiv_2605_22170 2026-06-01 2026 arXiv preprint arxiv:2605.22170 speech-llm">
   <div class="paper-date">2026-06-01</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2605_22170/">Do Factual Recall Mechanisms Carry over from Text to Speech in Multimodal Language Models?</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>

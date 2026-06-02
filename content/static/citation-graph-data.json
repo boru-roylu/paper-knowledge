@@ -64,6 +64,18 @@
       ]
     },
     {
+      "id": "arxiv_2505_17060",
+      "title": "SALMONN-omni: A Codec-free Speech LLM\\\\ for Full-duplex Listening and Speaking",
+      "year": 2025,
+      "venue": "arXiv preprint",
+      "url": "../papers/arxiv_2505_17060/",
+      "tags": [
+        "speech-llm",
+        "full-duplex",
+        "project-full-duplex-data"
+      ]
+    },
+    {
       "id": "arxiv_2510_03597",
       "title": "Neon: Negative Extrapolation From Self-Training Improves Image Generation",
       "year": 2025,

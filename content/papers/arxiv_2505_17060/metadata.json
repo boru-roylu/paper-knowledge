@@ -1,0 +1,39 @@
+{
+  "paper_key": "arxiv_2505_17060",
+  "canonical_id": "arxiv:2505.17060",
+  "arxiv_id": "2505.17060",
+  "version": "latest",
+  "title": "SALMONN-omni: A Codec-free Speech LLM\\\\ for Full-duplex Listening and Speaking",
+  "authors": [
+    "% Wenyi Yu$^1",
+    "2"
+  ],
+  "venue": "arXiv preprint",
+  "year": 2025,
+  "abstract": "",
+  "primaryClass": "",
+  "categories": [],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2505.17060",
+    "pdf": "https://arxiv.org/pdf/2505.17060",
+    "source": "https://arxiv.org/src/2505.17060"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2505.17060-src.tar.gz",
+    "entrypoint": "source/neurips_2025.tex"
+  },
+  "tags": [
+    "speech-llm",
+    "full-duplex",
+    "project-full-duplex-data"
+  ],
+  "concepts": [],
+  "status": "read",
+  "created": "2026-06-02",
+  "doi": "10.48550/arXiv.2505.17060",
+  "publication_status": "No formal conference or journal reference found as of 2026-06-02",
+  "bibtex_key": "yu$^12025salmonnomniacodecfreespeechllm",
+  "summary_model": "gpt-5.4-mini",
+  "citations": []
+}
