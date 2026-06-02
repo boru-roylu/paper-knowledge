@@ -40,7 +40,8 @@
     "project-tts-data-pipeline"
   ],
   "concepts": [],
-  "status": "pending-summary",
+  "status": "read",
+  "summary_model": "Codex GPT-5",
   "created": "2026-06-02",
   "doi": "10.48550/arXiv.2605.30993",
   "publication_status": "No formal conference or journal reference found as of 2026-06-02",
