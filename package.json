@@ -22,6 +22,7 @@
     "prebuild": "npm run install-plugins",
     "build:papers": "npx tsx scripts/install-quartz-plugins.ts && node scripts/patch-quartz-plugins.mjs && node scripts/update-citation-graph.mjs && node scripts/update-index.mjs && npx quartz build && node scripts/fix-tag-routes.mjs && node scripts/fix-page-routes.mjs && node scripts/prune-graph-index.mjs",
     "paper:queue": "node scripts/enqueue-paper.mjs",
+    "paper:worker": "node scripts/process-paper-worker.mjs",
     "paper:process": "node scripts/process-paper-queue.mjs --all",
     "paper:ingest": "node scripts/paper-fetch-ingest.mjs --url",
     "paper:ingest-summary": "node scripts/paper-fetch-ingest.mjs --summarize --url",
