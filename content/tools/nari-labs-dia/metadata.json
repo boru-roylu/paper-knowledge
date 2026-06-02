@@ -1,0 +1,19 @@
+{
+  "tool_key": "nari-labs-dia",
+  "title": "Dia",
+  "owner": "Nari Labs",
+  "repo": "nari-labs/dia",
+  "url": "https://github.com/nari-labs/dia",
+  "homepage": "https://huggingface.co/nari-labs/Dia-1.6B-0626",
+  "created": "2026-06-02",
+  "kind": "GitHub repo / TTS model",
+  "description": "Open-source 1.6B TTS model for realistic dialogue generation from transcripts, including multi-speaker dialogue and nonverbal events.",
+  "tags": [
+    "tts",
+    "speech-llm",
+    "dialogue",
+    "tool",
+    "project-full-duplex-data",
+    "project-tts-data-pipeline"
+  ]
+}

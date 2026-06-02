@@ -1,0 +1,18 @@
+{
+  "tool_key": "resemble-ai-chatterbox",
+  "title": "Chatterbox TTS",
+  "owner": "Resemble AI",
+  "repo": "resemble-ai/chatterbox",
+  "url": "https://github.com/resemble-ai/chatterbox",
+  "homepage": "https://resemble-ai.github.io/chatterbox_demopage/",
+  "created": "2026-06-02",
+  "kind": "GitHub repo / TTS model family",
+  "description": "Open-source TTS model family from Resemble AI, including Turbo, multilingual, and original English Chatterbox models.",
+  "tags": [
+    "tts",
+    "speech-llm",
+    "audio-data",
+    "tool",
+    "project-tts-data-pipeline"
+  ]
+}

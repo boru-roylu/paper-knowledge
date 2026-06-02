@@ -1,16 +1,18 @@
 ---
 paper_key: paper_1780385949770
 canonical_id: "https://jordandarefsky.com/blog/2025/echo/"
-title: "Echo | Jordan Darefsky"
-year: 2026
-venue: "arXiv preprint"
-url: "https://jordandare.github.io/blog/2025/echo/"
+title: "Echo-TTS"
+year: 2025
+venue: "Blog / GitHub release"
+url: "https://jordandarefsky.com/blog/2025/echo/"
+repo_url: "https://github.com/jordandare/echo-tts"
 pdf_url: ""
 status: read
 rating: 4
 tags:
   - speech-llm
   - speech-data
+  - tts
   - project-tts-data-pipeline
 created: 2026-06-02
 ---
@@ -18,90 +20,116 @@ created: 2026-06-02
 
 <div class="generation-note">
 
-- Paper summary model: `gpt-5.4-mini`
+- Paper summary model: `manual README update`
+- Note: GitHub repo link was provided by WhisperD.
 
 </div>
 
 ## Links
-- [arXiv abstract](https://jordandare.github.io/blog/2025/echo/)
-- [PDF]()
+- [Blog post](https://jordandarefsky.com/blog/2025/echo/)
+- [GitHub repo: echo-tts](https://github.com/jordandare/echo-tts)
+- [Hugging Face model: jordand/echo-tts-base](https://huggingface.co/jordand/echo-tts-base)
+- [Hugging Face demo: echo-tts-preview](https://huggingface.co/spaces/jordand/echo-tts-preview)
+- [WhisperD prompt format reference](https://huggingface.co/jordand/whisper-d-v1a)
 
 ## 一句話總結
-目前可得 metadata 幾乎沒有內容，這篇 **Echo | Jordan Darefsky** 的主題、方法、資料與結果都無法從提供的 abstract / TeX excerpts 可靠辨識，因此只能暫時視為一篇資訊不足的 arXiv preprint。
+**Echo-TTS** 是 Jordan Darefsky 釋出的 multi-speaker text-to-speech model，可以用 speaker reference audio 做 voice conditioning，目標是用 text prompt 生成對應 speaker style 的語音。
 
 ## 這篇在解決什麼問題
-從提供的資料看不到 paper abstract、正文摘錄或清楚的 task 設定，所以無法確認它在解決哪個具體問題。
+Echo-TTS 比較像是 blog / open-source release，而不是一般 arXiv paper。它主要關心的是：
 
-可確定的是：
-- 這是一篇 2026 年的 **arXiv preprint**
-- 目前沒有可用的 abstract
-- 也沒有提供任何 TeX excerpt 內容可供推斷方法、資料或實驗
+- 給定 text prompt 和 speaker reference audio，生成符合目標 speaker 的 speech
+- 讓 inference workflow 可以直接從 Hugging Face model / Gradio demo / Python API 使用
+- 支援較低 VRAM 的本地生成設定
 
-因此，這篇的研究問題、應用場景與貢獻都無法被可靠摘要。
+目前 repo README 顯示它需要 Python 3.10+，以及至少 8GB VRAM 的 CUDA GPU。
 
 ## 核心方法
-未能從提供的內容辨識核心方法。
+從 README 可以確認的重點：
 
-目前只能說：
-- 沒有抽取到 model architecture
-- 沒有 training objective
-- 沒有 dataset / benchmark 線索
-- 沒有可驗證的 experimental pipeline
+- model 是 multi-speaker TTS，支援 speaker reference conditioning
+- generation 最多約 30 秒 audio，對應 640 latents
+- 可以用較短 reference clip，例如 10 秒左右，來做 speaker conditioning
+- sampling 中有 text guidance 和 speaker guidance 相關參數
+- 有 Force Speaker / speaker KV scaling 的設定，用來減少 out-of-distribution text 造成 speaker drift 的問題
 
-如果你後續補上 abstract、section excerpt 或 PDF 內容，才有可能整理出方法重點。
+README 也提到 model release 是 fully fine-tuned model，不是 blog 裡描述的 LoRA。
 
 ## Training / Data
-目前沒有提供可用資訊，無法確認：
-- 使用什麼 dataset
-- 是否有 labeled / unlabeled data
-- 是否涉及 speech、dialogue、TTS 或其他 domain
-- training setup、loss、augmentation、filtering 規則
+目前 README 沒有完整列出 training data recipe，因此這部分還需要回頭讀 blog post 或更完整的 technical note。
+
+可確定的是 text prompt format 來自 **WhisperD**：
+
+- prompt 使用 `[S1] ...` 這類 speaker-marked format
+- comma 通常會作為 pause
+- exclamation mark 或比較 expressive 的 punctuation 可能增加表現力，但也可能降低品質
+- included text presets 與 WhisperD transcription style 在 style 上較接近
+
+這點對你的 TTS data pipeline 有直接關係，因為它暗示 training / inference prompt style 會影響 TTS controllability 和 speech quality。
 
 ## 主要結果
-未找到可整理的實驗結果、benchmark、ablation 或 SOTA claim。
+README 沒有提供 formal benchmark 或 ablation，因此目前不能把它當成有完整實驗結果的 paper summary。
+
+更適合把它標成：
+
+- repo / model release
+- 可實驗的 TTS baseline
+- 與 WhisperD transcription style 相關的 prompt-format reference
 
 ## Project relevance
-- **project-full-duplex-data**：目前無法判定
-- **project-tts-data-pipeline**：目前無法判定
+- **project-tts-data-pipeline**：高度相關。Echo-TTS 的 prompt format、speaker reference conditioning、punctuation handling、speaker drift 問題，都可以作為設計 TTS data cleaning / transcript formatting / inference control 的參考。
+- **project-full-duplex-data**：中度相關。它目前主要是 single-speaker conditioned TTS，但 `[S1]` prompt format 和 reference-conditioned generation 可能延伸到 multi-speaker / dialogue synthesis。
 
 ## Related papers in my pool
-目前 pool 裡沒有明顯直接相關的已讀 paper。
+可以和目前 pool 裡的 TTS / speech generation papers 一起比較：
+
+- **Seed-TTS**：同樣是 high-quality speech generation / TTS model family，可以比較 prompt format、speaker conditioning 和 release constraints。
+- **PilotTTS**：更偏 modular TTS recipe，可用來比較 Echo-TTS 的 practical recipe 是否完整。
+- **RobustSpeechFlow**：若之後加入，適合比較 content fidelity、skip / repeat error mitigation。
 
 ## OpenReview / reviewer discussion
-未找到公開 OpenReview review/rebuttal context。
+目前沒有找到公開 OpenReview review/rebuttal context。這是一個 blog / GitHub / Hugging Face release，不是 OpenReview-hosted paper。
 
 ## 我該不該細讀
-**目前不建議細讀。**
-原因是這份 metadata 與附帶內容幾乎沒有實質資訊，無法判斷 paper 是否與你的 project 相關。
+**建議保留並做中度細讀。**
 
-比較實際的做法是：
-- 先補齊 abstract 或 PDF
-- 若你想篩選 project 相關性，再看是否包含 speech / dialogue / data pipeline / filtering / overlap / conversation generation 等關鍵詞
-- 在沒有更多內容前，這篇可先標記為 **unknown / not enough info**
+原因是它不是完整 paper，但 repo 對你的 TTS data pipeline 很實用，尤其是：
+
+- WhisperD-style transcript format
+- speaker reference conditioning
+- prompt punctuation 對 expressiveness / quality 的影響
+- speaker drift 與 Force Speaker control
+- low-VRAM inference settings
+
+如果要進一步用於研究設計，下一步應該讀 blog post 和 inference code，而不是只看 README。
 
 ## 可能的弱點 / open questions
-- 缺少 abstract 與正文，無法驗證主張
-- 無法判斷是否有新方法、只是 blog-style page，或是 placeholder
-- 無法確認是否與 speech / dialogue / data pipeline 有關
-- 無法評估貢獻、實驗嚴謹性與可重現性
+- README 沒有 formal benchmark，無法量化品質
+- training data recipe 不完整
+- non-commercial output/license constraints 需要注意
+- blockwise generation README 說尚未 thoroughly tested
+- prompt style 對 quality 的影響目前比較像 engineering note，還不是 systematized evaluation
 
 ## Tags
-- unknown
-- insufficient-metadata
-- arXiv-preprint
-- needs-full-text
+- tts
+- speaker-conditioning
+- whisperd
+- speech-data
+- project-tts-data-pipeline
 
 ## Concepts
-- metadata-only summary
-- information missing
-- research triage
+- speaker reference conditioning
+- WhisperD transcription style
+- prompt punctuation control
+- speaker drift
+- blockwise generation
 
 ## Citation
 ```bibtex
-@article{crossrefmeta2026echojordandarefsky,
-  title={Echo | Jordan Darefsky},
-  author={source: "crossref_meta"},
-  journal={arXiv preprint},
-  year={2026}
+@misc{darefsky2025echo,
+  author = {Darefsky, Jordan},
+  title = {Echo-TTS},
+  year = {2025},
+  url = {https://jordandarefsky.com/blog/2025/echo/}
 }
 ```

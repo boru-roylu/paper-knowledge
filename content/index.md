@@ -22,20 +22,22 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="dialogue">dialogue</button>
     <button type="button" data-paper-tag="restoration">restoration</button>
     <button type="button" data-paper-tag="separation">separation</button>
+    <button type="button" data-paper-tag="tool">tool</button>
     <button type="button" data-paper-tag="turn-taking">turn taking</button>
+    <button type="button" data-paper-tag="whisperd">whisperd</button>
   </div>
 </div>
 
 <div class="paper-list">
-<div class="paper-row" data-tags="speech-llm speech-data project-tts-data-pipeline" data-search="Echo | Jordan Darefsky paper_1780385949770 2026-06-02 2026 arXiv preprint https://jordandarefsky.com/blog/2025/echo/ speech-llm speech-data project-tts-data-pipeline">
-  <div class="paper-date">2026-06-02</div>
-  <div class="paper-main"><a class="internal" href="./papers/paper_1780385949770/">Echo | Jordan Darefsky</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>
-  <div class="paper-tags"><a class="tag-link internal" href="./tags/speech-llm/">#speech-llm</a> <a class="tag-link internal" href="./tags/speech-data/">#speech-data</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a></div>
-</div>
 <div class="paper-row" data-tags="speech-llm full-duplex project-full-duplex-data" data-search="PersonaPlex: Voice and Role Control for Full Duplex Conversational Speech Models arxiv_2602_06053 2026-06-02 2026 arXiv preprint arxiv:2602.06053 speech-llm full-duplex project-full-duplex-data">
   <div class="paper-date">2026-06-02</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2602_06053/">PersonaPlex: Voice and Role Control for Full Duplex Conversational Speech Models</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>
   <div class="paper-tags"><a class="tag-link internal" href="./tags/speech-llm/">#speech-llm</a> <a class="tag-link internal" href="./tags/full-duplex/">#full-duplex</a> <a class="tag-link internal" href="./tags/project-full-duplex-data/">#project-full-duplex-data</a></div>
+</div>
+<div class="paper-row" data-tags="speech-llm speech-data tts project-tts-data-pipeline" data-search="Echo-TTS paper_1780385949770 2026-06-02 2025 Blog / GitHub release https://jordandarefsky.com/blog/2025/echo/ speech-llm speech-data tts project-tts-data-pipeline">
+  <div class="paper-date">2026-06-02</div>
+  <div class="paper-main"><a class="internal" href="./papers/paper_1780385949770/">Echo-TTS</a> <span class="paper-meta">(2025, Blog / GitHub release)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/speech-llm/">#speech-llm</a> <a class="tag-link internal" href="./tags/speech-data/">#speech-data</a> <a class="tag-link internal" href="./tags/tts/">#tts</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a></div>
 </div>
 <div class="paper-row" data-tags="speech-llm full-duplex project-full-duplex-data" data-search="SALMONN-omni: A Codec-free Speech LLM\\ for Full-duplex Listening and Speaking arxiv_2505_17060 2026-06-02 2025 arXiv preprint arxiv:2505.17060 speech-llm full-duplex project-full-duplex-data">
   <div class="paper-date">2026-06-02</div>
@@ -120,6 +122,29 @@ title: Paper Knowledge
 </div>
 
 <script src="./static/paper-filter.js?v=2" defer></script>
+
+## Tools / Repos / Notes
+
+<div class="paper-list tool-list">
+<div class="paper-row" data-tags="tts speech-llm audio-data tool project-tts-data-pipeline" data-search="Chatterbox TTS resemble-ai-chatterbox 2026-06-02 GitHub repo / TTS model family resemble-ai/chatterbox Open-source TTS model family from Resemble AI, including Turbo, multilingual, and original English Chatterbox models. tts speech-llm audio-data tool project-tts-data-pipeline">
+  <div class="paper-date">2026-06-02</div>
+  <div class="paper-main"><a class="internal" href="./tools/resemble-ai-chatterbox/">Chatterbox TTS</a> <span class="paper-meta">(GitHub repo / TTS model family, resemble-ai/chatterbox)</span></div>
+  <div class="paper-summary">Open-source TTS model family from Resemble AI, including Turbo, multilingual, and original English Chatterbox models.</div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/tts/">#tts</a> <a class="tag-link internal" href="./tags/speech-llm/">#speech-llm</a> <a class="tag-link internal" href="./tags/audio-data/">#audio-data</a> <a class="tag-link internal" href="./tags/tool/">#tool</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a></div>
+</div>
+<div class="paper-row" data-tags="tts speech-llm dialogue tool project-full-duplex-data project-tts-data-pipeline" data-search="Dia nari-labs-dia 2026-06-02 GitHub repo / TTS model nari-labs/dia Open-source 1.6B TTS model for realistic dialogue generation from transcripts, including multi-speaker dialogue and nonverbal events. tts speech-llm dialogue tool project-full-duplex-data project-tts-data-pipeline">
+  <div class="paper-date">2026-06-02</div>
+  <div class="paper-main"><a class="internal" href="./tools/nari-labs-dia/">Dia</a> <span class="paper-meta">(GitHub repo / TTS model, nari-labs/dia)</span></div>
+  <div class="paper-summary">Open-source 1.6B TTS model for realistic dialogue generation from transcripts, including multi-speaker dialogue and nonverbal events.</div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/tts/">#tts</a> <a class="tag-link internal" href="./tags/speech-llm/">#speech-llm</a> <a class="tag-link internal" href="./tags/dialogue/">#dialogue</a> <a class="tag-link internal" href="./tags/tool/">#tool</a> <a class="tag-link internal" href="./tags/project-full-duplex-data/">#project-full-duplex-data</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a></div>
+</div>
+<div class="paper-row" data-tags="tts speech-data diarization preprocessing whisperd project-full-duplex-data project-tts-data-pipeline" data-search="Parakeet and WhisperD jordandarefsky-parakeet-whisperd 2026-06-02 Technical blog / TTS data pipeline  Technical blog describing Parakeet, a conversational TTS model, and WhisperD, a fine-tuned Whisper model for speaker/event annotated podcast transcription. tts speech-data diarization preprocessing whisperd project-full-duplex-data project-tts-data-pipeline">
+  <div class="paper-date">2026-06-02</div>
+  <div class="paper-main"><a class="internal" href="./tools/jordandarefsky-parakeet-whisperd/">Parakeet and WhisperD</a> <span class="paper-meta">(Technical blog / TTS data pipeline)</span></div>
+  <div class="paper-summary">Technical blog describing Parakeet, a conversational TTS model, and WhisperD, a fine-tuned Whisper model for speaker/event annotated podcast transcription.</div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/tts/">#tts</a> <a class="tag-link internal" href="./tags/speech-data/">#speech-data</a> <a class="tag-link internal" href="./tags/diarization/">#diarization</a> <a class="tag-link internal" href="./tags/preprocessing/">#preprocessing</a> <a class="tag-link internal" href="./tags/whisperd/">#whisperd</a> <a class="tag-link internal" href="./tags/project-full-duplex-data/">#project-full-duplex-data</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a></div>
+</div>
+</div>
 
 ## Projects
 

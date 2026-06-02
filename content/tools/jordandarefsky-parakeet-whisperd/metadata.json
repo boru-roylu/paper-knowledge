@@ -1,0 +1,20 @@
+{
+  "tool_key": "jordandarefsky-parakeet-whisperd",
+  "title": "Parakeet and WhisperD",
+  "owner": "Jordan Darefsky, Ge Zhu, Zhiyao Duan",
+  "repo": "",
+  "url": "https://jordandarefsky.com/blog/2024/parakeet/#spotify-dataset-and-whisperd",
+  "homepage": "https://jordandarefsky.com/blog/2024/parakeet/",
+  "created": "2026-06-02",
+  "kind": "Technical blog / TTS data pipeline",
+  "description": "Technical blog describing Parakeet, a conversational TTS model, and WhisperD, a fine-tuned Whisper model for speaker/event annotated podcast transcription.",
+  "tags": [
+    "tts",
+    "speech-data",
+    "diarization",
+    "preprocessing",
+    "whisperd",
+    "project-full-duplex-data",
+    "project-tts-data-pipeline"
+  ]
+}

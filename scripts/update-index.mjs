@@ -2,7 +2,9 @@ import fs from "node:fs"
 import path from "node:path"
 
 const papersDir = path.resolve("content/papers")
+const toolsDir = path.resolve("content/tools")
 const papers = []
+const tools = []
 const coreTags = new Set([
   "speech-llm",
   "audio-reasoning",
@@ -30,6 +32,10 @@ function tagLabel(tag) {
 
 function pageHref(key) {
   return `./papers/${key}/`
+}
+
+function toolHref(key) {
+  return `./tools/${key}/`
 }
 
 function tagHref(tag) {
@@ -62,9 +68,31 @@ if (fs.existsSync(papersDir)) {
   }
 }
 
-papers.sort((a, b) => String(b.sortDate).localeCompare(String(a.sortDate)) || String(b.year).localeCompare(String(a.year)) || a.title.localeCompare(b.title))
+if (fs.existsSync(toolsDir)) {
+  for (const entry of fs.readdirSync(toolsDir, { withFileTypes: true })) {
+    if (!entry.isDirectory()) continue
+    const metaPath = path.join(toolsDir, entry.name, "metadata.json")
+    if (!fs.existsSync(metaPath)) continue
+    const meta = JSON.parse(fs.readFileSync(metaPath, "utf8"))
+    const tags = Array.isArray(meta.tags) ? meta.tags : []
+    tools.push({
+      key: meta.tool_key || entry.name,
+      title: meta.title || entry.name,
+      created: meta.created || "unknown",
+      sortDate: meta.created || "0000-00-00",
+      kind: meta.kind || "tool",
+      repo: meta.repo || "",
+      url: meta.url || "",
+      description: meta.description || "",
+      tags,
+    })
+  }
+}
 
-const allTags = [...new Set(papers.flatMap((p) => p.tags))].sort((a, b) => {
+papers.sort((a, b) => String(b.sortDate).localeCompare(String(a.sortDate)) || String(b.year).localeCompare(String(a.year)) || a.title.localeCompare(b.title))
+tools.sort((a, b) => String(b.sortDate).localeCompare(String(a.sortDate)) || a.title.localeCompare(b.title))
+
+const allTags = [...new Set([...papers.flatMap((p) => p.tags), ...tools.flatMap((t) => t.tags)])].sort((a, b) => {
   const ai = coreTags.has(a) ? 0 : 1
   const bi = coreTags.has(b) ? 0 : 1
   return ai - bi || a.localeCompare(b)
@@ -107,6 +135,27 @@ lines.push(
   "<script src=\"./static/paper-filter.js?v=2\" defer></script>",
   "",
 )
+
+if (tools.length) {
+  lines.push("## Tools / Repos / Notes", "", "<div class=\"paper-list tool-list\">")
+
+  for (const tool of tools) {
+    const suffix = [tool.kind, tool.repo].filter(Boolean).join(", ")
+    const haystack = esc([tool.title, tool.key, tool.created, tool.kind, tool.repo, tool.description, ...tool.tags].join(" "))
+    lines.push(`<div class="paper-row" data-tags="${esc(tool.tags.join(" "))}" data-search="${haystack}">`)
+    lines.push(`  <div class="paper-date">${esc(tool.created)}</div>`)
+    lines.push(`  <div class="paper-main"><a class="internal" href="${toolHref(tool.key)}">${esc(tool.title)}</a>${suffix ? ` <span class="paper-meta">(${esc(suffix)})</span>` : ""}</div>`)
+    if (tool.description) {
+      lines.push(`  <div class="paper-summary">${esc(tool.description)}</div>`)
+    }
+    if (tool.tags.length) {
+      lines.push(`  <div class="paper-tags">${tool.tags.map((tag) => `<a class="tag-link internal" href="${tagHref(tag)}">#${esc(tag)}</a>`).join(" ")}</div>`)
+    }
+    lines.push("</div>")
+  }
+
+  lines.push("</div>", "")
+}
 
 lines.push(
   "## Projects",

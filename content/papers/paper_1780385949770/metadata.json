@@ -2,19 +2,23 @@
   "paper_key": "paper_1780385949770",
   "canonical_id": "https://jordandarefsky.com/blog/2025/echo/",
   "arxiv_id": "",
-  "title": "Echo | Jordan Darefsky",
+  "title": "Echo-TTS",
   "authors": [
-    "source: \"crossref_meta\""
+    "Jordan Darefsky"
   ],
-  "venue": "arXiv preprint",
-  "year": 2026,
-  "abstract": "",
+  "venue": "Blog / GitHub release",
+  "year": 2025,
+  "abstract": "Echo-TTS is a multi-speaker text-to-speech model with speaker reference conditioning. The repository notes that its text prompt format follows WhisperD and that the model can generate up to roughly 30 seconds of audio from text and reference audio.",
   "primaryClass": "",
   "categories": [],
   "urls": {
     "abs": "https://jordandare.github.io/blog/2025/echo/",
     "pdf": "",
-    "source": ""
+    "source": "",
+    "repo": "https://github.com/jordandare/echo-tts",
+    "model": "https://huggingface.co/jordand/echo-tts-base",
+    "demo": "https://huggingface.co/spaces/jordand/echo-tts-preview",
+    "whisperd": "https://huggingface.co/jordand/whisper-d-v1a"
   },
   "local_paths": {
     "paper_fetch_json": "../../../cache/paper-fetch/paper_1780385949770/Echo_Jordan_Darefsky.both.json",
@@ -23,22 +27,28 @@
   "tags": [
     "speech-llm",
     "speech-data",
+    "tts",
     "project-tts-data-pipeline"
   ],
-  "concepts": [],
+  "concepts": [
+    "speaker reference conditioning",
+    "WhisperD prompt format",
+    "speaker drift",
+    "blockwise generation"
+  ],
   "status": "read",
   "created": "2026-06-02",
   "doi": "",
-  "publication_status": "Fetched from provider metadata; verify official venue if needed.",
-  "bibtex_key": "crossrefmeta2026echojordandarefsky",
-  "fetch_source": "crossref_meta",
+  "publication_status": "Blog / GitHub / Hugging Face release; not a formal arXiv paper.",
+  "bibtex_key": "darefsky2025echo",
+  "fetch_source": "manual_readme_update",
   "quality": {
     "has_fulltext": false,
     "token_estimate": 0,
     "content_kind": "metadata_only",
-    "has_abstract": false,
+    "has_abstract": true,
     "warnings": [
-      "Full text was not available; returning metadata and abstract only."
+      "This is a repo/blog release, not a formal paper ingestion."
     ],
     "source_trail": [
       "resolve:url",
@@ -96,6 +106,6 @@
     "asset_failures": [],
     "extraction_revision": 2
   },
-  "summary_model": "gpt-5.4-mini",
+  "summary_model": "manual README update",
   "citations": []
 }

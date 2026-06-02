@@ -222,13 +222,14 @@
     },
     {
       "id": "paper_1780385949770",
-      "title": "Echo | Jordan Darefsky",
-      "year": 2026,
-      "venue": "arXiv preprint",
+      "title": "Echo-TTS",
+      "year": 2025,
+      "venue": "Blog / GitHub release",
       "url": "../papers/paper_1780385949770/",
       "tags": [
         "speech-llm",
         "speech-data",
+        "tts",
         "project-tts-data-pipeline"
       ]
     }
