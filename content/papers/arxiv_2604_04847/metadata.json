@@ -1,0 +1,61 @@
+{
+  "paper_key": "arxiv_2604_04847",
+  "canonical_id": "arxiv:2604.04847",
+  "arxiv_id": "2604.04847",
+  "version": "latest",
+  "title": "Full-Duplex-Bench-v3: Benchmarking Tool Use for Full-Duplex Voice Agents Under Real-World Disfluency",
+  "authors": [
+    "Guan-Ting Lin",
+    "Chen Chen",
+    "Zhehuai Chen",
+    "Hung-yi Lee"
+  ],
+  "venue": "arXiv preprint",
+  "year": 2026,
+  "abstract": "We introduce Full-Duplex-Bench-v3 (FDB-v3), a benchmark for evaluating spoken language models under naturalistic speech conditions and multi-step tool use. Unlike prior work, our dataset consists entirely of real human audio annotated for five disfluency categories, paired with scenarios requiring chained API calls across four task domains. We evaluate six model configurations -- GPT-Realtime, Gemini Live 2.5, Gemini Live 3.1, Grok, Ultravox v0.7, and a traditional Cascaded pipeline (Whisper$\\rightarrow$GPT-4o$\\rightarrow$TTS) -- across accuracy, latency, and turn-taking dimensions. GPT-Realtime leads on Pass@1 (0.600) and interruption avoidance (13.5\\%); Gemini Live 3.1 achieves the fastest latency (4.25~s) but the lowest turn-take rate (78.0\\%); and the Cascaded baseline, despite a perfect turn-take rate, incurs the highest latency (10.12~s). Across all systems, self-correction handling and multi-step reasoning under hard scenarios remain the most consistent failure modes.",
+  "primaryClass": "eess.AS",
+  "categories": [
+    "eess.AS",
+    "cs.CL"
+  ],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2604.04847",
+    "pdf": "https://arxiv.org/pdf/2604.04847",
+    "source": "https://arxiv.org/src/2604.04847",
+    "demo": "https://daniellin94144.github.io/FDB-v3-demo/"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2604.04847-src.tar.gz",
+    "entrypoint": "source/acl_latex.tex"
+  },
+  "tags": [
+    "speech-llm",
+    "audio-reasoning",
+    "tts",
+    "full-duplex",
+    "speech-data",
+    "project-full-duplex-data",
+    "project-tts-data-pipeline"
+  ],
+  "concepts": [
+    "full-duplex voice agent",
+    "real-world disfluency",
+    "self-correction",
+    "state rollback",
+    "multi-step tool use",
+    "turn-taking",
+    "interruption rate",
+    "tool selection F1",
+    "argument accuracy",
+    "cascaded speech pipeline"
+  ],
+  "status": "read",
+  "created": "2026-06-02",
+  "doi": "10.48550/arXiv.2604.04847",
+  "publication_status": "No formal conference or journal reference found as of 2026-06-02",
+  "bibtex_key": "lin2026fullduplexbenchv3benchmarkingt",
+  "fetch_source": "arxiv_tex",
+  "summary_model": "Codex GPT-5",
+  "citations": []
+}

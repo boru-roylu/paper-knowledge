@@ -130,6 +130,22 @@
       ]
     },
     {
+      "id": "arxiv_2604_04847",
+      "title": "Full-Duplex-Bench-v3: Benchmarking Tool Use for Full-Duplex Voice Agents Under Real-World Disfluency",
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "url": "../papers/arxiv_2604_04847/",
+      "tags": [
+        "speech-llm",
+        "audio-reasoning",
+        "tts",
+        "full-duplex",
+        "speech-data",
+        "project-full-duplex-data",
+        "project-tts-data-pipeline"
+      ]
+    },
+    {
       "id": "arxiv_2604_09344",
       "title": "DialogueSidon: Recovering Full-Duplex Dialogue Tracks from In-the-Wild Dialogue Audio",
       "year": 2026,
