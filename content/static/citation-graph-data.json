@@ -219,6 +219,18 @@
         "asr",
         "project-tts-data-pipeline"
       ]
+    },
+    {
+      "id": "paper_1780385949770",
+      "title": "Echo | Jordan Darefsky",
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "url": "../papers/paper_1780385949770/",
+      "tags": [
+        "speech-llm",
+        "speech-data",
+        "project-tts-data-pipeline"
+      ]
     }
   ],
   "edges": [

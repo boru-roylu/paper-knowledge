@@ -27,6 +27,11 @@ title: Paper Knowledge
 </div>
 
 <div class="paper-list">
+<div class="paper-row" data-tags="speech-llm speech-data project-tts-data-pipeline" data-search="Echo | Jordan Darefsky paper_1780385949770 2026-06-02 2026 arXiv preprint https://jordandarefsky.com/blog/2025/echo/ speech-llm speech-data project-tts-data-pipeline">
+  <div class="paper-date">2026-06-02</div>
+  <div class="paper-main"><a class="internal" href="./papers/paper_1780385949770/">Echo | Jordan Darefsky</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/speech-llm/">#speech-llm</a> <a class="tag-link internal" href="./tags/speech-data/">#speech-data</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a></div>
+</div>
 <div class="paper-row" data-tags="speech-llm full-duplex project-full-duplex-data" data-search="PersonaPlex: Voice and Role Control for Full Duplex Conversational Speech Models arxiv_2602_06053 2026-06-02 2026 arXiv preprint arxiv:2602.06053 speech-llm full-duplex project-full-duplex-data">
   <div class="paper-date">2026-06-02</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2602_06053/">PersonaPlex: Voice and Role Control for Full Duplex Conversational Speech Models</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>

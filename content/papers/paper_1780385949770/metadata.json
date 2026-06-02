@@ -1,0 +1,101 @@
+{
+  "paper_key": "paper_1780385949770",
+  "canonical_id": "https://jordandarefsky.com/blog/2025/echo/",
+  "arxiv_id": "",
+  "title": "Echo | Jordan Darefsky",
+  "authors": [
+    "source: \"crossref_meta\""
+  ],
+  "venue": "arXiv preprint",
+  "year": 2026,
+  "abstract": "",
+  "primaryClass": "",
+  "categories": [],
+  "urls": {
+    "abs": "https://jordandare.github.io/blog/2025/echo/",
+    "pdf": "",
+    "source": ""
+  },
+  "local_paths": {
+    "paper_fetch_json": "../../../cache/paper-fetch/paper_1780385949770/Echo_Jordan_Darefsky.both.json",
+    "paper_fetch_markdown": "../../../cache/paper-fetch/paper_1780385949770/paper-fetch.md"
+  },
+  "tags": [
+    "speech-llm",
+    "speech-data",
+    "project-tts-data-pipeline"
+  ],
+  "concepts": [],
+  "status": "read",
+  "created": "2026-06-02",
+  "doi": "",
+  "publication_status": "Fetched from provider metadata; verify official venue if needed.",
+  "bibtex_key": "crossrefmeta2026echojordandarefsky",
+  "fetch_source": "crossref_meta",
+  "quality": {
+    "has_fulltext": false,
+    "token_estimate": 0,
+    "content_kind": "metadata_only",
+    "has_abstract": false,
+    "warnings": [
+      "Full text was not available; returning metadata and abstract only."
+    ],
+    "source_trail": [
+      "resolve:url",
+      "metadata:resolution_only",
+      "fallback:metadata_only"
+    ],
+    "trace": [
+      {
+        "stage": "resolve",
+        "component": "url",
+        "outcome": "info",
+        "code": null,
+        "message": null
+      },
+      {
+        "stage": "metadata",
+        "component": "resolution_only",
+        "outcome": "info",
+        "code": null,
+        "message": null
+      },
+      {
+        "stage": "fallback",
+        "component": "metadata_only",
+        "outcome": "info",
+        "code": null,
+        "message": null
+      }
+    ],
+    "token_estimate_breakdown": {
+      "abstract": 0,
+      "body": 0,
+      "refs": 0
+    },
+    "confidence": "low",
+    "flags": [],
+    "body_metrics": {
+      "char_count": 0,
+      "word_count": 0,
+      "body_block_count": 0,
+      "body_heading_count": 0,
+      "body_to_abstract_ratio": 0,
+      "explicit_body_container": false,
+      "post_abstract_body_run": false,
+      "figure_count": 0
+    },
+    "semantic_losses": {
+      "table_fallback_count": 0,
+      "table_lossy_count": 0,
+      "table_layout_degraded_count": 0,
+      "table_semantic_loss_count": 0,
+      "formula_fallback_count": 0,
+      "formula_missing_count": 0
+    },
+    "asset_failures": [],
+    "extraction_revision": 2
+  },
+  "summary_model": "gpt-5.4-mini",
+  "citations": []
+}
