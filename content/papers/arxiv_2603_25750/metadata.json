@@ -39,9 +39,18 @@
   "status": "read",
   "created": "2026-05-30",
   "doi": "10.48550/arXiv.2603.25750",
-  "publication_status": "No formal conference or journal reference found as of 2026-06-01",
+  "publication_status": "No formal conference or journal reference found as of 2026-06-02",
   "bibtex_key": "jung2026sommelierscalableopenmultiturn",
   "summary_model": "gpt-5.4-mini",
+  "openreview": {
+    "forum": "yc0HOnWubP",
+    "url": "https://openreview.net/forum?id=yc0HOnWubP",
+    "match_score": 1,
+    "notes_count": 0,
+    "local_path": "reviews/openreview.md",
+    "summary_local_path": "reviews/openreview-summary.md",
+    "summary_model": "gpt-5.5"
+  },
   "citations": [
     {
       "paper_key": "arxiv_2602_06053",
@@ -59,14 +68,5 @@
       "matched_first_author_last": "wang",
       "source_file": "source/main_new.bbl"
     }
-  ],
-  "openreview": {
-    "forum": "yc0HOnWubP",
-    "url": "https://openreview.net/forum?id=yc0HOnWubP",
-    "match_score": 1,
-    "notes_count": 0,
-    "local_path": "reviews/openreview.md",
-    "summary_local_path": "reviews/openreview-summary.md",
-    "summary_model": "gpt-5.5"
-  }
+  ]
 }
