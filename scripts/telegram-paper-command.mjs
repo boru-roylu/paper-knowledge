@@ -7,7 +7,15 @@ ensureDirs()
 
 const ROOT = process.cwd()
 const args = process.argv.slice(2)
-const command = (args[0] || "").replace(/^\//, "").toLowerCase()
+const commandAliases = {
+  paper_add: "add",
+  paper_status: "status",
+  pstatus: "status",
+  paper_queue: "queue",
+  pqueue: "queue",
+}
+const rawCommand = (args[0] || "").replace(/^\//, "").toLowerCase()
+const command = commandAliases[rawCommand] || rawCommand
 const urlRe = /https?:\/\/\S+|arxiv:\d{4}\.\d{4,5}(?:v\d+)?/gi
 
 function readJson(file, fallback) {
@@ -91,7 +99,7 @@ function add(urls) {
   const state = workerState()
   lines.push(state.running ? `Worker already running pid=${state.lock?.pid}.` : `Worker launched pid=${pid}.`)
   lines.push(`Pending: ${pending.length} / Total queued: ${afterRows.length}`)
-  lines.push("Use /status to check progress.")
+  lines.push("Use /paper_status to check progress.")
   console.log(lines.join("\n"))
 }
 
@@ -131,6 +139,6 @@ if (command === "add") {
 } else if (command === "queue") {
   queue()
 } else {
-  console.log("Supported commands: /add <url...>, /status, /queue")
+  console.log("Supported commands: /add <url...>, /paper_status, /paper_queue")
   process.exitCode = 2
 }
