@@ -1,0 +1,49 @@
+{
+  "paper_key": "arxiv_2605_30993",
+  "canonical_id": "arxiv:2605.30993",
+  "arxiv_id": "2605.30993",
+  "version": "latest",
+  "title": "SwanVoice: Expressive Long-Form Zero-Shot Speech Synthesis for Both Monologue and Dialogue",
+  "authors": [
+    "Ruiqi Li",
+    "Yu Zhang",
+    "Changhao Pan",
+    "Ke Lei",
+    "Xiang Yin",
+    "Cheng Yang"
+  ],
+  "venue": "arXiv preprint",
+  "year": 2026,
+  "abstract": "Zero-shot text-to-speech (TTS) has improved substantially for single-speaker synthesis, yet expressive long-form multi-speaker dialogue remains difficult. A common workaround is to synthesize each turn with a monologue TTS model and stitch the outputs together. This adds inference cost and often breaks acoustic consistency, conversational coherence, and affective continuity across turns. Recent dialogue TTS systems have begun to address this setting, but they still struggle to keep expressive coherence, controllable speaker switching, and monologue quality at the same time. We present SwanData-Speech and SwanVoice. SwanData-Speech builds monologue and dialogue corpora from in-the-wild audio, using Swan Forced Aligner for pause-aware word-level alignment and RobustMegaTTS3 for pronunciation-hard cases. Built on these data, SwanVoice is a zero-shot TTS model for 1--4 speakers, combining a 25 Hz VAE, raw-text conditioning with pause-aware symbols and pinyin substitution, and a flow-matching DiT with speaker-turn conditioning. Training starts from monologue speech, moves through mixed and real dialogue data, and then uses DiffusionNFT post-training with phone-level and speaker-similarity rewards. On SwanBench-Speech, SwanVoice obtains higher richness and hierarchy scores than all evaluated open-source baselines in both monologue and dialogue settings, while content accuracy remains the main limitation. Audio demos are available at https://swanaigc.github.io/#/swanvoice.",
+  "primaryClass": "cs.SD",
+  "categories": [
+    "cs.SD",
+    "eess.AS"
+  ],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2605.30993",
+    "pdf": "https://arxiv.org/pdf/2605.30993",
+    "source": "https://arxiv.org/src/2605.30993",
+    "project": "https://swanaigc.github.io/#/swanvoice"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2605.30993-src.tar.gz",
+    "entrypoint": "source/swanvoice.tex"
+  },
+  "tags": [
+    "speech-llm",
+    "tts",
+    "dialogue",
+    "speech-data",
+    "project-full-duplex-data",
+    "project-tts-data-pipeline"
+  ],
+  "concepts": [],
+  "status": "pending-summary",
+  "created": "2026-06-02",
+  "doi": "10.48550/arXiv.2605.30993",
+  "publication_status": "No formal conference or journal reference found as of 2026-06-02",
+  "bibtex_key": "li2026swanvoice",
+  "citations": []
+}

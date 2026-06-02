@@ -1,0 +1,43 @@
+{
+  "paper_key": "arxiv_2605_30748",
+  "canonical_id": "arxiv:2605.30748",
+  "arxiv_id": "2605.30748",
+  "version": "latest",
+  "title": "Chatterbox-Flash: Prior-Calibrated Block Diffusion for Streaming Zero-Shot TTS",
+  "authors": [
+    "Deokjin Seo",
+    "Gangin Park",
+    "Kihyun Nam"
+  ],
+  "venue": "arXiv preprint",
+  "year": 2026,
+  "abstract": "We present Chatterbox-Flash, a zero-shot text-to-speech model obtained by fine-tuning a pretrained autoregressive TTS decoder into a block-diffusion decoder, enabling parallel token generation within each block while retaining block-by-block streaming. We find that naively transferring mainstream block-diffusion decoding to discrete speech tokens degrades quality, as a long-tail token distribution biases parallel position selection toward a few high-frequency tokens. To mitigate this without architectural modification, we introduce two inference-time techniques: prior-calibrated scoring, which subtracts the block-level marginal token distribution, and an early-decoding schedule, which adaptively terminates iteration based on calibrated confidence. On standard zero-shot TTS benchmarks, Chatterbox-Flash attains high-fidelity synthesis comparable to strong autoregressive and non-autoregressive baselines, while supporting streaming inference with time-to-first-packet on par with streaming AR systems and substantially lower real-time factor. Code and audio samples are available at https://github.com/resemble-ai/chatterbox-flash.",
+  "primaryClass": "cs.SD",
+  "categories": [
+    "cs.SD",
+    "cs.AI",
+    "eess.AS"
+  ],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2605.30748",
+    "pdf": "https://arxiv.org/pdf/2605.30748",
+    "source": "https://arxiv.org/src/2605.30748"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2605.30748-src.tar.gz",
+    "entrypoint": "source/acl_latex.tex"
+  },
+  "tags": [
+    "speech-llm",
+    "tts",
+    "project-tts-data-pipeline"
+  ],
+  "concepts": [],
+  "status": "pending-summary",
+  "created": "2026-06-02",
+  "doi": "10.48550/arXiv.2605.30748",
+  "publication_status": "No formal conference or journal reference found as of 2026-06-02",
+  "bibtex_key": "seo2026chatterboxflashpriorcalibrated",
+  "citations": []
+}

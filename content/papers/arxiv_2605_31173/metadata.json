@@ -1,0 +1,44 @@
+{
+  "paper_key": "arxiv_2605_31173",
+  "canonical_id": "arxiv:2605.31173",
+  "arxiv_id": "2605.31173",
+  "version": "latest",
+  "title": "MindVoice: Reconstructing Intelligible Speech from Non-invasive Neural Signals with Pretrained Priors",
+  "authors": [
+    "Guangyin Bao",
+    "Taiping Zeng",
+    "Jianfeng Feng",
+    "Xiangyang Xue"
+  ],
+  "venue": "arXiv preprint",
+  "year": 2026,
+  "abstract": "Reconstructing continuous speech from non-invasive neural recordings is a fundamental problem for probing human auditory perception and building safe, scalable speech brain-computer interfaces. Despite recent progress, intelligible reconstruction remains elusive, as non-invasive recordings are inherently noisy, spatially blurred, and only partially preserve information about perceived speech. Existing methods directly map neural activity to entangled speech representations before synthesizing waveforms with neural vocoders, resulting in spectral-similar but unintelligible results. To overcome these limitations, we introduce MindVoice, a neuro-to-speech reconstruction framework that uses pretrained models to compensate for the incomplete semantic and acoustic information in neural recordings. MindVoice disentangles reconstruction into two complementary pathways: one recovers high-level semantic content, while the other estimates fine-grained acoustic attributes. These inferred representations are then fused with powerful speech generation models and in-context voice cloning to synthesize natural and intelligible utterances. Extensive experiments on EEG and MEG demonstrate that MindVoice substantially outperforms existing methods on various metrics. These results show that pretrained priors provide a principled way to bridge the gap between noisy neural recordings and natural speech, highlighting a promising attempt for auditory neuroscience research and non-invasive speech brain-computer interfaces.",
+  "primaryClass": "cs.SD",
+  "categories": [
+    "cs.SD",
+    "eess.AS"
+  ],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2605.31173",
+    "pdf": "https://arxiv.org/pdf/2605.31173",
+    "source": "https://arxiv.org/src/2605.31173"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2605.31173-src.tar.gz",
+    "entrypoint": "source/main.tex"
+  },
+  "tags": [
+    "speech-llm",
+    "tts",
+    "speech-data",
+    "project-tts-data-pipeline"
+  ],
+  "concepts": [],
+  "status": "pending-summary",
+  "created": "2026-06-02",
+  "doi": "10.48550/arXiv.2605.31173",
+  "publication_status": "No formal conference or journal reference found as of 2026-06-02",
+  "bibtex_key": "bao2026mindvoice",
+  "citations": []
+}

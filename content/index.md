@@ -29,10 +29,35 @@ title: Paper Knowledge
 </div>
 
 <div class="paper-list">
+<div class="paper-row" data-tags="speech-llm tts project-tts-data-pipeline" data-search="Chatterbox-Flash: Prior-Calibrated Block Diffusion for Streaming Zero-Shot TTS arxiv_2605_30748 2026-06-02 2026 arXiv preprint arxiv:2605.30748 speech-llm tts project-tts-data-pipeline">
+  <div class="paper-date">2026-06-02</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2605_30748/">Chatterbox-Flash: Prior-Calibrated Block Diffusion for Streaming Zero-Shot TTS</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/speech-llm/">#speech-llm</a> <a class="tag-link internal" href="./tags/tts/">#tts</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a></div>
+</div>
+<div class="paper-row" data-tags="speech-llm tts speech-data project-tts-data-pipeline" data-search="MindVoice: Reconstructing Intelligible Speech from Non-invasive Neural Signals with Pretrained Priors arxiv_2605_31173 2026-06-02 2026 arXiv preprint arxiv:2605.31173 speech-llm tts speech-data project-tts-data-pipeline">
+  <div class="paper-date">2026-06-02</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2605_31173/">MindVoice: Reconstructing Intelligible Speech from Non-invasive Neural Signals with Pretrained Priors</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/speech-llm/">#speech-llm</a> <a class="tag-link internal" href="./tags/tts/">#tts</a> <a class="tag-link internal" href="./tags/speech-data/">#speech-data</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a></div>
+</div>
 <div class="paper-row" data-tags="speech-llm full-duplex project-full-duplex-data" data-search="PersonaPlex: Voice and Role Control for Full Duplex Conversational Speech Models arxiv_2602_06053 2026-06-02 2026 arXiv preprint arxiv:2602.06053 speech-llm full-duplex project-full-duplex-data">
   <div class="paper-date">2026-06-02</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2602_06053/">PersonaPlex: Voice and Role Control for Full Duplex Conversational Speech Models</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>
   <div class="paper-tags"><a class="tag-link internal" href="./tags/speech-llm/">#speech-llm</a> <a class="tag-link internal" href="./tags/full-duplex/">#full-duplex</a> <a class="tag-link internal" href="./tags/project-full-duplex-data/">#project-full-duplex-data</a></div>
+</div>
+<div class="paper-row" data-tags="speech-llm tts dialogue speech-data project-full-duplex-data project-tts-data-pipeline" data-search="SwanVoice: Expressive Long-Form Zero-Shot Speech Synthesis for Both Monologue and Dialogue arxiv_2605_30993 2026-06-02 2026 arXiv preprint arxiv:2605.30993 speech-llm tts dialogue speech-data project-full-duplex-data project-tts-data-pipeline">
+  <div class="paper-date">2026-06-02</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2605_30993/">SwanVoice: Expressive Long-Form Zero-Shot Speech Synthesis for Both Monologue and Dialogue</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/speech-llm/">#speech-llm</a> <a class="tag-link internal" href="./tags/tts/">#tts</a> <a class="tag-link internal" href="./tags/dialogue/">#dialogue</a> <a class="tag-link internal" href="./tags/speech-data/">#speech-data</a> <a class="tag-link internal" href="./tags/project-full-duplex-data/">#project-full-duplex-data</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a></div>
+</div>
+<div class="paper-row" data-tags="speech-llm tts audio-data project-tts-data-pipeline" data-search="UniAudio-Token: Empowering Semantic Speech Tokenizers with General Audio Perception arxiv_2605_31521 2026-06-02 2026 arXiv preprint arxiv:2605.31521 speech-llm tts audio-data project-tts-data-pipeline">
+  <div class="paper-date">2026-06-02</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2605_31521/">UniAudio-Token: Empowering Semantic Speech Tokenizers with General Audio Perception</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/speech-llm/">#speech-llm</a> <a class="tag-link internal" href="./tags/tts/">#tts</a> <a class="tag-link internal" href="./tags/audio-data/">#audio-data</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a></div>
+</div>
+<div class="paper-row" data-tags="speech-llm tts audio-data project-tts-data-pipeline" data-search="UNISON: A Unified Sound Generation and Editing Framework via Deep LLM Fusion arxiv_2605_31530 2026-06-02 2026 arXiv preprint arxiv:2605.31530 speech-llm tts audio-data project-tts-data-pipeline">
+  <div class="paper-date">2026-06-02</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2605_31530/">UNISON: A Unified Sound Generation and Editing Framework via Deep LLM Fusion</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/speech-llm/">#speech-llm</a> <a class="tag-link internal" href="./tags/tts/">#tts</a> <a class="tag-link internal" href="./tags/audio-data/">#audio-data</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a></div>
 </div>
 <div class="paper-row" data-tags="speech-llm speech-data tts project-tts-data-pipeline" data-search="Echo-TTS paper_1780385949770 2026-06-02 2025 Blog / GitHub release https://jordandarefsky.com/blog/2025/echo/ speech-llm speech-data tts project-tts-data-pipeline">
   <div class="paper-date">2026-06-02</div>
