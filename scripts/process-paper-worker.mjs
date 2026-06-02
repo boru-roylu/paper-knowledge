@@ -47,7 +47,7 @@ function processAlive(pid) {
 function queueSummary() {
   const rows = queueRows()
   const processed = readJson(processedPath, {})
-  const pending = rows.filter((row) => processed[row.paper_key]?.status !== "done")
+  const pending = rows.filter((row) => !["done", "failed", "ignored"].includes(processed[row.paper_key]?.status))
   return { total: rows.length, pending: pending.length }
 }
 
@@ -89,7 +89,7 @@ function pendingRows() {
   for (const row of queueRows()) {
     if (seen.has(row.paper_key)) continue
     seen.add(row.paper_key)
-    if (processed[row.paper_key]?.status === "done") continue
+    if (["done", "failed", "ignored"].includes(processed[row.paper_key]?.status)) continue
     pending.push(row)
   }
   return limitArg > 0 ? pending.slice(0, limitArg) : pending

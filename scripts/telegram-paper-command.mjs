@@ -45,7 +45,22 @@ function processAlive(pid) {
 
 function pendingRows() {
   const processed = readJson(path.join(QUEUE, "processed.json"), {})
-  return queueRows().filter((row) => processed[row.paper_key]?.status !== "done")
+  return queueRows().filter((row) => !["done", "failed", "ignored"].includes(processed[row.paper_key]?.status))
+}
+
+function failedRows() {
+  const processed = readJson(path.join(QUEUE, "processed.json"), {})
+  return queueRows().filter((row) => processed[row.paper_key]?.status === "failed")
+}
+
+function isLikelyPaperUrl(url) {
+  return /arxiv\.org\/(?:abs|pdf|src)\//i.test(url)
+    || /^arxiv:\d{4}\.\d{4,5}/i.test(url)
+    || /openreview\.net\/forum/i.test(url)
+    || /aclanthology\.org\//i.test(url)
+    || /doi\.org\/10\./i.test(url)
+    || /^10\.\d{4,9}\//i.test(url)
+    || /\.pdf(?:$|[?#])/i.test(url)
 }
 
 function workerState() {
@@ -82,6 +97,16 @@ function add(urls) {
     console.log("Usage: /add <paper-url...>")
     return
   }
+  const unsupported = urls.filter((url) => !isLikelyPaperUrl(url))
+  urls = urls.filter(isLikelyPaperUrl)
+  if (!urls.length) {
+    console.log([
+      "No supported paper URLs found.",
+      "Supported: arXiv, OpenReview forum, ACL Anthology, DOI, direct PDF.",
+      unsupported.length ? `Ignored: ${unsupported.join(", ")}` : "",
+    ].filter(Boolean).join("\n"))
+    return
+  }
   const before = new Set(queueRows().map((row) => row.paper_key))
   const enqueue = spawnSync("npm", ["run", "paper:queue", "--", ...urls], { cwd: ROOT, encoding: "utf8" })
   if (enqueue.status !== 0) {
@@ -95,6 +120,7 @@ function add(urls) {
   const lines = []
   lines.push(`Queued ${urls.length} URL(s).`)
   for (const key of queuedKeys) lines.push(`${before.has(key) ? "Already queued" : "Queued"}: ${key}`)
+  for (const url of unsupported) lines.push(`Ignored unsupported URL: ${url}`)
   const pid = startWorker()
   const state = workerState()
   lines.push(state.running ? `Worker already running pid=${state.lock?.pid}.` : `Worker launched pid=${pid}.`)
@@ -105,6 +131,7 @@ function add(urls) {
 
 function status() {
   const pending = pendingRows()
+  const failed = failedRows()
   const rows = queueRows()
   const state = workerState()
   const statusEntries = Object.entries(state.status)
@@ -114,6 +141,7 @@ function status() {
   lines.push(state.running ? `Worker: running pid=${state.lock?.pid}` : "Worker: idle")
   if (state.worker.status) lines.push(`Last worker status: ${state.worker.status}`)
   lines.push(`Pending: ${pending.length} / Total queued: ${rows.length}`)
+  if (failed.length) lines.push(`Failed: ${failed.length}`)
   if (pending.length) lines.push(`Next: ${pending.slice(0, 5).map((row) => row.paper_key).join(", ")}`)
   if (statusEntries.length) {
     lines.push("Recent:")
