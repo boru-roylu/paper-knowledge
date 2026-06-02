@@ -1,7 +1,7 @@
 import { spawnSync } from "node:child_process"
 
 const remote = process.env.PAPER_REMOTE || "paper"
-const publishBranch = process.env.PAPER_PUBLISH_BRANCH || "paper-site"
+const publishBranch = process.env.PAPER_PUBLISH_BRANCH || "main"
 const remoteBranch = process.env.PAPER_REMOTE_BRANCH || "main"
 const doBuild = !process.argv.includes("--no-build")
 const messageArg = process.argv.includes("--message") ? process.argv[process.argv.indexOf("--message") + 1] : ""
@@ -39,6 +39,11 @@ function pacificTimestamp() {
   return `${byType.year}-${byType.month}-${byType.day} ${byType.hour}:${byType.minute} PT`
 }
 
+const currentBranch = output("git", ["branch", "--show-current"])
+if (currentBranch !== publishBranch) {
+  throw new Error(`Refusing to publish from ${currentBranch}; checkout ${publishBranch} first.`)
+}
+
 if (doBuild) {
   run("npm", ["run", "build:papers"])
 }
@@ -68,28 +73,6 @@ if (output("git", ["diff", "--cached", "--name-only"]).length === 0) {
 
 const message = messageArg || `Update paper knowledge ${pacificTimestamp()}`
 run("git", ["commit", "-m", message])
-
-const currentBranch = output("git", ["branch", "--show-current"])
-if (currentBranch === publishBranch) {
-  run("git", ["push", remote, `${publishBranch}:${remoteBranch}`])
-  run("git", ["push", remote, `${publishBranch}:${publishBranch}`])
-  console.log(`published ${output("git", ["rev-parse", "--short=12", "HEAD"])} to ${remote}/${remoteBranch}`)
-  process.exit(0)
-}
-
-const tree = output("git", ["rev-parse", "HEAD^{tree}"])
-let parent = ""
-try {
-  parent = output("git", ["rev-parse", "--verify", publishBranch])
-} catch {
-  // First publish on a new machine.
-}
-
-const commitArgs = parent ? ["commit-tree", tree, "-p", parent, "-m", message] : ["commit-tree", tree, "-m", message]
-const publishCommit = output("git", commitArgs)
-
-run("git", ["branch", "-f", publishBranch, publishCommit])
 run("git", ["push", remote, `${publishBranch}:${remoteBranch}`])
-run("git", ["push", remote, `${publishBranch}:${publishBranch}`])
 
-console.log(`published ${publishCommit.slice(0, 12)} to ${remote}/${remoteBranch}`)
+console.log(`published ${output("git", ["rev-parse", "--short=12", "HEAD"])} to ${remote}/${remoteBranch}`)
