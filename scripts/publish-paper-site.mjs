@@ -69,6 +69,14 @@ if (output("git", ["diff", "--cached", "--name-only"]).length === 0) {
 const message = messageArg || `Update paper knowledge ${pacificTimestamp()}`
 run("git", ["commit", "-m", message])
 
+const currentBranch = output("git", ["branch", "--show-current"])
+if (currentBranch === publishBranch) {
+  run("git", ["push", remote, `${publishBranch}:${remoteBranch}`])
+  run("git", ["push", remote, `${publishBranch}:${publishBranch}`])
+  console.log(`published ${output("git", ["rev-parse", "--short=12", "HEAD"])} to ${remote}/${remoteBranch}`)
+  process.exit(0)
+}
+
 const tree = output("git", ["rev-parse", "HEAD^{tree}"])
 let parent = ""
 try {
