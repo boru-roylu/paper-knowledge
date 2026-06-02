@@ -14,6 +14,21 @@
       ]
     },
     {
+      "id": "arxiv_2303_01664",
+      "title": "Miipher: A Robust Speech Restoration Model Integrating Self-Supervised Speech and Text Representations",
+      "year": 2023,
+      "venue": "IEEE WASPAA 2023 / arXiv",
+      "url": "../papers/arxiv_2303_01664/",
+      "tags": [
+        "speech-restoration",
+        "tts",
+        "asr",
+        "speech-data",
+        "data-cleaning",
+        "project-tts-data-pipeline"
+      ]
+    },
+    {
       "id": "arxiv_2405_19487",
       "title": "A Full-duplex Speech Dialogue Scheme Based On Large Language Model",
       "year": 2024,
@@ -61,6 +76,20 @@
       "url": "../papers/arxiv_2504_08528/",
       "tags": [
         "speech-llm"
+      ]
+    },
+    {
+      "id": "arxiv_2505_04457",
+      "title": "Miipher-2: A Universal Speech Restoration Model for Million-Hour Scale Data Restoration",
+      "year": 2025,
+      "venue": "arXiv preprint",
+      "url": "../papers/arxiv_2505_04457/",
+      "tags": [
+        "speech-restoration",
+        "speech-data",
+        "multilingual-speech",
+        "data-cleaning",
+        "project-tts-data-pipeline"
       ]
     },
     {
@@ -326,6 +355,10 @@
       "source": "arxiv_2504_08528",
       "target": "arxiv_2405_19487",
       "score": 0.97
+    },
+    {
+      "source": "arxiv_2505_04457",
+      "score": 1
     },
     {
       "source": "arxiv_2603_25750",

@@ -1,0 +1,67 @@
+{
+  "paper_key": "arxiv_2303_01664",
+  "canonical_id": "arxiv:2303.01664",
+  "arxiv_id": "2303.01664",
+  "version": "latest",
+  "title": "Miipher: A Robust Speech Restoration Model Integrating Self-Supervised Speech and Text Representations",
+  "authors": [
+    "Yuma Koizumi",
+    "Heiga Zen",
+    "Shigeki Karita",
+    "Yifan Ding",
+    "Kohei Yatabe",
+    "Nobuyuki Morioka",
+    "Yu Zhang",
+    "Wei Han",
+    "Ankur Bapna",
+    "Michiel Bacchiani"
+  ],
+  "venue": "IEEE WASPAA 2023 / arXiv",
+  "year": 2023,
+  "abstract": "Speech restoration (SR) is a task of converting degraded speech signals into high-quality ones. In this study, we propose a robust SR model called Miipher, and apply Miipher to a new SR application: increasing the amount of high-quality training data for speech generation by converting speech samples collected from the Web to studio-quality. To make our SR model robust against various degradation, we use (i) a speech representation extracted from w2v-BERT for the input feature, and (ii) a text representation extracted from transcripts via PnG-BERT as a linguistic conditioning feature. Experiments show that Miipher (i) is robust against various audio degradation and (ii) enable us to train a high-quality text-to-speech (TTS) model from restored speech samples collected from the Web. Audio samples are available at our demo page: google.github.io/df-conformer/miipher/",
+  "primaryClass": "cs.SD",
+  "categories": [
+    "cs.SD",
+    "cs.LG",
+    "eess.AS"
+  ],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2303.01664",
+    "pdf": "https://arxiv.org/pdf/2303.01664",
+    "source": "https://arxiv.org/src/2303.01664",
+    "demo": "https://google.github.io/df-conformer/miipher/"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2303.01664-src.tar.gz",
+    "entrypoint": "source/main.tex"
+  },
+  "tags": [
+    "speech-restoration",
+    "tts",
+    "asr",
+    "speech-data",
+    "data-cleaning",
+    "project-tts-data-pipeline"
+  ],
+  "concepts": [
+    "speech restoration",
+    "parametric re-synthesis",
+    "w2v-BERT feature",
+    "PnG-BERT conditioning",
+    "speaker embedding",
+    "WaveFit vocoder",
+    "content fidelity",
+    "speaker similarity",
+    "TTS data cleaning",
+    "LibriVox restoration"
+  ],
+  "status": "read",
+  "created": "2026-06-02",
+  "doi": "10.48550/arXiv.2303.01664",
+  "publication_status": "Associated with IEEE WASPAA 2023; arXiv version used for this note.",
+  "bibtex_key": "koizumi2023miipherarobustspeechrestoratio",
+  "fetch_source": "arxiv_tex",
+  "summary_model": "Codex GPT-5",
+  "citations": []
+}

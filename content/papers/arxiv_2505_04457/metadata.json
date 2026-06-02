@@ -1,0 +1,64 @@
+{
+  "paper_key": "arxiv_2505_04457",
+  "canonical_id": "arxiv:2505.04457",
+  "arxiv_id": "2505.04457",
+  "version": "latest",
+  "title": "Miipher-2: A Universal Speech Restoration Model for Million-Hour Scale Data Restoration",
+  "authors": [
+    "Shigeki Karita",
+    "Yuma Koizumi",
+    "Heiga Zen",
+    "Haruko Ishikawa",
+    "Robin Scheibler",
+    "Michiel Bacchiani"
+  ],
+  "venue": "arXiv preprint",
+  "year": 2025,
+  "abstract": "Training data cleaning is a new application for generative model-based speech restoration (SR). This paper introduces Miipher-2, an SR model designed for million-hour scale data, for training data cleaning for large-scale generative models like large language models. Key challenges addressed include generalization to unseen languages, operation without explicit conditioning (e.g., text, speaker ID), and computational efficiency. Miipher-2 utilizes a frozen, pre-trained Universal Speech Model (USM), supporting over 300 languages, as a robust, conditioning-free feature extractor. To optimize efficiency and minimize memory, Miipher-2 incorporates parallel adapters for predicting clean USM features from noisy inputs and employs the WaveFit neural vocoder for waveform synthesis. These components were trained on 3,000 hours of multi-lingual, studio-quality recordings with augmented degradations, while USM parameters remained fixed. Experimental results demonstrate Miipher-2's superior or comparable performance to conventional SR models in word-error-rate, speaker similarity, and both objective and subjective sound quality scores across all tested languages. Miipher-2 operates efficiently on consumer-grade accelerators, achieving a real-time factor of 0.0078, enabling the processing of a million-hour speech dataset in approximately three days using only 100 such accelerators.",
+  "primaryClass": "cs.SD",
+  "categories": [
+    "cs.SD",
+    "cs.CL",
+    "eess.AS"
+  ],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2505.04457",
+    "pdf": "https://arxiv.org/pdf/2505.04457",
+    "source": "https://arxiv.org/src/2505.04457",
+    "demo": "https://google.github.io/df-conformer/miipher2"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2505.04457-src.tar.gz",
+    "entrypoint": "source/main.tex"
+  },
+  "tags": [
+    "speech-restoration",
+    "speech-data",
+    "multilingual-speech",
+    "data-cleaning",
+    "project-tts-data-pipeline"
+  ],
+  "concepts": [
+    "universal speech restoration",
+    "conditioning-free inference",
+    "Universal Speech Model",
+    "BEST-RQ",
+    "parallel adapters",
+    "memory-efficient vocoder",
+    "WaveFit",
+    "real-time factor",
+    "dataset distillation",
+    "multilingual TTS data cleaning"
+  ],
+  "status": "read",
+  "created": "2026-06-02",
+  "doi": "10.48550/arXiv.2505.04457",
+  "publication_status": "No formal conference or journal reference found as of 2026-06-02",
+  "bibtex_key": "karita2025miipher2auniversalspeechrestor",
+  "fetch_source": "arxiv_tex",
+  "summary_model": "Codex GPT-5",
+  "citations": [
+    "arxiv_2303_01664"
+  ]
+}

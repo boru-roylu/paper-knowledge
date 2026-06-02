@@ -19,9 +19,12 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="speech-llm">speech llm</button>
     <button type="button" data-paper-tag="tts">tts</button>
     <button type="button" data-paper-tag="audio-data">audio data</button>
+    <button type="button" data-paper-tag="data-cleaning">data cleaning</button>
     <button type="button" data-paper-tag="dialogue">dialogue</button>
+    <button type="button" data-paper-tag="multilingual-speech">multilingual speech</button>
     <button type="button" data-paper-tag="restoration">restoration</button>
     <button type="button" data-paper-tag="separation">separation</button>
+    <button type="button" data-paper-tag="speech-restoration">speech restoration</button>
     <button type="button" data-paper-tag="tool">tool</button>
     <button type="button" data-paper-tag="turn-taking">turn taking</button>
     <button type="button" data-paper-tag="whisperd">whisperd</button>
@@ -69,10 +72,20 @@ title: Paper Knowledge
   <div class="paper-main"><a class="internal" href="./papers/paper_1780385949770/">Echo-TTS</a> <span class="paper-meta">(2025, Blog / GitHub release)</span></div>
   <div class="paper-tags"><a class="tag-link internal" href="./tags/speech-llm/">#speech-llm</a> <a class="tag-link internal" href="./tags/speech-data/">#speech-data</a> <a class="tag-link internal" href="./tags/tts/">#tts</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a></div>
 </div>
+<div class="paper-row" data-tags="speech-restoration speech-data multilingual-speech data-cleaning project-tts-data-pipeline" data-search="Miipher-2: A Universal Speech Restoration Model for Million-Hour Scale Data Restoration arxiv_2505_04457 2026-06-02 2025 arXiv preprint arxiv:2505.04457 speech-restoration speech-data multilingual-speech data-cleaning project-tts-data-pipeline">
+  <div class="paper-date">2026-06-02</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2505_04457/">Miipher-2: A Universal Speech Restoration Model for Million-Hour Scale Data Restoration</a> <span class="paper-meta">(2025, arXiv preprint)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/speech-restoration/">#speech-restoration</a> <a class="tag-link internal" href="./tags/speech-data/">#speech-data</a> <a class="tag-link internal" href="./tags/multilingual-speech/">#multilingual-speech</a> <a class="tag-link internal" href="./tags/data-cleaning/">#data-cleaning</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a></div>
+</div>
 <div class="paper-row" data-tags="speech-llm full-duplex project-full-duplex-data" data-search="SALMONN-omni: A Codec-free Speech LLM\\ for Full-duplex Listening and Speaking arxiv_2505_17060 2026-06-02 2025 arXiv preprint arxiv:2505.17060 speech-llm full-duplex project-full-duplex-data">
   <div class="paper-date">2026-06-02</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2505_17060/">SALMONN-omni: A Codec-free Speech LLM\\ for Full-duplex Listening and Speaking</a> <span class="paper-meta">(2025, arXiv preprint)</span></div>
   <div class="paper-tags"><a class="tag-link internal" href="./tags/speech-llm/">#speech-llm</a> <a class="tag-link internal" href="./tags/full-duplex/">#full-duplex</a> <a class="tag-link internal" href="./tags/project-full-duplex-data/">#project-full-duplex-data</a></div>
+</div>
+<div class="paper-row" data-tags="speech-restoration tts asr speech-data data-cleaning project-tts-data-pipeline" data-search="Miipher: A Robust Speech Restoration Model Integrating Self-Supervised Speech and Text Representations arxiv_2303_01664 2026-06-02 2023 IEEE WASPAA 2023 / arXiv arxiv:2303.01664 speech-restoration tts asr speech-data data-cleaning project-tts-data-pipeline">
+  <div class="paper-date">2026-06-02</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2303_01664/">Miipher: A Robust Speech Restoration Model Integrating Self-Supervised Speech and Text Representations</a> <span class="paper-meta">(2023, IEEE WASPAA 2023 / arXiv)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/speech-restoration/">#speech-restoration</a> <a class="tag-link internal" href="./tags/tts/">#tts</a> <a class="tag-link internal" href="./tags/asr/">#asr</a> <a class="tag-link internal" href="./tags/speech-data/">#speech-data</a> <a class="tag-link internal" href="./tags/data-cleaning/">#data-cleaning</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a></div>
 </div>
 <div class="paper-row" data-tags="speech-llm" data-search="Do Factual Recall Mechanisms Carry over from Text to Speech in Multimodal Language Models? arxiv_2605_22170 2026-06-01 2026 arXiv preprint arxiv:2605.22170 speech-llm">
   <div class="paper-date">2026-06-01</div>
