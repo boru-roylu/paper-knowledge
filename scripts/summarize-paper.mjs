@@ -24,6 +24,8 @@ function loadGatewayEnv() {
 
 const retryMax = Number(process.env.PAPER_LLM_RETRY_MAX || 6)
 const retryBaseMs = Number(process.env.PAPER_LLM_RETRY_BASE_MS || 2000)
+const texContextLimit = Number(process.env.PAPER_TEX_CONTEXT_CHARS || 120000)
+const texSectionChars = Number(process.env.PAPER_TEX_SECTION_CHARS || 9000)
 
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms))
@@ -51,17 +53,45 @@ function readTexContext() {
   const entry = meta.local_paths?.entrypoint ? path.join(paperDir, meta.local_paths.entrypoint) : null
   const files = []
   if (entry && fs.existsSync(entry)) files.push(entry)
-  for (const f of listFiles(sourceDir).filter((p) => p.endsWith(".tex"))) if (!files.includes(f)) files.push(f)
-  let text = files.slice(0, 6).map((f) => fs.readFileSync(f, "utf8")).join("\n\n")
-  text = text.replace(/^%.*$/gm, "")
-  const titleBlock = text.slice(0, 18000)
-  const sectionLines = [...text.matchAll(/\\(?:sub)*section\*?\{([^}]+)\}/g)].map((m) => m[0]).join("\n")
-  const conclusion = text.match(/\\section\*?\{(?:Conclusion|Conclusions|Discussion|Limitations|Challenges and Future Directions)[^}]*\}([\s\S]{0,12000})/i)?.[0] || ""
-  const tex = `${titleBlock}\n\nSECTION OUTLINE:\n${sectionLines}\n\nCONCLUSION-LIKE EXCERPT:\n${conclusion}`.slice(0, 36000)
+  for (const f of listFiles(sourceDir).filter((p) => p.endsWith(".tex")).sort()) if (!files.includes(f)) files.push(f)
+  let text = files.map((f) => `\n\n%% FILE: ${path.relative(sourceDir, f)}\n${fs.readFileSync(f, "utf8")}`).join("\n\n")
+  text = text
+    .replace(/^%.*$/gm, "")
+    .replace(/\\begin\{(figure\*?|table\*?|algorithm\*?|tikzpicture)\}[\s\S]*?\\end\{\1\}/gi, "")
+    .replace(/\n{3,}/g, "\n\n")
+  const titleBlock = text.slice(0, Math.min(26000, Math.floor(texContextLimit * 0.25)))
+  const sectionMatches = [...text.matchAll(/\\(?:(?:sub){0,2}section|paragraph)\*?\{([^}]+)\}/g)]
+  const sectionLines = sectionMatches.map((m) => m[0]).join("\n")
+  const sections = sectionMatches.map((m, i) => {
+    const start = m.index
+    const end = sectionMatches[i + 1]?.index ?? text.length
+    const title = m[1].replace(/\s+/g, " ").trim()
+    const body = text.slice(start, end)
+    return { title, body }
+  })
+  const priorityRe = /(abstract|introduction|background|related work|method|approach|model|architecture|system|pipeline|data|dataset|training|experiment|evaluation|result|analysis|ablation|discussion|limitation|conclusion|future)/i
+  const prioritySections = []
+  const otherSections = []
+  for (const section of sections) {
+    const excerpt = section.body.slice(0, priorityRe.test(section.title) ? texSectionChars : Math.floor(texSectionChars / 2))
+    ;(priorityRe.test(section.title) ? prioritySections : otherSections).push(`\n\n### ${section.title}\n${excerpt}`)
+  }
+  const tex = [
+    `SOURCE FILES READ (${files.length}):`,
+    files.map((f) => `- ${path.relative(sourceDir, f)}`).join("\n"),
+    "\nFRONT MATTER / EARLY CONTEXT:",
+    titleBlock,
+    "\nSECTION OUTLINE:",
+    sectionLines,
+    "\nPRIORITY SECTION EXCERPTS:",
+    prioritySections.join("\n"),
+    "\nOTHER SECTION EXCERPTS:",
+    otherSections.join("\n"),
+  ].join("\n").slice(0, texContextLimit)
   if (tex.trim()) return tex
   if (meta.local_paths?.paper_fetch_markdown) {
     const pf = path.resolve(paperDir, meta.local_paths.paper_fetch_markdown)
-    if (fs.existsSync(pf)) return fs.readFileSync(pf, "utf8").slice(0, 36000)
+    if (fs.existsSync(pf)) return fs.readFileSync(pf, "utf8").slice(0, texContextLimit)
   }
   return ""
 }
