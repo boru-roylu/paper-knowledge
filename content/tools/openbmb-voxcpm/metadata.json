@@ -1,0 +1,43 @@
+{
+  "tool_key": "openbmb-voxcpm",
+  "title": "VoxCPM / VoxCPM2",
+  "owner": "OpenBMB",
+  "repo": "OpenBMB/VoxCPM",
+  "url": "https://github.com/OpenBMB/VoxCPM",
+  "homepage": "https://voxcpm.readthedocs.io/en/latest/",
+  "created": "2026-06-03",
+  "kind": "GitHub repo / multilingual TTS model family",
+  "description": "Open-source tokenizer-free TTS model family. VoxCPM2 is a 2B multilingual TTS and voice cloning release supporting 30 languages, Voice Design, Controllable Voice Cloning, Ultimate Cloning, 48 kHz output, streaming, and production serving integrations.",
+  "urls": {
+    "repo": "https://github.com/OpenBMB/VoxCPM",
+    "model_hf": "https://huggingface.co/openbmb/VoxCPM2",
+    "model_modelscope": "https://modelscope.cn/models/OpenBMB/VoxCPM2",
+    "playground": "https://huggingface.co/spaces/OpenBMB/VoxCPM-Demo",
+    "demo": "https://openbmb.github.io/voxcpm2-demopage/",
+    "docs": "https://voxcpm.readthedocs.io/en/latest/",
+    "technical_report_voxcpm_0_5b": "https://arxiv.org/abs/2509.24650"
+  },
+  "tags": [
+    "tts",
+    "speech-llm",
+    "voice-cloning",
+    "multilingual-speech",
+    "tool",
+    "project-tts-data-pipeline",
+    "project-full-duplex-data"
+  ],
+  "concepts": [
+    "tokenizer-free TTS",
+    "diffusion autoregressive speech generation",
+    "AudioVAE V2",
+    "Voice Design",
+    "Controllable Voice Cloning",
+    "Ultimate Cloning",
+    "48 kHz speech generation",
+    "Nano-vLLM serving",
+    "vLLM-Omni OpenAI-compatible audio API"
+  ],
+  "status": "read",
+  "summary_model": "Codex GPT-5",
+  "fetch_source": "github_readme"
+}

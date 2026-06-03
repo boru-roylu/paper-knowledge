@@ -27,6 +27,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="speech-restoration">speech restoration</button>
     <button type="button" data-paper-tag="tool">tool</button>
     <button type="button" data-paper-tag="turn-taking">turn taking</button>
+    <button type="button" data-paper-tag="voice-cloning">voice cloning</button>
     <button type="button" data-paper-tag="whisperd">whisperd</button>
   </div>
 </div>
@@ -169,6 +170,12 @@ title: Paper Knowledge
 ## Tools / Repos / Notes
 
 <div class="paper-list tool-list">
+<div class="paper-row" data-tags="tts speech-llm voice-cloning multilingual-speech tool project-tts-data-pipeline project-full-duplex-data" data-search="VoxCPM / VoxCPM2 openbmb-voxcpm 2026-06-03 GitHub repo / multilingual TTS model family OpenBMB/VoxCPM Open-source tokenizer-free TTS model family. VoxCPM2 is a 2B multilingual TTS and voice cloning release supporting 30 languages, Voice Design, Controllable Voice Cloning, Ultimate Cloning, 48 kHz output, streaming, and production serving integrations. tts speech-llm voice-cloning multilingual-speech tool project-tts-data-pipeline project-full-duplex-data">
+  <div class="paper-date">2026-06-03</div>
+  <div class="paper-main"><a class="internal" href="./tools/openbmb-voxcpm/">VoxCPM / VoxCPM2</a> <span class="paper-meta">(GitHub repo / multilingual TTS model family, OpenBMB/VoxCPM)</span></div>
+  <div class="paper-summary">Open-source tokenizer-free TTS model family. VoxCPM2 is a 2B multilingual TTS and voice cloning release supporting 30 languages, Voice Design, Controllable Voice Cloning, Ultimate Cloning, 48 kHz output, streaming, and production serving integrations.</div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/tts/">#tts</a> <a class="tag-link internal" href="./tags/speech-llm/">#speech-llm</a> <a class="tag-link internal" href="./tags/voice-cloning/">#voice-cloning</a> <a class="tag-link internal" href="./tags/multilingual-speech/">#multilingual-speech</a> <a class="tag-link internal" href="./tags/tool/">#tool</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a> <a class="tag-link internal" href="./tags/project-full-duplex-data/">#project-full-duplex-data</a></div>
+</div>
 <div class="paper-row" data-tags="tts speech-llm audio-data tool project-tts-data-pipeline" data-search="Chatterbox TTS resemble-ai-chatterbox 2026-06-02 GitHub repo / TTS model family resemble-ai/chatterbox Open-source TTS model family from Resemble AI, including Turbo, multilingual, and original English Chatterbox models. tts speech-llm audio-data tool project-tts-data-pipeline">
   <div class="paper-date">2026-06-02</div>
   <div class="paper-main"><a class="internal" href="./tools/resemble-ai-chatterbox/">Chatterbox TTS</a> <span class="paper-meta">(GitHub repo / TTS model family, resemble-ai/chatterbox)</span></div>
