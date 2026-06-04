@@ -19,12 +19,15 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="speech-llm">speech llm</button>
     <button type="button" data-paper-tag="tts">tts</button>
     <button type="button" data-paper-tag="audio-data">audio data</button>
+    <button type="button" data-paper-tag="audio-generation">audio generation</button>
+    <button type="button" data-paper-tag="compositional-audio">compositional audio</button>
     <button type="button" data-paper-tag="data-cleaning">data cleaning</button>
     <button type="button" data-paper-tag="dialogue">dialogue</button>
     <button type="button" data-paper-tag="multilingual-speech">multilingual speech</button>
     <button type="button" data-paper-tag="restoration">restoration</button>
     <button type="button" data-paper-tag="separation">separation</button>
     <button type="button" data-paper-tag="speech-restoration">speech restoration</button>
+    <button type="button" data-paper-tag="text-to-audio">text to audio</button>
     <button type="button" data-paper-tag="tool">tool</button>
     <button type="button" data-paper-tag="turn-taking">turn taking</button>
     <button type="button" data-paper-tag="voice-cloning">voice cloning</button>
@@ -33,6 +36,11 @@ title: Paper Knowledge
 </div>
 
 <div class="paper-list">
+<div class="paper-row" data-tags="audio-generation text-to-audio tts speech-llm compositional-audio project-full-duplex-data project-tts-data-pipeline" data-search="Unified Synthesis of Compositional Speech and Sound from Free-Form Text Prompts arxiv_2605_28063 2026-06-03 2026 arXiv preprint arxiv:2605.28063 audio-generation text-to-audio tts speech-llm compositional-audio project-full-duplex-data project-tts-data-pipeline">
+  <div class="paper-date">2026-06-03</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2605_28063/">Unified Synthesis of Compositional Speech and Sound from Free-Form Text Prompts</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/audio-generation/">#audio-generation</a> <a class="tag-link internal" href="./tags/text-to-audio/">#text-to-audio</a> <a class="tag-link internal" href="./tags/tts/">#tts</a> <a class="tag-link internal" href="./tags/speech-llm/">#speech-llm</a> <a class="tag-link internal" href="./tags/compositional-audio/">#compositional-audio</a> <a class="tag-link internal" href="./tags/project-full-duplex-data/">#project-full-duplex-data</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a></div>
+</div>
 <div class="paper-row" data-tags="speech-llm tts project-tts-data-pipeline" data-search="Chatterbox-Flash: Prior-Calibrated Block Diffusion for Streaming Zero-Shot TTS arxiv_2605_30748 2026-06-02 2026 arXiv preprint arxiv:2605.30748 speech-llm tts project-tts-data-pipeline">
   <div class="paper-date">2026-06-02</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2605_30748/">Chatterbox-Flash: Prior-Calibrated Block Diffusion for Streaming Zero-Shot TTS</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>

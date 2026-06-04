@@ -1,0 +1,62 @@
+{
+  "paper_key": "arxiv_2605_28063",
+  "canonical_id": "arxiv:2605.28063",
+  "arxiv_id": "2605.28063",
+  "version": "v1",
+  "title": "Unified Synthesis of Compositional Speech and Sound from Free-Form Text Prompts",
+  "authors": [
+    "Yuyue Wang",
+    "Xihua Wang",
+    "Xin Cheng",
+    "Yijing Chen",
+    "Ruihua Song"
+  ],
+  "venue": "arXiv preprint",
+  "year": 2026,
+  "abstract": "Audio generation has made significant progress, yet synthesizing unified audio where speech and sounds are naturally composited remains a challenge. Current methods either rely on disjoint pipelines, which fail to capture fine-grained interactions, or require structured inputs and external text rewriting, which limits the flexibility of free-form text prompts. This paper introduces Free-Form-Text-Prompt-to-Unified-Audio generation and proposes PlanAudio, a unified autoregressive LLM-based framework with semantic latent chain-of-thought planning. It also creates PlanAudio-Bench for composite audio evaluation and evaluates speech, sound, and composite generation.",
+  "primaryClass": "cs.SD",
+  "categories": [
+    "cs.SD",
+    "cs.AI",
+    "cs.MM"
+  ],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2605.28063",
+    "pdf": "https://arxiv.org/pdf/2605.28063",
+    "source": "https://arxiv.org/src/2605.28063"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2605.28063v1-src.tar.gz",
+    "entrypoint": "source/main.tex"
+  },
+  "tags": [
+    "audio-generation",
+    "text-to-audio",
+    "tts",
+    "speech-llm",
+    "compositional-audio",
+    "project-full-duplex-data",
+    "project-tts-data-pipeline"
+  ],
+  "concepts": [
+    "free-form text prompt to unified audio",
+    "compositional speech and sound synthesis",
+    "Semantic Latent CoT",
+    "Audio Flamingo 3 Encoder",
+    "AudioCraft tokenizer",
+    "PlanAudio-Bench",
+    "semantic coverage factor",
+    "multi-scenario curriculum",
+    "temporal orchestration",
+    "speech-sound interaction"
+  ],
+  "status": "read",
+  "created": "2026-06-03",
+  "doi": "10.48550/arXiv.2605.28063",
+  "publication_status": "No formal conference or journal reference found as of 2026-06-04",
+  "bibtex_key": "wang2026unifiedsynthesiscompositional",
+  "fetch_source": "arxiv_tex",
+  "summary_model": "Codex GPT-5",
+  "citations": []
+}

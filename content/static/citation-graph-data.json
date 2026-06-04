@@ -253,6 +253,22 @@
       ]
     },
     {
+      "id": "arxiv_2605_28063",
+      "title": "Unified Synthesis of Compositional Speech and Sound from Free-Form Text Prompts",
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "url": "../papers/arxiv_2605_28063/",
+      "tags": [
+        "audio-generation",
+        "text-to-audio",
+        "tts",
+        "speech-llm",
+        "compositional-audio",
+        "project-full-duplex-data",
+        "project-tts-data-pipeline"
+      ]
+    },
+    {
       "id": "arxiv_2605_30748",
       "title": "Chatterbox-Flash: Prior-Calibrated Block Diffusion for Streaming Zero-Shot TTS",
       "year": 2026,
