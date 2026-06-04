@@ -1,0 +1,53 @@
+{
+  "paper_key": "microsoft_mai_thinking_1",
+  "canonical_id": "https://microsoft.ai/wp-content/uploads/2026/06/main_20260602_2.pdf",
+  "arxiv_id": "",
+  "title": "MAI-Thinking-1: Building a Hill-Climbing Machine",
+  "authors": [
+    "The Microsoft AI Team"
+  ],
+  "venue": "Microsoft AI technical report",
+  "year": 2026,
+  "abstract": "This technical report introduces MAI-Thinking-1, a 35B active / 1T total parameter sparse MoE reasoning model developed from scratch by Microsoft AI. The report frames model development as a system-level hill-climbing machine combining scaling-focused pre-training decisions, clean enterprise-grade data, reinforcement learning recipes, long-running RL infrastructure, evaluation suites, safety training, and red teaming.",
+  "primaryClass": "",
+  "categories": [
+    "technical-report",
+    "llm",
+    "reasoning"
+  ],
+  "urls": {
+    "abs": "",
+    "pdf": "https://microsoft.ai/wp-content/uploads/2026/06/main_20260602_2.pdf",
+    "source": ""
+  },
+  "local_paths": {
+    "pdf_cache": "../../../cache/pdfs/microsoft_main_20260602_2.pdf"
+  },
+  "tags": [
+    "llm",
+    "reasoning",
+    "reinforcement-learning",
+    "ai-infrastructure",
+    "tool-use"
+  ],
+  "concepts": [
+    "hill-climbing machine",
+    "sparse MoE",
+    "LatentMoE",
+    "local/global attention",
+    "pre-training data pipeline",
+    "deduplication",
+    "reinforcement learning climb",
+    "agentic coding",
+    "SWE-Bench Pro",
+    "safety-helpfulness tradeoff"
+  ],
+  "status": "read",
+  "created": "2026-06-04",
+  "doi": "",
+  "publication_status": "Microsoft AI technical report / PDF release.",
+  "bibtex_key": "microsoftai2026maithinking1",
+  "fetch_source": "pdf",
+  "summary_model": "Codex GPT-5",
+  "citations": []
+}

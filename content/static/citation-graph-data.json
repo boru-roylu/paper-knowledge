@@ -348,6 +348,20 @@
       ]
     },
     {
+      "id": "microsoft_mai_thinking_1",
+      "title": "MAI-Thinking-1: Building a Hill-Climbing Machine",
+      "year": 2026,
+      "venue": "Microsoft AI technical report",
+      "url": "../papers/microsoft_mai_thinking_1/",
+      "tags": [
+        "llm",
+        "reasoning",
+        "reinforcement-learning",
+        "ai-infrastructure",
+        "tool-use"
+      ]
+    },
+    {
       "id": "paper_1780385949770",
       "title": "Echo-TTS",
       "year": 2025,
