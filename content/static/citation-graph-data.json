@@ -129,6 +129,7 @@
         "reasoning",
         "speech-reasoning",
         "agentic-workflow",
+        "project-audio-model-evaluation",
         "project-full-duplex-data"
       ]
     },
@@ -280,6 +281,7 @@
         "tts",
         "speech-llm",
         "compositional-audio",
+        "project-audio-model-evaluation",
         "project-full-duplex-data",
         "project-tts-data-pipeline"
       ]
@@ -375,6 +377,7 @@
         "audio-evaluation",
         "tts",
         "reward-model",
+        "project-audio-model-evaluation",
         "project-full-duplex-data",
         "project-tts-data-pipeline"
       ]

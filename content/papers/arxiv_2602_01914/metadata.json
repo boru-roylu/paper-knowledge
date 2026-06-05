@@ -38,6 +38,7 @@
     "reasoning",
     "speech-reasoning",
     "agentic-workflow",
+    "project-audio-model-evaluation",
     "project-full-duplex-data"
   ],
   "concepts": [

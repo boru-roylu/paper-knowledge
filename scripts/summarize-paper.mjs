@@ -200,7 +200,8 @@ Sections 必須包含：
 ## Concepts
 ## Citation
 
-Project relevance 只做短分類，不要長 brainstorming。兩個 project：
+Project relevance 只做短分類，不要長 brainstorming。三個 project：
+- project-audio-model-evaluation: rubric-based audio/TTS/dialogue evaluation, open audio judges, reward models, grounding/attribution audits, benchmark design.
 - project-full-duplex-data: better full-duplex models/data from mono-channel dialogue, speaker separation, overlap/backchannel synthesis, dual-channel conversation generation.
 - project-tts-data-pipeline: English TTS data cleaning, overlap detection, transcription quality, filtering, data pipeline.
 

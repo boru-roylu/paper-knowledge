@@ -13,6 +13,7 @@ tags:
   - text-to-audio
   - tts
   - speech-llm
+  - project-audio-model-evaluation
   - project-full-duplex-data
   - project-tts-data-pipeline
 created: 2026-06-03
@@ -175,6 +176,7 @@ Data curriculum ablation 顯示 constant balanced sampling 最穩。若先訓練
 - speech-llm
 - compositional-audio
 - semantic-latent-cot
+- project-audio-model-evaluation
 - project-full-duplex-data
 - project-tts-data-pipeline
 

@@ -126,6 +126,7 @@ export function shortTags(meta) {
   if (/diari/.test(text)) tags.add("diarization")
   if (/full-duplex|duplex|turn-taking|backchannel|overlap/.test(text)) tags.add("full-duplex")
   if (/data|dataset|preprocess|pipeline|clean/.test(text)) tags.add("speech-data")
+  if (/judge|evaluation|evaluate|benchmark|rubric|reward|attribution|grounding|preference|metric/.test(text)) tags.add("project-audio-model-evaluation")
   if (/full-duplex|duplex|backchannel|overlap|spoken interaction|audio-to-speech/.test(text)) tags.add("project-full-duplex-data")
   if (/tts|asr|transcri|overlap|preprocess|clean|data|dataset/.test(text)) tags.add("project-tts-data-pipeline")
   return [...tags]

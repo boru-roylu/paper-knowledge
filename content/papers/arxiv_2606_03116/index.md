@@ -14,6 +14,7 @@ tags:
   - audio-evaluation
   - tts
   - reward-model
+  - project-audio-model-evaluation
   - project-full-duplex-data
   - project-tts-data-pipeline
 created: 2026-06-05
@@ -229,6 +230,7 @@ AnyAudio-Judge 的 rubric decomposition 很適合 full-duplex / dialogue audio�
 - tts
 - reward-model
 - rubric-judge
+- project-audio-model-evaluation
 - project-full-duplex-data
 - project-tts-data-pipeline
 

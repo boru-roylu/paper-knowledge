@@ -14,6 +14,7 @@ const coreTags = new Set([
   "asr",
   "diarization",
   "preprocessing",
+  "project-audio-model-evaluation",
   "project-full-duplex-data",
   "project-tts-data-pipeline",
 ])
@@ -160,6 +161,7 @@ if (tools.length) {
 lines.push(
   "## Projects",
   "",
+  "- [Project: Audio model evaluation](./tags/project-audio-model-evaluation/)",
   "- [Project: Full-duplex data and model](./tags/project-full-duplex-data/)",
   "- [Project: TTS data pipeline](./tags/project-tts-data-pipeline/)",
   "- [Citation graph](./citation-graph/)",

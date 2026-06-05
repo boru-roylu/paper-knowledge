@@ -15,6 +15,7 @@ tags:
   - reasoning
   - speech-reasoning
   - agentic-workflow
+  - project-audio-model-evaluation
   - project-full-duplex-data
 created: 2026-06-04
 ---
@@ -184,6 +185,7 @@ sum_i w_i * alpha_{i,j} * v_j = v_j * sum_i w_i * alpha_{i,j}
 - speech-reasoning
 - agentic-workflow
 - long-context
+- project-audio-model-evaluation
 - project-full-duplex-data
 
 ## Concepts

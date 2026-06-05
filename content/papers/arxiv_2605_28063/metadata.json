@@ -36,6 +36,7 @@
     "tts",
     "speech-llm",
     "compositional-audio",
+    "project-audio-model-evaluation",
     "project-full-duplex-data",
     "project-tts-data-pipeline"
   ],
