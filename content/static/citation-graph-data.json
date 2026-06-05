@@ -423,6 +423,12 @@
     },
     {
       "source": "arxiv_2505_04457",
+      "target": "arxiv_2303_01037",
+      "score": 1
+    },
+    {
+      "source": "arxiv_2505_04457",
+      "target": "arxiv_2303_01664",
       "score": 1
     },
     {
@@ -436,20 +442,23 @@
       "score": 0.97
     },
     {
-      "source": "arxiv_2605_31530",
+      "source": "arxiv_2605_30748",
+      "target": "arxiv_2406_02430",
+      "score": 0.97
+    },
+    {
+      "source": "arxiv_2605_30993",
       "target": "arxiv_2406_02430",
       "score": 1
     },
     {
-      "source": "arxiv_2606_03116",
+      "source": "arxiv_2605_31521",
+      "target": "arxiv_2406_02430",
       "score": 1
     },
     {
-      "source": "arxiv_2606_03116",
-      "score": 1
-    },
-    {
-      "source": "arxiv_2606_03116",
+      "source": "arxiv_2605_31530",
+      "target": "arxiv_2406_02430",
       "score": 1
     }
   ]

@@ -1,5 +1,7 @@
 import fs from "node:fs"
+import os from "node:os"
 import path from "node:path"
+import { execFileSync } from "node:child_process"
 
 const papersDir = path.resolve("content/papers")
 const staticDir = path.resolve("content/static")
@@ -45,6 +47,103 @@ function firstAuthorLastName(authors) {
   return normalizeTitle(clean).split(" ").at(-1) || ""
 }
 
+function sourceArchivePath(paper) {
+  const raw = paper.meta.local_paths?.source_archive
+  if (raw) {
+    const fromMeta = path.resolve(paper.dir, raw)
+    if (fs.existsSync(fromMeta)) return fromMeta
+    const fromRepo = path.resolve(raw)
+    if (fs.existsSync(fromRepo)) return fromRepo
+  }
+  if (paper.arxiv_id) {
+    const candidates = [
+      path.resolve("cache", "arxiv", `${paper.arxiv_id}-src.tar.gz`),
+      path.resolve("cache", "arxiv", `${paper.arxiv_id}v1-src.tar.gz`),
+    ]
+    for (const candidate of candidates) if (fs.existsSync(candidate)) return candidate
+  }
+  return ""
+}
+
+function extractSourceArchive(archive) {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), "paper-citations-"))
+  execFileSync("tar", ["-xzf", archive, "-C", dir], { stdio: "ignore" })
+  return dir
+}
+
+function readSourceRoots(paper) {
+  const roots = []
+  const sourceDir = path.join(paper.dir, "source")
+  if (fs.existsSync(sourceDir)) roots.push({ dir: sourceDir, label: "source", cleanup: false })
+  const archive = sourceArchivePath(paper)
+  if (archive) {
+    const extracted = extractSourceArchive(archive)
+    roots.push({ dir: extracted, label: `arxiv-src:${path.basename(archive)}`, cleanup: true })
+  }
+  return roots
+}
+
+function parseCitationKeys(tex) {
+  const keys = new Set()
+  const citeCommand = /\\(?:no)?cite[a-zA-Z*]*(?:\s*\[[^\]]*\]){0,2}\s*\{([^{}]+)\}/g
+  for (const m of tex.matchAll(citeCommand)) {
+    for (const key of m[1].split(",")) {
+      const clean = key.trim()
+      if (clean && clean !== "*") keys.add(clean)
+    }
+  }
+  return keys
+}
+
+function parseBibFields(body) {
+  const fields = {}
+  let i = body.indexOf(",")
+  if (i < 0) return fields
+  i += 1
+  while (i < body.length) {
+    while (i < body.length && /[\s,]/.test(body[i])) i++
+    const nameMatch = body.slice(i).match(/^([a-zA-Z][\w-]*)\s*=/)
+    if (!nameMatch) {
+      i++
+      continue
+    }
+    const name = nameMatch[1].toLowerCase()
+    i += nameMatch[0].length
+    while (i < body.length && /\s/.test(body[i])) i++
+    let value = ""
+    if (body[i] === "{") {
+      let depth = 0
+      const start = i + 1
+      for (; i < body.length; i++) {
+        if (body[i] === "{") depth++
+        else if (body[i] === "}") {
+          depth--
+          if (depth === 0) {
+            value = body.slice(start, i)
+            i++
+            break
+          }
+        }
+      }
+    } else if (body[i] === '"') {
+      const start = ++i
+      for (; i < body.length; i++) {
+        if (body[i] === '"' && body[i - 1] !== "\\") {
+          value = body.slice(start, i)
+          i++
+          break
+        }
+      }
+    } else {
+      const start = i
+      while (i < body.length && body[i] !== ",") i++
+      value = body.slice(start, i).trim()
+    }
+    fields[name] = value.trim()
+  }
+  return fields
+}
+
 function parseBibEntries(text) {
   const entries = []
   let i = 0
@@ -62,19 +161,18 @@ function parseBibEntries(text) {
         if (depth === 0) break
       }
     }
-    const raw = text.slice(at, j + 1)
-    const body = raw.slice(open + 1, -1)
-    const fields = {}
-    for (const m of body.matchAll(/([a-zA-Z][\w-]*)\s*=\s*(\{(?:[^{}]|\{[^{}]*\})*\}|"[^"]*"|[^,\n]+)\s*,?/g)) {
-      fields[m[1].toLowerCase()] = m[2].replace(/^["{]|["}]$/g, "").trim()
-    }
+    const body = text.slice(open + 1, j)
+    const key = body.match(/^\s*([^,\s]+)\s*,/)?.[1] || ""
+    const fields = parseBibFields(body)
+    const refText = Object.values(fields).join(" ")
     if (fields.title) {
       entries.push({
+        key,
         title: stripLatex(fields.title),
         authors: fields.author || "",
         first_author_last: firstAuthorLastName(fields.author || ""),
         year: fields.year || "",
-        arxiv_id: fields.eprint || fields.url?.match(/arxiv\.org\/abs\/([0-9]{4}\.[0-9]{4,5})/i)?.[1] || "",
+        arxiv_id: fields.eprint || refText.match(/arxiv[:.\/ ]+([0-9]{4}\.[0-9]{4,5})/i)?.[1] || fields.url?.match(/arxiv\.org\/abs\/([0-9]{4}\.[0-9]{4,5})/i)?.[1] || "",
       })
     }
     i = Math.max(j + 1, open + 1)
@@ -86,10 +184,13 @@ function parseBblEntries(text) {
   const chunks = text.split(/\\bibitem(?:\[[^\]]*\])?\{[^}]+\}/g).slice(1)
   return chunks.map((chunk) => {
     const blocks = chunk.split(/\\newblock/g).map((s) => stripLatex(s).replace(/\s+/g, " ").trim()).filter(Boolean)
+    const quotedTitle = chunk.match(/``([\s\S]*?),''/)?.[1] || chunk.match(/"([^"]+)"/)?.[1] || ""
+    const title = blocks[1] || stripLatex(quotedTitle).replace(/\s+/g, " ").trim()
+    const authors = blocks[0] || stripLatex(chunk.split(/``|"/)[0] || "").replace(/\s+/g, " ").trim()
     return {
-      title: blocks[1] || "",
-      authors: blocks[0] || "",
-      first_author_last: firstAuthorLastName(blocks[0] || ""),
+      title,
+      authors,
+      first_author_last: firstAuthorLastName(authors),
       year: chunk.match(/\b(19|20)[0-9]{2}\b/)?.[0] || "",
       arxiv_id: chunk.match(/arxiv[:.\/ ]+([0-9]{4}\.[0-9]{4,5})/i)?.[1] || "",
     }
@@ -135,12 +236,38 @@ function readPapers() {
 }
 
 function readReferences(paper) {
-  const sourceDir = path.join(paper.dir, "source")
-  const files = listFiles(sourceDir).filter((f) => /\.(bib|bbl)$/i.test(f))
+  const roots = readSourceRoots(paper)
   const refs = []
-  for (const f of files) {
-    const text = fs.readFileSync(f, "utf8")
-    refs.push(...(f.endsWith(".bib") ? parseBibEntries(text) : parseBblEntries(text)).map((r) => ({ ...r, source_file: path.relative(paper.dir, f) })))
+  try {
+    for (const root of roots) {
+      const files = listFiles(root.dir)
+      const bblFiles = files.filter((f) => /\.bbl$/i.test(f))
+      const bibFiles = files.filter((f) => /\.bib$/i.test(f))
+      const texFiles = files.filter((f) => /\.(tex|ltx)$/i.test(f))
+      const citedKeys = new Set()
+      for (const f of texFiles) {
+        const text = fs.readFileSync(f, "utf8")
+        for (const key of parseCitationKeys(text)) citedKeys.add(key)
+      }
+      const rel = (f) => `${root.label}/${path.relative(root.dir, f)}`
+      if (bblFiles.length) {
+        for (const f of bblFiles) {
+          const text = fs.readFileSync(f, "utf8")
+          refs.push(...parseBblEntries(text).map((r) => ({ ...r, source_file: rel(f) })))
+        }
+      } else {
+        for (const f of bibFiles) {
+          const text = fs.readFileSync(f, "utf8")
+          refs.push(...parseBibEntries(text)
+            .filter((r) => citedKeys.size === 0 || citedKeys.has(r.key))
+            .map((r) => ({ ...r, source_file: rel(f) })))
+        }
+      }
+    }
+  } finally {
+    for (const root of roots) {
+      if (root.cleanup) fs.rmSync(root.dir, { recursive: true, force: true })
+    }
   }
   const seen = new Set()
   return refs.filter((r) => {
@@ -201,6 +328,8 @@ for (const paper of papers) {
   let citations
   if (refs.length === 0 && Array.isArray(paper.meta.citations)) {
     citations = paper.meta.citations
+      .map((c) => typeof c === "string" ? { paper_key: c, title: papers.find((p) => p.key === c)?.title || c, score: 1, source_file: "metadata.citations" } : c)
+      .filter((c) => c?.paper_key)
   } else {
     const matches = refs.map((ref) => matchReference(ref, papers, paper.key)).filter(Boolean)
     const byKey = new Map()

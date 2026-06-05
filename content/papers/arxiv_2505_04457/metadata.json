@@ -59,6 +59,21 @@
   "fetch_source": "arxiv_tex",
   "summary_model": "Codex GPT-5",
   "citations": [
-    "arxiv_2303_01664"
+    {
+      "paper_key": "arxiv_2303_01037",
+      "title": "Google USM: Scaling Automatic Speech Recognition Beyond 100 Languages",
+      "score": 1,
+      "matched_title": "Google USM: Scaling automatic speech recognition beyond 100 languages",
+      "matched_first_author_last": "zhang",
+      "source_file": "source/main.bbl"
+    },
+    {
+      "paper_key": "arxiv_2303_01664",
+      "title": "Miipher: A Robust Speech Restoration Model Integrating Self-Supervised Speech and Text Representations",
+      "score": 1,
+      "matched_title": "Miipher: A robust speech restoration model integrating self-supervised speech and text representations",
+      "matched_first_author_last": "koizumi",
+      "source_file": "source/main.bbl"
+    }
   ]
 }

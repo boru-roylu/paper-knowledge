@@ -60,9 +60,5 @@
   "bibtex_key": "li2026anyaudiojudgeadynamicrubricbas",
   "fetch_source": "arxiv_tex",
   "summary_model": "Codex GPT-5",
-  "citations": [
-    "arxiv_2602_01914",
-    "arxiv_2604_04847",
-    "arxiv_2605_28063"
-  ]
+  "citations": []
 }

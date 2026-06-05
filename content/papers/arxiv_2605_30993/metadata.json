@@ -46,5 +46,14 @@
   "doi": "10.48550/arXiv.2605.30993",
   "publication_status": "No formal conference or journal reference found as of 2026-06-02",
   "bibtex_key": "li2026swanvoice",
-  "citations": []
+  "citations": [
+    {
+      "paper_key": "arxiv_2406_02430",
+      "title": "Seed-TTS: A Family of High-Quality Versatile Speech Generation Models",
+      "score": 1,
+      "matched_title": "Seed-tts: A family of high-quality versatile speech generation models",
+      "matched_first_author_last": "anastassiou",
+      "source_file": "source/custom.bib"
+    }
+  ]
 }
