@@ -117,6 +117,20 @@
       ]
     },
     {
+      "id": "arxiv_2602_01914",
+      "title": "Towards Long-Horizon Interpretability: Efficient and Faithful Multi-Token Attribution for Reasoning LLMs",
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "url": "../papers/arxiv_2602_01914/",
+      "tags": [
+        "llm",
+        "interpretability",
+        "attribution",
+        "reasoning",
+        "agentic-workflow"
+      ]
+    },
+    {
       "id": "arxiv_2602_06053",
       "title": "PersonaPlex: Voice and Role Control for Full Duplex Conversational Speech Models",
       "year": 2026,

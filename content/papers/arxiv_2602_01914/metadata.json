@@ -1,0 +1,61 @@
+{
+  "paper_key": "arxiv_2602_01914",
+  "canonical_id": "arxiv:2602.01914",
+  "arxiv_id": "2602.01914",
+  "version": "latest",
+  "title": "Towards Long-Horizon Interpretability: Efficient and Faithful Multi-Token Attribution for Reasoning LLMs",
+  "authors": [
+    "Wenbo Pan",
+    "Zhichao Liu",
+    "Xianlong Wang",
+    "Haining Yu",
+    "Xiaohua Jia"
+  ],
+  "venue": "arXiv preprint",
+  "year": 2026,
+  "abstract": "Token attribution methods provide intuitive explanations for language model outputs by identifying causally important input tokens. However, as modern LLMs increasingly rely on extended reasoning chains, existing schemes face efficiency bottlenecks for multi-token targets and faithfulness drops when intermediate reasoning tokens absorb attribution mass. This paper introduces FlashTrace, an efficient multi-token attribution method using span-wise aggregation and recursive attribution to trace importance through reasoning chains back to source inputs.",
+  "primaryClass": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "cs.CL"
+  ],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2602.01914",
+    "pdf": "https://arxiv.org/pdf/2602.01914",
+    "source": "https://arxiv.org/src/2602.01914",
+    "repo": "https://github.com/wbopan/flashtrace"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2602.01914-src.tar.gz",
+    "entrypoint": "source/main.tex"
+  },
+  "tags": [
+    "llm",
+    "interpretability",
+    "attribution",
+    "reasoning",
+    "agentic-workflow"
+  ],
+  "concepts": [
+    "multi-token attribution",
+    "span-wise aggregation",
+    "recursive attribution",
+    "information absorption",
+    "reasoning chain interpretability",
+    "RISE",
+    "MAS",
+    "Recovery Rate",
+    "Exhaustive Token-Level Rollout",
+    "Aider code generation attribution"
+  ],
+  "status": "read",
+  "created": "2026-06-04",
+  "doi": "10.48550/arXiv.2602.01914",
+  "publication_status": "No formal conference or journal reference confirmed as of 2026-06-05",
+  "bibtex_key": "pan2026longhorizoninterpretabilityefficientfaithful",
+  "fetch_source": "arxiv_tex",
+  "summary_model": "Codex GPT-5",
+  "citations": []
+}

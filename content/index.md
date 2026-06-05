@@ -18,12 +18,15 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="speech-data">speech data</button>
     <button type="button" data-paper-tag="speech-llm">speech llm</button>
     <button type="button" data-paper-tag="tts">tts</button>
+    <button type="button" data-paper-tag="agentic-workflow">agentic workflow</button>
     <button type="button" data-paper-tag="ai-infrastructure">ai infrastructure</button>
+    <button type="button" data-paper-tag="attribution">attribution</button>
     <button type="button" data-paper-tag="audio-data">audio data</button>
     <button type="button" data-paper-tag="audio-generation">audio generation</button>
     <button type="button" data-paper-tag="compositional-audio">compositional audio</button>
     <button type="button" data-paper-tag="data-cleaning">data cleaning</button>
     <button type="button" data-paper-tag="dialogue">dialogue</button>
+    <button type="button" data-paper-tag="interpretability">interpretability</button>
     <button type="button" data-paper-tag="llm">llm</button>
     <button type="button" data-paper-tag="multilingual-speech">multilingual speech</button>
     <button type="button" data-paper-tag="reasoning">reasoning</button>
@@ -45,6 +48,11 @@ title: Paper Knowledge
   <div class="paper-date">2026-06-04</div>
   <div class="paper-main"><a class="internal" href="./papers/microsoft_mai_thinking_1/">MAI-Thinking-1: Building a Hill-Climbing Machine</a> <span class="paper-meta">(2026, Microsoft AI technical report)</span></div>
   <div class="paper-tags"><a class="tag-link internal" href="./tags/llm/">#llm</a> <a class="tag-link internal" href="./tags/reasoning/">#reasoning</a> <a class="tag-link internal" href="./tags/reinforcement-learning/">#reinforcement-learning</a> <a class="tag-link internal" href="./tags/ai-infrastructure/">#ai-infrastructure</a> <a class="tag-link internal" href="./tags/tool-use/">#tool-use</a></div>
+</div>
+<div class="paper-row" data-tags="llm interpretability attribution reasoning agentic-workflow" data-search="Towards Long-Horizon Interpretability: Efficient and Faithful Multi-Token Attribution for Reasoning LLMs arxiv_2602_01914 2026-06-04 2026 arXiv preprint arxiv:2602.01914 llm interpretability attribution reasoning agentic-workflow">
+  <div class="paper-date">2026-06-04</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2602_01914/">Towards Long-Horizon Interpretability: Efficient and Faithful Multi-Token Attribution for Reasoning LLMs</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/llm/">#llm</a> <a class="tag-link internal" href="./tags/interpretability/">#interpretability</a> <a class="tag-link internal" href="./tags/attribution/">#attribution</a> <a class="tag-link internal" href="./tags/reasoning/">#reasoning</a> <a class="tag-link internal" href="./tags/agentic-workflow/">#agentic-workflow</a></div>
 </div>
 <div class="paper-row" data-tags="audio-generation text-to-audio tts speech-llm compositional-audio project-full-duplex-data project-tts-data-pipeline" data-search="Unified Synthesis of Compositional Speech and Sound from Free-Form Text Prompts arxiv_2605_28063 2026-06-03 2026 arXiv preprint arxiv:2605.28063 audio-generation text-to-audio tts speech-llm compositional-audio project-full-duplex-data project-tts-data-pipeline">
   <div class="paper-date">2026-06-03</div>
