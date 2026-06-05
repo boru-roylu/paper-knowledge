@@ -364,6 +364,22 @@
       ]
     },
     {
+      "id": "arxiv_2606_03116",
+      "title": "AnyAudio-Judge: A Dynamic Rubric-Based Benchmark and Evaluator for Audio Instruction Following",
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "url": "../papers/arxiv_2606_03116/",
+      "tags": [
+        "speech-llm",
+        "audio-reasoning",
+        "audio-evaluation",
+        "tts",
+        "reward-model",
+        "project-full-duplex-data",
+        "project-tts-data-pipeline"
+      ]
+    },
+    {
       "id": "microsoft_mai_thinking_1",
       "title": "MAI-Thinking-1: Building a Hill-Climbing Machine",
       "year": 2026,
@@ -419,6 +435,18 @@
     {
       "source": "arxiv_2605_31530",
       "target": "arxiv_2406_02430",
+      "score": 1
+    },
+    {
+      "source": "arxiv_2606_03116",
+      "score": 1
+    },
+    {
+      "source": "arxiv_2606_03116",
+      "score": 1
+    },
+    {
+      "source": "arxiv_2606_03116",
       "score": 1
     }
   ]

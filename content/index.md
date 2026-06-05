@@ -22,6 +22,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="ai-infrastructure">ai infrastructure</button>
     <button type="button" data-paper-tag="attribution">attribution</button>
     <button type="button" data-paper-tag="audio-data">audio data</button>
+    <button type="button" data-paper-tag="audio-evaluation">audio evaluation</button>
     <button type="button" data-paper-tag="audio-generation">audio generation</button>
     <button type="button" data-paper-tag="compositional-audio">compositional audio</button>
     <button type="button" data-paper-tag="data-cleaning">data cleaning</button>
@@ -32,6 +33,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="reasoning">reasoning</button>
     <button type="button" data-paper-tag="reinforcement-learning">reinforcement learning</button>
     <button type="button" data-paper-tag="restoration">restoration</button>
+    <button type="button" data-paper-tag="reward-model">reward model</button>
     <button type="button" data-paper-tag="separation">separation</button>
     <button type="button" data-paper-tag="speech-reasoning">speech reasoning</button>
     <button type="button" data-paper-tag="speech-restoration">speech restoration</button>
@@ -45,6 +47,11 @@ title: Paper Knowledge
 </div>
 
 <div class="paper-list">
+<div class="paper-row" data-tags="speech-llm audio-reasoning audio-evaluation tts reward-model project-full-duplex-data project-tts-data-pipeline" data-search="AnyAudio-Judge: A Dynamic Rubric-Based Benchmark and Evaluator for Audio Instruction Following arxiv_2606_03116 2026-06-05 2026 arXiv preprint arxiv:2606.03116 speech-llm audio-reasoning audio-evaluation tts reward-model project-full-duplex-data project-tts-data-pipeline">
+  <div class="paper-date">2026-06-05</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2606_03116/">AnyAudio-Judge: A Dynamic Rubric-Based Benchmark and Evaluator for Audio Instruction Following</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/speech-llm/">#speech-llm</a> <a class="tag-link internal" href="./tags/audio-reasoning/">#audio-reasoning</a> <a class="tag-link internal" href="./tags/audio-evaluation/">#audio-evaluation</a> <a class="tag-link internal" href="./tags/tts/">#tts</a> <a class="tag-link internal" href="./tags/reward-model/">#reward-model</a> <a class="tag-link internal" href="./tags/project-full-duplex-data/">#project-full-duplex-data</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a></div>
+</div>
 <div class="paper-row" data-tags="llm reasoning reinforcement-learning ai-infrastructure tool-use" data-search="MAI-Thinking-1: Building a Hill-Climbing Machine microsoft_mai_thinking_1 2026-06-04 2026 Microsoft AI technical report https://microsoft.ai/wp-content/uploads/2026/06/main_20260602_2.pdf llm reasoning reinforcement-learning ai-infrastructure tool-use">
   <div class="paper-date">2026-06-04</div>
   <div class="paper-main"><a class="internal" href="./papers/microsoft_mai_thinking_1/">MAI-Thinking-1: Building a Hill-Climbing Machine</a> <span class="paper-meta">(2026, Microsoft AI technical report)</span></div>
