@@ -13,7 +13,9 @@ tags:
   - interpretability
   - attribution
   - reasoning
+  - speech-reasoning
   - agentic-workflow
+  - project-full-duplex-data
 created: 2026-06-04
 ---
 <div class="paper-nav"><a href="../../">&larr; Papers</a></div>
@@ -118,15 +120,35 @@ sum_i w_i * alpha_{i,j} * v_j = v_j * sum_i w_i * alpha_{i,j}
 這表示 multi-token attribution 不只適用自然語言 CoT，也能解釋 code snippets / code modification spans。
 
 ## Project relevance
-**project-full-duplex-data：低直接相關。**
+**project-full-duplex-data：中度相關，尤其是 speech reasoning / voice-agent debugging。**
 
-這篇不是 speech/audio paper。不過如果你之後做 full-duplex voice agent，並且 agent 會產生長 reasoning / tool traces，FlashTrace 類方法可用來分析「模型最後的 spoken/tool action 到底依賴 user audio/transcript 哪些部分」。它比較像 agent debugging / interpretability 工具，不是 data synthesis 方法。
+這篇不是 speech/audio paper，也不是 data synthesis 方法。不過如果你之後做 full-duplex voice agent 或 speech reasoning model，並且模型會產生長 reasoning / tool traces，FlashTrace 類方法可以用來分析「模型最後的 spoken answer / tool action 到底依賴 user audio/transcript 哪些部分」。它比較像 agent debugging / grounding analysis 工具。
 
 **project-tts-data-pipeline：低直接相關。**
 
 它不處理 TTS、ASR 或 audio data cleaning。但「multi-token attribution」的概念可轉譯到 TTS pipeline debug：例如分析長 transcript prompt 中哪些 style tags / speaker tags / event tags 影響某段 generated speech，但這需要額外 audio-side attribution 方法，不是本篇直接提供。
 
 對目前 Telegram/Codex paper system 比較有用的點是：如果未來讓 Codex worker 做長任務，FlashTrace 類 long-horizon attribution 可作為 debugging 長 reasoning / code generation 的工具概念。
+
+## Speech reasoning brainstorming
+如果把這篇放到 speech reasoning 脈絡，它最可能的用法不是直接解釋 waveform，而是先解釋 **speech-derived token sequence**：transcript tokens、speaker/event tags、ASR hypotheses、tool traces、或 speech LLM 的 internal text reasoning。
+
+幾個可行方向：
+
+- **Transcript-grounded speech reasoning attribution**：給定一段 user speech transcript、diarization、pause/backchannel tags，以及模型最後的 spoken answer/tool call，用 FlashTrace 類方法追蹤 answer span 依賴哪些 transcript spans。這能檢查 voice agent 是否真的使用 self-correction 後的內容，而不是被前面 false start 誤導。
+- **Hallucinated ASR / noisy transcript debugging**：如果 speech reasoning model 答錯，可以看 attribution 是否集中到 ASR hallucination、錯分 speaker、或 noise-induced transcript fragment。這比只看 final WER 更接近「哪個錯誤真的影響 reasoning」。
+- **Full-duplex tool-use analysis**：在 FDB-v3 類 benchmark 中，模型可能有 intermediate reasoning 和 tool-call arguments。FlashTrace 可用來追蹤 `destination=Boston`、`cancel_action`、`update_search_filter` 這類 argument 依賴 user utterance 的哪段 evidence，尤其適合分析 premature tool call / stale state。
+- **Event-tag / paralinguistic control attribution**：若 transcript 內含 `[pause]`, `[overlap]`, `[laughs]`, `[backchannel]`, `[S1]`, `[S2]`，可以測模型的 decision 是否真的利用這些 event tags。例如 interruption policy 是否依賴 pause，而不是只依賴 lexical content。
+- **Speech data curation**：對 speech reasoning dataset，保留那些模型 attribution 明確落在關鍵 acoustic/transcript evidence 的樣本；淘汰 attribution 主要落在 spurious boilerplate、speaker ID artifacts、或 annotation leakage 的樣本。
+- **Judge / benchmark grounding metric**：除 Pass@1 / WER / tool accuracy 外，可以加一個 attribution-based grounding check：正確答案是否依賴 expected evidence spans。這可幫助區分「真的 grounded reasoning」和「靠 prior / shortcut 猜對」。
+
+更進一步的研究版做法，是把 FlashTrace 從 text tokens 擴到 **audio codec tokens / speech encoder frames / multimodal hidden states**。這需要三個額外條件：
+
+- 模型必須能暴露 attention maps 或可追蹤的 intermediate activations。
+- audio frames / codec tokens 要能對齊回 time spans、speaker turns、events。
+- attribution target 要能定義成 spoken answer span、tool-call argument span，或 acoustic output span。
+
+**結論：FlashTrace 對 speech reasoning 是有用的，但第一步應該用在 transcript/event-token 層，而不是 raw audio 層。** 它適合作為 voice-agent reasoning / tool-call grounding debugger；若要直接解釋 end-to-end speech LLM 的 acoustic evidence，則需要把 span-wise attribution 改造成 multimodal/audio-token attribution。
 
 ## Related papers in my pool
 - **MAI-Thinking-1**：同樣關心 reasoning / agentic workflow；FlashTrace 可作為解釋 reasoning model 長輸出的工具。
@@ -159,8 +181,10 @@ sum_i w_i * alpha_{i,j} * v_j = v_j * sum_i w_i * alpha_{i,j}
 - interpretability
 - attribution
 - reasoning
+- speech-reasoning
 - agentic-workflow
 - long-context
+- project-full-duplex-data
 
 ## Concepts
 - multi-token attribution
@@ -173,6 +197,9 @@ sum_i w_i * alpha_{i,j} * v_j = v_j * sum_i w_i * alpha_{i,j}
 - Recovery Rate
 - Exhaustive Token-Level Rollout
 - Aider code generation attribution
+- transcript-grounded speech reasoning
+- tool-call grounding
+- multimodal attribution
 
 ## Citation
 ```bibtex

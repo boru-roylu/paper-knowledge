@@ -127,7 +127,9 @@
         "interpretability",
         "attribution",
         "reasoning",
-        "agentic-workflow"
+        "speech-reasoning",
+        "agentic-workflow",
+        "project-full-duplex-data"
       ]
     },
     {

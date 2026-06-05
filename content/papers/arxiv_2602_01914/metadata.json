@@ -36,7 +36,9 @@
     "interpretability",
     "attribution",
     "reasoning",
-    "agentic-workflow"
+    "speech-reasoning",
+    "agentic-workflow",
+    "project-full-duplex-data"
   ],
   "concepts": [
     "multi-token attribution",
@@ -48,7 +50,10 @@
     "MAS",
     "Recovery Rate",
     "Exhaustive Token-Level Rollout",
-    "Aider code generation attribution"
+    "Aider code generation attribution",
+    "transcript-grounded speech reasoning",
+    "tool-call grounding",
+    "multimodal attribution"
   ],
   "status": "read",
   "created": "2026-06-04",
