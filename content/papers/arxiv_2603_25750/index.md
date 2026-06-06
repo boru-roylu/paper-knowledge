@@ -118,6 +118,8 @@ ASR 用三個模型做 ROVER ensemble：
 
 這個設計的意義是降低 Whisper 在 silence / noise / low-volume / BGM 區段的 hallucination，避免 downstream model 學到「音訊裡沒有但 transcript 裡有」的內容。
 
+**ROVER 評論：**這篇有把 ASR ensemble 當成 pipeline component 做實驗，證明最後的 ensemble transcript 比單用 Whisper-large-v3 更穩；但它沒有做一個很乾淨的 ablation 去分離「ROVER voting algorithm 本身」和「多個 ASR backbone 互補」各自的貢獻。換句話說，我們可以說 Sommelier 的 ROVER-style ensemble 有實用收益，尤其是降低 noisy / BGM / silence 下的 hallucination；但不能過度解讀成作者已經證明 ROVER 比所有其他 ensembling / confidence selection 方法都好。
+
 ### 6) Context captioning
 附錄提到用 **Qwen3-Omni-Captioner** 產生 richer metadata，例如 emotion、gender、age group、situation description。
 
@@ -198,6 +200,8 @@ Sortformer 相對 Pyannote 3.1 在 VoxConverse 上整體較好，但真正關鍵
 - TEDLIUM3 test：12.19 -> **10.66**
 
 代價是 inference time 約 3x。作者指出 bottleneck 主要是 Canary，且三模型同時載入/推理有額外 overhead。
+
+要注意這組實驗驗證的是 **Sommelier ASR ensemble module** 的整體效果，而不是單獨驗證 ROVER。因為對照組是 Whisper-large-v3，實驗同時改了兩件事：從 single ASR 變成 Whisper / Canary / Parakeet 三模型互補，也加入 word-level voting / fallback。對我們的 pipeline 設計，這仍然有價值：若目標是 data cleaning，第一優先是降低 transcript hallucination 和 content mismatch；但若要研究最佳 ASR fusion 方法，還需要額外比較 confidence-based selection、oracle-best model、majority voting、ROVER variants、以及 LLM transcript repair。
 
 ### 4) Full-Duplex-Bench 1.0：83 hours processed data 已能改變 Moshi 行為
 Moshi + Sommelier 在 FDB 1.0：
