@@ -1,0 +1,69 @@
+{
+  "paper_key": "arxiv_2605_20613",
+  "canonical_id": "arxiv:2605.20613",
+  "arxiv_id": "2605.20613",
+  "version": "latest",
+  "title": "HRM-Text: Efficient Pretraining Beyond Scaling",
+  "authors": [
+    "Guan Wang",
+    "Changling Liu",
+    "Chenyu Wang",
+    "Cai Zhou",
+    "Yuhao Sun",
+    "Yifei Wu",
+    "Shuai Zhen",
+    "Luca Scimeca",
+    "Yasin Abbasi Yadkori"
+  ],
+  "venue": "arXiv preprint",
+  "year": 2026,
+  "abstract": "HRM-Text is a 1B-parameter hierarchical recurrent language model trained from scratch on instruction-response pairs using a task-completion objective and PrefixLM masking. It combines a dual-timescale HRM architecture with MagicNorm and warmup deep credit assignment to stabilize recurrent depth for language modeling. Trained on 40B unique tokens with a reported budget around $1,500, HRM-Text achieves strong reasoning-heavy benchmark results such as 60.7% MMLU, 81.9% ARC-C, 82.2% DROP, 84.5% GSM8K, and 56.2% MATH, suggesting that architecture and objective co-design can improve compute-to-performance efficiency.",
+  "primaryClass": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2605.20613",
+    "pdf": "https://arxiv.org/pdf/2605.20613",
+    "source": "https://arxiv.org/src/2605.20613",
+    "repo": "https://github.com/sapientinc/HRM-Text"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2605.20613-src.tar.gz",
+    "entrypoint": "source/main.tex"
+  },
+  "tags": [
+    "llm",
+    "efficient-pretraining",
+    "recurrent-model",
+    "reasoning",
+    "speech-llm"
+  ],
+  "concepts": [
+    "HRM-Text",
+    "Hierarchical Recurrent Model",
+    "dual-timescale recurrence",
+    "MagicNorm",
+    "warmup deep credit assignment",
+    "truncated BPTT",
+    "task-completion objective",
+    "response-only loss",
+    "PrefixLM masking",
+    "instruction-response pretraining",
+    "condition tags",
+    "internal reasoning",
+    "effective depth",
+    "logit lens analysis",
+    "contamination test",
+    "compact reasoning core"
+  ],
+  "status": "read",
+  "created": "2026-06-06",
+  "doi": "10.48550/arXiv.2605.20613",
+  "publication_status": "No formal conference or journal reference found as of 2026-06-06",
+  "bibtex_key": "wang2026hrmtextefficientpretrainingbey",
+  "fetch_source": "arxiv_tex",
+  "summary_model": "Codex GPT-5",
+  "citations": []
+}

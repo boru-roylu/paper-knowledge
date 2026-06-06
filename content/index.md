@@ -31,11 +31,13 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="data-curation">data curation</button>
     <button type="button" data-paper-tag="data-mixing">data mixing</button>
     <button type="button" data-paper-tag="dialogue">dialogue</button>
+    <button type="button" data-paper-tag="efficient-pretraining">efficient pretraining</button>
     <button type="button" data-paper-tag="interpretability">interpretability</button>
     <button type="button" data-paper-tag="llm">llm</button>
     <button type="button" data-paper-tag="multilingual-asr">multilingual asr</button>
     <button type="button" data-paper-tag="multilingual-speech">multilingual speech</button>
     <button type="button" data-paper-tag="reasoning">reasoning</button>
+    <button type="button" data-paper-tag="recurrent-model">recurrent model</button>
     <button type="button" data-paper-tag="reinforcement-learning">reinforcement learning</button>
     <button type="button" data-paper-tag="restoration">restoration</button>
     <button type="button" data-paper-tag="reward-model">reward model</button>
@@ -54,6 +56,11 @@ title: Paper Knowledge
 </div>
 
 <div class="paper-list">
+<div class="paper-row" data-tags="llm efficient-pretraining recurrent-model reasoning speech-llm" data-search="HRM-Text: Efficient Pretraining Beyond Scaling arxiv_2605_20613 2026-06-06 2026 arXiv preprint arxiv:2605.20613 llm efficient-pretraining recurrent-model reasoning speech-llm">
+  <div class="paper-date">2026-06-06</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2605_20613/">HRM-Text: Efficient Pretraining Beyond Scaling</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/llm/">#llm</a> <a class="tag-link internal" href="./tags/efficient-pretraining/">#efficient-pretraining</a> <a class="tag-link internal" href="./tags/recurrent-model/">#recurrent-model</a> <a class="tag-link internal" href="./tags/reasoning/">#reasoning</a> <a class="tag-link internal" href="./tags/speech-llm/">#speech-llm</a></div>
+</div>
 <div class="paper-row" data-tags="speech-llm audio-reasoning audio-evaluation tts reward-model project-audio-model-evaluation project-full-duplex-data project-tts-data-pipeline" data-search="AnyAudio-Judge: A Dynamic Rubric-Based Benchmark and Evaluator for Audio Instruction Following arxiv_2606_03116 2026-06-05 2026 arXiv preprint arxiv:2606.03116 speech-llm audio-reasoning audio-evaluation tts reward-model project-audio-model-evaluation project-full-duplex-data project-tts-data-pipeline">
   <div class="paper-date">2026-06-05</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2606_03116/">AnyAudio-Judge: A Dynamic Rubric-Based Benchmark and Evaluator for Audio Instruction Following</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>

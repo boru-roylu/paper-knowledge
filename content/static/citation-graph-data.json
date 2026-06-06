@@ -235,6 +235,20 @@
       ]
     },
     {
+      "id": "arxiv_2605_20613",
+      "title": "HRM-Text: Efficient Pretraining Beyond Scaling",
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "url": "../papers/arxiv_2605_20613/",
+      "tags": [
+        "llm",
+        "efficient-pretraining",
+        "recurrent-model",
+        "reasoning",
+        "speech-llm"
+      ]
+    },
+    {
       "id": "arxiv_2605_21008",
       "title": "A Survey of Audio Reasoning in Multimodal Foundation Models",
       "year": 2026,
