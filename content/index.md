@@ -32,10 +32,13 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="data-mixing">data mixing</button>
     <button type="button" data-paper-tag="dialogue">dialogue</button>
     <button type="button" data-paper-tag="efficient-pretraining">efficient pretraining</button>
+    <button type="button" data-paper-tag="evaluation">evaluation</button>
+    <button type="button" data-paper-tag="forecasting">forecasting</button>
     <button type="button" data-paper-tag="interpretability">interpretability</button>
     <button type="button" data-paper-tag="llm">llm</button>
     <button type="button" data-paper-tag="multilingual-asr">multilingual asr</button>
     <button type="button" data-paper-tag="multilingual-speech">multilingual speech</button>
+    <button type="button" data-paper-tag="proxy-metrics">proxy metrics</button>
     <button type="button" data-paper-tag="reasoning">reasoning</button>
     <button type="button" data-paper-tag="recurrent-model">recurrent model</button>
     <button type="button" data-paper-tag="reinforcement-learning">reinforcement learning</button>
@@ -56,6 +59,11 @@ title: Paper Knowledge
 </div>
 
 <div class="paper-list">
+<div class="paper-row" data-tags="llm evaluation forecasting proxy-metrics reasoning project-audio-model-evaluation project-tts-data-pipeline" data-search="Forecasting Downstream Performance of LLMs With Proxy Metrics arxiv_2605_18607 2026-06-06 2026 arXiv preprint arxiv:2605.18607 llm evaluation forecasting proxy-metrics reasoning project-audio-model-evaluation project-tts-data-pipeline">
+  <div class="paper-date">2026-06-06</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2605_18607/">Forecasting Downstream Performance of LLMs With Proxy Metrics</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/llm/">#llm</a> <a class="tag-link internal" href="./tags/evaluation/">#evaluation</a> <a class="tag-link internal" href="./tags/forecasting/">#forecasting</a> <a class="tag-link internal" href="./tags/proxy-metrics/">#proxy-metrics</a> <a class="tag-link internal" href="./tags/reasoning/">#reasoning</a> <a class="tag-link internal" href="./tags/project-audio-model-evaluation/">#project-audio-model-evaluation</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a></div>
+</div>
 <div class="paper-row" data-tags="llm efficient-pretraining recurrent-model reasoning speech-llm" data-search="HRM-Text: Efficient Pretraining Beyond Scaling arxiv_2605_20613 2026-06-06 2026 arXiv preprint arxiv:2605.20613 llm efficient-pretraining recurrent-model reasoning speech-llm">
   <div class="paper-date">2026-06-06</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2605_20613/">HRM-Text: Efficient Pretraining Beyond Scaling</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>

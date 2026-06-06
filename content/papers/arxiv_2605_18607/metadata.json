@@ -1,0 +1,64 @@
+{
+  "paper_key": "arxiv_2605_18607",
+  "canonical_id": "arxiv:2605.18607",
+  "arxiv_id": "2605.18607",
+  "version": "latest",
+  "title": "Forecasting Downstream Performance of LLMs With Proxy Metrics",
+  "authors": [
+    "Arkil Patel",
+    "Siva Reddy",
+    "Marius Mosbach",
+    "Dzmitry Bahdanau"
+  ],
+  "venue": "arXiv preprint",
+  "year": 2026,
+  "abstract": "Progress in language model development is often driven by comparative decisions: which architecture to adopt, which pretraining corpus to use, or which training recipe to apply. Making these decisions well requires reliable performance forecasts, yet the two commonly used signals are fundamentally limited. Cross-entropy loss is poorly aligned with downstream capabilities, and direct downstream evaluation is expensive, sparse, and often uninformative at early training stages. Instead, we propose to construct proxy metrics by aggregating token-level statistics, such as entropy, top-k accuracy, and expert token rank, from a candidate model's next token distribution over expert-written solutions. Across three settings, our proxies consistently outperform loss- and compute-based baselines: 1) For cross-family model selection, they rank a heterogeneous population of reasoning models with mean Spearman Rho = 0.81 (vs. Rho = 0.36 for cross-entropy loss); 2) For pretraining data selection, they reliably rank 25 candidate corpora for a target model at roughly 10,000x less compute than direct evaluation, pushing the Pareto frontier beyond existing methods; and 3) for training-time forecasting, they extrapolate downstream accuracy across an 18x compute horizon with roughly half the error of existing alternatives. Together, these results suggest that expert trajectories are a broadly useful source of signal for assessing model capabilities, enabling reliable performance forecasting throughout the model development life cycle.",
+  "primaryClass": "cs.CL",
+  "categories": [
+    "cs.CL",
+    "cs.LG"
+  ],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2605.18607",
+    "pdf": "https://arxiv.org/pdf/2605.18607",
+    "source": "https://arxiv.org/src/2605.18607",
+    "repo": "https://github.com/McGill-NLP/proxy-metrics"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2605.18607-src.tar.gz",
+    "entrypoint": "source/preprint.tex"
+  },
+  "tags": [
+    "llm",
+    "evaluation",
+    "forecasting",
+    "proxy-metrics",
+    "reasoning",
+    "project-audio-model-evaluation",
+    "project-tts-data-pipeline"
+  ],
+  "concepts": [
+    "expert trajectory proxy metrics",
+    "token-level predictive distribution",
+    "top-k expert token accuracy",
+    "expert token rank",
+    "entropy-weighted metrics",
+    "wrong-confidence",
+    "RankSVM model selection",
+    "DataDecide",
+    "pretraining data selection",
+    "training-time forecasting",
+    "downstream performance extrapolation",
+    "OLMo-3 checkpoints",
+    "rBridge comparison"
+  ],
+  "status": "read",
+  "created": "2026-06-06",
+  "doi": "10.48550/arXiv.2605.18607",
+  "publication_status": "arXiv preprint; TeX source uses NeurIPS 2026 preprint style, but no formal acceptance or proceedings metadata was verified as of 2026-06-06",
+  "bibtex_key": "patel2026forecastingdownstreamperforman",
+  "fetch_source": "arxiv_tex",
+  "summary_model": "Codex GPT-5",
+  "citations": []
+}
