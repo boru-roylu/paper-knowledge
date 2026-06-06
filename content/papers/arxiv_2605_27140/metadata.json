@@ -1,0 +1,56 @@
+{
+  "paper_key": "arxiv_2605_27140",
+  "canonical_id": "arxiv:2605.27140",
+  "arxiv_id": "2605.27140",
+  "version": "latest",
+  "title": "StepOPSD: Step-Aware Online Preference Distillation for Agent Reinforcement Learning",
+  "authors": [
+    "Yanfei Zhang",
+    "Xu Lin",
+    "Chenglin Wu"
+  ],
+  "venue": "arXiv preprint",
+  "year": 2026,
+  "abstract": "Reinforcement learning for multi-turn agents suffers from a credit-assignment mismatch: rewards are sparse and trajectory-level, while success often hinges on a few local decisions. Existing online policy distillation (OPD) provides denser token-level supervision, but typically treats heterogeneous agent trajectories as monolithic strings rather than causal interaction units. We present StepOPSD, a post-rollout preference self-distillation framework that takes the agent step as the unit of credit redistribution. StepOPSD decomposes trajectories into action-centered step segments, rescoring them under hindsight-enriched teacher contexts and converting token-level log-probability gaps into sign-preserving advantage shaping with a normalized per-step credit budget before the GRPO update. Across ALFWorld and Search-QA with Qwen3-1.7B and Qwen2.5-3B-Instruct, StepOPSD attains best or second-best results on subsets most sensitive to local causal errors, including first-place performance on ALFWorld Heat (79.1%), PickTwo (95.0%), Search-QA TriviaQA (61.6%), and tied-best performance on HotpotQA (40.4%). The results further reveal a consistent two-knob law: smaller α_clip acts as a broadly stabilizing local trust region, whereas the optimal global mixing strength λ_mix remains task-dependent. These findings suggest that step-aware distillation is most useful when trajectory-level rewards are weakly aligned with the local action that determines downstream success.",
+  "primaryClass": "cs.AI",
+  "categories": [
+    "cs.AI"
+  ],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2605.27140",
+    "pdf": "https://arxiv.org/pdf/2605.27140",
+    "source": "https://arxiv.org/src/2605.27140"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2605.27140-src.tar.gz",
+    "entrypoint": "source/agentic_opsd_acl.tex"
+  },
+  "tags": [
+    "agent-rl",
+    "credit-assignment",
+    "preference-distillation",
+    "reward-shaping",
+    "attribution",
+    "project-audio-model-evaluation",
+    "project-full-duplex-data"
+  ],
+  "concepts": [
+    "step-aware credit assignment",
+    "online preference distillation",
+    "hindsight teacher",
+    "teacher-student log-probability gap",
+    "advantage shaping",
+    "local trust region",
+    "grounded rubric evaluation",
+    "span-level reward"
+  ],
+  "status": "read",
+  "created": "2026-06-06",
+  "doi": "10.48550/arXiv.2605.27140",
+  "publication_status": "No formal conference or journal reference found as of 2026-06-06",
+  "bibtex_key": "zhang2026stepopsdstepawareonlineprefere",
+  "fetch_source": "arxiv_tex",
+  "summary_model": "Codex GPT-5",
+  "citations": []
+}

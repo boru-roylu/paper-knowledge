@@ -39,11 +39,58 @@ free-form prompt / transcript / event controls
 
 FlashTrace 的第一步應該先用在 **text / transcript / event-token layer**，而不是直接解釋 raw waveform。若要做到真正的 audio span attribution，需要 open audio judge 或 speech LLM，並且能把 audio frames / codec tokens 對齊回 time spans、speaker turns 和 events。
 
+## Grounded rubric credit assignment
+
+StepOPSD 提供一個可以借到 audio evaluation 的 framing：不要把整段 audio clip 當成 monolithic reward object，而是把 judge 的 yes/no 重新分配到可定位的 local spans。
+
+目前 AnyAudio-Judge 比較像：
+
+```text
+audio + prompt
+  -> dynamic rubric questions
+  -> yes/no answers
+```
+
+這對 scoring 有用，但對 human-friendly reasoning 還不夠。更理想的 evaluator 應該輸出：
+
+```text
+rubric answer = No
+evidence = 12.3s-14.1s, speaker B backchannel starts too early
+reason = temporal order / overlap timing violates the instruction
+```
+
+可行的資料構建路線：
+
+```text
+AnyAudio-Judge data / prompts
+  -> generate rubric question-answer pairs
+  -> use FlashTrace-style attribution to find transcript / event / audio-token spans
+  -> map spans back to time ranges
+  -> human verifies whether the evidence span supports the rubric decision
+  -> grounded rubric dataset
+```
+
+這本身就可能是一個 contribution，因為它從普通 rubric labels 升級成：
+
+- answer：rubric yes/no。
+- evidence span：audio time span、codec-token span、transcript span 或 event span。
+- rationale：人能理解的 failure reason。
+- verification：人工或 cross-judge 檢查 attribution 是否真的 grounded。
+
+更進一步，這些 grounded signals 可以回流到 training：
+
+- train audio judge to answer with evidence span and rationale。
+- train generator with span-level reward，而不是只用 clip-level reward。
+- 把 bad spans 用於 data filtering / rejection sampling。
+- 把普通 rubrics 改寫成 input-grounded rubrics，例如「檢查 8-12 秒內 speech 和 background event 的 temporal order」。
+- 做 reward-hacking audit：如果 judge 的 attribution 不落在合理 evidence span，該 yes/no decision 應降權。
+
 ## Open Questions
 
 - AnyAudio-Judge 的 per-rubric yes/no 在 speech+sound mixed audio 上是否足夠穩，特別是 subtle background、foreground/background hierarchy 和 temporal order？
 - 如果用 AnyAudio-Judge 當 reward model，generator 會不會學到容易騙過 rubric judge、但人聽起來不自然的 shortcut？
 - FlashTrace 類 attribution 能否有效延伸到 audio codec tokens / speech encoder frames？
+- StepOPSD-style credit shaping 能否把 clip-level rubric reward 穩定轉成 span-level reward，而不引入新的 judge shortcut？
 - 對 black-box judges，只能拿到文字 evidence；這種 evidence 和真正 attribution 之間的落差要怎麼量化？
 - PlanAudio 目前未見官方開源模型；在它不可跑的情況下，應該用哪些 open generators 建立 evaluation baseline？
 
@@ -52,6 +99,7 @@ FlashTrace 的第一步應該先用在 **text / transcript / event-token layer**
 - [AnyAudio-Judge](../papers/arxiv_2606_03116/)：dynamic rubric-based evaluator / reward model，是這條 project 的核心 evaluator pattern。
 - [PlanAudio](../papers/arxiv_2605_28063/)：free-form prompt -> unified speech+sound generation，是 composite audio evaluation 的重要 target task。
 - [FlashTrace](../papers/arxiv_2602_01914/)：multi-token attribution，可以補上 judge / reasoning / tool-call grounding analysis。
+- [StepOPSD](../papers/arxiv_2605_27140/)：不是 audio paper，但提供 step-aware credit assignment pattern，可借來把 rubric yes/no 轉成 span-level grounded reward / training signal。
 - [Full-Duplex-Bench-v3](../papers/arxiv_2604_04847/)：可提供 voice-agent / disfluency / tool-use rubrics 的 benchmark 場景。
 - [VoxCPM / VoxCPM2](../tools/openbmb-voxcpm/)：open TTS / voice design model，可作為可跑的 generation target。
 - [Dia](../tools/nari-labs-dia/)：open dialogue TTS baseline，可用於 dialogue event-control evaluation。

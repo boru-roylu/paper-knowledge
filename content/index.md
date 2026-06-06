@@ -21,6 +21,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="speech-llm">speech llm</button>
     <button type="button" data-paper-tag="tts">tts</button>
     <button type="button" data-paper-tag="adversarial-training">adversarial training</button>
+    <button type="button" data-paper-tag="agent-rl">agent rl</button>
     <button type="button" data-paper-tag="agentic-workflow">agentic workflow</button>
     <button type="button" data-paper-tag="ai-infrastructure">ai infrastructure</button>
     <button type="button" data-paper-tag="attribution">attribution</button>
@@ -31,6 +32,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="autoregressive-generation">autoregressive generation</button>
     <button type="button" data-paper-tag="clustering">clustering</button>
     <button type="button" data-paper-tag="compositional-audio">compositional audio</button>
+    <button type="button" data-paper-tag="credit-assignment">credit assignment</button>
     <button type="button" data-paper-tag="data-cleaning">data cleaning</button>
     <button type="button" data-paper-tag="data-curation">data curation</button>
     <button type="button" data-paper-tag="data-mixing">data mixing</button>
@@ -48,12 +50,14 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="multilingual-asr">multilingual asr</button>
     <button type="button" data-paper-tag="multilingual-speech">multilingual speech</button>
     <button type="button" data-paper-tag="one-step-generation">one step generation</button>
+    <button type="button" data-paper-tag="preference-distillation">preference distillation</button>
     <button type="button" data-paper-tag="proxy-metrics">proxy metrics</button>
     <button type="button" data-paper-tag="reasoning">reasoning</button>
     <button type="button" data-paper-tag="recurrent-model">recurrent model</button>
     <button type="button" data-paper-tag="reinforcement-learning">reinforcement learning</button>
     <button type="button" data-paper-tag="restoration">restoration</button>
     <button type="button" data-paper-tag="reward-model">reward model</button>
+    <button type="button" data-paper-tag="reward-shaping">reward shaping</button>
     <button type="button" data-paper-tag="separation">separation</button>
     <button type="button" data-paper-tag="speech-data-cleaning">speech data cleaning</button>
     <button type="button" data-paper-tag="speech-reasoning">speech reasoning</button>
@@ -96,6 +100,11 @@ title: Paper Knowledge
   <div class="paper-date">2026-06-06</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2604_28190/">Representation Fréchet Loss for Visual Generation</a> <span class="paper-meta">(2026, arXiv preprint / NeurIPS 2026 preprint style)</span></div>
   <div class="paper-tags"><a class="tag-link internal" href="./tags/visual-generation/">#visual-generation</a> <a class="tag-link internal" href="./tags/one-step-generation/">#one-step-generation</a> <a class="tag-link internal" href="./tags/diffusion-distillation/">#diffusion-distillation</a> <a class="tag-link internal" href="./tags/distribution-matching/">#distribution-matching</a> <a class="tag-link internal" href="./tags/evaluation-metrics/">#evaluation-metrics</a> <a class="tag-link internal" href="./tags/project-one-step-audio-generation/">#project-one-step-audio-generation</a> <a class="tag-link internal" href="./tags/project-audio-model-evaluation/">#project-audio-model-evaluation</a></div>
+</div>
+<div class="paper-row" data-tags="agent-rl credit-assignment preference-distillation reward-shaping attribution project-audio-model-evaluation project-full-duplex-data" data-search="StepOPSD: Step-Aware Online Preference Distillation for Agent Reinforcement Learning arxiv_2605_27140 2026-06-06 2026 arXiv preprint arxiv:2605.27140 agent-rl credit-assignment preference-distillation reward-shaping attribution project-audio-model-evaluation project-full-duplex-data">
+  <div class="paper-date">2026-06-06</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2605_27140/">StepOPSD: Step-Aware Online Preference Distillation for Agent Reinforcement Learning</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/agent-rl/">#agent-rl</a> <a class="tag-link internal" href="./tags/credit-assignment/">#credit-assignment</a> <a class="tag-link internal" href="./tags/preference-distillation/">#preference-distillation</a> <a class="tag-link internal" href="./tags/reward-shaping/">#reward-shaping</a> <a class="tag-link internal" href="./tags/attribution/">#attribution</a> <a class="tag-link internal" href="./tags/project-audio-model-evaluation/">#project-audio-model-evaluation</a> <a class="tag-link internal" href="./tags/project-full-duplex-data/">#project-full-duplex-data</a></div>
 </div>
 <div class="paper-row" data-tags="diffusion latent-space autoencoder tokenizer visual-generation project-one-step-audio-generation project-audio-model-evaluation project-tts-data-pipeline" data-search="Reconstruction vs. Generation: Taming Optimization Dilemma in Latent Diffusion Models arxiv_2501_01423 2026-06-06 2025 CVPR 2025 Oral / arXiv arxiv:2501.01423 diffusion latent-space autoencoder tokenizer visual-generation project-one-step-audio-generation project-audio-model-evaluation project-tts-data-pipeline">
   <div class="paper-date">2026-06-06</div>

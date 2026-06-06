@@ -367,6 +367,22 @@
       ]
     },
     {
+      "id": "arxiv_2605_27140",
+      "title": "StepOPSD: Step-Aware Online Preference Distillation for Agent Reinforcement Learning",
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "url": "../papers/arxiv_2605_27140/",
+      "tags": [
+        "agent-rl",
+        "credit-assignment",
+        "preference-distillation",
+        "reward-shaping",
+        "attribution",
+        "project-audio-model-evaluation",
+        "project-full-duplex-data"
+      ]
+    },
+    {
       "id": "arxiv_2605_27258",
       "title": "PilotTTS: A Disciplined Modular Recipe for Competitive Speech Synthesis",
       "year": 2026,
