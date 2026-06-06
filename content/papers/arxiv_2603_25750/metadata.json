@@ -14,18 +14,23 @@
   ],
   "venue": "arXiv preprint",
   "year": 2026,
-  "abstract": "",
-  "primaryClass": "",
-  "categories": [],
+  "abstract": "As the paradigm of AI shifts from text-based LLMs to Speech Language Models (SLMs), there is a growing demand for full-duplex systems capable of real-time, natural human-computer interaction. However, the development of such models is constrained by the scarcity of high-quality, multi-speaker conversational data, as existing large-scale resources are predominantly single-speaker or limited in volume. Addressing the complex dynamics of natural dialogue, such as overlapping and back-channeling remains a challenge, with standard processing pipelines suffering from diarization errors and ASR hallucinations. To bridge this gap, we present Sommelier, a robust and scalable open-source data processing pipeline designed for full-duplex models.",
+  "primaryClass": "cs.SD",
+  "categories": [
+    "cs.SD",
+    "cs.AI",
+    "eess.AS"
+  ],
   "urls": {
     "abs": "https://arxiv.org/abs/2603.25750",
     "pdf": "https://arxiv.org/pdf/2603.25750",
-    "source": "https://arxiv.org/src/2603.25750"
+    "source": "https://arxiv.org/src/2603.25750",
+    "project": "https://kyudan1.github.io/sommelier.github.io/",
+    "repo": "https://github.com/naver-ai/sommelier"
   },
   "local_paths": {
-    "source_dir": "source",
     "source_archive": "../../../cache/arxiv/2603.25750-src.tar.gz",
-    "entrypoint": "source/main_new.tex"
+    "entrypoint": "main_new.tex"
   },
   "tags": [
     "speech-llm",
@@ -35,13 +40,33 @@
     "project-full-duplex-data",
     "project-tts-data-pipeline"
   ],
-  "concepts": [],
+  "concepts": [
+    "full-duplex SLM",
+    "mono-channel conversational audio",
+    "speaker-wise track recovery",
+    "overlap disentanglement",
+    "backchannel preservation",
+    "Sortformer diarization",
+    "SepReformer separation",
+    "speaker embedding identity matching",
+    "PANNs music detection",
+    "Demucs vocal extraction",
+    "ROVER ASR ensemble",
+    "Whisper Canary Parakeet ensemble",
+    "RepetitionFilter",
+    "word-level timestamps",
+    "context-aware audio captioning",
+    "Moshi LoRA fine-tuning",
+    "Full-Duplex-Bench",
+    "turn density filtering",
+    "Real-Time Factor"
+  ],
   "status": "read",
   "created": "2026-05-30",
   "doi": "10.48550/arXiv.2603.25750",
   "publication_status": "No formal conference or journal reference found as of 2026-06-02",
   "bibtex_key": "jung2026sommelierscalableopenmultiturn",
-  "summary_model": "gpt-5.4-mini",
+  "summary_model": "gpt-5",
   "openreview": {
     "forum": "yc0HOnWubP",
     "url": "https://openreview.net/forum?id=yc0HOnWubP",
@@ -58,7 +83,7 @@
       "score": 1,
       "matched_title": "Personaplex: Voice and role control for full duplex conversational speech models.",
       "matched_first_author_last": "roy",
-      "source_file": "source/main_new.bbl"
+      "source_file": "arxiv-src:2603.25750-src.tar.gz/main_new.bbl"
     },
     {
       "paper_key": "arxiv_2405_19487",
@@ -66,7 +91,7 @@
       "score": 0.97,
       "matched_title": "A full-duplex speech dialogue scheme based on large language models, 2024b.",
       "matched_first_author_last": "wang",
-      "source_file": "source/main_new.bbl"
+      "source_file": "arxiv-src:2603.25750-src.tar.gz/main_new.bbl"
     }
   ]
 }

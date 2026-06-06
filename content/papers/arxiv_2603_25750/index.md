@@ -7,7 +7,7 @@ venue: "arXiv preprint"
 url: "https://arxiv.org/abs/2603.25750"
 pdf_url: "https://arxiv.org/pdf/2603.25750"
 status: read
-rating: 4
+rating: 5
 tags:
   - speech-llm
   - audio-data
@@ -22,183 +22,336 @@ created: 2026-05-30
 <div class="generation-note">
 
 - Paper summary model: `gpt-5.4-mini`
-- OpenReview summary model: `gpt-5.5`
+- Deep review update: `gpt-5`
+- Source used: arXiv TeX source, appendix tables, project page, and official GitHub.
 
 </div>
 
 ## Links
 - [arXiv abstract](https://arxiv.org/abs/2603.25750)
 - [PDF](https://arxiv.org/pdf/2603.25750)
+- [TeX source](https://arxiv.org/src/2603.25750)
+- [Project page / demo](https://kyudan1.github.io/sommelier.github.io/)
+- [Official GitHub: naver-ai/sommelier](https://github.com/naver-ai/sommelier)
 
 ## 一句話總結
-Sommelier 是一個可擴展、開源的 open multi-turn audio pre-processing pipeline，用來把 in-the-wild 單軌對話音訊整理成適合 full-duplex Speech Language Models (SLMs) 訓練的高品質資料。
+**Sommelier** 是一條針對 full-duplex Speech Language Models 的 open multi-turn audio preprocessing pipeline：它把 in-the-wild podcast / radio-style mono conversational audio 轉成 speaker-structured、overlap-aware、word-timestamped 的訓練資料，核心精神是 **保留 overlap / backchannel，而不是把它們當 noise 刪掉**。
 
 ## 這篇在解決什麼問題
-這篇主要在解決 full-duplex SLM 訓練資料不足的問題。  
-現有大規模 speech datasets 多半偏向 single-speaker、read speech，或是雖然有 conversational audio，卻沒有針對 overlap、backchanneling、turn-taking 做好處理。
+這篇在解決 full-duplex SLM 的資料瓶頸：模型需要學會 simultaneous listening/speaking、backchannel、overlap、interruption、turn-taking，但現有大規模 speech datasets 多半是 single-speaker、read speech、monologue，或是把 overlap 當成污染處理。
 
-作者指出幾個關鍵痛點：
-- real-world dialogue 中常有 **overlap**、**backchannel**、短促插話
-- in-the-wild audio 常伴隨 **noise**, **music**, **silence**, **clipping**
-- **diarization errors** 和 **ASR hallucinations** 會嚴重污染標註
-- web-scale processing 需要高 throughput，否則資料整理成本太高
+作者的問題定義很貼近我們的 project：
 
-因此，這篇目標不是提出新的 speech model，而是建立一條能大規模產出 full-duplex training corpus 的 preprocessing pipeline。
+- real dialogue 中有 short utterances、backchanneling、speaker changes、overlap speech。
+- web audio 還有 BGM、noise、silence、clipping、low volume。
+- diarization error 會直接造成 speaker/channel 錯配。
+- ASR hallucination 會把 training label 污染，讓 downstream SLM 學到重複、亂補字、或 off-audio transcript。
+- 如果處理流程太慢，就算方法好也無法擴展到萬小時級資料。
+
+所以 Sommelier 不是一般 ASR cleaning pipeline。它的目標是：**從單軌、不乾淨的 conversational audio 中，盡量恢復可用於 full-duplex training 的 speaker-wise structure。**
 
 ## 核心方法
-Sommelier 是一個 modular pipeline，依序處理音訊標準化、VAD、speaker diarization、overlap disentanglement、background music removal、以及 ensemble-based ASR。
+Sommelier 是 modular pipeline，可開關不同模組，在 data purity 與 conversational authenticity 間取捨。
 
 ### 1) Audio standardization
-先把各種來源音訊統一成：
-- 16kHz
+先把來源音訊統一成：
+
+- 16 kHz
 - 16-bit
-- Mono
+- mono
+- loudness normalization 到 `-20 dBFS`
 
-並做 loudness normalization 到 -20 dBFS。
+這一步本身不新，但它確保後面的 VAD、diarization、separation、ASR 在同一個音訊規格下工作。
 
-### 2) VAD + speaker diarization
-- 用 VAD 切 silence，並把長音檔分成 <5 分鐘的 chunk，避免 diarization OOM
-- diarization 改用 **Sortformer**，而不是常見的 **Pyannote 3.1**
-- 原因是 Sortformer 對 **short utterances** 和 **backchanneling** 更穩定
+### 2) VAD + chunking + Sortformer diarization
+長音訊先用 silence / VAD 切成小於 5 分鐘的 chunks，避免 diarization OOM，同時盡量保留 conversational context。
 
-### 3) Overlap handling
-作者把 overlap 情境分成四種 case，最後採用能保留雙方 overlap 資訊的方案：
-- 先從 non-overlap 區段抽 speaker embeddings
-- 再對 overlapped region 做 **two-speaker separation**
-- 用 cosine similarity 把 separated candidates 對回正確 speaker
-- 最後把分離後片段接回各 speaker stream
+diarization 選 **NVIDIA Sortformer**，不是常見的 Pyannote 3.1。原因不是 global DER 稍好而已，而是 Sortformer 在 full-duplex 最重要的短 utterance / rapid turn-taking 上明顯更穩。
 
-這樣做的重點是：**保留 conversational overlap 的真實性，但又讓資料能以 source-separated 形式供 full-duplex 訓練使用。**
+VoxConverse common subset 結果：
+
+- Pyannote 3.1：DER 8.40、JER 17.68、DER <=1s 20.21、turn DER 0.051
+- Sortformer：DER **7.16**、JER **14.69**、DER <=1s **16.87**、turn DER **0.006**
+
+對我們來說，這代表 diarization 評估不能只看 overall DER，還要看：
+
+- short backchannel DER
+- turn-boundary DER
+- overlap-adjacent speaker confusion
+
+### 3) Overlap handling: Case 4 + two-speaker separation
+作者把 overlap / backchannel 處理分成四類。前幾種要嘛切掉 overlap、要嘛把 overlap 指派給其中一邊，這會造成 utterance loss 或 ASR 混雜。Sommelier 選 **Case 4**：允許兩個 speaker segment 都保有 overlap，再在 overlap interval 做 two-speaker separation。
+
+具體流程：
+
+1. 從 non-overlap 區段抽出兩位 speaker 的 reference embeddings。要求 non-overlap reference 至少 2 秒。
+2. 只把 overlapped interval 送進 SepReformer-style two-speaker separation，而不是把整段送進 separation。作者觀察只處理 duplicated overlap part 效果較好。
+3. separation 產生 `candidate1`, `candidate2`。
+4. 用 speaker embedding cosine similarity 把 candidates 對回原 speaker。
+5. 把 separated overlap pieces 接回各自 speaker stream。
+
+這個 design 對我們的主線非常重要：它不是「denoise」，而是把 mono-channel overlap 轉成可訓練的 pseudo dual-channel / speaker-wise tracks。
 
 ### 4) Background music removal
-- 用 **PANNs** 偵測是否有 BGM
-- 若機率 > 0.3，則用 **Demucs** 去除音樂
-- 只對被判定有 BGM 的區段做處理，以兼顧品質與效率
+針對 radio / podcast / drama audio 的 BGM：
 
-### 5) Ensemble-based ASR
-- 用三個 SOTA ASR model 做 **ROVER** ensemble
-- 具體是 **Whisper + Canary + Parakeet**
-- 以 word-level voting 降低單一 ASR 的 hallucination
-- 再用 **RepetitionFilter** 刪除過度重複的 n-gram hallucination
-- 同時輸出 word-level timestamps，方便 streaming / alignment
+- 用 **PANNs** 偵測 BGM probability。
+- threshold > 0.3 才跑 **Demucs** 抽 vocal track。
+- 為了效果，Demucs 不是只處理短 segment，而是吃完整 2-minute audio context，再回切需要的片段。
+- 作者考慮過 SAM-Audio，但因 A100 RTF 0.73 太慢而排除。
+
+這裡的實用訊號是：music removal 會傷 speech quality，所以要 selective，不要無腦全跑。
+
+### 5) Ensemble ASR + hallucination filtering
+ASR 用三個模型做 ROVER ensemble：
+
+- Whisper-large-v3
+- Canary
+- Parakeet
+
+策略是 word-level alignment + voting：
+
+- 如果至少兩個模型同意某 word，就接受。
+- 否則 fallback 到 primary backbone Whisper，維持 consistent style。
+- 再用 `RepetitionFilter` 移除過度 n-gram repetition：`n=15`, count >= 5。
+- 另外用 Whisper / WhisperX 取 word-level timestamps。
+
+這個設計的意義是降低 Whisper 在 silence / noise / low-volume / BGM 區段的 hallucination，避免 downstream model 學到「音訊裡沒有但 transcript 裡有」的內容。
+
+### 6) Context captioning
+附錄提到用 **Qwen3-Omni-Captioner** 產生 richer metadata，例如 emotion、gender、age group、situation description。
+
+有一個細節值得注意：短 segment 單獨 caption 容易失去 context，例如 sarcasm。因此作者用前兩段 audio 作 in-context prompt，生成當前 segment caption。這對我們未來做 dual-channel generator 很有用，因為 generator 可能需要 style / emotion / situation metadata，而不只是 text。
 
 ## Training / Data
-這篇不是訓練一個新模型，而是訓練資料處理管線。  
-不過作者有用處理後的資料去 fine-tune full-duplex model 作驗證。
+### Pipeline output
+GitHub README 和 appendix JSON 顯示 Sommelier output 不是單純 transcript，而是一個 segment-level JSON。每段包含：
 
-### 資料來源與處理策略
-- 來源是 in-the-wild conversational audio，如 radio / podcast 類型資料
-- 資料經過：
-  - audio standardization
-  - VAD
-  - diarization
-  - overlap separation
-  - optional denoising / music removal
-  - ASR ensemble transcription
+- `start`, `end`
+- `speaker`
+- ensemble `text`
+- `text_whisper`, `text_parakeet`, `text_canary`
+- `language`
+- `demucs`
+- `is_separated`
+- `sepreformer`
+- word-level timestamps：`word`, `start`, `end`, `score`
+- optional `qwen3omni_caption`
+- processing metadata / RTF
 
-### 驗證設定
-- 用 **LoRA fine-tuning** 在 **Moshi** 上做驗證
-- 訓練資料限制：
-  - 每段 turn 最長不超過 10 秒
-  - 至少 3 個連續 turns 才算有效區域
-  - 若某 turn 超過 10 秒則截斷
-  - stereo training data 左聲道只放單一 speaker
+這對我們的 data format 有直接啟發：如果目標是 `mono-channel dialogue -> dual-channel training data -> dual-channel generator`，Sommelier 的 JSON 還不夠，需要再加：
 
-### 具體例子
-從提供的 JSON 範例可看出：
-- 2 分鐘音檔可切出 26 個 segments
-- pipeline 中各步驟都有明確 RT factor
-- ASR 與 alignment 使用多模態輸出做 transcript consolidation
+- `channel`: left / right
+- `overlap_with`: utterance ids
+- `event`: backchannel / interruption / repair / hesitation
+- `source_type`: original / separated / denoised / synthetic
+- `speaker_confidence`, `separation_confidence`, `asr_confidence`
 
-### 效率
-- 單一 A100 上 total RTF 約 **0.1746**
-- 拿掉 optional FlowSE denoising 後可降到 **0.133**
-- 若 1 張 GPU 跑 3 個並行 process，則約 **0.0443 / GPU**
-- 作者估計 8 張 A100 可在約 55 小時處理 10,000 小時音訊
+### Moshi fine-tuning validation
+作者用 Sommelier processed data fine-tune `moshiko-pytorch-bf16`，不是要提出新 model，而是驗證資料是否真的改善 full-duplex behavior。
+
+重要 training constraints：
+
+- LoRA fine-tuning
+- total data duration：約 **83 hours**
+- training steps：2,000
+- hardware：8 x A100
+- LoRA rank：128
+- batch size：16
+- learning rate：2e-6
+- weight decay：0.1
+- 每個 turn 最長不超過 10 秒
+- valid region 至少要有 3 個連續 turns
+- 若遇到超過 10 秒的 utterance 就截斷 region
+- stereo training data 左聲道只放單一 speaker
+
+最關鍵的觀察：**single speaker 持續講超過 1 分鐘會讓 Moshi training loss 不穩，甚至讓模型變得 unresponsive。** 這表示 full-duplex training data 不能只是「長對話音檔」，而要控制 turn density、speaker switching 和 event distribution。
 
 ## 主要結果
-### 1) Diarization
-- **Sortformer** 在 VoxConverse 上優於 **Pyannote 3.1**
-- 對短 utterance、rapid turn-taking、boundary quality 特別有利
+### 1) Diarization：Sortformer 更適合 short utterances / turn boundaries
+Sortformer 相對 Pyannote 3.1 在 VoxConverse 上整體較好，但真正關鍵是 short utterance 和 turn-taking region：
 
-### 2) Overlap separation
-在模擬的兩人混音資料上：
-- separation 後的 **WER**, **SI-SDR**, **STOI**, **UTMOS** 都比直接切 mixed signal 明顯更好
-- overlap ratio 越高，baseline 越差；separation 模組的改善越明顯
-- 特別是 **Speaker 2 / secondary speaker** 的改善最大
-- 在 **UTMOS** 上，分離結果接近 Oracle upper bound，表示品質與自然度都保得不錯
+- DER <=1s：20.21 -> **16.87**
+- turn DER：0.051 -> **0.006**
 
-### 3) ASR ensemble
-- Whisper 單模型的 WER 約 **6.26%**
-- ensemble 後降到約 **3.92%**
-- 相對改善約 **37%**
-- 在 noisy segments、low volume、BGM 區段尤其明顯
-- 代價是 inference time 約變成原本的 **3 倍**
+這對 backchannel / interruption 很重要，因為這些事件常常很短。若 diarization 漏掉短 utterance，後面再好的 generator 都學不到。
 
-### 4) Fine-tuning Moshi
-Sommelier 產生的資料拿來 fine-tune Moshi 後：
-- **Backchanneling**
-- **Smooth Turn-Taking**
-- **User Interruption**
-都有改善
-- 但 **Pause Handling** 與 base Moshi 差不多
-- 在 Full-Duplex-Bench 1.5 上也持續優於 base model
-- 部分情境下 latency 變高，但作者認為這反而代表模型真的開始處理 user input，而不是無視對話
+### 2) Overlap separation：overlap ratio 越高，改善越大
+作者用 LibriSpeech 合成 900 個 two-speaker mixture，控制：
+
+- SIR：0 / 5 / 10 dB
+- overlap ratio：0.2 / 0.5 / 1.0
+
+結果重點：
+
+- 0 dB, overlap 1.0：WER 48.9 -> **15.6**，UTMOS 1.70 -> **3.02**
+- 5 dB, overlap 1.0：WER 52.5 -> **9.1**，UTMOS 1.79 -> **3.12**
+- 10 dB, overlap 1.0：WER 51.0 -> **13.8**，UTMOS 2.17 -> **3.01**
+
+附錄強調改善對 secondary / interfering speaker 特別大。例如 0 dB、full overlap 時 Speaker 2 WER 從 0.444 降到 0.138。這對 full-duplex 很關鍵，因為 backchannel / interrupting speaker 常常就是 quieter / secondary speaker。
+
+### 3) ASR ensemble：降低 noisy / BGM / hallucination failure
+相對 Whisper-large-v3：
+
+- LibriSpeech test-clean：3.63 -> **2.04**
+- LibriSpeech test-other：6.26 -> **3.92**
+- TEDLIUM3 test：12.19 -> **10.66**
+
+代價是 inference time 約 3x。作者指出 bottleneck 主要是 Canary，且三模型同時載入/推理有額外 overhead。
+
+### 4) Full-Duplex-Bench 1.0：83 hours processed data 已能改變 Moshi 行為
+Moshi + Sommelier 在 FDB 1.0：
+
+- Backchannel TOR：1.000 -> **0.291**，表示不再把 backchannel window 當作完整 turn 接管。
+- Backchannel frequency：0.001 -> **0.052**，表示模型真的開始產生 backchannel。
+- Backchannel JSD：0.957 -> **0.630**，timing distribution 更像 human。
+- Smooth turn-taking Candor TOR：0.941 -> **1.000**。
+- User interruption GPT-4o relevance：0.765 -> **3.684**。
+
+但也有 trade-off：
+
+- Pause Handling 幾乎沒改善，甚至 TOR 仍接近 1.0。
+- User Interruption TOR 從 1.000 降到 0.858，但 relevance 大幅提高。
+- Latency 變高，作者認為 base Moshi 低 latency 是因為它沒有真的處理 user input，而不是行為更好。
+
+### 5) Full-Duplex-Bench 1.5：overlap handling / latency 有更清楚改善
+FDB 1.5 裡 fine-tuned Moshi 在 four overlap scenarios 上多數 audio-quality 和 latency 指標顯著改善。
+
+例子：
+
+- Background Speech：STOI 0.79 -> **0.98**，PESQ 2.19 -> **3.33**，SI-SDR 5.43 -> **20.76**
+- User Backchannel：STOI 0.63 -> **0.91**，PESQ 1.60 -> **3.01**，SI-SDR -6.57 -> **16.48**
+- User Interruption response latency：1.99s -> **0.66s**
+- Background Speech response latency：2.90s -> **0.73s**
+
+這些結果支持一個結論：即使只用 83 hours processed data，資料 recipe 也能顯著改變 full-duplex behavior。
+
+### 6) Throughput：可到 web-scale
+單一 A100 80GB、120 秒 audio sample：
+
+- VAD + Sortformer：RTF 0.0159
+- SepReformer separation：RTF 0.0013
+- ASR ensemble：RTF 0.1159
+- FlowSE denoising：RTF 0.0416
+- Total：RTF **0.1746**
+
+拿掉 optional FlowSE 後 total RTF 約 **0.133**。因 peak memory 約 23GB，可在一張 A100 上跑 3 concurrent processes，等效 RTF 約 **0.0443 / GPU**。作者估計 8 張 A100 處理 10,000 hours 約 55 小時。
 
 ## Project relevance
-- **project-full-duplex-data:** 高相關
-- **project-tts-data-pipeline:** 中相關
+**project-full-duplex-data：極高相關。**
+
+這篇就是我們「mono-channel dialogue -> speaker-wise / dual-channel data」路線裡最直接的 engineering blueprint。它沒有完全解決 dual-channel audio generator，但它回答了上游最關鍵的問題：
+
+- 如何從 single-stream in-the-wild dialogue 保留 overlap / backchannel。
+- 如何把 overlap region 拆成 speaker-wise tracks。
+- 如何避免 diarization / ASR hallucination 污染 training data。
+- 如何把 output 做成可訓練 full-duplex model 的 structured segments。
+- 如何用 downstream Moshi fine-tuning 驗證資料是否真的影響 full-duplex behavior。
+
+**project-tts-data-pipeline：中到高度相關。**
+
+Sommelier 偏 SLM / full-duplex，不是一般 TTS pipeline。但它的 speaker/event/time-aligned transcript、ASR ensemble、BGM filtering、captioning 都可以直接借到 dialogue TTS / dual-channel TTS data construction。
+
+## 對我們的 mono -> dual -> generator project 的具體結論
+Sommelier 和我們的關係不是「evaluation paper」，而是 **data production baseline**。
+
+我們可以把它放在第一段箭頭：
+
+```text
+mono-channel dialogue
+  -> Sommelier-style diarization + overlap separation + ASR ensemble
+  -> speaker-wise pseudo dual-channel records
+  -> train dual-channel audio generator
+```
+
+但 Sommelier output 還需要補幾個欄位才適合 generator：
+
+- channel assignment：left/right 或 speaker track id。
+- explicit overlap graph：哪個 utterance 跟哪個 utterance overlap。
+- event labels：backchannel / interruption / repair / hesitation。
+- source confidence：哪些片段是 separated、哪些是 clean non-overlap。
+- training role：real distribution sample vs stress-test sample。
+
+Evaluation 的位置則是在 Sommelier 後面做 QA：
+
+- separation 是否保留 both speakers。
+- backchannel 是否被刪掉。
+- speaker 是否 swap。
+- transcript 是否和各 speaker channel 對齊。
+- overlap timing 是否仍在原位置。
+
+所以 Sommelier 給 pipeline，AnyAudio-Judge / rubric checks 給 QA，dual-channel generator 是 downstream consumer。
 
 ## Related papers in my pool
-和目前 pool 裡的 **LLM-Enhanced Dialogue Management for Full-Duplex Spoken Dialogue Systems (2025)** 有間接相關：  
-那篇重點是 full-duplex dialogue control / turn-taking policy；這篇則是在上游建立可訓練 full-duplex model 的 data preprocessing pipeline。兩者都關注 **backchanneling、interruptions、turn-taking**，但一個偏 runtime dialogue manager，另一個偏資料管線。
+- [DialogueSidon](/papers/arxiv_2604_09344/)：和 Sommelier 最互補。DialogueSidon 更像 model-based restoration/separation；Sommelier 更像 scalable preprocessing pipeline。若要做 mono -> dual，應該把兩者當 baseline。
+- [Full-Duplex-Bench-v3](/papers/arxiv_2604_04847/)：Sommelier 用 FDB 1.0 / 1.5 驗證 Moshi；FDB-v3 則把 disfluency + tool-use 帶進更接近 voice agent 的設定。
+- [PersonaPlex](/papers/arxiv_2602_06053/)：Sommelier 引用它，且 pause handling failure 被作者猜測可能和缺 prompt audio / architecture 有關；PersonaPlex 的 prompt audio / role-voice conditioning 可能是後續補法。
+- [LLM-Enhanced Dialogue Management](/papers/arxiv_2502_14145/) / [SoulX-Duplug](/papers/arxiv_2603_14877/)：這兩篇是 runtime policy / semantic VAD；Sommelier 是 data side。兩邊應該接起來：用 Sommelier 產生 control-token training data。
+- [WhisperD / Parakeet](/tools/jordandarefsky-parakeet-whisperd/)：WhisperD 提供 speaker/event transcript style；Sommelier 提供 time-aligned processing pipeline。兩者結合後更接近我們需要的 training format。
 
 ## OpenReview / reviewer discussion
 - [OpenReview summary](./reviews/openreview-summary/)
-未找到公開 OpenReview review/rebuttal context。
+
+未找到公開 review/rebuttal notes；OpenReview forum metadata 有匹配頁，但目前沒有可摘要的公開 review 內容。
 
 ## 我該不該細讀
-如果你的工作和以下任一項有關，建議細讀：
-- full-duplex SLM / spoken dialogue data curation
-- overlap / backchannel / interruption 的資料處理
-- web-scale conversational audio preprocessing
-- ASR hallucination filtering、diarization、speaker separation pipeline
+**應該細讀，而且是 full-duplex data project 的第一優先 paper 之一。**
 
-如果你主要做的是純 TTS 或一般單人語音資料清洗，則可先略讀方法與實驗中的 overlap / ASR / diarization 部分即可。
+建議細讀順序：
+
+1. Method 的 `Handling Overlapping Speech`。
+2. Appendix 的 overlap cases，理解 backchannel fully-contained overlap vs partial overlap。
+3. Output JSON example，反推我們自己的 dual-channel training schema。
+4. Fine-tuning data constraints：turn <= 10s、至少 3 turns、長 single-speaker turn 會讓 Moshi 失穩。
+5. ASR ensemble 和 RepetitionFilter，設計 transcript QA。
+
+如果只讀一個 takeaway：**full-duplex data cleaning 不能把 overlap 清掉；要把 overlap 轉成可訓練的 speaker-wise evidence。**
 
 ## 可能的弱點 / open questions
-- pipeline 主要聚焦 speech，對 **non-speech acoustic events** 與更一般的 audio scene 覆蓋有限
-- overlap separation 後的 audio fidelity 仍會比原生 isolated-channel 資料略差，可能引入 artifact
-- ASR ensemble 雖然提升 WER，但 inference cost 明顯上升，對超大規模 pipeline 是實際 trade-off
-- fine-tuning 驗證主要針對 Moshi，是否能泛化到其他 full-duplex SLM 還需要更多實證
-- 對資料品質的提升多是工程式整合，對「哪一種 conversational structure 最有助於 full-duplex learning」還沒有被系統性抽象成一般原則
-- context captioning 有提到，但不是本文核心，後續是否能成為可用的 supervision signal 還不清楚
+- **仍不是真正 isolated dual-channel ground truth**：overlap separation 會有 artifact，品質低於 oracle isolated channels。
+- **two-speaker assumption 偏強**：overlap module 主要是 two-speaker separation；more speakers / group conversation 不一定可直接用。
+- **speaker identity matching 依賴 non-overlap reference**：如果某 speaker 幾乎只在 overlap 裡出現，或 reference <2s，speaker assignment 會變弱。
+- **event labeling 不足**：pipeline 保留 backchannel / overlap，但沒有直接輸出 backchannel、repair、hesitation、interruption labels；我們需要額外 classifier / heuristic / LLM labeler。
+- **ASR ensemble 成本高**：ASR 是主要 RTF bottleneck，三模型 ensemble 對超大規模資料仍有成本。
+- **Pause handling 沒改善**：代表資料 pipeline alone 可能不足，還需要 architecture / prompt audio / control-token supervision。
+- **evaluation 仍偏 FDB / Moshi**：是否能泛化到我們自己的 dual-channel generator，需要重新做 generator-side metrics。
+- **non-speech events 覆蓋有限**：對 environment sound / laughter / breath / room tone 的處理沒有像 PlanAudio / AnyAudio-Judge 那樣細。
+- **ethical / consent risk**：high-fidelity conversation data 可能被用於 voice cloning；實際建庫需要 consent / provenance / license policy。
 
 ## Tags
-full-duplex, speech-language-model, data-preprocessing, speaker-diarization, overlap-separation, backchanneling, turn-taking, ASR-ensemble, hallucination-filtering, web-scale-pipeline
+- full-duplex
+- speech-language-model
+- data-preprocessing
+- speaker-diarization
+- overlap-separation
+- backchanneling
+- turn-taking
+- ASR-ensemble
+- hallucination-filtering
+- web-scale-pipeline
+- project-full-duplex-data
+- project-tts-data-pipeline
 
 ## Concepts
 - full-duplex SLM
-- open multi-turn audio pre-processing
-- Voice Activity Detection (VAD)
-- speaker diarization
+- mono-channel conversational audio
+- speaker-wise track recovery
 - overlap disentanglement
-- two-speaker separation
-- speaker embedding
-- background music removal
-- PANNs
-- Demucs
-- ensemble ASR
-- ROVER
-- ASR hallucination
+- backchannel preservation
+- Sortformer diarization
+- SepReformer separation
+- speaker embedding identity matching
+- PANNs music detection
+- Demucs vocal extraction
+- ROVER ASR ensemble
+- Whisper / Canary / Parakeet
 - RepetitionFilter
+- word-level timestamps
+- context-aware audio captioning
+- Moshi LoRA fine-tuning
+- Full-Duplex-Bench 1.0 / 1.5
+- turn density filtering
 - Real-Time Factor (RTF)
-- Moshi
-- LoRA fine-tuning
-- Full-Duplex-Bench
-- backchanneling
-- smooth turn-taking
-- user interruption
 
 ## Citation
 ```bibtex
