@@ -35,8 +35,10 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="data-mixing">data mixing</button>
     <button type="button" data-paper-tag="dialogue">dialogue</button>
     <button type="button" data-paper-tag="diffusion-distillation">diffusion distillation</button>
+    <button type="button" data-paper-tag="distribution-matching">distribution matching</button>
     <button type="button" data-paper-tag="efficient-pretraining">efficient pretraining</button>
     <button type="button" data-paper-tag="evaluation">evaluation</button>
+    <button type="button" data-paper-tag="evaluation-metrics">evaluation metrics</button>
     <button type="button" data-paper-tag="forecasting">forecasting</button>
     <button type="button" data-paper-tag="interpretability">interpretability</button>
     <button type="button" data-paper-tag="llm">llm</button>
@@ -59,6 +61,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="tool-use">tool use</button>
     <button type="button" data-paper-tag="turn-taking">turn taking</button>
     <button type="button" data-paper-tag="video-generation">video generation</button>
+    <button type="button" data-paper-tag="visual-generation">visual generation</button>
     <button type="button" data-paper-tag="voice-cloning">voice cloning</button>
     <button type="button" data-paper-tag="whisperd">whisperd</button>
   </div>
@@ -79,6 +82,11 @@ title: Paper Knowledge
   <div class="paper-date">2026-06-06</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2605_20613/">HRM-Text: Efficient Pretraining Beyond Scaling</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>
   <div class="paper-tags"><a class="tag-link internal" href="./tags/llm/">#llm</a> <a class="tag-link internal" href="./tags/efficient-pretraining/">#efficient-pretraining</a> <a class="tag-link internal" href="./tags/recurrent-model/">#recurrent-model</a> <a class="tag-link internal" href="./tags/reasoning/">#reasoning</a> <a class="tag-link internal" href="./tags/speech-llm/">#speech-llm</a></div>
+</div>
+<div class="paper-row" data-tags="visual-generation one-step-generation diffusion-distillation distribution-matching evaluation-metrics project-one-step-audio-generation project-audio-model-evaluation" data-search="Representation Fréchet Loss for Visual Generation arxiv_2604_28190 2026-06-06 2026 arXiv preprint / NeurIPS 2026 preprint style arxiv:2604.28190 visual-generation one-step-generation diffusion-distillation distribution-matching evaluation-metrics project-one-step-audio-generation project-audio-model-evaluation">
+  <div class="paper-date">2026-06-06</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2604_28190/">Representation Fréchet Loss for Visual Generation</a> <span class="paper-meta">(2026, arXiv preprint / NeurIPS 2026 preprint style)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/visual-generation/">#visual-generation</a> <a class="tag-link internal" href="./tags/one-step-generation/">#one-step-generation</a> <a class="tag-link internal" href="./tags/diffusion-distillation/">#diffusion-distillation</a> <a class="tag-link internal" href="./tags/distribution-matching/">#distribution-matching</a> <a class="tag-link internal" href="./tags/evaluation-metrics/">#evaluation-metrics</a> <a class="tag-link internal" href="./tags/project-one-step-audio-generation/">#project-one-step-audio-generation</a> <a class="tag-link internal" href="./tags/project-audio-model-evaluation/">#project-audio-model-evaluation</a></div>
 </div>
 <div class="paper-row" data-tags="speech-llm audio-reasoning audio-evaluation tts reward-model project-audio-model-evaluation project-full-duplex-data project-tts-data-pipeline" data-search="AnyAudio-Judge: A Dynamic Rubric-Based Benchmark and Evaluator for Audio Instruction Following arxiv_2606_03116 2026-06-05 2026 arXiv preprint arxiv:2606.03116 speech-llm audio-reasoning audio-evaluation tts reward-model project-audio-model-evaluation project-full-duplex-data project-tts-data-pipeline">
   <div class="paper-date">2026-06-05</div>

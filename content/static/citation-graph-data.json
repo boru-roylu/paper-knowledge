@@ -222,6 +222,22 @@
       ]
     },
     {
+      "id": "arxiv_2604_28190",
+      "title": "Representation Fréchet Loss for Visual Generation",
+      "year": 2026,
+      "venue": "arXiv preprint / NeurIPS 2026 preprint style",
+      "url": "../papers/arxiv_2604_28190/",
+      "tags": [
+        "visual-generation",
+        "one-step-generation",
+        "diffusion-distillation",
+        "distribution-matching",
+        "evaluation-metrics",
+        "project-one-step-audio-generation",
+        "project-audio-model-evaluation"
+      ]
+    },
+    {
       "id": "arxiv_2605_18607",
       "title": "Forecasting Downstream Performance of LLMs With Proxy Metrics",
       "year": 2026,
