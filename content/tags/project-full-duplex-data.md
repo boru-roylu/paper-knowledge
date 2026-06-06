@@ -91,6 +91,77 @@ mono dialogue audio
 - confidence scores：diarization confidence、ASR confidence、separation confidence、rubric judge score
 - failure flags：speaker swap、content deletion、over-restoration、unnatural silence、overlap artifact
 
+### Hypothesis: mixture-consistent multi-loss training
+
+一個值得獨立驗證的想法是：**不要完全相信 DialogueSidon / diarization / separation 產出的 speaker A / speaker B pseudo labels，而是同時用原始 mixed audio 當 mixture-consistency supervision。**
+
+問題背景是：從 mono-channel dialogue 切出 dual-channel tracks 時，overlap 區域很容易切不乾淨：
+
+- Speaker A track 可能殘留 Speaker B。
+- Speaker B track 可能漏掉 quieter backchannel。
+- overlap 區域可能被 separation artifact 或 over-restoration 改壞。
+- diarization 可能在短 utterance / interruption 附近 speaker swap。
+
+如果 training 只用 separated pseudo labels，模型會被迫學這些錯誤。比較穩的訊號是 original mixture，因為它是真實可觀測的 audio。因此可以把 diffusion / audio generator 設計成 shared representation + 多個 prediction heads：
+
+```text
+shared encoder / diffusion backbone
+  -> head_A: predict speaker A track
+  -> head_B: predict speaker B track
+  -> head_mix: predict original mixed track
+```
+
+基本 loss：
+
+```text
+L_A      = loss(A_pred, A_pseudo)
+L_B      = loss(B_pred, B_pseudo)
+L_mix    = loss(M_pred, A_plus_B_original)
+L_total  = lambda_A * L_A + lambda_B * L_B + lambda_mix * L_mix
+```
+
+更強的版本應該加上 **sum-consistency**，直接約束分離後的兩條 channel 合起來要回到原始 mixture：
+
+```text
+L_sum = loss(A_pred + B_pred, A_plus_B_original)
+
+L_total =
+  lambda_A   * L_A
++ lambda_B   * L_B
++ lambda_mix * L_mix
++ lambda_sum * L_sum
+```
+
+這個 objective 的直覺是：
+
+- `L_A` / `L_B` 讓模型仍然學 speaker-wise decomposition。
+- `L_mix` 讓 shared representation 保留整體 acoustic scene，不完全被 noisy separated labels 帶歪。
+- `L_sum` 防止 A/B outputs 各自看起來合理但合起來不像原始 conversation。
+
+需要小心的是：`L_mix` 或 `L_sum` 太強時，模型可能學會只滿足 mixture reconstruction，而不是正確 speaker attribution。也就是：
+
+```text
+A_pred + B_pred ≈ mixture
+```
+
+不保證：
+
+```text
+A_pred ≈ true A
+B_pred ≈ true B
+```
+
+所以這個 idea 不能只看 mixture loss 下降，必須同時測：
+
+- overlap region 的 speaker leakage
+- speaker swap rate
+- quieter speaker / backchannel recall
+- A/B channel 的 ASR WER
+- `A_pred + B_pred` 對 original mixture 的 reconstruction quality
+- human check：分開聽 A/B 是否仍然像正確 speaker
+
+短期最合理的 framing：**這不是取代 DialogueSidon，而是把 DialogueSidon 產生的 noisy pseudo dual-channel labels，包進一個 mixture-consistent multi-task diffusion training objective。** 如果有效，它可以降低 imperfect separation 對 full-duplex generator 的傷害，並讓模型同時學到 speaker-wise output 和 realistic overlap mixture。
+
 ### Stage 2: synthetic full-duplex data
 
 用 real data 學分布，但用 synthetic data 做 controllable coverage。建議的 synthetic generator 不是「逐句 TTS 後混音」而是兩層：
@@ -186,6 +257,24 @@ mono dialogue audio
 - 20 個 turn-taking latency cases
 
 每個 case 都有 expected rubrics，先用 AnyAudio-Judge-style prompting 評估，再抽樣人工驗證。
+
+### Experiment D: mixture-consistent loss ablation
+
+目標：回答「在 separated pseudo labels 不乾淨時，mixture-consistency loss 是否能讓 full-duplex generator 更穩？」
+
+- Input：人工 gold set + DialogueSidon / Sommelier recovered tracks。
+- Compare：
+  - `L_A + L_B`
+  - `L_A + L_B + L_mix`
+  - `L_A + L_B + L_sum`
+  - `L_A + L_B + L_mix + L_sum`
+- Stress cases：
+  - full overlap
+  - short backchannel
+  - quiet secondary speaker
+  - rapid speaker switch
+  - diarization boundary error
+- Metrics：speaker leakage、speaker swap、overlap WER、backchannel recall、mixture reconstruction、human A/B channel preference。
 
 ## Open questions
 
