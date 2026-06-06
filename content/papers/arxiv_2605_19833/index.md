@@ -27,6 +27,8 @@ created: 2026-06-01
 - [arXiv abstract](https://arxiv.org/abs/2605.19833)
 - [PDF](https://arxiv.org/pdf/2605.19833)
 - [Project page](https://xzf-thu.github.io/Mega-ASR/)
+- [Official GitHub](https://github.com/xzf-thu/Mega-ASR)
+- [Model weights](https://huggingface.co/zhifeixie/Mega-ASR)
 - [Data: Voices-in-the-Wild-2M](https://huggingface.co/datasets/zhifeixie/Voices-in-the-Wild-2M)
 - [Benchmark: Voices-in-the-Wild-Bench](https://github.com/xzf-thu/Voices-in-the-Wild-Bench)
 
@@ -52,21 +54,16 @@ Mega-ASR 的方法可拆成三個部分：
 作者先建一個大規模合成資料集 **Voices-in-the-Wild-2M**，用 spectrogram-level / signal-level simulation 模擬真實世界的 acoustic degradation。
 
 資料涵蓋：
-- 7 個 atomic acoustic effects
-  - `noise`
-  - `far-field`
-  - `obstructed`
-  - `echo&reverb`
-  - `recording`
-  - `electronic distortion`
-  - `transmission dropout`
+- 8 個 primitive acoustic effects：`additive noise`、`echo delay`、`reverberation`、`nonlinear distortion`、`resampling`、`spectral filtering`、`loudness transformation`、`frame-level stutter`
+- 7 個 atomic acoustic effects：`noise`、`far-field`、`obstructed`、`echo&reverb`、`recording coloration`、`electronic distortion`、`transmission dropout`
 - 54 個 physically plausible compound scenarios
 
 這個設計的重點是：
 - 不是只做單一 degradation
 - 而是把多個 effects 組合成現實可發生的 scenario
-- 會用 agentic check 篩掉不合理組合
-- 還會控制 difficulty distribution，並過濾 WER > 70% 的過難樣本，以維持 training stability
+- 用 anchor/modifier decomposition 避免不合理組合：`far-field`、`echo&reverb`、`obstructed` 是 scene-defining anchor；`recording coloration`、`electronic distortion`、`noise`、`transmission dropout` 是 portable modifier
+- 使用 global severity variable `m` 控制同一樣本內所有 primitive effect 的難度，避免「某個 effect 很嚴重、其他 effect 幾乎 clean」的不一致合成
+- 會控制 difficulty distribution，並過濾 WER > 70% 的過難樣本，以維持 training stability
 
 ### 2) Acoustic-to-Semantic Progressive Supervised Fine-Tuning (A2S-SFT)
 第二部分是分階段 supervised fine-tuning，重點在 **從 acoustic recovery 漸進過渡到 semantic recovery**。
@@ -112,15 +109,33 @@ Mega-ASR 的方法可拆成三個部分：
 
 ### 資料設計
 - 7 個 atomic acoustic effects，由 8 個 primitive acoustic effects 組合而來
-- 54 個 compound scenarios，要求物理上合理
+- 54 個 compound scenarios，透過 anchor/modifier enumeration 組成：
+  - 7 個 single-effect scenarios
+  - 18 個 two-effect scenarios
+  - 13 個 three-effect scenarios
+  - 16 個 higher-order scenarios
 - 以 controlled severity sampling 來校準難度分布
 - 過濾太極端樣本（WER > 70%）
+- **Voices-in-the-Wild-Bench**：5,000 clips，包含 3,500 synthetic clips 與 1,500 real-world recordings；real-world recordings 來自 internet sources 與 16 位 human participants，覆蓋同樣 7 類 atomic phenomena
 
 ### 訓練
 - 先做 **A2S-SFT**
 - 再做 **DG-WGPO**
 - backbone 文中以 **Qwen3-ASR-1.7B** 作為重要基底
 - 另有 router / LoRA delta switching 的實作來做 inference routing
+
+更細的訓練 recipe：
+
+- **A2S-SFT Phase I**：只更新 acoustic encoder + speech-to-LLM aligner，用 WER-graded curriculum，資料從 `WER < 30%` 擴到 `WER < 50%`，最後到 `WER < 70%`。
+- **A2S-SFT Phase II**：凍結 acoustic side，只更新 LLM-side LoRA，讓 LLM 適應 noisy transcription recovery。
+- **A2S-SFT Phase III**：encoder、aligner、LLM 一起 LoRA update，做 end-to-end acoustic-semantic alignment。
+- **DG-WGPO**：從 A2S-SFT LoRA-merged checkpoint 初始化；每個 prompt sampling 12 個 transcriptions；主要 reward 包含 static WER reward、repetition gate、token-level refinement reward、sentence-level structural recovery reward，並用 WER gate 調整低/高 WER 樣本的 reward granularity。
+
+公開狀態需要分開看：
+
+- 官方 GitHub 已公開 inference / A2S-SFT training code、evaluation script、vLLM / streaming entrypoints。
+- Hugging Face 已公開 Mega-ASR weights 與 Voices-in-the-Wild-2M。
+- README 仍標示 **DG-WGPO RL code** 與 **完整 data process pipeline** 是 coming / future update，所以這篇對 data construction 描述很細，但目前還不是 PilotTTS 那種「完整 pipeline code 全部可復現」狀態。
 
 ## 主要結果
 作者報告 Mega-ASR 在多個 robust ASR benchmark 上都有提升：
@@ -159,6 +174,7 @@ Mega-ASR 的方法可拆成三個部分：
 
 ## Related papers in my pool
 - **Google USM: Scaling Automatic Speech Recognition Beyond 100 Languages**：同樣是 ASR scaling 與 speech-data 取向，但 USM 重點是 multilingual pretraining；Mega-ASR 重點是 **robustness under compositional acoustic distortion** 與 synthetic acoustic simulation。若你在看 speech-data pipeline，兩篇都涉及大規模資料設計，但任務與失真設定不同。
+- **Qwen3-ASR Technical Report**：Mega-ASR 是在 Qwen3-ASR-1.7B 上做 data-centric robust ASR adaptation；如果要復現或改造這條線，Qwen3-ASR 是必讀 backbone context。
 - 目前 pool 裡沒有其他明顯直接相關的已讀 paper。
 
 ## OpenReview / reviewer discussion
@@ -180,6 +196,7 @@ Mega-ASR 的方法可拆成三個部分：
 - **routing complexity**：environment-aware routing 與多 LoRA / delta switching 增加系統複雜度，實際部署成本需評估。
 - **semantic vs. acoustic trade-off**：方法強調 semantic recovery，但在某些場景可能會有過度修補、或保守輸出的風險。
 - **data construction cost**：2M 合成資料可擴展，但校準 simulator、驗證 physical plausibility、調整 difficulty 分布，本身仍有工程成本。
+- **release gap**：官方已公開模型、資料、benchmark 與 A2S-SFT/inference code，但 RL code 與完整 data process pipeline 仍未完整公開；若要照著做資料清洗/合成 pipeline，仍需要自行補 simulator 實作細節與 orchestration。
 
 ## Tags
 - ASR

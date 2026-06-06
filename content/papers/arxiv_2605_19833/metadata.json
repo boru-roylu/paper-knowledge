@@ -27,12 +27,16 @@
   "urls": {
     "abs": "https://arxiv.org/abs/2605.19833",
     "pdf": "https://arxiv.org/pdf/2605.19833",
-    "source": "https://arxiv.org/src/2605.19833"
+    "source": "https://arxiv.org/src/2605.19833",
+    "project": "https://xzf-thu.github.io/Mega-ASR/",
+    "repo": "https://github.com/xzf-thu/Mega-ASR",
+    "model": "https://huggingface.co/zhifeixie/Mega-ASR",
+    "data": "https://huggingface.co/datasets/zhifeixie/Voices-in-the-Wild-2M",
+    "benchmark": "https://github.com/xzf-thu/Voices-in-the-Wild-Bench"
   },
   "local_paths": {
-    "source_dir": "source",
     "source_archive": "../../../cache/arxiv/2605.19833-src.tar.gz",
-    "entrypoint": "source/main__3_.tex"
+    "entrypoint": "main__3_.tex"
   },
   "tags": [
     "speech-llm",
@@ -40,7 +44,23 @@
     "speech-data",
     "project-tts-data-pipeline"
   ],
-  "concepts": [],
+  "concepts": [
+    "acoustic robustness bottleneck",
+    "in-the-wild squared speech recognition",
+    "Voices-in-the-Wild-2M",
+    "compound acoustic simulation",
+    "primitive acoustic effects",
+    "atomic acoustic effects",
+    "anchor-modifier scenario enumeration",
+    "global severity variable",
+    "Acoustic-to-Semantic Progressive Supervised Fine-Tuning",
+    "Dual-Granularity WER-Gated Policy Optimization",
+    "WER-gated reward",
+    "semantic reconstruction",
+    "hallucination and omission in ASR",
+    "LoRA delta switching",
+    "environment-aware routing"
+  ],
   "status": "read",
   "created": "2026-06-01",
   "doi": "10.48550/arXiv.2605.19833",
