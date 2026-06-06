@@ -1,0 +1,68 @@
+{
+  "paper_key": "arxiv_2603_05630",
+  "canonical_id": "arxiv:2603.05630",
+  "arxiv_id": "2603.05630",
+  "version": "latest",
+  "title": "Making Reconstruction FID Predictive of Diffusion Generation FID",
+  "authors": [
+    "Tongda Xu",
+    "Mingwei He",
+    "Shady Abu-Hussein",
+    "Jose Miguel Hernandez-Lobato",
+    "Chunhang Zheng",
+    "Kai Zhao",
+    "Chao Zhou",
+    "Ya-Qin Zhang",
+    "Yan Wang"
+  ],
+  "venue": "arXiv preprint / ICLR 2026 submission-style source",
+  "year": 2026,
+  "abstract": "It is well known that the reconstruction FID (rFID) of a VAE is poorly correlated with the generation FID (gFID) of a latent diffusion model. This paper proposes interpolated FID (iFID): for each dataset element, retrieve its nearest neighbor in latent space, interpolate between their latent representations, decode the interpolated latent, and compute FID between decoded interpolations and the original dataset. iFID correlates strongly with diffusion gFID across diverse VAEs, with Pearson and Spearman correlations around 0.85, because it measures latent interpolation regions aligned with where diffusion samples concentrate.",
+  "primaryClass": "cs.CV",
+  "categories": [
+    "cs.CV",
+    "cs.LG"
+  ],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2603.05630",
+    "pdf": "https://arxiv.org/pdf/2603.05630",
+    "source": "https://arxiv.org/src/2603.05630",
+    "project": "https://tongdaxu.github.io/pages/ifid.html",
+    "repo": "https://github.com/tongdaxu/Making-rFID-Predictive-of-Diffusion-gFID"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2603.05630-src.tar.gz",
+    "entrypoint": "source/iclr2026_conference.tex"
+  },
+  "tags": [
+    "diffusion",
+    "evaluation-metrics",
+    "latent-space",
+    "autoencoder",
+    "tokenizer",
+    "project-audio-model-evaluation",
+    "project-one-step-audio-generation",
+    "project-tts-data-pipeline"
+  ],
+  "concepts": [
+    "interpolated FID",
+    "reconstruction-generation dilemma",
+    "rFID vs gFID",
+    "latent interpolation",
+    "nearest-neighbor latent interpolation",
+    "VAE diffusability",
+    "ridge set",
+    "latent space interpolability",
+    "audio codec evaluation",
+    "tokenizer selection"
+  ],
+  "status": "read",
+  "created": "2026-06-06",
+  "doi": "10.48550/arXiv.2603.05630",
+  "publication_status": "arXiv preprint; TeX source uses ICLR 2026 conference template, but no formal acceptance or proceedings metadata was verified as of 2026-06-06",
+  "bibtex_key": "xu2026makingreconstructionfidpredict",
+  "fetch_source": "arxiv_tex",
+  "summary_model": "Codex GPT-5",
+  "citations": []
+}

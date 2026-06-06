@@ -27,6 +27,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="audio-data">audio data</button>
     <button type="button" data-paper-tag="audio-evaluation">audio evaluation</button>
     <button type="button" data-paper-tag="audio-generation">audio generation</button>
+    <button type="button" data-paper-tag="autoencoder">autoencoder</button>
     <button type="button" data-paper-tag="autoregressive-generation">autoregressive generation</button>
     <button type="button" data-paper-tag="clustering">clustering</button>
     <button type="button" data-paper-tag="compositional-audio">compositional audio</button>
@@ -34,6 +35,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="data-curation">data curation</button>
     <button type="button" data-paper-tag="data-mixing">data mixing</button>
     <button type="button" data-paper-tag="dialogue">dialogue</button>
+    <button type="button" data-paper-tag="diffusion">diffusion</button>
     <button type="button" data-paper-tag="diffusion-distillation">diffusion distillation</button>
     <button type="button" data-paper-tag="distribution-matching">distribution matching</button>
     <button type="button" data-paper-tag="efficient-pretraining">efficient pretraining</button>
@@ -41,6 +43,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="evaluation-metrics">evaluation metrics</button>
     <button type="button" data-paper-tag="forecasting">forecasting</button>
     <button type="button" data-paper-tag="interpretability">interpretability</button>
+    <button type="button" data-paper-tag="latent-space">latent space</button>
     <button type="button" data-paper-tag="llm">llm</button>
     <button type="button" data-paper-tag="multilingual-asr">multilingual asr</button>
     <button type="button" data-paper-tag="multilingual-speech">multilingual speech</button>
@@ -57,6 +60,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="speech-restoration">speech restoration</button>
     <button type="button" data-paper-tag="taxonomy">taxonomy</button>
     <button type="button" data-paper-tag="text-to-audio">text to audio</button>
+    <button type="button" data-paper-tag="tokenizer">tokenizer</button>
     <button type="button" data-paper-tag="tool">tool</button>
     <button type="button" data-paper-tag="tool-use">tool use</button>
     <button type="button" data-paper-tag="turn-taking">turn taking</button>
@@ -82,6 +86,11 @@ title: Paper Knowledge
   <div class="paper-date">2026-06-06</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2605_20613/">HRM-Text: Efficient Pretraining Beyond Scaling</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>
   <div class="paper-tags"><a class="tag-link internal" href="./tags/llm/">#llm</a> <a class="tag-link internal" href="./tags/efficient-pretraining/">#efficient-pretraining</a> <a class="tag-link internal" href="./tags/recurrent-model/">#recurrent-model</a> <a class="tag-link internal" href="./tags/reasoning/">#reasoning</a> <a class="tag-link internal" href="./tags/speech-llm/">#speech-llm</a></div>
+</div>
+<div class="paper-row" data-tags="diffusion evaluation-metrics latent-space autoencoder tokenizer project-audio-model-evaluation project-one-step-audio-generation project-tts-data-pipeline" data-search="Making Reconstruction FID Predictive of Diffusion Generation FID arxiv_2603_05630 2026-06-06 2026 arXiv preprint / ICLR 2026 submission-style source arxiv:2603.05630 diffusion evaluation-metrics latent-space autoencoder tokenizer project-audio-model-evaluation project-one-step-audio-generation project-tts-data-pipeline">
+  <div class="paper-date">2026-06-06</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2603_05630/">Making Reconstruction FID Predictive of Diffusion Generation FID</a> <span class="paper-meta">(2026, arXiv preprint / ICLR 2026 submission-style source)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/diffusion/">#diffusion</a> <a class="tag-link internal" href="./tags/evaluation-metrics/">#evaluation-metrics</a> <a class="tag-link internal" href="./tags/latent-space/">#latent-space</a> <a class="tag-link internal" href="./tags/autoencoder/">#autoencoder</a> <a class="tag-link internal" href="./tags/tokenizer/">#tokenizer</a> <a class="tag-link internal" href="./tags/project-audio-model-evaluation/">#project-audio-model-evaluation</a> <a class="tag-link internal" href="./tags/project-one-step-audio-generation/">#project-one-step-audio-generation</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a></div>
 </div>
 <div class="paper-row" data-tags="visual-generation one-step-generation diffusion-distillation distribution-matching evaluation-metrics project-one-step-audio-generation project-audio-model-evaluation" data-search="Representation Fréchet Loss for Visual Generation arxiv_2604_28190 2026-06-06 2026 arXiv preprint / NeurIPS 2026 preprint style arxiv:2604.28190 visual-generation one-step-generation diffusion-distillation distribution-matching evaluation-metrics project-one-step-audio-generation project-audio-model-evaluation">
   <div class="paper-date">2026-06-06</div>

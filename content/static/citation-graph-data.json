@@ -161,6 +161,23 @@
       ]
     },
     {
+      "id": "arxiv_2603_05630",
+      "title": "Making Reconstruction FID Predictive of Diffusion Generation FID",
+      "year": 2026,
+      "venue": "arXiv preprint / ICLR 2026 submission-style source",
+      "url": "../papers/arxiv_2603_05630/",
+      "tags": [
+        "diffusion",
+        "evaluation-metrics",
+        "latent-space",
+        "autoencoder",
+        "tokenizer",
+        "project-audio-model-evaluation",
+        "project-one-step-audio-generation",
+        "project-tts-data-pipeline"
+      ]
+    },
+    {
       "id": "arxiv_2603_14877",
       "title": "SoulX-Duplug: Plug-and-Play Streaming State Prediction Module for Realtime Full-Duplex Speech Conversation",
       "year": 2026,
