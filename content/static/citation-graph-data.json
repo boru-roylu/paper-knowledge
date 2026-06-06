@@ -272,6 +272,21 @@
       ]
     },
     {
+      "id": "arxiv_2605_26121",
+      "title": "GEM: Geometric Entropy Mixing for Optimal LLM Data Curation",
+      "year": 2026,
+      "venue": "ICML 2026 accepted-style source / arXiv preprint",
+      "url": "../papers/arxiv_2605_26121/",
+      "tags": [
+        "llm",
+        "data-curation",
+        "data-mixing",
+        "taxonomy",
+        "clustering",
+        "project-tts-data-pipeline"
+      ]
+    },
+    {
       "id": "arxiv_2605_27258",
       "title": "PilotTTS: A Disciplined Modular Recipe for Competitive Speech Synthesis",
       "year": 2026,

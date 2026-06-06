@@ -1,0 +1,68 @@
+{
+  "paper_key": "arxiv_2605_26121",
+  "canonical_id": "arxiv:2605.26121",
+  "arxiv_id": "2605.26121",
+  "version": "latest",
+  "title": "GEM: Geometric Entropy Mixing for Optimal LLM Data Curation",
+  "authors": [
+    "Yue Min",
+    "Ziyun Qiao",
+    "Ruining Chen",
+    "Yujun Li"
+  ],
+  "venue": "ICML 2026 accepted-style source / arXiv preprint",
+  "year": 2026,
+  "abstract": "GEM (Geometric Entropy Mixing) is a framework for LLM data curation that reformulates semantic corpus categorization as entropy-regularized clustering on the hypersphere with a mixing-balance regularizer. It uses a von Mises-Fisher mixture model, MM-based inference, GIS-based representative sampling, and teacher-student distillation to produce scalable, interpretable, and balanced taxonomies for downstream data mixing. Experiments with 1.1B-parameter models show consistent gains when GEM taxonomies are integrated with DoReMi, Perf, and RegMix.",
+  "primaryClass": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2605.26121",
+    "pdf": "https://arxiv.org/pdf/2605.26121",
+    "source": "https://arxiv.org/src/2605.26121"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2605.26121-src.tar.gz",
+    "entrypoint": "source/main.tex"
+  },
+  "tags": [
+    "llm",
+    "data-curation",
+    "data-mixing",
+    "taxonomy",
+    "clustering",
+    "project-tts-data-pipeline"
+  ],
+  "concepts": [
+    "Geometric Entropy Mixing",
+    "GEM",
+    "data mixture optimization",
+    "hyperspherical embedding space",
+    "embedding anisotropy",
+    "cone effect",
+    "cluster collapse",
+    "von Mises-Fisher mixture model",
+    "entropy regularization",
+    "mixing-balance regularizer",
+    "Minorize-Maximize inference",
+    "Geometric Influence Score",
+    "GIS",
+    "teacher-student distillation",
+    "FastText student classifier",
+    "RegMix predictability",
+    "taxonomy quality evaluation",
+    "DoReMi",
+    "RegMix"
+  ],
+  "status": "read",
+  "created": "2026-06-05",
+  "doi": "10.48550/arXiv.2605.26121",
+  "publication_status": "TeX source uses icml2026 accepted style; formal proceedings metadata not independently verified",
+  "bibtex_key": "min2026gemgeometricentropymixingforop",
+  "fetch_source": "arxiv_tex",
+  "summary_model": "Codex GPT-5",
+  "citations": []
+}

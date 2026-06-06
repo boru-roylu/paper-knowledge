@@ -25,8 +25,11 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="audio-data">audio data</button>
     <button type="button" data-paper-tag="audio-evaluation">audio evaluation</button>
     <button type="button" data-paper-tag="audio-generation">audio generation</button>
+    <button type="button" data-paper-tag="clustering">clustering</button>
     <button type="button" data-paper-tag="compositional-audio">compositional audio</button>
     <button type="button" data-paper-tag="data-cleaning">data cleaning</button>
+    <button type="button" data-paper-tag="data-curation">data curation</button>
+    <button type="button" data-paper-tag="data-mixing">data mixing</button>
     <button type="button" data-paper-tag="dialogue">dialogue</button>
     <button type="button" data-paper-tag="interpretability">interpretability</button>
     <button type="button" data-paper-tag="llm">llm</button>
@@ -40,6 +43,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="speech-data-cleaning">speech data cleaning</button>
     <button type="button" data-paper-tag="speech-reasoning">speech reasoning</button>
     <button type="button" data-paper-tag="speech-restoration">speech restoration</button>
+    <button type="button" data-paper-tag="taxonomy">taxonomy</button>
     <button type="button" data-paper-tag="text-to-audio">text to audio</button>
     <button type="button" data-paper-tag="tool">tool</button>
     <button type="button" data-paper-tag="tool-use">tool use</button>
@@ -54,6 +58,11 @@ title: Paper Knowledge
   <div class="paper-date">2026-06-05</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2606_03116/">AnyAudio-Judge: A Dynamic Rubric-Based Benchmark and Evaluator for Audio Instruction Following</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>
   <div class="paper-tags"><a class="tag-link internal" href="./tags/speech-llm/">#speech-llm</a> <a class="tag-link internal" href="./tags/audio-reasoning/">#audio-reasoning</a> <a class="tag-link internal" href="./tags/audio-evaluation/">#audio-evaluation</a> <a class="tag-link internal" href="./tags/tts/">#tts</a> <a class="tag-link internal" href="./tags/reward-model/">#reward-model</a> <a class="tag-link internal" href="./tags/project-audio-model-evaluation/">#project-audio-model-evaluation</a> <a class="tag-link internal" href="./tags/project-full-duplex-data/">#project-full-duplex-data</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a></div>
+</div>
+<div class="paper-row" data-tags="llm data-curation data-mixing taxonomy clustering project-tts-data-pipeline" data-search="GEM: Geometric Entropy Mixing for Optimal LLM Data Curation arxiv_2605_26121 2026-06-05 2026 ICML 2026 accepted-style source / arXiv preprint arxiv:2605.26121 llm data-curation data-mixing taxonomy clustering project-tts-data-pipeline">
+  <div class="paper-date">2026-06-05</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2605_26121/">GEM: Geometric Entropy Mixing for Optimal LLM Data Curation</a> <span class="paper-meta">(2026, ICML 2026 accepted-style source / arXiv preprint)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/llm/">#llm</a> <a class="tag-link internal" href="./tags/data-curation/">#data-curation</a> <a class="tag-link internal" href="./tags/data-mixing/">#data-mixing</a> <a class="tag-link internal" href="./tags/taxonomy/">#taxonomy</a> <a class="tag-link internal" href="./tags/clustering/">#clustering</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a></div>
 </div>
 <div class="paper-row" data-tags="speech-llm asr multilingual-asr data-cleaning speech-data-cleaning project-tts-data-pipeline" data-search="OWSM v4: Improving Open Whisper-Style Speech Models via Data Scaling and Cleaning arxiv_2506_00338 2026-06-05 2025 Interspeech camera-ready / arXiv preprint arxiv:2506.00338 speech-llm asr multilingual-asr data-cleaning speech-data-cleaning project-tts-data-pipeline">
   <div class="paper-date">2026-06-05</div>
