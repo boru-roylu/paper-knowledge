@@ -1,0 +1,59 @@
+{
+  "paper_key": "arxiv_2605_28902",
+  "canonical_id": "arxiv:2605.28902",
+  "arxiv_id": "2605.28902",
+  "version": "latest",
+  "title": "Orthogonal Concept Erasure for Diffusion Models",
+  "authors": [
+    "Yuhao Sun",
+    "Lingyun Yu",
+    "Haoxiang Xu",
+    "Fengyuan Miao",
+    "Zhuoer Xu",
+    "Hongtao Xie"
+  ],
+  "venue": "ICML 2026 / arXiv preprint",
+  "year": 2026,
+  "abstract": "Orthogonal Concept Erasure (OCE) is a geometry-driven editing method for text-to-image diffusion concept erasure. It replaces additive parameter updates with layer-wise orthogonal transformations, changing neuron directions while preserving magnitudes and inter-neuron angular geometry. OCE further uses subspace-level erasure with vector-wise preservation for scalable multi-concept erasure, achieving strong erasure-preservation trade-offs and erasing up to 100 concepts in 4.3 seconds.",
+  "primaryClass": "cs.AI",
+  "categories": [
+    "cs.AI"
+  ],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2605.28902",
+    "pdf": "https://arxiv.org/pdf/2605.28902",
+    "source": "https://arxiv.org/src/2605.28902",
+    "repo": "https://github.com/HansSunY/OCE"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2605.28902-src.tar.gz",
+    "entrypoint": "source/example_paper.tex"
+  },
+  "tags": [
+    "diffusion",
+    "concept-erasure",
+    "model-editing",
+    "safety",
+    "text-to-image",
+    "orthogonal-transform"
+  ],
+  "concepts": [
+    "concept erasure",
+    "orthogonal Procrustes",
+    "layer-wise orthogonal transformation",
+    "additive vs multiplicative editing",
+    "angular geometry",
+    "subspace-level suppression",
+    "global preservation prior",
+    "multi-concept erasure"
+  ],
+  "status": "read",
+  "created": "2026-06-06",
+  "doi": "10.48550/arXiv.2605.28902",
+  "publication_status": "arXiv preprint; TeX style uses ICML 2026 template",
+  "bibtex_key": "sun2026orthogonalconcepterasurefordif",
+  "fetch_source": "arxiv_tex",
+  "summary_model": "Codex GPT-5",
+  "citations": []
+}

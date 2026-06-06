@@ -430,6 +430,21 @@
       ]
     },
     {
+      "id": "arxiv_2605_28902",
+      "title": "Orthogonal Concept Erasure for Diffusion Models",
+      "year": 2026,
+      "venue": "ICML 2026 / arXiv preprint",
+      "url": "../papers/arxiv_2605_28902/",
+      "tags": [
+        "diffusion",
+        "concept-erasure",
+        "model-editing",
+        "safety",
+        "text-to-image",
+        "orthogonal-transform"
+      ]
+    },
+    {
       "id": "arxiv_2605_30748",
       "title": "Chatterbox-Flash: Prior-Calibrated Block Diffusion for Streaming Zero-Shot TTS",
       "year": 2026,

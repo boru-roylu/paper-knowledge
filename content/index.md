@@ -32,6 +32,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="autoregressive-generation">autoregressive generation</button>
     <button type="button" data-paper-tag="clustering">clustering</button>
     <button type="button" data-paper-tag="compositional-audio">compositional audio</button>
+    <button type="button" data-paper-tag="concept-erasure">concept erasure</button>
     <button type="button" data-paper-tag="controllable-tts">controllable tts</button>
     <button type="button" data-paper-tag="credit-assignment">credit assignment</button>
     <button type="button" data-paper-tag="data-cleaning">data cleaning</button>
@@ -51,9 +52,11 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="interpretability">interpretability</button>
     <button type="button" data-paper-tag="latent-space">latent space</button>
     <button type="button" data-paper-tag="llm">llm</button>
+    <button type="button" data-paper-tag="model-editing">model editing</button>
     <button type="button" data-paper-tag="multilingual-asr">multilingual asr</button>
     <button type="button" data-paper-tag="multilingual-speech">multilingual speech</button>
     <button type="button" data-paper-tag="one-step-generation">one step generation</button>
+    <button type="button" data-paper-tag="orthogonal-transform">orthogonal transform</button>
     <button type="button" data-paper-tag="preference-distillation">preference distillation</button>
     <button type="button" data-paper-tag="proxy-metrics">proxy metrics</button>
     <button type="button" data-paper-tag="reasoning">reasoning</button>
@@ -62,12 +65,14 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="restoration">restoration</button>
     <button type="button" data-paper-tag="reward-model">reward model</button>
     <button type="button" data-paper-tag="reward-shaping">reward shaping</button>
+    <button type="button" data-paper-tag="safety">safety</button>
     <button type="button" data-paper-tag="separation">separation</button>
     <button type="button" data-paper-tag="speech-data-cleaning">speech data cleaning</button>
     <button type="button" data-paper-tag="speech-reasoning">speech reasoning</button>
     <button type="button" data-paper-tag="speech-restoration">speech restoration</button>
     <button type="button" data-paper-tag="taxonomy">taxonomy</button>
     <button type="button" data-paper-tag="text-to-audio">text to audio</button>
+    <button type="button" data-paper-tag="text-to-image">text to image</button>
     <button type="button" data-paper-tag="tokenizer">tokenizer</button>
     <button type="button" data-paper-tag="tool">tool</button>
     <button type="button" data-paper-tag="tool-use">tool use</button>
@@ -99,6 +104,11 @@ title: Paper Knowledge
   <div class="paper-date">2026-06-06</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2603_05630/">Making Reconstruction FID Predictive of Diffusion Generation FID</a> <span class="paper-meta">(2026, arXiv preprint / ICLR 2026 submission-style source)</span></div>
   <div class="paper-tags"><a class="tag-link internal" href="./tags/diffusion/">#diffusion</a> <a class="tag-link internal" href="./tags/evaluation-metrics/">#evaluation-metrics</a> <a class="tag-link internal" href="./tags/latent-space/">#latent-space</a> <a class="tag-link internal" href="./tags/autoencoder/">#autoencoder</a> <a class="tag-link internal" href="./tags/tokenizer/">#tokenizer</a> <a class="tag-link internal" href="./tags/project-audio-model-evaluation/">#project-audio-model-evaluation</a> <a class="tag-link internal" href="./tags/project-one-step-audio-generation/">#project-one-step-audio-generation</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a></div>
+</div>
+<div class="paper-row" data-tags="diffusion concept-erasure model-editing safety text-to-image orthogonal-transform" data-search="Orthogonal Concept Erasure for Diffusion Models arxiv_2605_28902 2026-06-06 2026 ICML 2026 / arXiv preprint arxiv:2605.28902 diffusion concept-erasure model-editing safety text-to-image orthogonal-transform">
+  <div class="paper-date">2026-06-06</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2605_28902/">Orthogonal Concept Erasure for Diffusion Models</a> <span class="paper-meta">(2026, ICML 2026 / arXiv preprint)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/diffusion/">#diffusion</a> <a class="tag-link internal" href="./tags/concept-erasure/">#concept-erasure</a> <a class="tag-link internal" href="./tags/model-editing/">#model-editing</a> <a class="tag-link internal" href="./tags/safety/">#safety</a> <a class="tag-link internal" href="./tags/text-to-image/">#text-to-image</a> <a class="tag-link internal" href="./tags/orthogonal-transform/">#orthogonal-transform</a></div>
 </div>
 <div class="paper-row" data-tags="visual-generation one-step-generation diffusion-distillation distribution-matching evaluation-metrics project-one-step-audio-generation project-audio-model-evaluation" data-search="Representation Fréchet Loss for Visual Generation arxiv_2604_28190 2026-06-06 2026 arXiv preprint / NeurIPS 2026 preprint style arxiv:2604.28190 visual-generation one-step-generation diffusion-distillation distribution-matching evaluation-metrics project-one-step-audio-generation project-audio-model-evaluation">
   <div class="paper-date">2026-06-06</div>
