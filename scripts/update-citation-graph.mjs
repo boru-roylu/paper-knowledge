@@ -235,6 +235,20 @@ function readPapers() {
     .filter(Boolean)
 }
 
+function buildPaperKeyResolver(papers) {
+  const byId = new Map()
+  for (const paper of papers) {
+    byId.set(paper.key, paper.key)
+    if (paper.arxiv_id) {
+      byId.set(`arxiv:${paper.arxiv_id}`, paper.key)
+      byId.set(paper.arxiv_id, paper.key)
+      byId.set(`arxiv_${paper.arxiv_id.replace(".", "_")}`, paper.key)
+    }
+    if (paper.meta.canonical_id) byId.set(String(paper.meta.canonical_id), paper.key)
+  }
+  return (id) => byId.get(String(id || "").trim()) || ""
+}
+
 function readReferences(paper) {
   const roots = readSourceRoots(paper)
   const refs = []
@@ -311,6 +325,7 @@ function matchReference(ref, papers, sourceKey) {
 }
 
 const papers = readPapers()
+const resolvePaperKey = buildPaperKeyResolver(papers)
 const graph = {}
 const graphData = {
   nodes: papers.map((paper) => ({
@@ -328,8 +343,20 @@ for (const paper of papers) {
   let citations
   if (refs.length === 0 && Array.isArray(paper.meta.citations)) {
     citations = paper.meta.citations
-      .map((c) => typeof c === "string" ? { paper_key: c, title: papers.find((p) => p.key === c)?.title || c, score: 1, source_file: "metadata.citations" } : c)
-      .filter((c) => c?.paper_key)
+      .map((c) => {
+        const rawKey = typeof c === "string" ? c : c?.paper_key
+        const paperKey = resolvePaperKey(rawKey)
+        const target = papers.find((p) => p.key === paperKey)
+        if (!target) return null
+        return {
+          ...(typeof c === "string" ? {} : c),
+          paper_key: paperKey,
+          title: target.title,
+          score: typeof c === "string" ? 1 : c.score || 1,
+          source_file: typeof c === "string" ? "metadata.citations" : c.source_file || "metadata.citations",
+        }
+      })
+      .filter(Boolean)
   } else {
     const matches = refs.map((ref) => matchReference(ref, papers, paper.key)).filter(Boolean)
     const byKey = new Map()

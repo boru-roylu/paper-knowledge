@@ -21,13 +21,15 @@ function initCitationGraph() {
   fetch('/static/citation-graph-data.json')
     .then((res) => res.json())
     .then((data) => {
+      const nodeIds = new Set((data.nodes || []).map((node) => node.id))
+      const validEdges = (data.edges || []).filter((edge) => nodeIds.has(edge.source) && nodeIds.has(edge.target))
       const incoming = new Map()
       const outgoing = new Map()
       for (const node of data.nodes) {
         incoming.set(node.id, [])
         outgoing.set(node.id, [])
       }
-      for (const edge of data.edges) {
+      for (const edge of validEdges) {
         outgoing.get(edge.source)?.push(edge.target)
         incoming.get(edge.target)?.push(edge.source)
       }
@@ -48,7 +50,7 @@ function initCitationGraph() {
             search: [node.title, node.year, node.venue, ...(node.tags || [])].join(' ').toLowerCase(),
           },
         })),
-        ...data.edges.map((edge) => ({ data: { id: `${edge.source}->${edge.target}`, ...edge } })),
+        ...validEdges.map((edge) => ({ data: { id: `${edge.source}->${edge.target}`, ...edge } })),
       ]
 
       const cy = cytoscape({

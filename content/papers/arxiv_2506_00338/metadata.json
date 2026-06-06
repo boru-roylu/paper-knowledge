@@ -68,8 +68,8 @@
   "summary_model": "Codex GPT-5",
   "citations": [
     {
-      "paper_key": "arxiv:2303.01037",
-      "title": "arxiv:2303.01037",
+      "paper_key": "arxiv_2303_01037",
+      "title": "Google USM: Scaling Automatic Speech Recognition Beyond 100 Languages",
       "score": 1,
       "source_file": "metadata.citations"
     }
