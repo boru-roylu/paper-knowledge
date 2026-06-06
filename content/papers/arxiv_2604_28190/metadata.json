@@ -59,5 +59,14 @@
   "bibtex_key": "yang2026representationfrchetlossforvis",
   "fetch_source": "arxiv_tex",
   "summary_model": "Codex GPT-5",
-  "citations": []
+  "citations": [
+    {
+      "paper_key": "arxiv_2501_01423",
+      "title": "Reconstruction vs. Generation: Taming Optimization Dilemma in Latent Diffusion Models",
+      "score": 1,
+      "matched_title": "Reconstruction vs. generation: Taming optimization dilemma in latent diffusion models.",
+      "matched_first_author_last": "yao",
+      "source_file": "source/neurips_2026.bbl"
+    }
+  ]
 }

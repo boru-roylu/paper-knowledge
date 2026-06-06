@@ -55,6 +55,23 @@
       ]
     },
     {
+      "id": "arxiv_2501_01423",
+      "title": "Reconstruction vs. Generation: Taming Optimization Dilemma in Latent Diffusion Models",
+      "year": 2025,
+      "venue": "CVPR 2025 Oral / arXiv",
+      "url": "../papers/arxiv_2501_01423/",
+      "tags": [
+        "diffusion",
+        "latent-space",
+        "autoencoder",
+        "tokenizer",
+        "visual-generation",
+        "project-one-step-audio-generation",
+        "project-audio-model-evaluation",
+        "project-tts-data-pipeline"
+      ]
+    },
+    {
       "id": "arxiv_2502_14145",
       "title": "LLM-Enhanced Dialogue Management for Full-Duplex Spoken Dialogue Systems",
       "year": 2025,
@@ -545,6 +562,11 @@
       "score": 1
     },
     {
+      "source": "arxiv_2603_05630",
+      "target": "arxiv_2501_01423",
+      "score": 1
+    },
+    {
       "source": "arxiv_2603_25750",
       "target": "arxiv_2602_06053",
       "score": 1
@@ -553,6 +575,11 @@
       "source": "arxiv_2603_25750",
       "target": "arxiv_2405_19487",
       "score": 0.97
+    },
+    {
+      "source": "arxiv_2604_28190",
+      "target": "arxiv_2501_01423",
+      "score": 1
     },
     {
       "source": "arxiv_2605_30748",

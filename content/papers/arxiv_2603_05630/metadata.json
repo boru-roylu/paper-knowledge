@@ -64,5 +64,14 @@
   "bibtex_key": "xu2026makingreconstructionfidpredict",
   "fetch_source": "arxiv_tex",
   "summary_model": "Codex GPT-5",
-  "citations": []
+  "citations": [
+    {
+      "paper_key": "arxiv_2501_01423",
+      "title": "Reconstruction vs. Generation: Taming Optimization Dilemma in Latent Diffusion Models",
+      "score": 1,
+      "matched_title": "Reconstruction vs. Generation: Taming Optimization Dilemma in Latent Diffusion Models",
+      "matched_first_author_last": "yao",
+      "source_file": "source/iclr2026_conference.bib"
+    }
+  ]
 }

@@ -1,0 +1,62 @@
+{
+  "paper_key": "arxiv_2501_01423",
+  "canonical_id": "arxiv:2501.01423",
+  "arxiv_id": "2501.01423",
+  "version": "latest",
+  "title": "Reconstruction vs. Generation: Taming Optimization Dilemma in Latent Diffusion Models",
+  "authors": [
+    "Jingfeng Yao",
+    "Bin Yang",
+    "Xinggang Wang"
+  ],
+  "venue": "CVPR 2025 Oral / arXiv",
+  "year": 2025,
+  "abstract": "Latent diffusion models with Transformer architectures exhibit a reconstruction-generation dilemma: increasing visual tokenizer feature dimension improves reconstruction but makes diffusion generation harder and slower. This paper proposes VA-VAE, a vision-foundation-model-aligned VAE that structures high-dimensional latent spaces with VF Loss, and LightningDiT, an optimized DiT baseline. The integrated system reaches FID 1.35 on ImageNet 256x256 and reaches FID 2.11 in 64 epochs, about 21.8x faster convergence than the original DiT.",
+  "primaryClass": "cs.CV",
+  "categories": [
+    "cs.CV",
+    "cs.LG"
+  ],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2501.01423",
+    "pdf": "https://arxiv.org/pdf/2501.01423",
+    "source": "https://arxiv.org/src/2501.01423",
+    "repo": "https://github.com/hustvl/LightningDiT",
+    "cvpr": "https://openaccess.thecvf.com/content/CVPR2025/papers/Yao_Reconstruction_vs._Generation_Taming_Optimization_Dilemma_in_Latent_Diffusion_Models_CVPR_2025_paper.pdf"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2501.01423-src.tar.gz",
+    "entrypoint": "source/main.tex"
+  },
+  "tags": [
+    "diffusion",
+    "latent-space",
+    "autoencoder",
+    "tokenizer",
+    "visual-generation",
+    "project-one-step-audio-generation",
+    "project-audio-model-evaluation",
+    "project-tts-data-pipeline"
+  ],
+  "concepts": [
+    "reconstruction-generation dilemma",
+    "VA-VAE",
+    "Vision Foundation model alignment Loss",
+    "VF Loss",
+    "LightningDiT",
+    "visual tokenizer",
+    "latent diffusion tokenizer",
+    "rFID vs gFID",
+    "foundation-model-aligned latent space",
+    "audio tokenizer alignment"
+  ],
+  "status": "read",
+  "created": "2026-06-06",
+  "doi": "10.48550/arXiv.2501.01423",
+  "publication_status": "CVPR 2025 Oral / arXiv preprint",
+  "bibtex_key": "yao2025reconstructionvsgenerationtami",
+  "fetch_source": "arxiv_tex",
+  "summary_model": "Codex GPT-5",
+  "citations": []
+}
