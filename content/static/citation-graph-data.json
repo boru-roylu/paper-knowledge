@@ -105,6 +105,21 @@
       ]
     },
     {
+      "id": "arxiv_2506_00338",
+      "title": "OWSM v4: Improving Open Whisper-Style Speech Models via Data Scaling and Cleaning",
+      "year": 2025,
+      "venue": "Interspeech camera-ready / arXiv preprint",
+      "url": "../papers/arxiv_2506_00338/",
+      "tags": [
+        "speech-llm",
+        "asr",
+        "multilingual-asr",
+        "data-cleaning",
+        "speech-data-cleaning",
+        "project-tts-data-pipeline"
+      ]
+    },
+    {
       "id": "arxiv_2510_03597",
       "title": "Neon: Negative Extrapolation From Self-Training Improves Image Generation",
       "year": 2025,
@@ -429,6 +444,11 @@
     {
       "source": "arxiv_2505_04457",
       "target": "arxiv_2303_01664",
+      "score": 1
+    },
+    {
+      "source": "arxiv_2506_00338",
+      "target": "arxiv:2303.01037",
       "score": 1
     },
     {

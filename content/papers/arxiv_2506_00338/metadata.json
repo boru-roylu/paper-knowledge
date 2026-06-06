@@ -1,0 +1,77 @@
+{
+  "paper_key": "arxiv_2506_00338",
+  "canonical_id": "arxiv:2506.00338",
+  "arxiv_id": "2506.00338",
+  "version": "latest",
+  "title": "OWSM v4: Improving Open Whisper-Style Speech Models via Data Scaling and Cleaning",
+  "authors": [
+    "Yifan Peng",
+    "Muhammad Shakeel",
+    "Yui Sudo",
+    "William Chen",
+    "Jinchuan Tian",
+    "Chyi-Jiunn Lin",
+    "Shinji Watanabe"
+  ],
+  "venue": "Interspeech camera-ready / arXiv preprint",
+  "year": 2025,
+  "abstract": "The Open Whisper-style Speech Models (OWSM) project has developed a series of fully open speech foundation models using academic-scale resources, but their training data remains insufficient. This work enhances OWSM by integrating YODAS, a large-scale web-crawled dataset with a Creative Commons license. However, incorporating YODAS is nontrivial due to its wild nature, which introduces challenges such as incorrect language labels and audio-text misalignments. To address this, the authors develop a scalable data-cleaning pipeline using public toolkits, yielding a dataset with 166,000 hours of speech across 75 languages. OWSM v4 models trained on the curated dataset plus existing OWSM data significantly outperform previous versions on multilingual ASR and LID benchmarks.",
+  "primaryClass": "eess.AS",
+  "categories": [
+    "eess.AS",
+    "cs.CL",
+    "cs.SD"
+  ],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2506.00338",
+    "pdf": "https://arxiv.org/pdf/2506.00338",
+    "source": "https://arxiv.org/src/2506.00338",
+    "project": "https://www.wavlab.org/activities/2024/owsm/"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2506.00338-src.tar.gz",
+    "entrypoint": "source/template.tex"
+  },
+  "tags": [
+    "speech-llm",
+    "asr",
+    "multilingual-asr",
+    "data-cleaning",
+    "speech-data-cleaning",
+    "project-tts-data-pipeline"
+  ],
+  "concepts": [
+    "OWSM v4",
+    "YODAS cleaning",
+    "web-crawled speech data",
+    "CTC segmentation",
+    "audio-text realignment",
+    "CTC confidence score",
+    "language-relative thresholding",
+    "text LID",
+    "spoken LID",
+    "fastText LID",
+    "SpeechBrain ECAPA-TDNN LID",
+    "Common Voice threshold selection",
+    "long-form ASR",
+    "multilingual ASR",
+    "fully-open speech foundation model",
+    "ESPnet"
+  ],
+  "status": "read",
+  "created": "2026-06-05",
+  "doi": "10.48550/arXiv.2506.00338",
+  "publication_status": "Interspeech camera-ready source; arXiv version ingested on 2026-06-05",
+  "bibtex_key": "peng2025owsmv4improvingopenwhisperstyle",
+  "fetch_source": "arxiv_tex",
+  "summary_model": "Codex GPT-5",
+  "citations": [
+    {
+      "paper_key": "arxiv:2303.01037",
+      "title": "arxiv:2303.01037",
+      "score": 1,
+      "source_file": "metadata.citations"
+    }
+  ]
+}

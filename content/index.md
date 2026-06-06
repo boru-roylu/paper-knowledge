@@ -30,12 +30,14 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="dialogue">dialogue</button>
     <button type="button" data-paper-tag="interpretability">interpretability</button>
     <button type="button" data-paper-tag="llm">llm</button>
+    <button type="button" data-paper-tag="multilingual-asr">multilingual asr</button>
     <button type="button" data-paper-tag="multilingual-speech">multilingual speech</button>
     <button type="button" data-paper-tag="reasoning">reasoning</button>
     <button type="button" data-paper-tag="reinforcement-learning">reinforcement learning</button>
     <button type="button" data-paper-tag="restoration">restoration</button>
     <button type="button" data-paper-tag="reward-model">reward model</button>
     <button type="button" data-paper-tag="separation">separation</button>
+    <button type="button" data-paper-tag="speech-data-cleaning">speech data cleaning</button>
     <button type="button" data-paper-tag="speech-reasoning">speech reasoning</button>
     <button type="button" data-paper-tag="speech-restoration">speech restoration</button>
     <button type="button" data-paper-tag="text-to-audio">text to audio</button>
@@ -52,6 +54,11 @@ title: Paper Knowledge
   <div class="paper-date">2026-06-05</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2606_03116/">AnyAudio-Judge: A Dynamic Rubric-Based Benchmark and Evaluator for Audio Instruction Following</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>
   <div class="paper-tags"><a class="tag-link internal" href="./tags/speech-llm/">#speech-llm</a> <a class="tag-link internal" href="./tags/audio-reasoning/">#audio-reasoning</a> <a class="tag-link internal" href="./tags/audio-evaluation/">#audio-evaluation</a> <a class="tag-link internal" href="./tags/tts/">#tts</a> <a class="tag-link internal" href="./tags/reward-model/">#reward-model</a> <a class="tag-link internal" href="./tags/project-audio-model-evaluation/">#project-audio-model-evaluation</a> <a class="tag-link internal" href="./tags/project-full-duplex-data/">#project-full-duplex-data</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a></div>
+</div>
+<div class="paper-row" data-tags="speech-llm asr multilingual-asr data-cleaning speech-data-cleaning project-tts-data-pipeline" data-search="OWSM v4: Improving Open Whisper-Style Speech Models via Data Scaling and Cleaning arxiv_2506_00338 2026-06-05 2025 Interspeech camera-ready / arXiv preprint arxiv:2506.00338 speech-llm asr multilingual-asr data-cleaning speech-data-cleaning project-tts-data-pipeline">
+  <div class="paper-date">2026-06-05</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2506_00338/">OWSM v4: Improving Open Whisper-Style Speech Models via Data Scaling and Cleaning</a> <span class="paper-meta">(2025, Interspeech camera-ready / arXiv preprint)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/speech-llm/">#speech-llm</a> <a class="tag-link internal" href="./tags/asr/">#asr</a> <a class="tag-link internal" href="./tags/multilingual-asr/">#multilingual-asr</a> <a class="tag-link internal" href="./tags/data-cleaning/">#data-cleaning</a> <a class="tag-link internal" href="./tags/speech-data-cleaning/">#speech-data-cleaning</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a></div>
 </div>
 <div class="paper-row" data-tags="llm reasoning reinforcement-learning ai-infrastructure tool-use" data-search="MAI-Thinking-1: Building a Hill-Climbing Machine microsoft_mai_thinking_1 2026-06-04 2026 Microsoft AI technical report https://microsoft.ai/wp-content/uploads/2026/06/main_20260602_2.pdf llm reasoning reinforcement-learning ai-infrastructure tool-use">
   <div class="paper-date">2026-06-04</div>
