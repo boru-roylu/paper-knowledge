@@ -76,6 +76,39 @@ one-step audio generator
 
 這條路線的吸引力是：不一定需要 teacher logprobs、paired targets 或 adversarial discriminator。它比較像直接讓 generated audio 的 representation distribution 貼近 real audio。
 
+## iFID and FD-loss as a combined route
+
+[Making Reconstruction FID Predictive of Diffusion Generation FID](../papers/arxiv_2603_05630/) 和 [Representation Fréchet Loss](../papers/arxiv_2604_28190/) 可以接成一條很清楚的 one-step audio generation pipeline：
+
+```text
+audio-iFID / interpolation metric
+  -> choose codec / VAE / semantic token / latent representation
+  -> audio FD-loss post-training
+  -> one-step audio generator
+  -> rubric judge + human eval
+```
+
+兩篇的角色不同：
+
+- **iFID 是 diagnostic / predictor**：它回答「這個 latent space 是否適合 diffusion / generative modeling？」普通 reconstruction FID、mel loss、PESQ、STOI、WER 或 reconstruction FAD 可能只表示 codec 很會還原 input，不代表 latent space 可被 generator 平滑取樣。
+- **FD-loss 是 training objective**：它回答「怎麼把 generated samples 的 distribution 推近 real distribution？」它把 Fréchet Distance 從 evaluation metric 變成可微的 representation-space distributional loss。
+
+因此對 audio 來說，合理策略不是直接拿 reconstruction 最好的 codec 來做 one-step generator，而是：
+
+1. 先設計 **audio-iFID**：在 audio latent space 找 nearest neighbor / local interpolation，decode 後用 audio representation FID / FAD / FDr_audio 評估，檢查 interpolation region 是否仍保留 speech intelligibility、speaker identity、prosody、event semantics。
+2. 用 audio-iFID / downstream generation score 選 codec、VAE、semantic token 或 prosody token。
+3. 再用 **audio FD-loss** 做 generator-side post-training，讓 one-step generator 的 output distribution 靠近 real audio distribution。
+4. 最後用 AnyAudio-Judge-style rubric、ASR/content metrics、speaker similarity 和 human eval 檢查 conditional correctness，避免 FD-loss 只改善 global distribution 卻犧牲 transcript adherence。
+
+簡化理解：
+
+```text
+iFID: is this latent space generative?
+FD-loss: how do we push generated samples toward the real distribution?
+```
+
+這也說明為什麼它們和 one-step audio 特別相關：one-step model 沒有多步 refinement，latent space 如果不好取樣，錯誤會被直接 decode 出來；而 generator 如果只靠 per-sample regression，很容易產生 over-smoothed speech 或 flat prosody。iFID 負責挑一個比較可生成的空間，FD-loss 負責讓 one-step output 的整體 distribution 更像真實資料。
+
 ## Audio-specific failure modes
 
 AAD-1 的 motion collapse 可以類比成 audio 裡的：
