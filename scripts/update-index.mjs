@@ -16,6 +16,7 @@ const coreTags = new Set([
   "preprocessing",
   "project-audio-model-evaluation",
   "project-full-duplex-data",
+  "project-one-step-audio-generation",
   "project-tts-data-pipeline",
 ])
 
@@ -163,6 +164,7 @@ lines.push(
   "",
   "- [Project: Audio model evaluation](./tags/project-audio-model-evaluation/)",
   "- [Project: Full-duplex data and model](./tags/project-full-duplex-data/)",
+  "- [Project: One-step audio generation](./tags/project-one-step-audio-generation/)",
   "- [Project: TTS data pipeline](./tags/project-tts-data-pipeline/)",
   "- [Citation graph](./citation-graph/)",
   "",

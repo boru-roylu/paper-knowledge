@@ -42,9 +42,11 @@ function initCitationGraph() {
             label: shortTitle(node.title),
             project: (node.tags || []).includes('project-full-duplex-data')
               ? 'full-duplex'
-              : (node.tags || []).includes('project-tts-data-pipeline')
-                ? 'tts'
-                : '',
+              : (node.tags || []).includes('project-one-step-audio-generation')
+                ? 'one-step'
+                : (node.tags || []).includes('project-tts-data-pipeline')
+                  ? 'tts'
+                  : '',
             indegree: incoming.get(node.id)?.length || 0,
             outdegree: outgoing.get(node.id)?.length || 0,
             search: [node.title, node.year, node.venue, ...(node.tags || [])].join(' ').toLowerCase(),
@@ -90,6 +92,10 @@ function initCitationGraph() {
           {
             selector: 'node[project = "full-duplex"]',
             style: { 'background-color': '#2f6f5e' },
+          },
+          {
+            selector: 'node[project = "one-step"]',
+            style: { 'background-color': '#6f4aa8' },
           },
           {
             selector: 'edge',

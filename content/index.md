@@ -15,22 +15,26 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="preprocessing">preprocessing</button>
     <button type="button" data-paper-tag="project-audio-model-evaluation">project: audio model evaluation</button>
     <button type="button" data-paper-tag="project-full-duplex-data">project: full duplex data</button>
+    <button type="button" data-paper-tag="project-one-step-audio-generation">project: one step audio generation</button>
     <button type="button" data-paper-tag="project-tts-data-pipeline">project: tts data pipeline</button>
     <button type="button" data-paper-tag="speech-data">speech data</button>
     <button type="button" data-paper-tag="speech-llm">speech llm</button>
     <button type="button" data-paper-tag="tts">tts</button>
+    <button type="button" data-paper-tag="adversarial-training">adversarial training</button>
     <button type="button" data-paper-tag="agentic-workflow">agentic workflow</button>
     <button type="button" data-paper-tag="ai-infrastructure">ai infrastructure</button>
     <button type="button" data-paper-tag="attribution">attribution</button>
     <button type="button" data-paper-tag="audio-data">audio data</button>
     <button type="button" data-paper-tag="audio-evaluation">audio evaluation</button>
     <button type="button" data-paper-tag="audio-generation">audio generation</button>
+    <button type="button" data-paper-tag="autoregressive-generation">autoregressive generation</button>
     <button type="button" data-paper-tag="clustering">clustering</button>
     <button type="button" data-paper-tag="compositional-audio">compositional audio</button>
     <button type="button" data-paper-tag="data-cleaning">data cleaning</button>
     <button type="button" data-paper-tag="data-curation">data curation</button>
     <button type="button" data-paper-tag="data-mixing">data mixing</button>
     <button type="button" data-paper-tag="dialogue">dialogue</button>
+    <button type="button" data-paper-tag="diffusion-distillation">diffusion distillation</button>
     <button type="button" data-paper-tag="efficient-pretraining">efficient pretraining</button>
     <button type="button" data-paper-tag="evaluation">evaluation</button>
     <button type="button" data-paper-tag="forecasting">forecasting</button>
@@ -38,6 +42,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="llm">llm</button>
     <button type="button" data-paper-tag="multilingual-asr">multilingual asr</button>
     <button type="button" data-paper-tag="multilingual-speech">multilingual speech</button>
+    <button type="button" data-paper-tag="one-step-generation">one step generation</button>
     <button type="button" data-paper-tag="proxy-metrics">proxy metrics</button>
     <button type="button" data-paper-tag="reasoning">reasoning</button>
     <button type="button" data-paper-tag="recurrent-model">recurrent model</button>
@@ -53,12 +58,18 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="tool">tool</button>
     <button type="button" data-paper-tag="tool-use">tool use</button>
     <button type="button" data-paper-tag="turn-taking">turn taking</button>
+    <button type="button" data-paper-tag="video-generation">video generation</button>
     <button type="button" data-paper-tag="voice-cloning">voice cloning</button>
     <button type="button" data-paper-tag="whisperd">whisperd</button>
   </div>
 </div>
 
 <div class="paper-list">
+<div class="paper-row" data-tags="video-generation diffusion-distillation adversarial-training autoregressive-generation one-step-generation project-one-step-audio-generation" data-search="AAD-1: Asymmetric Adversarial Distillation for One-Step Autoregressive Video Generation arxiv_2606_03972 2026-06-06 2026 ICML 2026 / arXiv arxiv:2606.03972 video-generation diffusion-distillation adversarial-training autoregressive-generation one-step-generation project-one-step-audio-generation">
+  <div class="paper-date">2026-06-06</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2606_03972/">AAD-1: Asymmetric Adversarial Distillation for One-Step Autoregressive Video Generation</a> <span class="paper-meta">(2026, ICML 2026 / arXiv)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/video-generation/">#video-generation</a> <a class="tag-link internal" href="./tags/diffusion-distillation/">#diffusion-distillation</a> <a class="tag-link internal" href="./tags/adversarial-training/">#adversarial-training</a> <a class="tag-link internal" href="./tags/autoregressive-generation/">#autoregressive-generation</a> <a class="tag-link internal" href="./tags/one-step-generation/">#one-step-generation</a> <a class="tag-link internal" href="./tags/project-one-step-audio-generation/">#project-one-step-audio-generation</a></div>
+</div>
 <div class="paper-row" data-tags="llm evaluation forecasting proxy-metrics reasoning project-audio-model-evaluation project-tts-data-pipeline" data-search="Forecasting Downstream Performance of LLMs With Proxy Metrics arxiv_2605_18607 2026-06-06 2026 arXiv preprint arxiv:2605.18607 llm evaluation forecasting proxy-metrics reasoning project-audio-model-evaluation project-tts-data-pipeline">
   <div class="paper-date">2026-06-06</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2605_18607/">Forecasting Downstream Performance of LLMs With Proxy Metrics</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>
@@ -266,6 +277,7 @@ title: Paper Knowledge
 
 - [Project: Audio model evaluation](./tags/project-audio-model-evaluation/)
 - [Project: Full-duplex data and model](./tags/project-full-duplex-data/)
+- [Project: One-step audio generation](./tags/project-one-step-audio-generation/)
 - [Project: TTS data pipeline](./tags/project-tts-data-pipeline/)
 - [Citation graph](./citation-graph/)
 

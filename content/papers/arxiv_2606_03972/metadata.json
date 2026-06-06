@@ -1,0 +1,71 @@
+{
+  "paper_key": "arxiv_2606_03972",
+  "canonical_id": "arxiv:2606.03972",
+  "arxiv_id": "2606.03972",
+  "version": "latest",
+  "title": "AAD-1: Asymmetric Adversarial Distillation for One-Step Autoregressive Video Generation",
+  "authors": [
+    "Haobo Li",
+    "Yanhong Zeng",
+    "Yunhong Lu",
+    "Jiapeng Zhu",
+    "Hao Ouyang",
+    "Qiuyu Wang",
+    "Ka Leong Cheng",
+    "Yujun Shen",
+    "Zhipeng Zhang"
+  ],
+  "venue": "ICML 2026 / arXiv",
+  "year": 2026,
+  "abstract": "We present AAD-1, an Asymmetric Adversarial Distillation framework for One-step autoregressive image-to-video generation. State-of-the-art methods adopt adversarial distillation but suffer from motion collapse and training instability, resulting in static videos. AAD-1 addresses these challenges through two key designs in architecture and training strategy. The generator remains causal to preserve autoregressive sampling, while the discriminator attends bidirectionally over the full spatiotemporal context and produces a holistic realism score for the entire video sequence. A phased strategy first uses distribution matching to bootstrap a stable one-step generator before adversarial distillation. Experiments on VBench show state-of-the-art one-step autoregressive video generation.",
+  "primaryClass": "cs.CV",
+  "categories": [
+    "cs.CV",
+    "cs.LG"
+  ],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2606.03972",
+    "pdf": "https://arxiv.org/pdf/2606.03972",
+    "source": "https://arxiv.org/src/2606.03972",
+    "project": "https://aad-1.github.io/",
+    "repo": "https://github.com/AutoLab-SAI-SJTU/AAD-1",
+    "huggingface": "https://huggingface.co/Watay/AAD-1"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2606.03972-src.tar.gz",
+    "entrypoint": "source/main.tex"
+  },
+  "tags": [
+    "video-generation",
+    "diffusion-distillation",
+    "adversarial-training",
+    "autoregressive-generation",
+    "one-step-generation",
+    "project-one-step-audio-generation"
+  ],
+  "concepts": [
+    "asymmetric adversarial distillation",
+    "one-step autoregressive generation",
+    "causal generator",
+    "bidirectional discriminator",
+    "video-level holistic discrimination",
+    "distribution matching distillation",
+    "DMD warmup",
+    "self-rollout training",
+    "motion collapse",
+    "long-horizon drift",
+    "sink tokens",
+    "sliding-window context",
+    "Relative RoPE",
+    "VBench-I2V"
+  ],
+  "status": "read",
+  "created": "2026-06-06",
+  "doi": "10.48550/arXiv.2606.03972",
+  "publication_status": "ICML 2026 to appear according to official project page; arXiv submitted 2026-06-02",
+  "bibtex_key": "li2026aad1",
+  "fetch_source": "arxiv_tex",
+  "summary_model": "Codex GPT-5",
+  "citations": []
+}

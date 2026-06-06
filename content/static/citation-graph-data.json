@@ -443,6 +443,21 @@
       ]
     },
     {
+      "id": "arxiv_2606_03972",
+      "title": "AAD-1: Asymmetric Adversarial Distillation for One-Step Autoregressive Video Generation",
+      "year": 2026,
+      "venue": "ICML 2026 / arXiv",
+      "url": "../papers/arxiv_2606_03972/",
+      "tags": [
+        "video-generation",
+        "diffusion-distillation",
+        "adversarial-training",
+        "autoregressive-generation",
+        "one-step-generation",
+        "project-one-step-audio-generation"
+      ]
+    },
+    {
       "id": "microsoft_mai_thinking_1",
       "title": "MAI-Thinking-1: Building a Hill-Climbing Machine",
       "year": 2026,

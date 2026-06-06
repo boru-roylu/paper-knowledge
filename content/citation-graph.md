@@ -8,6 +8,7 @@ title: Citation Graph
     <select id="citation-project">
       <option value="">All projects</option>
       <option value="project-full-duplex-data">Full-duplex data and model</option>
+      <option value="project-one-step-audio-generation">One-step audio generation</option>
       <option value="project-tts-data-pipeline">TTS data pipeline</option>
     </select>
     <label class="citation-toggle" role="button" aria-pressed="false">
