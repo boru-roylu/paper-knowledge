@@ -120,6 +120,128 @@ sum_i w_i * alpha_{i,j} * v_j = v_j * sum_i w_i * alpha_{i,j}
 
 這表示 multi-token attribution 不只適用自然語言 CoT，也能解釋 code snippets / code modification spans。
 
+## 作者如何驗證 source span 真的找對
+這篇不是靠人工看 heatmap 說「看起來對」，而是用三層驗證。
+
+### 1) 有 ground-truth evidence 的任務：Recovery Rate
+在 RULER 類 long-context retrieval tasks 裡，input 裡哪些 token 是答案來源是已知的，例如 Needle-in-a-Haystack、Variable Tracking、HotpotQA long-context variants。
+
+作者流程是：
+
+```text
+target model 先生成 reasoning + final answer
+只保留 final answer 正確的 cases
+FlashTrace 對 final output span 做 attribution
+把 generated reasoning tokens 排除
+看 ground-truth evidence tokens 有沒有落在 top 10% attributed input tokens
+```
+
+這個指標叫 **Recovery Rate**。如果答案應該來自 input 裡某個 key/value、needle、entity span，好的 attribution 應該把高分放到那些 evidence tokens。
+
+這是最接近「是否正確 locate input source span」的驗證。但它有前提：final answer 必須正確，否則 ground-truth evidence recovery 沒有明確意義，因為模型可能根本沒有用正確 evidence 產生答案。
+
+### 2) 沒有明確 source span 的 reasoning tasks：RISE / MAS
+在 MATH、MoreHopQA、Aider code generation 這些任務裡，不一定有乾淨的 ground-truth input span。因此作者用 causal perturbation 類指標：
+
+```text
+找出 attribution score 高的 input tokens
+mask / perturb 這些 tokens
+看模型原本 output 的 probability 是否明顯下降
+```
+
+如果移除高 attribution tokens 後，模型更難產生原本 output，代表這些 tokens 對 realized generation 確實重要。這就是 RISE / MAS 的角色。
+
+所以 RISE / MAS 驗證的是：
+
+> 被找出的 tokens 是否真的影響模型產生該 output。
+
+它不是人工標準答案式的 span matching，而是測 attribution 是否對模型行為有 causal predictive power。
+
+### 3) 和 expensive exhaustive rollout 比
+作者還用 **Exhaustive Token-Level Rollout** 當昂貴近似上界：逐 token 做更細的 attribution / rollout，然後看 FlashTrace 的 span-wise approximation 是否接近它。
+
+在 MoreHopQA：
+
+- Exhaustive Token-Level Rollout：11.2s，RISE 0.116，MAS 0.193。
+- FlashTrace：0.72s，RISE 0.128，MAS 0.205。
+
+結論是 FlashTrace 的 span-wise approximation 接近 exhaustive rollout，但速度快很多。
+
+### 要怎麼解讀這個驗證
+比較準確的說法是：
+
+- 在有 ground-truth evidence 的 retrieval tasks，FlashTrace 更常把 top attribution 放到正確 evidence tokens。
+- 在沒有 ground-truth source span 的 reasoning tasks，FlashTrace 的高 attribution tokens 被 perturb 後會更明顯影響 output probability。
+- 它解釋的是 **realized generation 的 information flow**，不是完整 mechanistic circuit，也不保證在 diffuse evidence 場景能定位到單一精準 span。
+
+## 找出 source span 有什麼用
+source span 的主要用途不是讓 heatmap 好看，而是做 grounding、debugging 和 data/eval filtering。
+
+### 1) 檢查模型是不是 grounded
+例如 voice agent 最後回答或 tool call 用了 `Boston`。可以檢查 attribution 是否真的落在使用者最後修正：
+
+```text
+actually wait, make that Boston
+```
+
+而不是前面的 false start：
+
+```text
+book me a flight to New York
+```
+
+這可以區分「真的讀懂 self-correction」和「靠 prior / shortcut 猜對」。
+
+### 2) Debug 錯誤 reasoning
+如果模型答錯，可以看高 attribution 是否集中在：
+
+- ASR hallucination
+- speaker diarization 錯分的 utterance
+- stale instruction
+- irrelevant retrieved document
+- prompt template 裡的 spurious token
+
+這比只看 final accuracy 更能定位錯誤來源。
+
+### 3) Tool-call / agent action grounding
+對 full-duplex voice agent，FlashTrace 可檢查 tool arguments 是否依賴正確 user evidence。例如：
+
+```json
+{"destination": "Boston", "date": "Friday"}
+```
+
+可以分別追蹤 `destination=Boston`、`date=Friday` 依賴 transcript 的哪段，分析 premature tool call、stale state、或 self-correction 沒更新的 failure。
+
+### 4) Dataset cleaning
+對 speech reasoning / agent dataset，可以保留 attribution 落在正確 evidence span 的 examples，丟掉 attribution 主要落在 boilerplate、speaker ID artifact、annotation leakage、或 hallucinated ASR fragment 的 examples。
+
+### 5) Benchmark grounding metric
+除了 Pass@1、WER、tool accuracy，也可以加一個 attribution-based grounding check：
+
+```text
+answer correct + attribution on expected evidence = grounded success
+answer correct + attribution off evidence = suspicious / shortcut
+answer wrong + attribution on wrong source = useful failure diagnosis
+```
+
+### 6) 對 speech / full-duplex project 的用途
+第一步不應該直接做 raw audio attribution，而應該做 transcript / event-token attribution。例如：
+
+```text
+[S1] book me a flight to New York
+[S1] actually wait, make that Boston
+[S2:backchannel] mm-hmm
+```
+
+我們可以檢查 full-duplex agent、rubric judge、或 speech reasoning model 是否真的用到：
+
+- self-correction 後的 span
+- interruption span
+- backchannel / pause / overlap tag
+- 正確 speaker 的 utterance
+
+對我們目前的 project，FlashTrace 不負責 `mono -> dual-channel` data production；它更像之後的 **reasoning / judge / tool-call grounding debugger**。
+
 ## Project relevance
 **project-full-duplex-data：中度相關，尤其是 speech reasoning / voice-agent debugging。**
 

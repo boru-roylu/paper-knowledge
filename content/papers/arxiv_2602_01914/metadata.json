@@ -52,6 +52,9 @@
     "Recovery Rate",
     "Exhaustive Token-Level Rollout",
     "Aider code generation attribution",
+    "source span grounding",
+    "attribution-based benchmark grounding",
+    "dataset cleaning via attribution",
     "transcript-grounded speech reasoning",
     "tool-call grounding",
     "multimodal attribution"
