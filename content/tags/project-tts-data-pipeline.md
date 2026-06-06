@@ -24,6 +24,45 @@ title: "Project: TTS data pipeline"
 - 該用哪些 automatic metrics、人類抽查策略、或 model-based filters？
 - 對 English TTS 而言，資料多樣性和資料乾淨程度應該怎麼 trade off？
 
+## Structured controllable TTS prompts
+
+[TED-TTS](../papers/arxiv_2601_03170/) 補上一個重要方向：TTS data pipeline 不應只產生 plain transcript，而應產生 **segment-level structured prompt**。
+
+一個更有訓練價值的 expressive TTS example 可以長成：
+
+```text
+utterance text
+  -> contiguous segments
+  -> emotion label / natural language emotion description
+  -> expected duration or speaking-rate range
+  -> pause / emphasis / nonverbal tags
+  -> speaker identity and style constraints
+```
+
+TED-TTS 的 MED-TTS 是 synthetic text-side dataset，不是真實 speech annotation，但它提供了可借鑑的 schema：
+
+- GPT-4o 產生 emotion-rich English / Chinese text。
+- DeepSeek-Chat 做 emotion-aligned segmentation 和 duration estimation。
+- Qwen3-8B 被 fine-tune 成 automatic prompt constructor。
+- 人工 verification checklist 檢查 segment order、emotion-text alignment、emotion description、duration plausibility。
+
+對我們的 pipeline，下一步可以把這種 schema 接到真實 audio：
+
+```text
+raw audio + transcript
+  -> ASR / diarization / forced alignment
+  -> segment boundary detection
+  -> emotion / prosody / speaking-rate tags
+  -> duration from timestamps or codec-token counts
+  -> verification / filtering
+  -> structured TTS training example
+```
+
+這樣可以同時服務兩個目標：
+
+- clean English TTS training：保留 content fidelity、speaker consistency、alignment quality。
+- controllable expressive TTS：讓模型學會 segment-level emotion、pace、pause 和 emphasis，而不是只有整句 global style。
+
 ## Related Tags
 
 #audio-data #diarization #preprocessing #speech-data #tts #asr

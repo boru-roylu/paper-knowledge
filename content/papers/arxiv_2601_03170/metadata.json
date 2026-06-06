@@ -1,0 +1,70 @@
+{
+  "paper_key": "arxiv_2601_03170",
+  "canonical_id": "arxiv:2601.03170",
+  "arxiv_id": "2601.03170",
+  "version": "latest",
+  "title": "TED-TTS: Training-Free Intra-Utterance Emotion and Duration Control for Text-to-Speech Synthesis",
+  "authors": [
+    "Qifan Liang",
+    "Yuansen Liu",
+    "Ruixin Wei",
+    "Nan Lu",
+    "Junchuan Zhao",
+    "Ye Wang"
+  ],
+  "venue": "ACL 2026 Main Conference / arXiv preprint",
+  "year": 2026,
+  "abstract": "TED-TTS is a training-free framework for intra-utterance emotion and duration control in pretrained zero-shot TTS. It combines segment-aware emotion conditioning with 2D causal masks and Monotonic Stream Alignment, plus segment-aware duration steering with local duration embedding control and global EOS logit modulation. The paper also constructs MED-TTS, a 30,000-sample multi-emotion and duration-annotated text dataset for fine-tuning a Qwen3-8B automatic prompt constructor.",
+  "primaryClass": "cs.SD",
+  "categories": [
+    "cs.SD"
+  ],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2601.03170",
+    "pdf": "https://arxiv.org/pdf/2601.03170",
+    "source": "https://arxiv.org/src/2601.03170",
+    "repo": "https://github.com/Simon-leong/TED-TTS",
+    "demo": "https://simon-leong.github.io/TED-TTS-DemoPage/",
+    "openreview": "https://openreview.net/forum?id=8eyCzZcE7t"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2601.03170-src.tar.gz",
+    "entrypoint": "source/main.tex"
+  },
+  "tags": [
+    "tts",
+    "controllable-tts",
+    "expressive-speech",
+    "duration-control",
+    "emotion-control",
+    "speech-data",
+    "project-tts-data-pipeline",
+    "project-full-duplex-data"
+  ],
+  "concepts": [
+    "training-free TTS control",
+    "intra-utterance emotion control",
+    "segment-aware conditioning",
+    "Monotonic Stream Alignment",
+    "duration steering",
+    "global EOS steering",
+    "MED-TTS",
+    "structured TTS prompts"
+  ],
+  "status": "read",
+  "created": "2026-06-06",
+  "doi": "10.48550/arXiv.2601.03170",
+  "publication_status": "Reported as ACL 2026 Main Conference; arXiv metadata remains preprint as of 2026-06-06",
+  "bibtex_key": "liang2026tedttstrainingfreeintrautteran",
+  "fetch_source": "arxiv_tex",
+  "summary_model": "Codex GPT-5",
+  "citations": [],
+  "openreview": {
+    "forum": "E07nRDUAtN",
+    "url": "https://openreview.net/forum?id=E07nRDUAtN",
+    "match_score": 0.75,
+    "notes_count": 0,
+    "local_path": "reviews/openreview.md"
+  }
+}

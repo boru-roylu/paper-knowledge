@@ -149,6 +149,23 @@
       ]
     },
     {
+      "id": "arxiv_2601_03170",
+      "title": "TED-TTS: Training-Free Intra-Utterance Emotion and Duration Control for Text-to-Speech Synthesis",
+      "year": 2026,
+      "venue": "ACL 2026 Main Conference / arXiv preprint",
+      "url": "../papers/arxiv_2601_03170/",
+      "tags": [
+        "tts",
+        "controllable-tts",
+        "expressive-speech",
+        "duration-control",
+        "emotion-control",
+        "speech-data",
+        "project-tts-data-pipeline",
+        "project-full-duplex-data"
+      ]
+    },
+    {
       "id": "arxiv_2602_01914",
       "title": "Towards Long-Horizon Interpretability: Efficient and Faithful Multi-Token Attribution for Reasoning LLMs",
       "year": 2026,
