@@ -37,6 +37,7 @@ title: "Project: Full-duplex data and model"
 ### Core data recovery / preprocessing
 
 - [DialogueSidon](../papers/arxiv_2604_09344/)：最直接命中本 project。它把 noisy monaural two-speaker dialogue 轉成 speaker-wise full-duplex tracks，用 **SSL-VAE + diffusion latent predictor** 同時做 restoration + separation。可作為「real mono audio -> dual-track training data」的核心 baseline。
+- [Dual-path Mamba](../papers/arxiv_2403_18257/)：efficient single-channel speech separation backbone。它用 dual-path bidirectional Mamba 做 local/global separation，在 WSJ0-2mix 上以較小 memory 接近 SepFormer/MossFormer 等 baseline；可作 mono dialogue overlap cleanup baseline，但不處理 diarization、speaker swap、event tags 或 transcript alignment。
 - [Sommelier](../papers/arxiv_2603_25750/)：web-scale open multi-turn audio preprocessing pipeline，包含 VAD、diarization、overlap disentanglement、background music removal、ASR ensemble。它的價值是工程 pipeline blueprint，尤其是保留 overlap / backchannel 而不是直接刪掉。
 - [MeanFlow-TSE](../papers/arxiv_2512_18572/)：one-step generative target speaker extraction。它用 enrollment + mixing-ratio-aware MeanFlow 從 mono mixture 直接抽 target speaker，可作 overlap cleanup / speaker-conditioned extraction baseline；但目前只在 Libri2Mix synthetic mixture 上驗證，不是完整 dialogue diarization 或 dual-channel recovery pipeline。
 - [WhisperD / Parakeet](../tools/jordandarefsky-parakeet-whisperd/)：提供 speaker/event transcript format：`[S1]`, `[S2]`, `(laughs)`, `(coughs)`。它是把 podcast data 轉成 dialogue TTS data 的實用中間層，但仍需要補 time alignment / channel-level annotation。

@@ -29,6 +29,23 @@
       ]
     },
     {
+      "id": "arxiv_2403_18257",
+      "title": "Dual-path Mamba: Short and Long-term Bidirectional Selective Structured State Space Models for Speech Separation",
+      "year": 2025,
+      "venue": "ICASSP 2025",
+      "url": "../papers/arxiv_2403_18257/",
+      "tags": [
+        "speech-separation",
+        "source-separation",
+        "mamba",
+        "state-space-model",
+        "dual-path-network",
+        "wsj0-2mix",
+        "project-full-duplex-data",
+        "project-tts-data-pipeline"
+      ]
+    },
+    {
       "id": "arxiv_2405_19487",
       "title": "A Full-duplex Speech Dialogue Scheme Based On Large Language Model",
       "year": 2024,

@@ -1,0 +1,74 @@
+{
+  "paper_key": "arxiv_2403_18257",
+  "canonical_id": "arxiv:2403.18257",
+  "arxiv_id": "2403.18257",
+  "version": "latest",
+  "title": "Dual-path Mamba: Short and Long-term Bidirectional Selective Structured State Space Models for Speech Separation",
+  "authors": [
+    "Xilin Jiang",
+    "Cong Han",
+    "Nima Mesgarani"
+  ],
+  "venue": "ICASSP 2025",
+  "year": 2025,
+  "abstract": "Transformers have been the most successful architecture for various speech modeling tasks, including speech separation. However, the self-attention mechanism in transformers with quadratic complexity is inefficient in computation and memory. Recent models incorporate new layers and modules along with transformers for better performance but also introduce extra model complexity. In this work, we replace transformers with Mamba, a selective state space model, for speech separation. We propose dual-path Mamba, which models short-term and long-term forward and backward dependency of speech signals using selective state spaces. Our experimental results on the WSJ0-2mix data show that our dual-path Mamba models of comparably smaller sizes outperform state-of-the-art RNN model DPRNN, CNN model WaveSplit, and transformer model Sepformer. Code: https://github.com/xi-j/Mamba-TasNet",
+  "primaryClass": "eess.AS",
+  "categories": [
+    "eess.AS",
+    "cs.SD"
+  ],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2403.18257",
+    "pdf": "https://arxiv.org/pdf/2403.18257",
+    "source": "https://arxiv.org/src/2403.18257",
+    "repo": "https://github.com/xi-j/Mamba-TasNet",
+    "code": "https://github.com/xi-j/Mamba-TasNet",
+    "doi": "https://doi.org/10.1109/ICASSP49660.2025.10888514"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2403.18257-src.tar.gz",
+    "entrypoint": "source/Template.tex"
+  },
+  "tags": [
+    "speech-separation",
+    "source-separation",
+    "mamba",
+    "state-space-model",
+    "dual-path-network",
+    "wsj0-2mix",
+    "project-full-duplex-data",
+    "project-tts-data-pipeline"
+  ],
+  "concepts": [
+    "Dual-path Mamba",
+    "Mamba",
+    "selective state space model",
+    "bidirectional SSM",
+    "BiMamba",
+    "time-domain speech separation",
+    "single-channel speech separation",
+    "WSJ0-2mix",
+    "SI-SNRi",
+    "SDRi",
+    "dynamic mixing",
+    "SepFormer",
+    "DPRNN",
+    "MossFormer",
+    "full-duplex data preprocessing"
+  ],
+  "status": "read",
+  "created": "2026-06-07",
+  "doi": "10.1109/ICASSP49660.2025.10888514",
+  "arxiv_doi": "10.48550/arXiv.2403.18257",
+  "publication_status": "Published as an ICASSP 2025 proceedings article according to Crossref DOI metadata; arXiv source was used for the detailed note.",
+  "bibtex_key": "jiang2025dualpathmamba",
+  "fetch_source": "arXiv TeX source",
+  "summary_model": "GPT-5 Codex",
+  "openreview": {
+    "status": "no-public-notes",
+    "forum": "ddfuZ3pj4t",
+    "summary": "OpenReview fetch matched a forum, but public notes count was 0; no public review/rebuttal context was available."
+  },
+  "citations": []
+}

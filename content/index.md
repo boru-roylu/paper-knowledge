@@ -48,6 +48,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="diffusion">diffusion</button>
     <button type="button" data-paper-tag="diffusion-distillation">diffusion distillation</button>
     <button type="button" data-paper-tag="distribution-matching">distribution matching</button>
+    <button type="button" data-paper-tag="dual-path-network">dual path network</button>
     <button type="button" data-paper-tag="duration-control">duration control</button>
     <button type="button" data-paper-tag="efficient-pretraining">efficient pretraining</button>
     <button type="button" data-paper-tag="emotion-control">emotion control</button>
@@ -64,6 +65,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="llm">llm</button>
     <button type="button" data-paper-tag="llm-judge">llm judge</button>
     <button type="button" data-paper-tag="long-context">long context</button>
+    <button type="button" data-paper-tag="mamba">mamba</button>
     <button type="button" data-paper-tag="meanflow">meanflow</button>
     <button type="button" data-paper-tag="model-editing">model editing</button>
     <button type="button" data-paper-tag="multilingual-asr">multilingual asr</button>
@@ -83,11 +85,13 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="safety">safety</button>
     <button type="button" data-paper-tag="separation">separation</button>
     <button type="button" data-paper-tag="sequence-modeling">sequence modeling</button>
+    <button type="button" data-paper-tag="source-separation">source separation</button>
     <button type="button" data-paper-tag="speech-data-cleaning">speech data cleaning</button>
     <button type="button" data-paper-tag="speech-enhancement">speech enhancement</button>
     <button type="button" data-paper-tag="speech-reasoning">speech reasoning</button>
     <button type="button" data-paper-tag="speech-restoration">speech restoration</button>
     <button type="button" data-paper-tag="speech-separation">speech separation</button>
+    <button type="button" data-paper-tag="state-space-model">state space model</button>
     <button type="button" data-paper-tag="streaming-tts">streaming tts</button>
     <button type="button" data-paper-tag="target-speaker-extraction">target speaker extraction</button>
     <button type="button" data-paper-tag="task-oriented-dialogue">task oriented dialogue</button>
@@ -106,6 +110,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="voice-agent">voice agent</button>
     <button type="button" data-paper-tag="voice-cloning">voice cloning</button>
     <button type="button" data-paper-tag="whisperd">whisperd</button>
+    <button type="button" data-paper-tag="wsj0-2mix">wsj0 2mix</button>
     <button type="button" data-paper-tag="zero-shot-tts">zero shot tts</button>
   </div>
 </div>
@@ -120,6 +125,11 @@ title: Paper Knowledge
   <div class="paper-date">2026-06-07</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2603_18008/">TherapyGym: Evaluating and Aligning Clinical Fidelity and Safety in Therapy Chatbots</a> <span class="paper-meta">(2026, ICLR 2026 submission / arXiv preprint)</span></div>
   <div class="paper-tags"><a class="tag-link internal" href="./tags/clinical-ai/">#clinical-ai</a> <a class="tag-link internal" href="./tags/chatbot-evaluation/">#chatbot-evaluation</a> <a class="tag-link internal" href="./tags/llm-judge/">#llm-judge</a> <a class="tag-link internal" href="./tags/safety/">#safety</a> <a class="tag-link internal" href="./tags/grpo/">#grpo</a> <a class="tag-link internal" href="./tags/project-audio-model-evaluation/">#project-audio-model-evaluation</a></div>
+</div>
+<div class="paper-row" data-tags="speech-separation source-separation mamba state-space-model dual-path-network wsj0-2mix project-full-duplex-data project-tts-data-pipeline" data-search="Dual-path Mamba: Short and Long-term Bidirectional Selective Structured State Space Models for Speech Separation arxiv_2403_18257 2026-06-07 2025 ICASSP 2025 arxiv:2403.18257 speech-separation source-separation mamba state-space-model dual-path-network wsj0-2mix project-full-duplex-data project-tts-data-pipeline">
+  <div class="paper-date">2026-06-07</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2403_18257/">Dual-path Mamba: Short and Long-term Bidirectional Selective Structured State Space Models for Speech Separation</a> <span class="paper-meta">(2025, ICASSP 2025)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/speech-separation/">#speech-separation</a> <a class="tag-link internal" href="./tags/source-separation/">#source-separation</a> <a class="tag-link internal" href="./tags/mamba/">#mamba</a> <a class="tag-link internal" href="./tags/state-space-model/">#state-space-model</a> <a class="tag-link internal" href="./tags/dual-path-network/">#dual-path-network</a> <a class="tag-link internal" href="./tags/wsj0-2mix/">#wsj0-2mix</a> <a class="tag-link internal" href="./tags/project-full-duplex-data/">#project-full-duplex-data</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a></div>
 </div>
 <div class="paper-row" data-tags="target-speaker-extraction speech-separation one-step-generation meanflow flow-matching speech-enhancement project-full-duplex-data project-one-step-audio-generation project-audio-model-evaluation" data-search="MeanFlow-TSE: One-Step Generative Target Speaker Extraction with Mean Flow arxiv_2512_18572 2026-06-07 2025 arXiv preprint / Interspeech style manuscript arxiv:2512.18572 target-speaker-extraction speech-separation one-step-generation meanflow flow-matching speech-enhancement project-full-duplex-data project-one-step-audio-generation project-audio-model-evaluation">
   <div class="paper-date">2026-06-07</div>
