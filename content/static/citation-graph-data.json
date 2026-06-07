@@ -110,6 +110,24 @@
       ]
     },
     {
+      "id": "arxiv_2505_13181",
+      "title": "Efficient Speech Language Modeling via Energy Distance in Continuous Latent Space",
+      "year": 2025,
+      "venue": "NeurIPS 2025 submission / arXiv preprint",
+      "url": "../papers/arxiv_2505_13181/",
+      "tags": [
+        "speech-llm",
+        "tts",
+        "continuous-latent",
+        "autoregressive-generation",
+        "streaming-tts",
+        "energy-distance",
+        "project-one-step-audio-generation",
+        "project-tts-data-pipeline",
+        "project-full-duplex-data"
+      ]
+    },
+    {
       "id": "arxiv_2505_17060",
       "title": "SALMONN-omni: A Codec-free Speech LLM\\\\ for Full-duplex Listening and Speaking",
       "year": 2025,

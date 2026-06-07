@@ -1,0 +1,65 @@
+{
+  "paper_key": "arxiv_2505_13181",
+  "canonical_id": "arxiv:2505.13181",
+  "arxiv_id": "2505.13181",
+  "version": "latest",
+  "title": "Efficient Speech Language Modeling via Energy Distance in Continuous Latent Space",
+  "authors": [
+    "Zhengrui Ma",
+    "Yang Feng",
+    "Chenze Shao",
+    "Fandong Meng",
+    "Jie Zhou",
+    "Min Zhang"
+  ],
+  "venue": "NeurIPS 2025 submission / arXiv preprint",
+  "year": 2025,
+  "abstract": "SLED models speech autoregressively in continuous latent space using a lightweight per-token generative module trained with generalized energy distance. By avoiding residual vector quantization and hierarchical residual-token prediction, SLED simplifies speech language modeling while preserving rich speech information and supporting streaming inference. Experiments on zero-shot and streaming speech synthesis show strong WER, competitive quality, and efficient per-step sampling.",
+  "primaryClass": "cs.CL",
+  "categories": [
+    "cs.CL",
+    "cs.SD",
+    "eess.AS"
+  ],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2505.13181",
+    "pdf": "https://arxiv.org/pdf/2505.13181",
+    "source": "https://arxiv.org/src/2505.13181",
+    "repo": "https://github.com/ictnlp/SLED-TTS"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2505.13181-src.tar.gz",
+    "entrypoint": "source/neurips_2025.tex"
+  },
+  "tags": [
+    "speech-llm",
+    "tts",
+    "continuous-latent",
+    "autoregressive-generation",
+    "streaming-tts",
+    "energy-distance",
+    "project-one-step-audio-generation",
+    "project-tts-data-pipeline",
+    "project-full-duplex-data"
+  ],
+  "concepts": [
+    "SLED",
+    "continuous speech language modeling",
+    "energy distance",
+    "generalized energy distance",
+    "MMD",
+    "continuous latent space",
+    "streaming inference",
+    "classifier-free guidance",
+    "Encodec latent"
+  ],
+  "status": "read",
+  "created": "2026-06-06",
+  "doi": "10.48550/arXiv.2505.13181",
+  "publication_status": "No formal conference or journal reference found as of 2026-06-06",
+  "bibtex_key": "ma2025efficientspeechlanguagemodelin",
+  "fetch_source": "arxiv_tex",
+  "summary_model": "Codex GPT-5",
+  "citations": []
+}

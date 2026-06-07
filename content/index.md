@@ -33,6 +33,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="clustering">clustering</button>
     <button type="button" data-paper-tag="compositional-audio">compositional audio</button>
     <button type="button" data-paper-tag="concept-erasure">concept erasure</button>
+    <button type="button" data-paper-tag="continuous-latent">continuous latent</button>
     <button type="button" data-paper-tag="controllable-tts">controllable tts</button>
     <button type="button" data-paper-tag="credit-assignment">credit assignment</button>
     <button type="button" data-paper-tag="data-cleaning">data cleaning</button>
@@ -45,6 +46,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="duration-control">duration control</button>
     <button type="button" data-paper-tag="efficient-pretraining">efficient pretraining</button>
     <button type="button" data-paper-tag="emotion-control">emotion control</button>
+    <button type="button" data-paper-tag="energy-distance">energy distance</button>
     <button type="button" data-paper-tag="evaluation">evaluation</button>
     <button type="button" data-paper-tag="evaluation-metrics">evaluation metrics</button>
     <button type="button" data-paper-tag="expressive-speech">expressive speech</button>
@@ -70,6 +72,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="speech-data-cleaning">speech data cleaning</button>
     <button type="button" data-paper-tag="speech-reasoning">speech reasoning</button>
     <button type="button" data-paper-tag="speech-restoration">speech restoration</button>
+    <button type="button" data-paper-tag="streaming-tts">streaming tts</button>
     <button type="button" data-paper-tag="taxonomy">taxonomy</button>
     <button type="button" data-paper-tag="text-to-audio">text to audio</button>
     <button type="button" data-paper-tag="text-to-image">text to image</button>
@@ -124,6 +127,11 @@ title: Paper Knowledge
   <div class="paper-date">2026-06-06</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2601_03170/">TED-TTS: Training-Free Intra-Utterance Emotion and Duration Control for Text-to-Speech Synthesis</a> <span class="paper-meta">(2026, ACL 2026 Main Conference / arXiv preprint)</span></div>
   <div class="paper-tags"><a class="tag-link internal" href="./tags/tts/">#tts</a> <a class="tag-link internal" href="./tags/controllable-tts/">#controllable-tts</a> <a class="tag-link internal" href="./tags/expressive-speech/">#expressive-speech</a> <a class="tag-link internal" href="./tags/duration-control/">#duration-control</a> <a class="tag-link internal" href="./tags/emotion-control/">#emotion-control</a> <a class="tag-link internal" href="./tags/speech-data/">#speech-data</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a> <a class="tag-link internal" href="./tags/project-full-duplex-data/">#project-full-duplex-data</a></div>
+</div>
+<div class="paper-row" data-tags="speech-llm tts continuous-latent autoregressive-generation streaming-tts energy-distance project-one-step-audio-generation project-tts-data-pipeline project-full-duplex-data" data-search="Efficient Speech Language Modeling via Energy Distance in Continuous Latent Space arxiv_2505_13181 2026-06-06 2025 NeurIPS 2025 submission / arXiv preprint arxiv:2505.13181 speech-llm tts continuous-latent autoregressive-generation streaming-tts energy-distance project-one-step-audio-generation project-tts-data-pipeline project-full-duplex-data">
+  <div class="paper-date">2026-06-06</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2505_13181/">Efficient Speech Language Modeling via Energy Distance in Continuous Latent Space</a> <span class="paper-meta">(2025, NeurIPS 2025 submission / arXiv preprint)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/speech-llm/">#speech-llm</a> <a class="tag-link internal" href="./tags/tts/">#tts</a> <a class="tag-link internal" href="./tags/continuous-latent/">#continuous-latent</a> <a class="tag-link internal" href="./tags/autoregressive-generation/">#autoregressive-generation</a> <a class="tag-link internal" href="./tags/streaming-tts/">#streaming-tts</a> <a class="tag-link internal" href="./tags/energy-distance/">#energy-distance</a> <a class="tag-link internal" href="./tags/project-one-step-audio-generation/">#project-one-step-audio-generation</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a> <a class="tag-link internal" href="./tags/project-full-duplex-data/">#project-full-duplex-data</a></div>
 </div>
 <div class="paper-row" data-tags="diffusion latent-space autoencoder tokenizer visual-generation project-one-step-audio-generation project-audio-model-evaluation project-tts-data-pipeline" data-search="Reconstruction vs. Generation: Taming Optimization Dilemma in Latent Diffusion Models arxiv_2501_01423 2026-06-06 2025 CVPR 2025 Oral / arXiv arxiv:2501.01423 diffusion latent-space autoencoder tokenizer visual-generation project-one-step-audio-generation project-audio-model-evaluation project-tts-data-pipeline">
   <div class="paper-date">2026-06-06</div>
