@@ -1,0 +1,74 @@
+{
+  "paper_key": "arxiv_2512_18572",
+  "canonical_id": "arxiv:2512.18572",
+  "arxiv_id": "2512.18572",
+  "version": "latest",
+  "title": "MeanFlow-TSE: One-Step Generative Target Speaker Extraction with Mean Flow",
+  "authors": [
+    "Riki Shimizu",
+    "Xilin Jiang",
+    "Nima Mesgarani"
+  ],
+  "venue": "arXiv preprint / Interspeech style manuscript",
+  "year": 2025,
+  "abstract": "Target speaker extraction (TSE) aims to isolate a desired speaker's voice from a multi-speaker mixture using auxiliary information such as a reference utterance. Although recent advances in diffusion and flow-matching models have improved TSE performance, these methods typically require multi-step sampling, which limits their practicality in low-latency settings. In this work, we propose MeanFlow-TSE, a one-step generative TSE framework trained with mean-flow objectives, enabling fast and high-quality generation without iterative refinement. Building on the AD-FlowTSE paradigm, our method defines a flow between the background and target source that is governed by the mixing ratio (MR). Experiments on the Libri2Mix corpus show that our approach outperforms existing diffusion- and flow-matching-based TSE models in separation quality and perceptual metrics while requiring only a single inference step. These results demonstrate that mean-flow-guided one-step generation offers an effective and efficient alternative for real-time target speaker extraction. Code is available at https://github.com/rikishimizu/MeanFlow-TSE.",
+  "primaryClass": "eess.AS",
+  "categories": [
+    "eess.AS"
+  ],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2512.18572",
+    "pdf": "https://arxiv.org/pdf/2512.18572",
+    "source": "https://arxiv.org/src/2512.18572",
+    "repo": "https://github.com/rikishimizu/MeanFlow-TSE",
+    "code": "https://github.com/rikishimizu/MeanFlow-TSE"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2512.18572-src.tar.gz",
+    "entrypoint": "source/template.tex"
+  },
+  "tags": [
+    "target-speaker-extraction",
+    "speech-separation",
+    "one-step-generation",
+    "meanflow",
+    "flow-matching",
+    "speech-enhancement",
+    "project-full-duplex-data",
+    "project-one-step-audio-generation",
+    "project-audio-model-evaluation"
+  ],
+  "concepts": [
+    "MeanFlow-TSE",
+    "Target Speaker Extraction",
+    "MeanFlow",
+    "alpha-Flow",
+    "AD-FlowTSE",
+    "mixing ratio",
+    "mixing-ratio-aware initialization",
+    "one-step generation",
+    "flow matching",
+    "UDiT",
+    "ECAPA-TDNN",
+    "Libri2Mix",
+    "SI-SDR",
+    "PESQ",
+    "ESTOI",
+    "DNSMOS",
+    "Speaker Similarity",
+    "Real Time Factor"
+  ],
+  "status": "read",
+  "created": "2026-06-07",
+  "doi": "10.48550/arXiv.2512.18572",
+  "publication_status": "No formal conference or journal reference found as of 2026-06-07; arXiv source uses an Interspeech-style manuscript.",
+  "bibtex_key": "shimizu2025meanflowtseonestepgenerativeta",
+  "fetch_source": "arXiv TeX source",
+  "summary_model": "GPT-5 Codex",
+  "openreview": {
+    "status": "not-found",
+    "summary": "未找到公開 OpenReview review/rebuttal context。"
+  },
+  "citations": []
+}

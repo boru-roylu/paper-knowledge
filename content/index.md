@@ -55,6 +55,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="evaluation">evaluation</button>
     <button type="button" data-paper-tag="evaluation-metrics">evaluation metrics</button>
     <button type="button" data-paper-tag="expressive-speech">expressive speech</button>
+    <button type="button" data-paper-tag="flow-matching">flow matching</button>
     <button type="button" data-paper-tag="forecasting">forecasting</button>
     <button type="button" data-paper-tag="grpo">grpo</button>
     <button type="button" data-paper-tag="information-gathering">information gathering</button>
@@ -63,6 +64,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="llm">llm</button>
     <button type="button" data-paper-tag="llm-judge">llm judge</button>
     <button type="button" data-paper-tag="long-context">long context</button>
+    <button type="button" data-paper-tag="meanflow">meanflow</button>
     <button type="button" data-paper-tag="model-editing">model editing</button>
     <button type="button" data-paper-tag="multilingual-asr">multilingual asr</button>
     <button type="button" data-paper-tag="multilingual-speech">multilingual speech</button>
@@ -82,9 +84,12 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="separation">separation</button>
     <button type="button" data-paper-tag="sequence-modeling">sequence modeling</button>
     <button type="button" data-paper-tag="speech-data-cleaning">speech data cleaning</button>
+    <button type="button" data-paper-tag="speech-enhancement">speech enhancement</button>
     <button type="button" data-paper-tag="speech-reasoning">speech reasoning</button>
     <button type="button" data-paper-tag="speech-restoration">speech restoration</button>
+    <button type="button" data-paper-tag="speech-separation">speech separation</button>
     <button type="button" data-paper-tag="streaming-tts">streaming tts</button>
+    <button type="button" data-paper-tag="target-speaker-extraction">target speaker extraction</button>
     <button type="button" data-paper-tag="task-oriented-dialogue">task oriented dialogue</button>
     <button type="button" data-paper-tag="taxonomy">taxonomy</button>
     <button type="button" data-paper-tag="text-to-audio">text to audio</button>
@@ -115,6 +120,11 @@ title: Paper Knowledge
   <div class="paper-date">2026-06-07</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2603_18008/">TherapyGym: Evaluating and Aligning Clinical Fidelity and Safety in Therapy Chatbots</a> <span class="paper-meta">(2026, ICLR 2026 submission / arXiv preprint)</span></div>
   <div class="paper-tags"><a class="tag-link internal" href="./tags/clinical-ai/">#clinical-ai</a> <a class="tag-link internal" href="./tags/chatbot-evaluation/">#chatbot-evaluation</a> <a class="tag-link internal" href="./tags/llm-judge/">#llm-judge</a> <a class="tag-link internal" href="./tags/safety/">#safety</a> <a class="tag-link internal" href="./tags/grpo/">#grpo</a> <a class="tag-link internal" href="./tags/project-audio-model-evaluation/">#project-audio-model-evaluation</a></div>
+</div>
+<div class="paper-row" data-tags="target-speaker-extraction speech-separation one-step-generation meanflow flow-matching speech-enhancement project-full-duplex-data project-one-step-audio-generation project-audio-model-evaluation" data-search="MeanFlow-TSE: One-Step Generative Target Speaker Extraction with Mean Flow arxiv_2512_18572 2026-06-07 2025 arXiv preprint / Interspeech style manuscript arxiv:2512.18572 target-speaker-extraction speech-separation one-step-generation meanflow flow-matching speech-enhancement project-full-duplex-data project-one-step-audio-generation project-audio-model-evaluation">
+  <div class="paper-date">2026-06-07</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2512_18572/">MeanFlow-TSE: One-Step Generative Target Speaker Extraction with Mean Flow</a> <span class="paper-meta">(2025, arXiv preprint / Interspeech style manuscript)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/target-speaker-extraction/">#target-speaker-extraction</a> <a class="tag-link internal" href="./tags/speech-separation/">#speech-separation</a> <a class="tag-link internal" href="./tags/one-step-generation/">#one-step-generation</a> <a class="tag-link internal" href="./tags/meanflow/">#meanflow</a> <a class="tag-link internal" href="./tags/flow-matching/">#flow-matching</a> <a class="tag-link internal" href="./tags/speech-enhancement/">#speech-enhancement</a> <a class="tag-link internal" href="./tags/project-full-duplex-data/">#project-full-duplex-data</a> <a class="tag-link internal" href="./tags/project-one-step-audio-generation/">#project-one-step-audio-generation</a> <a class="tag-link internal" href="./tags/project-audio-model-evaluation/">#project-audio-model-evaluation</a></div>
 </div>
 <div class="paper-row" data-tags="agent-evaluation tool-use task-oriented-dialogue user-simulation voice-agent project-audio-model-evaluation project-full-duplex-data" data-search="$τ$-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains arxiv_2406_12045 2026-06-07 2024 arXiv preprint / NeurIPS 2024 Datasets &amp; Benchmarks style submission arxiv:2406.12045 agent-evaluation tool-use task-oriented-dialogue user-simulation voice-agent project-audio-model-evaluation project-full-duplex-data">
   <div class="paper-date">2026-06-07</div>

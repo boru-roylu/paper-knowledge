@@ -216,6 +216,24 @@
       ]
     },
     {
+      "id": "arxiv_2512_18572",
+      "title": "MeanFlow-TSE: One-Step Generative Target Speaker Extraction with Mean Flow",
+      "year": 2025,
+      "venue": "arXiv preprint / Interspeech style manuscript",
+      "url": "../papers/arxiv_2512_18572/",
+      "tags": [
+        "target-speaker-extraction",
+        "speech-separation",
+        "one-step-generation",
+        "meanflow",
+        "flow-matching",
+        "speech-enhancement",
+        "project-full-duplex-data",
+        "project-one-step-audio-generation",
+        "project-audio-model-evaluation"
+      ]
+    },
+    {
       "id": "arxiv_2601_03170",
       "title": "TED-TTS: Training-Free Intra-Utterance Emotion and Duration Control for Text-to-Speech Synthesis",
       "year": 2026,
