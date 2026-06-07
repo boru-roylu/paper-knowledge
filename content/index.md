@@ -54,11 +54,13 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="interpretability">interpretability</button>
     <button type="button" data-paper-tag="latent-space">latent space</button>
     <button type="button" data-paper-tag="llm">llm</button>
+    <button type="button" data-paper-tag="long-context">long context</button>
     <button type="button" data-paper-tag="model-editing">model editing</button>
     <button type="button" data-paper-tag="multilingual-asr">multilingual asr</button>
     <button type="button" data-paper-tag="multilingual-speech">multilingual speech</button>
     <button type="button" data-paper-tag="one-step-generation">one step generation</button>
     <button type="button" data-paper-tag="orthogonal-transform">orthogonal transform</button>
+    <button type="button" data-paper-tag="positional-encoding">positional encoding</button>
     <button type="button" data-paper-tag="preference-distillation">preference distillation</button>
     <button type="button" data-paper-tag="proxy-metrics">proxy metrics</button>
     <button type="button" data-paper-tag="reasoning">reasoning</button>
@@ -69,6 +71,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="reward-shaping">reward shaping</button>
     <button type="button" data-paper-tag="safety">safety</button>
     <button type="button" data-paper-tag="separation">separation</button>
+    <button type="button" data-paper-tag="sequence-modeling">sequence modeling</button>
     <button type="button" data-paper-tag="speech-data-cleaning">speech data cleaning</button>
     <button type="button" data-paper-tag="speech-reasoning">speech reasoning</button>
     <button type="button" data-paper-tag="speech-restoration">speech restoration</button>
@@ -80,6 +83,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="tokenizer-free">tokenizer free</button>
     <button type="button" data-paper-tag="tool">tool</button>
     <button type="button" data-paper-tag="tool-use">tool use</button>
+    <button type="button" data-paper-tag="transformer">transformer</button>
     <button type="button" data-paper-tag="turn-taking">turn taking</button>
     <button type="button" data-paper-tag="video-generation">video generation</button>
     <button type="button" data-paper-tag="visual-generation">visual generation</button>
@@ -134,6 +138,11 @@ title: Paper Knowledge
   <div class="paper-date">2026-06-06</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2505_13181/">Efficient Speech Language Modeling via Energy Distance in Continuous Latent Space</a> <span class="paper-meta">(2025, NeurIPS 2025 submission / arXiv preprint)</span></div>
   <div class="paper-tags"><a class="tag-link internal" href="./tags/speech-llm/">#speech-llm</a> <a class="tag-link internal" href="./tags/tts/">#tts</a> <a class="tag-link internal" href="./tags/continuous-latent/">#continuous-latent</a> <a class="tag-link internal" href="./tags/autoregressive-generation/">#autoregressive-generation</a> <a class="tag-link internal" href="./tags/streaming-tts/">#streaming-tts</a> <a class="tag-link internal" href="./tags/energy-distance/">#energy-distance</a> <a class="tag-link internal" href="./tags/project-one-step-audio-generation/">#project-one-step-audio-generation</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a> <a class="tag-link internal" href="./tags/project-full-duplex-data/">#project-full-duplex-data</a></div>
+</div>
+<div class="paper-row" data-tags="positional-encoding long-context transformer sequence-modeling speech-llm project-audio-model-evaluation" data-search="Group Representational Position Encoding arxiv_2512_07805 2026-06-06 2025 ICLR 2026 poster / arXiv arxiv:2512.07805 positional-encoding long-context transformer sequence-modeling speech-llm project-audio-model-evaluation">
+  <div class="paper-date">2026-06-06</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2512_07805/">Group Representational Position Encoding</a> <span class="paper-meta">(2025, ICLR 2026 poster / arXiv)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/positional-encoding/">#positional-encoding</a> <a class="tag-link internal" href="./tags/long-context/">#long-context</a> <a class="tag-link internal" href="./tags/transformer/">#transformer</a> <a class="tag-link internal" href="./tags/sequence-modeling/">#sequence-modeling</a> <a class="tag-link internal" href="./tags/speech-llm/">#speech-llm</a> <a class="tag-link internal" href="./tags/project-audio-model-evaluation/">#project-audio-model-evaluation</a></div>
 </div>
 <div class="paper-row" data-tags="diffusion latent-space autoencoder tokenizer visual-generation project-one-step-audio-generation project-audio-model-evaluation project-tts-data-pipeline" data-search="Reconstruction vs. Generation: Taming Optimization Dilemma in Latent Diffusion Models arxiv_2501_01423 2026-06-06 2025 CVPR 2025 Oral / arXiv arxiv:2501.01423 diffusion latent-space autoencoder tokenizer visual-generation project-one-step-audio-generation project-audio-model-evaluation project-tts-data-pipeline">
   <div class="paper-date">2026-06-06</div>

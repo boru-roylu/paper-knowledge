@@ -1,0 +1,78 @@
+{
+  "paper_key": "arxiv_2512_07805",
+  "canonical_id": "arxiv:2512.07805",
+  "arxiv_id": "2512.07805",
+  "version": "latest",
+  "title": "Group Representational Position Encoding",
+  "authors": [
+    "Yifan Zhang",
+    "Zixiang Chen",
+    "Yifeng Liu",
+    "Zhen Qin",
+    "Huizhuo Yuan",
+    "Kangping Xu",
+    "Yang Yuan",
+    "Quanquan Gu",
+    "Andrew Chi-Chih Yao"
+  ],
+  "venue": "ICLR 2026 poster / arXiv",
+  "year": 2025,
+  "abstract": "We present GRAPE (Group Representational Position Encoding), a unified framework for positional encoding based on group actions. GRAPE unifies two families of mechanisms: multiplicative rotations in SO(d) and additive logit biases arising from unipotent actions in the general linear group GL. Multiplicative GRAPE recovers RoPE as a special case and extends it through learned subspaces and compact non-commuting mixtures. Additive GRAPE recovers ALiBi and the Forgetting Transformer as special cases while preserving exact relative laws and streaming cacheability.",
+  "primaryClass": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "cs.CL"
+  ],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2512.07805",
+    "pdf": "https://arxiv.org/pdf/2512.07805",
+    "source": "https://arxiv.org/src/2512.07805",
+    "openreview": "https://openreview.net/forum?id=itoNJ3gJl2",
+    "repo": "https://github.com/model-architectures/GRAPE"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2512.07805-src.tar.gz",
+    "entrypoint": "source/iclr2026_conference.tex",
+    "openreview_notes": "reviews/openreview.md"
+  },
+  "tags": [
+    "positional-encoding",
+    "long-context",
+    "transformer",
+    "sequence-modeling",
+    "speech-llm",
+    "project-audio-model-evaluation"
+  ],
+  "concepts": [
+    "GRAPE",
+    "Multiplicative GRAPE",
+    "Additive GRAPE",
+    "Path-Integral Additive GRAPE",
+    "RoPE",
+    "ALiBi",
+    "Forgetting Transformer",
+    "FoX",
+    "exact relative law",
+    "group action",
+    "SO(d)",
+    "GL(d)",
+    "unipotent action",
+    "streaming cacheability",
+    "long-context positional encoding"
+  ],
+  "status": "read",
+  "created": "2026-06-06",
+  "doi": "10.48550/arXiv.2512.07805",
+  "publication_status": "Accepted as ICLR 2026 poster according to public OpenReview decision",
+  "bibtex_key": "zhang2025grouprepresentationalpositione",
+  "fetch_source": "arxiv_tex",
+  "summary_model": "Codex GPT-5",
+  "openreview": {
+    "forum": "https://openreview.net/forum?id=itoNJ3gJl2",
+    "decision": "Accept (Poster)",
+    "notes_fetched": true
+  },
+  "citations": []
+}

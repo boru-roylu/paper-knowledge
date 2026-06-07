@@ -185,6 +185,21 @@
       ]
     },
     {
+      "id": "arxiv_2512_07805",
+      "title": "Group Representational Position Encoding",
+      "year": 2025,
+      "venue": "ICLR 2026 poster / arXiv",
+      "url": "../papers/arxiv_2512_07805/",
+      "tags": [
+        "positional-encoding",
+        "long-context",
+        "transformer",
+        "sequence-modeling",
+        "speech-llm",
+        "project-audio-model-evaluation"
+      ]
+    },
+    {
       "id": "arxiv_2601_03170",
       "title": "TED-TTS: Training-Free Intra-Utterance Emotion and Duration Control for Text-to-Speech Synthesis",
       "year": 2026,
