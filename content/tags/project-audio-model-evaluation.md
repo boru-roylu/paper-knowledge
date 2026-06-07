@@ -11,9 +11,12 @@ title: "Project: Audio model evaluation"
 - **AnyAudio-Judge**：把複雜 audio instruction 拆成 dynamic yes/no rubrics，評估 speech、sound、music、mixed audio 是否逐項滿足要求。
 - **PlanAudio**：作為 speech+sound composite generation 的代表任務與模型設計；它本身不是 evaluator，但提供了需要被評估的 free-form prompt -> unified audio 場景。
 - **FlashTrace**：提供 long-horizon multi-token attribution 思路，可用來追蹤 judge 的 yes/no、evidence span、tool action 或 spoken response 是否依賴正確 input / transcript / event tokens。
+- **Audio / Speech iFID**：評估 codec / VAE / tokenizer 的 latent geometry 是否適合 downstream generation，避免只看 reconstruction PESQ / FAD 卻選到難以生成或難以控制的 representation。
 - **τ-bench**：提供 tool-agent-user interaction 的 deterministic final-state evaluation 和 `pass^k` reliability metric；可借來評估 voice agent 是否在多輪 spoken interaction 後真的做對 tool/database outcome。
 
 核心想法是：**rubric-level correctness + attribution-level grounding**。AnyAudio-Judge 告訴我們每個 rubric 是 yes/no；FlashTrace 類方法幫我們檢查這個 yes/no 是否真的由正確 evidence 支持；PlanAudio 或其他 open audio generators 則提供可被測、可被 reward、可被 debug 的生成目標。
+
+[Audio / Speech iFID](./project-audio-speech-ifid/) 補的是另一層：在訓練 generator 之前，先問 codec / VAE / tokenizer 的 latent space 是否 smooth、semantic、interpolatable、condition-friendly。它評估的是 representation 是否適合生成，不是單次 output 是否符合 rubric。
 
 ## Target
 
@@ -107,6 +110,7 @@ AnyAudio-Judge data / prompts
 - [τ-bench](../papers/arxiv_2406_12045/)：不是 audio paper，但提供 multi-turn tool-agent-user interaction、database-state reward、`pass^k` consistency metric；很適合改成 full-duplex voice-agent task correctness benchmark。
 - [ScholarGym](../papers/arxiv_2601_21654/)：不是 audio paper，但提供 deep-research information gathering 的 decomposable evaluation：Query Planning、Tool Invocation、Relevance Assessment、static paper corpus、retrieval/selection metrics。可借來評估 paper discovery / research-agent workflow。
 - [TherapyGym](../papers/arxiv_2603_18008/)：不是 audio paper，也不是 clinical deployment evidence；但它提供 high-stakes rubric judge + expert calibration + GRPO safety penalty 的案例，可借來設計更嚴格的 audio / voice-agent evaluator。
+- [Making Reconstruction FID Predictive of Diffusion Generation FID](../papers/arxiv_2603_05630/)：image-side iFID 起點；啟發 audio / speech iFID project，重點是 reconstruction metric 不等於 generation metric。
 - [Full-Duplex-Bench-v3](../papers/arxiv_2604_04847/)：可提供 voice-agent / disfluency / tool-use rubrics 的 benchmark 場景。
 - [VoxCPM / VoxCPM2](../tools/openbmb-voxcpm/)：open TTS / voice design model，可作為可跑的 generation target。
 - [Dia](../tools/nari-labs-dia/)：open dialogue TTS baseline，可用於 dialogue event-control evaluation。

@@ -42,6 +42,7 @@
     "autoencoder",
     "tokenizer",
     "project-audio-model-evaluation",
+    "project-audio-speech-ifid",
     "project-one-step-audio-generation",
     "project-tts-data-pipeline"
   ],
