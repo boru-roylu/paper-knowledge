@@ -32,6 +32,8 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="audio-generation">audio generation</button>
     <button type="button" data-paper-tag="autoencoder">autoencoder</button>
     <button type="button" data-paper-tag="autoregressive-generation">autoregressive generation</button>
+    <button type="button" data-paper-tag="chatbot-evaluation">chatbot evaluation</button>
+    <button type="button" data-paper-tag="clinical-ai">clinical ai</button>
     <button type="button" data-paper-tag="clustering">clustering</button>
     <button type="button" data-paper-tag="compositional-audio">compositional audio</button>
     <button type="button" data-paper-tag="concept-erasure">concept erasure</button>
@@ -54,10 +56,12 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="evaluation-metrics">evaluation metrics</button>
     <button type="button" data-paper-tag="expressive-speech">expressive speech</button>
     <button type="button" data-paper-tag="forecasting">forecasting</button>
+    <button type="button" data-paper-tag="grpo">grpo</button>
     <button type="button" data-paper-tag="information-gathering">information gathering</button>
     <button type="button" data-paper-tag="interpretability">interpretability</button>
     <button type="button" data-paper-tag="latent-space">latent space</button>
     <button type="button" data-paper-tag="llm">llm</button>
+    <button type="button" data-paper-tag="llm-judge">llm judge</button>
     <button type="button" data-paper-tag="long-context">long context</button>
     <button type="button" data-paper-tag="model-editing">model editing</button>
     <button type="button" data-paper-tag="multilingual-asr">multilingual asr</button>
@@ -106,6 +110,11 @@ title: Paper Knowledge
   <div class="paper-date">2026-06-07</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2601_21654/">ScholarGym: Benchmarking Large Language Model Capabilities in the Information-Gathering Stage of Deep Research</a> <span class="paper-meta">(2026, arXiv preprint / ICML 2026 style submission)</span></div>
   <div class="paper-tags"><a class="tag-link internal" href="./tags/deep-research/">#deep-research</a> <a class="tag-link internal" href="./tags/research-agent/">#research-agent</a> <a class="tag-link internal" href="./tags/academic-retrieval/">#academic-retrieval</a> <a class="tag-link internal" href="./tags/agent-evaluation/">#agent-evaluation</a> <a class="tag-link internal" href="./tags/information-gathering/">#information-gathering</a> <a class="tag-link internal" href="./tags/project-audio-model-evaluation/">#project-audio-model-evaluation</a></div>
+</div>
+<div class="paper-row" data-tags="clinical-ai chatbot-evaluation llm-judge safety grpo project-audio-model-evaluation" data-search="TherapyGym: Evaluating and Aligning Clinical Fidelity and Safety in Therapy Chatbots arxiv_2603_18008 2026-06-07 2026 ICLR 2026 submission / arXiv preprint arxiv:2603.18008 clinical-ai chatbot-evaluation llm-judge safety grpo project-audio-model-evaluation">
+  <div class="paper-date">2026-06-07</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2603_18008/">TherapyGym: Evaluating and Aligning Clinical Fidelity and Safety in Therapy Chatbots</a> <span class="paper-meta">(2026, ICLR 2026 submission / arXiv preprint)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/clinical-ai/">#clinical-ai</a> <a class="tag-link internal" href="./tags/chatbot-evaluation/">#chatbot-evaluation</a> <a class="tag-link internal" href="./tags/llm-judge/">#llm-judge</a> <a class="tag-link internal" href="./tags/safety/">#safety</a> <a class="tag-link internal" href="./tags/grpo/">#grpo</a> <a class="tag-link internal" href="./tags/project-audio-model-evaluation/">#project-audio-model-evaluation</a></div>
 </div>
 <div class="paper-row" data-tags="agent-evaluation tool-use task-oriented-dialogue user-simulation voice-agent project-audio-model-evaluation project-full-duplex-data" data-search="$τ$-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains arxiv_2406_12045 2026-06-07 2024 arXiv preprint / NeurIPS 2024 Datasets &amp; Benchmarks style submission arxiv:2406.12045 agent-evaluation tool-use task-oriented-dialogue user-simulation voice-agent project-audio-model-evaluation project-full-duplex-data">
   <div class="paper-date">2026-06-07</div>

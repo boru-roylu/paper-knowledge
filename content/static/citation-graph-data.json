@@ -309,6 +309,21 @@
       ]
     },
     {
+      "id": "arxiv_2603_18008",
+      "title": "TherapyGym: Evaluating and Aligning Clinical Fidelity and Safety in Therapy Chatbots",
+      "year": 2026,
+      "venue": "ICLR 2026 submission / arXiv preprint",
+      "url": "../papers/arxiv_2603_18008/",
+      "tags": [
+        "clinical-ai",
+        "chatbot-evaluation",
+        "llm-judge",
+        "safety",
+        "grpo",
+        "project-audio-model-evaluation"
+      ]
+    },
+    {
       "id": "arxiv_2603_25750",
       "title": "Sommelier: Scalable Open Multi-turn Audio Pre-processing for Full-duplex Speech Language Models",
       "year": 2026,

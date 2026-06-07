@@ -96,6 +96,7 @@ AnyAudio-Judge data / prompts
 - PlanAudio 目前未見官方開源模型；在它不可跑的情況下，應該用哪些 open generators 建立 evaluation baseline？
 - τ-bench / τ-Voice 類 task-level evaluation 要如何和 audio-level rubrics 合併？例如 final database state 正確但過程中沒有取得 explicit spoken confirmation，應該如何扣分？
 - ScholarGym 類 static paper-corpus evaluation 能不能拿來評估我們自己的 Telegram / Codex paper discovery agent？例如對 data cleaning / full-duplex / audio judge query，測 retrieval coverage、selection precision 和 discard reasons。
+- TherapyGym 類 high-stakes evaluator 給出的教訓是：rubric judge 若要進入 RL reward loop，必須先有 expert validation、human-human reliability audit、明確 safety penalty，以及 reward hacking stress test。
 
 ## Related Papers
 
@@ -105,6 +106,7 @@ AnyAudio-Judge data / prompts
 - [StepOPSD](../papers/arxiv_2605_27140/)：不是 audio paper，但提供 step-aware credit assignment pattern，可借來把 rubric yes/no 轉成 span-level grounded reward / training signal。
 - [τ-bench](../papers/arxiv_2406_12045/)：不是 audio paper，但提供 multi-turn tool-agent-user interaction、database-state reward、`pass^k` consistency metric；很適合改成 full-duplex voice-agent task correctness benchmark。
 - [ScholarGym](../papers/arxiv_2601_21654/)：不是 audio paper，但提供 deep-research information gathering 的 decomposable evaluation：Query Planning、Tool Invocation、Relevance Assessment、static paper corpus、retrieval/selection metrics。可借來評估 paper discovery / research-agent workflow。
+- [TherapyGym](../papers/arxiv_2603_18008/)：不是 audio paper，也不是 clinical deployment evidence；但它提供 high-stakes rubric judge + expert calibration + GRPO safety penalty 的案例，可借來設計更嚴格的 audio / voice-agent evaluator。
 - [Full-Duplex-Bench-v3](../papers/arxiv_2604_04847/)：可提供 voice-agent / disfluency / tool-use rubrics 的 benchmark 場景。
 - [VoxCPM / VoxCPM2](../tools/openbmb-voxcpm/)：open TTS / voice design model，可作為可跑的 generation target。
 - [Dia](../tools/nari-labs-dia/)：open dialogue TTS baseline，可用於 dialogue event-control evaluation。

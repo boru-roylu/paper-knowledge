@@ -1,0 +1,86 @@
+{
+  "paper_key": "arxiv_2603_18008",
+  "canonical_id": "arxiv:2603.18008",
+  "arxiv_id": "2603.18008",
+  "version": "latest",
+  "title": "TherapyGym: Evaluating and Aligning Clinical Fidelity and Safety in Therapy Chatbots",
+  "authors": [
+    "Fangrui Huang",
+    "Souhad Chbeir",
+    "Arpandeep Khatua",
+    "Sheng Wang",
+    "Sijun Tan",
+    "Kenan Ye",
+    "Lily Bailey",
+    "Merryn Daniel",
+    "Ryan Louie",
+    "Sanmi Koyejo",
+    "Ehsan Adeli"
+  ],
+  "venue": "ICLR 2026 submission / arXiv preprint",
+  "year": 2026,
+  "abstract": "TherapyGym is a framework for evaluating and improving therapy chatbots along two clinical pillars: CBT fidelity and safety. Fidelity is measured using a CTRS-based multi-turn scoring pipeline, while safety is assessed with therapy-specific risk labels. TherapyJudgeBench contains 116 dialogues with 1,270 expert ratings for auditing LLM judges against licensed clinicians. TherapyGym also uses CTRS and safety rewards for GRPO fine-tuning over simulated patient dialogues.",
+  "primaryClass": "cs.CL",
+  "categories": [
+    "cs.CL",
+    "cs.AI",
+    "cs.CY"
+  ],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2603.18008",
+    "pdf": "https://arxiv.org/pdf/2603.18008",
+    "source": "https://arxiv.org/src/2603.18008",
+    "project": "https://therapygym.stanford.edu/",
+    "repo": "https://github.com/fangruih/therapygym",
+    "openreview": "https://openreview.net/forum?id=nwANzdlMKI"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2603.18008-src.tar.gz",
+    "entrypoint": "source/draft.tex",
+    "openreview_notes": "reviews/openreview.md"
+  },
+  "tags": [
+    "clinical-ai",
+    "chatbot-evaluation",
+    "llm-judge",
+    "safety",
+    "grpo",
+    "project-audio-model-evaluation"
+  ],
+  "concepts": [
+    "TherapyGym",
+    "TherapyJudgeBench",
+    "TherapyJudge",
+    "Cognitive Therapy Rating Scale",
+    "CTRS",
+    "CBT fidelity",
+    "therapy safety taxonomy",
+    "LLM-as-judge",
+    "expert annotation",
+    "patient simulation",
+    "Patient-Psi-CM",
+    "TreeSynth",
+    "GRPO",
+    "reward hacking",
+    "human-LLM alignment"
+  ],
+  "status": "read",
+  "created": "2026-06-07",
+  "doi": "10.48550/arXiv.2603.18008",
+  "publication_status": "ICLR 2026 OpenReview decision: Reject; arXiv preprint",
+  "bibtex_key": "huang2026therapygymevaluatingandalignin",
+  "fetch_source": "arxiv_tex",
+  "summary_model": "Codex GPT-5",
+  "openreview": {
+    "forum": "https://openreview.net/forum?id=nwANzdlMKI",
+    "decision": "Reject",
+    "notes_fetched": true
+  },
+  "quality_notes": [
+    "All therapy dialogues are synthetic and the paper explicitly states the system is a research artifact, not clinical guidance or a deployment-ready therapy tool.",
+    "Official project page links to a GitHub repo that was public but empty when checked on 2026-06-07.",
+    "OpenReview reviewers raised concerns about simulated patient realism, annotation details, judge validity, reward hacking, and limited novelty of GRPO."
+  ],
+  "citations": []
+}
