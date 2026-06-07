@@ -43,6 +43,14 @@
   "bibtex_key": "seo2026chatterboxflashpriorcalibrated",
   "citations": [
     {
+      "paper_key": "arxiv_2509_24650",
+      "title": "VoxCPM: Tokenizer-Free TTS for Context-Aware Speech Generation and True-to-Life Voice Cloning",
+      "score": 1,
+      "matched_title": "Voxcpm: Tokenizer-free TTS for context-aware speech generation and true-to-life voice cloning",
+      "matched_first_author_last": "zhou",
+      "source_file": "source/custom.bib"
+    },
+    {
       "paper_key": "arxiv_2406_02430",
       "title": "Seed-TTS: A Family of High-Quality Versatile Speech Generation Models",
       "score": 0.97,

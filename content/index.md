@@ -77,6 +77,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="text-to-audio">text to audio</button>
     <button type="button" data-paper-tag="text-to-image">text to image</button>
     <button type="button" data-paper-tag="tokenizer">tokenizer</button>
+    <button type="button" data-paper-tag="tokenizer-free">tokenizer free</button>
     <button type="button" data-paper-tag="tool">tool</button>
     <button type="button" data-paper-tag="tool-use">tool use</button>
     <button type="button" data-paper-tag="turn-taking">turn taking</button>
@@ -84,6 +85,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="visual-generation">visual generation</button>
     <button type="button" data-paper-tag="voice-cloning">voice cloning</button>
     <button type="button" data-paper-tag="whisperd">whisperd</button>
+    <button type="button" data-paper-tag="zero-shot-tts">zero shot tts</button>
   </div>
 </div>
 
@@ -137,6 +139,11 @@ title: Paper Knowledge
   <div class="paper-date">2026-06-06</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2501_01423/">Reconstruction vs. Generation: Taming Optimization Dilemma in Latent Diffusion Models</a> <span class="paper-meta">(2025, CVPR 2025 Oral / arXiv)</span></div>
   <div class="paper-tags"><a class="tag-link internal" href="./tags/diffusion/">#diffusion</a> <a class="tag-link internal" href="./tags/latent-space/">#latent-space</a> <a class="tag-link internal" href="./tags/autoencoder/">#autoencoder</a> <a class="tag-link internal" href="./tags/tokenizer/">#tokenizer</a> <a class="tag-link internal" href="./tags/visual-generation/">#visual-generation</a> <a class="tag-link internal" href="./tags/project-one-step-audio-generation/">#project-one-step-audio-generation</a> <a class="tag-link internal" href="./tags/project-audio-model-evaluation/">#project-audio-model-evaluation</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a></div>
+</div>
+<div class="paper-row" data-tags="tts zero-shot-tts tokenizer-free voice-cloning speech-llm continuous-latent project-tts-data-pipeline project-one-step-audio-generation project-full-duplex-data" data-search="VoxCPM: Tokenizer-Free TTS for Context-Aware Speech Generation and True-to-Life Voice Cloning arxiv_2509_24650 2026-06-06 2025 arXiv technical report arxiv:2509.24650 tts zero-shot-tts tokenizer-free voice-cloning speech-llm continuous-latent project-tts-data-pipeline project-one-step-audio-generation project-full-duplex-data">
+  <div class="paper-date">2026-06-06</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2509_24650/">VoxCPM: Tokenizer-Free TTS for Context-Aware Speech Generation and True-to-Life Voice Cloning</a> <span class="paper-meta">(2025, arXiv technical report)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/tts/">#tts</a> <a class="tag-link internal" href="./tags/zero-shot-tts/">#zero-shot-tts</a> <a class="tag-link internal" href="./tags/tokenizer-free/">#tokenizer-free</a> <a class="tag-link internal" href="./tags/voice-cloning/">#voice-cloning</a> <a class="tag-link internal" href="./tags/speech-llm/">#speech-llm</a> <a class="tag-link internal" href="./tags/continuous-latent/">#continuous-latent</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a> <a class="tag-link internal" href="./tags/project-one-step-audio-generation/">#project-one-step-audio-generation</a> <a class="tag-link internal" href="./tags/project-full-duplex-data/">#project-full-duplex-data</a></div>
 </div>
 <div class="paper-row" data-tags="speech-llm audio-reasoning audio-evaluation tts reward-model project-audio-model-evaluation project-full-duplex-data project-tts-data-pipeline" data-search="AnyAudio-Judge: A Dynamic Rubric-Based Benchmark and Evaluator for Audio Instruction Following arxiv_2606_03116 2026-06-05 2026 arXiv preprint arxiv:2606.03116 speech-llm audio-reasoning audio-evaluation tts reward-model project-audio-model-evaluation project-full-duplex-data project-tts-data-pipeline">
   <div class="paper-date">2026-06-05</div>

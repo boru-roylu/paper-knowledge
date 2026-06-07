@@ -1,0 +1,71 @@
+{
+  "paper_key": "arxiv_2509_24650",
+  "canonical_id": "arxiv:2509.24650",
+  "arxiv_id": "2509.24650",
+  "version": "latest",
+  "title": "VoxCPM: Tokenizer-Free TTS for Context-Aware Speech Generation and True-to-Life Voice Cloning",
+  "authors": [
+    "VoxCPM Team"
+  ],
+  "venue": "arXiv technical report",
+  "year": 2025,
+  "abstract": "VoxCPM is a tokenizer-free zero-shot TTS system that resolves the stability-expressivity trade-off through hierarchical semantic-acoustic modeling with semi-discrete residual representations. It uses a MiniCPM-initialized Text-Semantic Language Model, an FSQ semi-discrete bottleneck for semantic-prosodic skeletons, a Residual Acoustic Language Model for fine acoustic details, and a local diffusion transformer decoder over causal AudioVAE latents. Trained on 1.8 million hours of bilingual speech, VoxCPM-0.5B reaches strong open-source zero-shot TTS results and supports context-aware speech generation.",
+  "primaryClass": "cs.SD",
+  "categories": [
+    "cs.SD",
+    "eess.AS",
+    "cs.CL"
+  ],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2509.24650",
+    "pdf": "https://arxiv.org/pdf/2509.24650",
+    "source": "https://arxiv.org/src/2509.24650",
+    "repo": "https://github.com/OpenBMB/VoxCPM",
+    "demo": "https://openbmb.github.io/VoxCPM-demopage/"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2509.24650-src.tar.gz",
+    "entrypoint": "source/main.tex"
+  },
+  "tags": [
+    "tts",
+    "zero-shot-tts",
+    "tokenizer-free",
+    "voice-cloning",
+    "speech-llm",
+    "continuous-latent",
+    "project-tts-data-pipeline",
+    "project-one-step-audio-generation",
+    "project-full-duplex-data"
+  ],
+  "concepts": [
+    "VoxCPM",
+    "tokenizer-free TTS",
+    "Finite Scalar Quantization",
+    "semi-discrete bottleneck",
+    "Text-Semantic Language Model",
+    "Residual Acoustic Language Model",
+    "Local Diffusion Transformer",
+    "causal AudioVAE",
+    "context-aware prosody",
+    "zero-shot voice cloning"
+  ],
+  "status": "read",
+  "created": "2026-06-06",
+  "doi": "10.48550/arXiv.2509.24650",
+  "publication_status": "arXiv technical report",
+  "bibtex_key": "voxcpm2025",
+  "fetch_source": "arxiv_tex",
+  "summary_model": "Codex GPT-5",
+  "citations": [
+    {
+      "paper_key": "arxiv_2406_02430",
+      "title": "Seed-TTS: A Family of High-Quality Versatile Speech Generation Models",
+      "score": 1,
+      "matched_title": "Seed-tts: A family of high-quality versatile speech generation models.",
+      "matched_first_author_last": "anastassiou",
+      "source_file": "source/main.bbl"
+    }
+  ]
+}

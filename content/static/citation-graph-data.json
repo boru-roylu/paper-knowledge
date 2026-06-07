@@ -155,6 +155,24 @@
       ]
     },
     {
+      "id": "arxiv_2509_24650",
+      "title": "VoxCPM: Tokenizer-Free TTS for Context-Aware Speech Generation and True-to-Life Voice Cloning",
+      "year": 2025,
+      "venue": "arXiv technical report",
+      "url": "../papers/arxiv_2509_24650/",
+      "tags": [
+        "tts",
+        "zero-shot-tts",
+        "tokenizer-free",
+        "voice-cloning",
+        "speech-llm",
+        "continuous-latent",
+        "project-tts-data-pipeline",
+        "project-one-step-audio-generation",
+        "project-full-duplex-data"
+      ]
+    },
+    {
       "id": "arxiv_2510_03597",
       "title": "Neon: Negative Extrapolation From Self-Training Improves Image Generation",
       "year": 2025,
@@ -628,6 +646,11 @@
       "score": 1
     },
     {
+      "source": "arxiv_2509_24650",
+      "target": "arxiv_2406_02430",
+      "score": 1
+    },
+    {
       "source": "arxiv_2603_05630",
       "target": "arxiv_2501_01423",
       "score": 1
@@ -645,6 +668,11 @@
     {
       "source": "arxiv_2604_28190",
       "target": "arxiv_2501_01423",
+      "score": 1
+    },
+    {
+      "source": "arxiv_2605_30748",
+      "target": "arxiv_2509_24650",
       "score": 1
     },
     {
