@@ -233,6 +233,21 @@
       ]
     },
     {
+      "id": "arxiv_2601_21654",
+      "title": "ScholarGym: Benchmarking Large Language Model Capabilities in the Information-Gathering Stage of Deep Research",
+      "year": 2026,
+      "venue": "arXiv preprint / ICML 2026 style submission",
+      "url": "../papers/arxiv_2601_21654/",
+      "tags": [
+        "deep-research",
+        "research-agent",
+        "academic-retrieval",
+        "agent-evaluation",
+        "information-gathering",
+        "project-audio-model-evaluation"
+      ]
+    },
+    {
       "id": "arxiv_2602_01914",
       "title": "Towards Long-Horizon Interpretability: Efficient and Faithful Multi-Token Attribution for Reasoning LLMs",
       "year": 2026,

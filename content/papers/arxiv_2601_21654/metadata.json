@@ -1,0 +1,71 @@
+{
+  "paper_key": "arxiv_2601_21654",
+  "canonical_id": "arxiv:2601.21654",
+  "arxiv_id": "2601.21654",
+  "version": "latest",
+  "title": "ScholarGym: Benchmarking Large Language Model Capabilities in the Information-Gathering Stage of Deep Research",
+  "authors": [
+    "Hao Shen",
+    "Hang Yang",
+    "Zhouhong Gu",
+    "Weili Han"
+  ],
+  "venue": "arXiv preprint / ICML 2026 style submission",
+  "year": 2026,
+  "abstract": "ScholarGym is an evaluation environment that isolates the information-gathering stage of deep research on academic literature. It decomposes the research process into Query Planning, Tool Invocation, and Relevance Assessment, and evaluates models against 2,536 expert-annotated queries over a static corpus of 570K papers with deterministic retrieval. Experiments show that iterative query decomposition yields 2.9-3.3x F1 gains over single-query retrieval, extended thinking trades recall for precision, and Query Planning plus Relevance Assessment are dual bottlenecks.",
+  "primaryClass": "cs.AI",
+  "categories": [
+    "cs.AI"
+  ],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2601.21654",
+    "pdf": "https://arxiv.org/pdf/2601.21654",
+    "source": "https://arxiv.org/src/2601.21654",
+    "repo": "https://github.com/shenhao-stu/ScholarGym",
+    "huggingface_dataset": "https://huggingface.co/datasets/shenhao/ScholarGym",
+    "modelscope_dataset": "https://modelscope.cn/datasets/shenhao23/ScholarGym"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2601.21654-src.tar.gz",
+    "entrypoint": "source/main.tex"
+  },
+  "tags": [
+    "deep-research",
+    "research-agent",
+    "academic-retrieval",
+    "agent-evaluation",
+    "information-gathering",
+    "project-audio-model-evaluation"
+  ],
+  "concepts": [
+    "ScholarGym",
+    "deep research workflow",
+    "Query Planning",
+    "Tool Invocation",
+    "Relevance Assessment",
+    "subquery tree",
+    "experience buffer",
+    "static paper corpus",
+    "deterministic retrieval",
+    "BM25",
+    "dense retrieval",
+    "Qwen3-Embedding-0.6B",
+    "Qdrant",
+    "Avg.Distance",
+    "GT Discard Rate",
+    "Adaptive Browsing"
+  ],
+  "status": "read",
+  "created": "2026-06-07",
+  "doi": "10.48550/arXiv.2601.21654",
+  "publication_status": "arXiv v3, last revised 2026-02-17; no formal venue metadata found in arXiv record",
+  "bibtex_key": "shen2026scholargymbenchmarkinglargelan",
+  "fetch_source": "arxiv_tex",
+  "summary_model": "Codex GPT-5",
+  "quality_notes": [
+    "No public OpenReview forum was found by the repo OpenReview fetch script.",
+    "Official GitHub README lists Apache-2.0 license and datasets on HuggingFace and ModelScope."
+  ],
+  "citations": []
+}

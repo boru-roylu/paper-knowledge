@@ -20,6 +20,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="speech-data">speech data</button>
     <button type="button" data-paper-tag="speech-llm">speech llm</button>
     <button type="button" data-paper-tag="tts">tts</button>
+    <button type="button" data-paper-tag="academic-retrieval">academic retrieval</button>
     <button type="button" data-paper-tag="adversarial-training">adversarial training</button>
     <button type="button" data-paper-tag="agent-evaluation">agent evaluation</button>
     <button type="button" data-paper-tag="agent-rl">agent rl</button>
@@ -40,6 +41,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="data-cleaning">data cleaning</button>
     <button type="button" data-paper-tag="data-curation">data curation</button>
     <button type="button" data-paper-tag="data-mixing">data mixing</button>
+    <button type="button" data-paper-tag="deep-research">deep research</button>
     <button type="button" data-paper-tag="dialogue">dialogue</button>
     <button type="button" data-paper-tag="diffusion">diffusion</button>
     <button type="button" data-paper-tag="diffusion-distillation">diffusion distillation</button>
@@ -52,6 +54,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="evaluation-metrics">evaluation metrics</button>
     <button type="button" data-paper-tag="expressive-speech">expressive speech</button>
     <button type="button" data-paper-tag="forecasting">forecasting</button>
+    <button type="button" data-paper-tag="information-gathering">information gathering</button>
     <button type="button" data-paper-tag="interpretability">interpretability</button>
     <button type="button" data-paper-tag="latent-space">latent space</button>
     <button type="button" data-paper-tag="llm">llm</button>
@@ -67,6 +70,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="reasoning">reasoning</button>
     <button type="button" data-paper-tag="recurrent-model">recurrent model</button>
     <button type="button" data-paper-tag="reinforcement-learning">reinforcement learning</button>
+    <button type="button" data-paper-tag="research-agent">research agent</button>
     <button type="button" data-paper-tag="restoration">restoration</button>
     <button type="button" data-paper-tag="reward-model">reward model</button>
     <button type="button" data-paper-tag="reward-shaping">reward shaping</button>
@@ -98,6 +102,11 @@ title: Paper Knowledge
 </div>
 
 <div class="paper-list">
+<div class="paper-row" data-tags="deep-research research-agent academic-retrieval agent-evaluation information-gathering project-audio-model-evaluation" data-search="ScholarGym: Benchmarking Large Language Model Capabilities in the Information-Gathering Stage of Deep Research arxiv_2601_21654 2026-06-07 2026 arXiv preprint / ICML 2026 style submission arxiv:2601.21654 deep-research research-agent academic-retrieval agent-evaluation information-gathering project-audio-model-evaluation">
+  <div class="paper-date">2026-06-07</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2601_21654/">ScholarGym: Benchmarking Large Language Model Capabilities in the Information-Gathering Stage of Deep Research</a> <span class="paper-meta">(2026, arXiv preprint / ICML 2026 style submission)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/deep-research/">#deep-research</a> <a class="tag-link internal" href="./tags/research-agent/">#research-agent</a> <a class="tag-link internal" href="./tags/academic-retrieval/">#academic-retrieval</a> <a class="tag-link internal" href="./tags/agent-evaluation/">#agent-evaluation</a> <a class="tag-link internal" href="./tags/information-gathering/">#information-gathering</a> <a class="tag-link internal" href="./tags/project-audio-model-evaluation/">#project-audio-model-evaluation</a></div>
+</div>
 <div class="paper-row" data-tags="agent-evaluation tool-use task-oriented-dialogue user-simulation voice-agent project-audio-model-evaluation project-full-duplex-data" data-search="$τ$-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains arxiv_2406_12045 2026-06-07 2024 arXiv preprint / NeurIPS 2024 Datasets &amp; Benchmarks style submission arxiv:2406.12045 agent-evaluation tool-use task-oriented-dialogue user-simulation voice-agent project-audio-model-evaluation project-full-duplex-data">
   <div class="paper-date">2026-06-07</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2406_12045/">$τ$-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains</a> <span class="paper-meta">(2024, arXiv preprint / NeurIPS 2024 Datasets &amp; Benchmarks style submission)</span></div>

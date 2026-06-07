@@ -95,6 +95,7 @@ AnyAudio-Judge data / prompts
 - 對 black-box judges，只能拿到文字 evidence；這種 evidence 和真正 attribution 之間的落差要怎麼量化？
 - PlanAudio 目前未見官方開源模型；在它不可跑的情況下，應該用哪些 open generators 建立 evaluation baseline？
 - τ-bench / τ-Voice 類 task-level evaluation 要如何和 audio-level rubrics 合併？例如 final database state 正確但過程中沒有取得 explicit spoken confirmation，應該如何扣分？
+- ScholarGym 類 static paper-corpus evaluation 能不能拿來評估我們自己的 Telegram / Codex paper discovery agent？例如對 data cleaning / full-duplex / audio judge query，測 retrieval coverage、selection precision 和 discard reasons。
 
 ## Related Papers
 
@@ -103,6 +104,7 @@ AnyAudio-Judge data / prompts
 - [FlashTrace](../papers/arxiv_2602_01914/)：multi-token attribution，可以補上 judge / reasoning / tool-call grounding analysis。
 - [StepOPSD](../papers/arxiv_2605_27140/)：不是 audio paper，但提供 step-aware credit assignment pattern，可借來把 rubric yes/no 轉成 span-level grounded reward / training signal。
 - [τ-bench](../papers/arxiv_2406_12045/)：不是 audio paper，但提供 multi-turn tool-agent-user interaction、database-state reward、`pass^k` consistency metric；很適合改成 full-duplex voice-agent task correctness benchmark。
+- [ScholarGym](../papers/arxiv_2601_21654/)：不是 audio paper，但提供 deep-research information gathering 的 decomposable evaluation：Query Planning、Tool Invocation、Relevance Assessment、static paper corpus、retrieval/selection metrics。可借來評估 paper discovery / research-agent workflow。
 - [Full-Duplex-Bench-v3](../papers/arxiv_2604_04847/)：可提供 voice-agent / disfluency / tool-use rubrics 的 benchmark 場景。
 - [VoxCPM / VoxCPM2](../tools/openbmb-voxcpm/)：open TTS / voice design model，可作為可跑的 generation target。
 - [Dia](../tools/nari-labs-dia/)：open dialogue TTS baseline，可用於 dialogue event-control evaluation。
