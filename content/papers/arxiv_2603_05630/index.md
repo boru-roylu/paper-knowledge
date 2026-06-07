@@ -15,7 +15,7 @@ tags:
   - autoencoder
   - tokenizer
   - project-audio-model-evaluation
-  - project-audio-speech-ifid
+  - project-generative-speech-representation-evaluation
   - project-one-step-audio-generation
   - project-tts-data-pipeline
 created: 2026-06-06
@@ -225,7 +225,7 @@ one-step audio generator 很依賴 latent representation。如果 latent space �
 - `autoencoder`
 - `tokenizer`
 - `project-audio-model-evaluation`
-- `project-audio-speech-ifid`
+- `project-generative-speech-representation-evaluation`
 - `project-one-step-audio-generation`
 - `project-tts-data-pipeline`
 

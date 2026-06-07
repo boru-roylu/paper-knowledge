@@ -11,12 +11,12 @@ title: "Project: Audio model evaluation"
 - **AnyAudio-Judge**：把複雜 audio instruction 拆成 dynamic yes/no rubrics，評估 speech、sound、music、mixed audio 是否逐項滿足要求。
 - **PlanAudio**：作為 speech+sound composite generation 的代表任務與模型設計；它本身不是 evaluator，但提供了需要被評估的 free-form prompt -> unified audio 場景。
 - **FlashTrace**：提供 long-horizon multi-token attribution 思路，可用來追蹤 judge 的 yes/no、evidence span、tool action 或 spoken response 是否依賴正確 input / transcript / event tokens。
-- **Audio / Speech iFID**：評估 codec / VAE / tokenizer 的 latent geometry 是否適合 downstream generation，避免只看 reconstruction PESQ / FAD 卻選到難以生成或難以控制的 representation。
+- **Generative Speech Representation Evaluation**：評估 codec / VAE / tokenizer / continuous encoder 的 latent geometry 是否適合 downstream generation，避免只看 reconstruction PESQ / FAD 卻選到難以生成或難以控制的 representation。
 - **τ-bench**：提供 tool-agent-user interaction 的 deterministic final-state evaluation 和 `pass^k` reliability metric；可借來評估 voice agent 是否在多輪 spoken interaction 後真的做對 tool/database outcome。
 
 核心想法是：**rubric-level correctness + attribution-level grounding**。AnyAudio-Judge 告訴我們每個 rubric 是 yes/no；FlashTrace 類方法幫我們檢查這個 yes/no 是否真的由正確 evidence 支持；PlanAudio 或其他 open audio generators 則提供可被測、可被 reward、可被 debug 的生成目標。
 
-[Audio / Speech iFID](./project-audio-speech-ifid/) 補的是另一層：在訓練 generator 之前，先問 codec / VAE / tokenizer 的 latent space 是否 smooth、semantic、interpolatable、condition-friendly。它評估的是 representation 是否適合生成，不是單次 output 是否符合 rubric。
+[Generative Speech Representation Evaluation](./project-generative-speech-representation-evaluation/) 補的是另一層：在訓練 generator 之前，先問 codec / VAE / tokenizer / continuous encoder 的 latent space 是否 smooth、semantic、interpolatable、condition-friendly。它評估的是 representation 是否適合生成，不是單次 output 是否符合 rubric。
 
 ## Target
 

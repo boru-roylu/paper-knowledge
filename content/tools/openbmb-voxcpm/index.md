@@ -11,6 +11,7 @@ tags:
   - tool
   - project-tts-data-pipeline
   - project-full-duplex-data
+  - project-generative-speech-representation-evaluation
 ---
 <div class="paper-nav"><a href="../../">&larr; Papers</a></div>
 
@@ -95,6 +96,7 @@ README 提供的 benchmark 摘要：
 ## Project relevance
 - **project-tts-data-pipeline**：高度相關。VoxCPM2 的 training scale、multilingual coverage、voice description controls、cloning modes、LoRA/SFT fine-tuning 都可以反推需要什麼 transcript / metadata / speaker reference / style label 格式。
 - **project-full-duplex-data**：中度相關。它不是 full-duplex dialogue model，但 streaming TTS、expressive prosody、controllable cloning、voice design 都可作為 full-duplex agent 的 speech output baseline。仍需額外測 backchannel timing、overlap、interruptibility、turn-taking latency。
+- **project-generative-speech-representation-evaluation**：高度相關。VoxCPM2 的 tokenizer-free continuous speech representation / AudioVAE V2 可以作為 discrete codec tokens 之外的 candidate encoder，適合測 reconstruction quality、speaker/content/prosody interpolation、voice cloning controllability 與 downstream generation quality 之間的關係。
 
 ## Related papers / tools in my pool
 - **Echo-TTS**：同樣關心 prompt format 和 speaker reference conditioning，可比較 WhisperD-style transcript vs VoxCPM2 natural-language voice description。
@@ -118,6 +120,7 @@ README 提供的 benchmark 摘要：
 - streaming-tts
 - project-tts-data-pipeline
 - project-full-duplex-data
+- project-generative-speech-representation-evaluation
 
 ## Concepts
 - tokenizer-free TTS

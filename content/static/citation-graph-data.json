@@ -324,7 +324,7 @@
         "autoencoder",
         "tokenizer",
         "project-audio-model-evaluation",
-        "project-audio-speech-ifid",
+        "project-generative-speech-representation-evaluation",
         "project-one-step-audio-generation",
         "project-tts-data-pipeline"
       ]
