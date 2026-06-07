@@ -21,6 +21,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="speech-llm">speech llm</button>
     <button type="button" data-paper-tag="tts">tts</button>
     <button type="button" data-paper-tag="adversarial-training">adversarial training</button>
+    <button type="button" data-paper-tag="agent-evaluation">agent evaluation</button>
     <button type="button" data-paper-tag="agent-rl">agent rl</button>
     <button type="button" data-paper-tag="agentic-workflow">agentic workflow</button>
     <button type="button" data-paper-tag="ai-infrastructure">ai infrastructure</button>
@@ -76,6 +77,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="speech-reasoning">speech reasoning</button>
     <button type="button" data-paper-tag="speech-restoration">speech restoration</button>
     <button type="button" data-paper-tag="streaming-tts">streaming tts</button>
+    <button type="button" data-paper-tag="task-oriented-dialogue">task oriented dialogue</button>
     <button type="button" data-paper-tag="taxonomy">taxonomy</button>
     <button type="button" data-paper-tag="text-to-audio">text to audio</button>
     <button type="button" data-paper-tag="text-to-image">text to image</button>
@@ -85,8 +87,10 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="tool-use">tool use</button>
     <button type="button" data-paper-tag="transformer">transformer</button>
     <button type="button" data-paper-tag="turn-taking">turn taking</button>
+    <button type="button" data-paper-tag="user-simulation">user simulation</button>
     <button type="button" data-paper-tag="video-generation">video generation</button>
     <button type="button" data-paper-tag="visual-generation">visual generation</button>
+    <button type="button" data-paper-tag="voice-agent">voice agent</button>
     <button type="button" data-paper-tag="voice-cloning">voice cloning</button>
     <button type="button" data-paper-tag="whisperd">whisperd</button>
     <button type="button" data-paper-tag="zero-shot-tts">zero shot tts</button>
@@ -94,6 +98,11 @@ title: Paper Knowledge
 </div>
 
 <div class="paper-list">
+<div class="paper-row" data-tags="agent-evaluation tool-use task-oriented-dialogue user-simulation voice-agent project-audio-model-evaluation project-full-duplex-data" data-search="$τ$-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains arxiv_2406_12045 2026-06-07 2024 arXiv preprint / NeurIPS 2024 Datasets &amp; Benchmarks style submission arxiv:2406.12045 agent-evaluation tool-use task-oriented-dialogue user-simulation voice-agent project-audio-model-evaluation project-full-duplex-data">
+  <div class="paper-date">2026-06-07</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2406_12045/">$τ$-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains</a> <span class="paper-meta">(2024, arXiv preprint / NeurIPS 2024 Datasets &amp; Benchmarks style submission)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/agent-evaluation/">#agent-evaluation</a> <a class="tag-link internal" href="./tags/tool-use/">#tool-use</a> <a class="tag-link internal" href="./tags/task-oriented-dialogue/">#task-oriented-dialogue</a> <a class="tag-link internal" href="./tags/user-simulation/">#user-simulation</a> <a class="tag-link internal" href="./tags/voice-agent/">#voice-agent</a> <a class="tag-link internal" href="./tags/project-audio-model-evaluation/">#project-audio-model-evaluation</a> <a class="tag-link internal" href="./tags/project-full-duplex-data/">#project-full-duplex-data</a></div>
+</div>
 <div class="paper-row" data-tags="video-generation diffusion-distillation adversarial-training autoregressive-generation one-step-generation project-one-step-audio-generation" data-search="AAD-1: Asymmetric Adversarial Distillation for One-Step Autoregressive Video Generation arxiv_2606_03972 2026-06-06 2026 ICML 2026 / arXiv arxiv:2606.03972 video-generation diffusion-distillation adversarial-training autoregressive-generation one-step-generation project-one-step-audio-generation">
   <div class="paper-date">2026-06-06</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2606_03972/">AAD-1: Asymmetric Adversarial Distillation for One-Step Autoregressive Video Generation</a> <span class="paper-meta">(2026, ICML 2026 / arXiv)</span></div>

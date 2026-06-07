@@ -11,6 +11,7 @@ title: "Project: Audio model evaluation"
 - **AnyAudio-Judge**：把複雜 audio instruction 拆成 dynamic yes/no rubrics，評估 speech、sound、music、mixed audio 是否逐項滿足要求。
 - **PlanAudio**：作為 speech+sound composite generation 的代表任務與模型設計；它本身不是 evaluator，但提供了需要被評估的 free-form prompt -> unified audio 場景。
 - **FlashTrace**：提供 long-horizon multi-token attribution 思路，可用來追蹤 judge 的 yes/no、evidence span、tool action 或 spoken response 是否依賴正確 input / transcript / event tokens。
+- **τ-bench**：提供 tool-agent-user interaction 的 deterministic final-state evaluation 和 `pass^k` reliability metric；可借來評估 voice agent 是否在多輪 spoken interaction 後真的做對 tool/database outcome。
 
 核心想法是：**rubric-level correctness + attribution-level grounding**。AnyAudio-Judge 告訴我們每個 rubric 是 yes/no；FlashTrace 類方法幫我們檢查這個 yes/no 是否真的由正確 evidence 支持；PlanAudio 或其他 open audio generators 則提供可被測、可被 reward、可被 debug 的生成目標。
 
@@ -93,6 +94,7 @@ AnyAudio-Judge data / prompts
 - StepOPSD-style credit shaping 能否把 clip-level rubric reward 穩定轉成 span-level reward，而不引入新的 judge shortcut？
 - 對 black-box judges，只能拿到文字 evidence；這種 evidence 和真正 attribution 之間的落差要怎麼量化？
 - PlanAudio 目前未見官方開源模型；在它不可跑的情況下，應該用哪些 open generators 建立 evaluation baseline？
+- τ-bench / τ-Voice 類 task-level evaluation 要如何和 audio-level rubrics 合併？例如 final database state 正確但過程中沒有取得 explicit spoken confirmation，應該如何扣分？
 
 ## Related Papers
 
@@ -100,6 +102,7 @@ AnyAudio-Judge data / prompts
 - [PlanAudio](../papers/arxiv_2605_28063/)：free-form prompt -> unified speech+sound generation，是 composite audio evaluation 的重要 target task。
 - [FlashTrace](../papers/arxiv_2602_01914/)：multi-token attribution，可以補上 judge / reasoning / tool-call grounding analysis。
 - [StepOPSD](../papers/arxiv_2605_27140/)：不是 audio paper，但提供 step-aware credit assignment pattern，可借來把 rubric yes/no 轉成 span-level grounded reward / training signal。
+- [τ-bench](../papers/arxiv_2406_12045/)：不是 audio paper，但提供 multi-turn tool-agent-user interaction、database-state reward、`pass^k` consistency metric；很適合改成 full-duplex voice-agent task correctness benchmark。
 - [Full-Duplex-Bench-v3](../papers/arxiv_2604_04847/)：可提供 voice-agent / disfluency / tool-use rubrics 的 benchmark 場景。
 - [VoxCPM / VoxCPM2](../tools/openbmb-voxcpm/)：open TTS / voice design model，可作為可跑的 generation target。
 - [Dia](../tools/nari-labs-dia/)：open dialogue TTS baseline，可用於 dialogue event-control evaluation。

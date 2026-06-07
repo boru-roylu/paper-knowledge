@@ -55,6 +55,22 @@
       ]
     },
     {
+      "id": "arxiv_2406_12045",
+      "title": "$τ$-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains",
+      "year": 2024,
+      "venue": "arXiv preprint / NeurIPS 2024 Datasets & Benchmarks style submission",
+      "url": "../papers/arxiv_2406_12045/",
+      "tags": [
+        "agent-evaluation",
+        "tool-use",
+        "task-oriented-dialogue",
+        "user-simulation",
+        "voice-agent",
+        "project-audio-model-evaluation",
+        "project-full-duplex-data"
+      ]
+    },
+    {
       "id": "arxiv_2501_01423",
       "title": "Reconstruction vs. Generation: Taming Optimization Dilemma in Latent Diffusion Models",
       "year": 2025,

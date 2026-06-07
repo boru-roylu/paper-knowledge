@@ -1,0 +1,71 @@
+{
+  "paper_key": "arxiv_2406_12045",
+  "canonical_id": "arxiv:2406.12045",
+  "arxiv_id": "2406.12045",
+  "version": "latest",
+  "title": "$τ$-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains",
+  "authors": [
+    "Shunyu Yao",
+    "Noah Shinn",
+    "Pedram Razavi",
+    "Karthik Narasimhan"
+  ],
+  "venue": "arXiv preprint / NeurIPS 2024 Datasets & Benchmarks style submission",
+  "year": 2024,
+  "abstract": "Existing benchmarks do not test language agents on their interaction with human users or ability to follow domain-specific rules, both of which are vital for deploying them in real world applications. τ-bench emulates dynamic conversations between a user simulated by language models and a language agent provided with domain-specific API tools and policy guidelines. It evaluates episodes by comparing the final database state with the annotated goal state and introduces pass^k to measure reliability across multiple trials.",
+  "primaryClass": "cs.AI",
+  "categories": [
+    "cs.AI",
+    "cs.CL"
+  ],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2406.12045",
+    "pdf": "https://arxiv.org/pdf/2406.12045",
+    "source": "https://arxiv.org/src/2406.12045",
+    "repo": "https://github.com/sierra-research/tau-bench",
+    "current_repo": "https://github.com/sierra-research/tau2-bench",
+    "project": "https://www.tau-bench.com/"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2406.12045-src.tar.gz",
+    "entrypoint": "source/main.tex"
+  },
+  "tags": [
+    "agent-evaluation",
+    "tool-use",
+    "task-oriented-dialogue",
+    "user-simulation",
+    "voice-agent",
+    "project-audio-model-evaluation",
+    "project-full-duplex-data"
+  ],
+  "concepts": [
+    "tau-bench",
+    "Tool-Agent-User Interaction",
+    "function calling",
+    "LM-simulated user",
+    "database state evaluation",
+    "domain policy following",
+    "pass^k",
+    "pass@k",
+    "retail domain",
+    "airline domain",
+    "tool-use reliability",
+    "task-oriented dialogue",
+    "voice-agent evaluation",
+    "full-duplex voice agent"
+  ],
+  "status": "read",
+  "created": "2026-06-07",
+  "doi": "10.48550/arXiv.2406.12045",
+  "publication_status": "arXiv preprint; source uses NeurIPS 2024 Datasets & Benchmarks style, but no formal venue metadata found in arXiv record",
+  "bibtex_key": "yao2024benchabenchmarkfortoolagentuse",
+  "fetch_source": "arxiv_tex",
+  "summary_model": "Codex GPT-5",
+  "quality_notes": [
+    "Original tau-bench GitHub repo now warns that tasks are outdated and points users to the newer tau2/tau3-bench repo.",
+    "No public OpenReview forum was found by the repo OpenReview fetch script."
+  ],
+  "citations": []
+}

@@ -61,6 +61,7 @@ title: "Project: Full-duplex data and model"
 ### Evaluation / debugging
 
 - [AnyAudio-Judge](../papers/arxiv_2606_03116/)：dynamic rubric-based audio evaluator。很適合把 full-duplex behavior 拆成 binary checks：speaker role 是否正確、backchannel 是否存在、overlap timing 是否合理、self-correction 是否被遵守、tool action 是否和最後 intent 一致。
+- [τ-bench](../papers/arxiv_2406_12045/)：text-based tool-agent-user benchmark，但提供 final database state / required output 的 deterministic task success 和 `pass^k` reliability metric。可和 Full-Duplex-Bench 類 turn-taking metrics 結合，檢查 full-duplex voice agent 不只聽起來自然，也真的在 tool/database 層做對事情。
 - [FlashTrace](../papers/arxiv_2602_01914/)：不是 audio paper，但可用於 transcript / event-token layer 的 grounding attribution。目標是檢查 voice agent 的 answer / tool action 是否真的依賴正確 transcript span，而不是被 false start 或 spurious speaker tags 誤導。
 - [A Survey of Audio Reasoning](../papers/arxiv_2605_21008/)：可作 taxonomy 入口，把 full-duplex control 視為 Audio-to-Speech Reasoning 的一種。
 
