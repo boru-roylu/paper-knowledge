@@ -218,6 +218,24 @@
       ]
     },
     {
+      "id": "arxiv_2510_11690",
+      "title": "Diffusion Transformers with Representation Autoencoders",
+      "year": 2025,
+      "venue": "ICLR 2026 (Poster)",
+      "url": "../papers/arxiv_2510_11690/",
+      "tags": [
+        "diffusion",
+        "representation-autoencoder",
+        "latent-space",
+        "tokenizer",
+        "training-efficiency",
+        "generative-evaluation",
+        "project-generative-speech-representation-evaluation",
+        "project-audio-model-evaluation",
+        "project-one-step-audio-generation"
+      ]
+    },
+    {
       "id": "arxiv_2512_07805",
       "title": "Group Representational Position Encoding",
       "year": 2025,
@@ -766,6 +784,16 @@
       "score": 1
     },
     {
+      "source": "arxiv_2510_11690",
+      "target": "arxiv_2501_01423",
+      "score": 1
+    },
+    {
+      "source": "arxiv_2603_05630",
+      "target": "arxiv_2510_11690",
+      "score": 1
+    },
+    {
       "source": "arxiv_2603_05630",
       "target": "arxiv_2501_01423",
       "score": 1
@@ -782,7 +810,17 @@
     },
     {
       "source": "arxiv_2604_28190",
+      "target": "arxiv_2510_11690",
+      "score": 1
+    },
+    {
+      "source": "arxiv_2604_28190",
       "target": "arxiv_2501_01423",
+      "score": 1
+    },
+    {
+      "source": "arxiv_2605_18324",
+      "target": "arxiv_2510_11690",
       "score": 1
     },
     {

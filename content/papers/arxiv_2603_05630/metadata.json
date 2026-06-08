@@ -67,6 +67,14 @@
   "summary_model": "Codex GPT-5",
   "citations": [
     {
+      "paper_key": "arxiv_2510_11690",
+      "title": "Diffusion Transformers with Representation Autoencoders",
+      "score": 1,
+      "matched_title": "Diffusion Transformers with Representation Autoencoders",
+      "matched_first_author_last": "zheng",
+      "source_file": "source/iclr2026_conference.bib"
+    },
+    {
       "paper_key": "arxiv_2501_01423",
       "title": "Reconstruction vs. Generation: Taming Optimization Dilemma in Latent Diffusion Models",
       "score": 1,
