@@ -1,0 +1,96 @@
+{
+  "paper_key": "arxiv_2605_18324",
+  "canonical_id": "arxiv:2605.18324",
+  "arxiv_id": "2605.18324",
+  "version": "v1",
+  "title": "Improved Baselines with Representation Autoencoders",
+  "authors": [
+    "Jaskirat Singh",
+    "Boyang Zheng",
+    "Zongze Wu",
+    "Richard Zhang",
+    "Eli Shechtman",
+    "Saining Xie"
+  ],
+  "venue": "arXiv preprint",
+  "year": 2026,
+  "abstract": "Representation Autoencoders (RAE) replace traditional VAE with pretrained vision encoders. This paper studies design choices that simplify and improve RAE: aggregating the last k encoder layers rather than only the final layer, combining RAE with REPA because they have complementary mechanisms, and reformulating REPA as x-prediction in RAE latent space to provide internal guidance without a separate weaker model. RAEv2 achieves more than 10x faster convergence over the original RAE, reaching guided gFID 1.06 in 80 epochs on ImageNet-256 and EP_FID@2 of 35 epochs versus 177 for the original RAE. The paper also motivates training efficiency as a practical evaluation metric and validates the recipe on text-to-image generation and navigation world models.",
+  "primaryClass": "cs.CV",
+  "categories": [
+    "cs.CV",
+    "cs.AI",
+    "cs.GR",
+    "cs.LG",
+    "stat.ML"
+  ],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2605.18324",
+    "pdf": "https://arxiv.org/pdf/2605.18324",
+    "source": "https://arxiv.org/src/2605.18324",
+    "project": "https://raev2.github.io",
+    "repo": "https://github.com/nanovisionx/raev2",
+    "models": "https://huggingface.co/collections/nyu-visionx/raev2"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2605.18324-src.tar.gz",
+    "entrypoint": "source/main.tex"
+  },
+  "tags": [
+    "diffusion",
+    "representation-autoencoder",
+    "latent-space",
+    "training-efficiency",
+    "generative-evaluation",
+    "reconstruction-generation-tradeoff",
+    "project-generative-speech-representation-evaluation",
+    "project-audio-model-evaluation",
+    "project-one-step-audio-generation"
+  ],
+  "concepts": [
+    "Representation Autoencoder",
+    "RAEv2",
+    "REPA",
+    "x-prediction",
+    "internal guidance",
+    "AutoGuidance",
+    "classifier-free guidance",
+    "EP_FID@k",
+    "training efficiency",
+    "reconstruction-generation trade-off",
+    "generalized representation encoder",
+    "multi-layer feature aggregation",
+    "FD_r",
+    "learnability",
+    "generative speech representation evaluation"
+  ],
+  "status": "read",
+  "created": "2026-06-07",
+  "doi": "10.48550/arXiv.2605.18324",
+  "publication_status": "arXiv preprint; no formal conference or journal reference found as of 2026-06-08",
+  "bibtex_key": "singh2026improvedbaselineswithrepresent",
+  "fetch_source": "arXiv TeX source",
+  "summary_model": "GPT-5 Codex",
+  "openreview": {
+    "status": "not-found",
+    "summary": "未找到公開 OpenReview review/rebuttal context。"
+  },
+  "citations": [
+    {
+      "paper_key": "arxiv_2501_01423",
+      "title": "Reconstruction vs. Generation: Taming Optimization Dilemma in Latent Diffusion Models",
+      "score": 1,
+      "matched_title": "Reconstruction vs. Generation: Taming Optimization Dilemma in Latent Diffusion Models",
+      "matched_first_author_last": "yao",
+      "source_file": "source/main.bib"
+    },
+    {
+      "paper_key": "arxiv_2604_28190",
+      "title": "Representation Fréchet Loss for Visual Generation",
+      "score": 1,
+      "matched_title": "Representation Frechet Loss for Visual Generation",
+      "matched_first_author_last": "yang",
+      "source_file": "source/main.bib"
+    }
+  ]
+}

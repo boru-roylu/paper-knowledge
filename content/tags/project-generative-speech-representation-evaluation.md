@@ -20,7 +20,7 @@ title: "Project: Generative Speech Representation Evaluation"
 
 ## Project thesis
 
-這條 project 要做的是 **Making Reconstruction FID Predictive of Diffusion Generation FID 的 speech/audio version**，但範圍不只 codec：
+這條 project 要做的是 **Making Reconstruction FID Predictive of Diffusion Generation FID 的 speech/audio version**，但範圍不只 codec，也不只預測 final quality：
 
 > 建立一組能預測 downstream speech/audio generation quality 的 representation evaluation，用來比較 codec、VAE、tokenizer、continuous encoder、semantic-acoustic latent，而不是只評估 reconstruction quality。
 
@@ -32,6 +32,9 @@ speech representation reconstruction quality
 
 latent/token neighborhood geometry + semantic-acoustic organization
   may predict downstream generation quality better
+
+representation learnability
+  may predict how much compute is needed to train a good generator
 ```
 
 更具體地說，我們要找 audio/speech 版的 `iFID-like` metric family：
@@ -47,6 +50,8 @@ audio clip
 ```
 
 如果這類 metric 比 reconstruction FAD 更能預測 downstream TTS / speech generation / full-duplex generation 的 WER、speaker similarity、naturalness、event timing、human preference，它就有價值。
+
+另一個同等重要的目標是 **compute-to-quality**：好的 representation 應該讓 downstream generator 更早學好、用更少 GPU-hours / audio-hours / training tokens 達到可用品質。這點受到 [Improved Baselines with Representation Autoencoders](../papers/arxiv_2605_18324/) 的 `EP_FID@k` 啟發。
 
 ## Representation candidates
 
@@ -174,6 +179,7 @@ overlap event present vs absent
 - [Semantic-VAE](https://arxiv.org/abs/2509.22167)：非常接近本 project。它指出 speech VAE 有 dimension dilemma：高維 latent reconstruction / speaker similarity 好，但 intelligibility 變差；低維 latent intelligibility 好但 reconstruction fidelity 差。Semantic alignment regularization 改善 F5-TTS downstream WER / speaker similarity。
 - [On the Distillation Loss Functions of Speech VAE](https://arxiv.org/abs/2604.12383)：系統比較 speech VAE distillation/alignment loss 對 reconstruction、understanding、generation 三個軸的影響。這正是我們要避免只看 reconstruction 的原因。
 - [WavCube](https://arxiv.org/abs/2605.06407)：從 SSL speech encoder 得到 compact continuous latent，同時支援 understanding、reconstruction、generation；兩階段訓練先去掉讓 diffusion 難學的 off-manifold redundancy，再補 acoustic details。這和 latent geometry framing 很一致。
+- [Improved Baselines with Representation Autoencoders](../papers/arxiv_2605_18324/)：image-side but highly relevant。它提出 `EP_FID@k` 作為 training efficiency metric，明確衡量 representation / autoencoder 讓 downstream diffusion model 多快學好。這支持本 project 從 final quality evaluation 擴展到 **representation learnability / compute-to-quality evaluation**。
 
 ### Tokenizer-free / continuous encoder candidate
 
@@ -255,6 +261,23 @@ representation metric
   -> evaluate downstream TTS / audio generation
   -> compute Pearson / Spearman with downstream score
 ```
+
+除了 final quality，也要量 learning curve：
+
+```text
+quality vs GPU-hours
+quality vs audio-hours seen
+quality vs training tokens
+quality vs optimizer steps
+```
+
+Speech 版 EP metrics：
+
+- `EP_WER@x`：達到 WER <= x 需要多少 compute。
+- `EP_SIM@y`：達到 speaker similarity >= y 需要多少 compute。
+- `EP_UTMOS@z`：達到 UTMOS >= z 需要多少 compute。
+- `EP_Event@r`：達到 overlap/backchannel event recall >= r 需要多少 compute。
+- `AUC_learning`：整條 learning curve 的 area under curve，避免只看單一 threshold。
 
 Downstream tasks:
 

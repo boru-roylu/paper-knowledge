@@ -58,6 +58,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="expressive-speech">expressive speech</button>
     <button type="button" data-paper-tag="flow-matching">flow matching</button>
     <button type="button" data-paper-tag="forecasting">forecasting</button>
+    <button type="button" data-paper-tag="generative-evaluation">generative evaluation</button>
     <button type="button" data-paper-tag="grpo">grpo</button>
     <button type="button" data-paper-tag="information-gathering">information gathering</button>
     <button type="button" data-paper-tag="interpretability">interpretability</button>
@@ -77,8 +78,10 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="project-generative-speech-representation-evaluation">project: generative speech representation evaluation</button>
     <button type="button" data-paper-tag="proxy-metrics">proxy metrics</button>
     <button type="button" data-paper-tag="reasoning">reasoning</button>
+    <button type="button" data-paper-tag="reconstruction-generation-tradeoff">reconstruction generation tradeoff</button>
     <button type="button" data-paper-tag="recurrent-model">recurrent model</button>
     <button type="button" data-paper-tag="reinforcement-learning">reinforcement learning</button>
+    <button type="button" data-paper-tag="representation-autoencoder">representation autoencoder</button>
     <button type="button" data-paper-tag="research-agent">research agent</button>
     <button type="button" data-paper-tag="restoration">restoration</button>
     <button type="button" data-paper-tag="reward-model">reward model</button>
@@ -103,6 +106,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="tokenizer-free">tokenizer free</button>
     <button type="button" data-paper-tag="tool">tool</button>
     <button type="button" data-paper-tag="tool-use">tool use</button>
+    <button type="button" data-paper-tag="training-efficiency">training efficiency</button>
     <button type="button" data-paper-tag="transformer">transformer</button>
     <button type="button" data-paper-tag="turn-taking">turn taking</button>
     <button type="button" data-paper-tag="user-simulation">user simulation</button>
@@ -117,6 +121,11 @@ title: Paper Knowledge
 </div>
 
 <div class="paper-list">
+<div class="paper-row" data-tags="diffusion representation-autoencoder latent-space training-efficiency generative-evaluation reconstruction-generation-tradeoff project-generative-speech-representation-evaluation project-audio-model-evaluation project-one-step-audio-generation" data-search="Improved Baselines with Representation Autoencoders arxiv_2605_18324 2026-06-07 2026 arXiv preprint arxiv:2605.18324 diffusion representation-autoencoder latent-space training-efficiency generative-evaluation reconstruction-generation-tradeoff project-generative-speech-representation-evaluation project-audio-model-evaluation project-one-step-audio-generation">
+  <div class="paper-date">2026-06-07</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2605_18324/">Improved Baselines with Representation Autoencoders</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/diffusion/">#diffusion</a> <a class="tag-link internal" href="./tags/representation-autoencoder/">#representation-autoencoder</a> <a class="tag-link internal" href="./tags/latent-space/">#latent-space</a> <a class="tag-link internal" href="./tags/training-efficiency/">#training-efficiency</a> <a class="tag-link internal" href="./tags/generative-evaluation/">#generative-evaluation</a> <a class="tag-link internal" href="./tags/reconstruction-generation-tradeoff/">#reconstruction-generation-tradeoff</a> <a class="tag-link internal" href="./tags/project-generative-speech-representation-evaluation/">#project-generative-speech-representation-evaluation</a> <a class="tag-link internal" href="./tags/project-audio-model-evaluation/">#project-audio-model-evaluation</a> <a class="tag-link internal" href="./tags/project-one-step-audio-generation/">#project-one-step-audio-generation</a></div>
+</div>
 <div class="paper-row" data-tags="deep-research research-agent academic-retrieval agent-evaluation information-gathering project-audio-model-evaluation" data-search="ScholarGym: Benchmarking Large Language Model Capabilities in the Information-Gathering Stage of Deep Research arxiv_2601_21654 2026-06-07 2026 arXiv preprint / ICML 2026 style submission arxiv:2601.21654 deep-research research-agent academic-retrieval agent-evaluation information-gathering project-audio-model-evaluation">
   <div class="paper-date">2026-06-07</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2601_21654/">ScholarGym: Benchmarking Large Language Model Capabilities in the Information-Gathering Stage of Deep Research</a> <span class="paper-meta">(2026, arXiv preprint / ICML 2026 style submission)</span></div>

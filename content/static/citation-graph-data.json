@@ -422,6 +422,24 @@
       ]
     },
     {
+      "id": "arxiv_2605_18324",
+      "title": "Improved Baselines with Representation Autoencoders",
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "url": "../papers/arxiv_2605_18324/",
+      "tags": [
+        "diffusion",
+        "representation-autoencoder",
+        "latent-space",
+        "training-efficiency",
+        "generative-evaluation",
+        "reconstruction-generation-tradeoff",
+        "project-generative-speech-representation-evaluation",
+        "project-audio-model-evaluation",
+        "project-one-step-audio-generation"
+      ]
+    },
+    {
       "id": "arxiv_2605_18607",
       "title": "Forecasting Downstream Performance of LLMs With Proxy Metrics",
       "year": 2026,
@@ -765,6 +783,16 @@
     {
       "source": "arxiv_2604_28190",
       "target": "arxiv_2501_01423",
+      "score": 1
+    },
+    {
+      "source": "arxiv_2605_18324",
+      "target": "arxiv_2501_01423",
+      "score": 1
+    },
+    {
+      "source": "arxiv_2605_18324",
+      "target": "arxiv_2604_28190",
       "score": 1
     },
     {
