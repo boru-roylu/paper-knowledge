@@ -29,6 +29,23 @@
       ]
     },
     {
+      "id": "arxiv_2305_10005",
+      "title": "DinoSR: Self-Distillation and Online Clustering for Self-supervised Speech Representation Learning",
+      "year": 2023,
+      "venue": "NeurIPS 2023",
+      "url": "../papers/arxiv_2305_10005/",
+      "tags": [
+        "speech-ssl",
+        "acoustic-unit-discovery",
+        "online-clustering",
+        "speech-representation",
+        "speech-tokenizer",
+        "self-distillation",
+        "project-tts-data-pipeline",
+        "project-generative-speech-representation-evaluation"
+      ]
+    },
+    {
       "id": "arxiv_2403_18257",
       "title": "Dual-path Mamba: Short and Long-term Bidirectional Selective Structured State Space Models for Speech Separation",
       "year": 2025,

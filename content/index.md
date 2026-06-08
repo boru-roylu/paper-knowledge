@@ -21,6 +21,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="speech-llm">speech llm</button>
     <button type="button" data-paper-tag="tts">tts</button>
     <button type="button" data-paper-tag="academic-retrieval">academic retrieval</button>
+    <button type="button" data-paper-tag="acoustic-unit-discovery">acoustic unit discovery</button>
     <button type="button" data-paper-tag="adversarial-training">adversarial training</button>
     <button type="button" data-paper-tag="agent-evaluation">agent evaluation</button>
     <button type="button" data-paper-tag="agent-rl">agent rl</button>
@@ -72,6 +73,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="multilingual-asr">multilingual asr</button>
     <button type="button" data-paper-tag="multilingual-speech">multilingual speech</button>
     <button type="button" data-paper-tag="one-step-generation">one step generation</button>
+    <button type="button" data-paper-tag="online-clustering">online clustering</button>
     <button type="button" data-paper-tag="orthogonal-transform">orthogonal transform</button>
     <button type="button" data-paper-tag="positional-encoding">positional encoding</button>
     <button type="button" data-paper-tag="preference-distillation">preference distillation</button>
@@ -87,14 +89,18 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="reward-model">reward model</button>
     <button type="button" data-paper-tag="reward-shaping">reward shaping</button>
     <button type="button" data-paper-tag="safety">safety</button>
+    <button type="button" data-paper-tag="self-distillation">self distillation</button>
     <button type="button" data-paper-tag="separation">separation</button>
     <button type="button" data-paper-tag="sequence-modeling">sequence modeling</button>
     <button type="button" data-paper-tag="source-separation">source separation</button>
     <button type="button" data-paper-tag="speech-data-cleaning">speech data cleaning</button>
     <button type="button" data-paper-tag="speech-enhancement">speech enhancement</button>
     <button type="button" data-paper-tag="speech-reasoning">speech reasoning</button>
+    <button type="button" data-paper-tag="speech-representation">speech representation</button>
     <button type="button" data-paper-tag="speech-restoration">speech restoration</button>
     <button type="button" data-paper-tag="speech-separation">speech separation</button>
+    <button type="button" data-paper-tag="speech-ssl">speech ssl</button>
+    <button type="button" data-paper-tag="speech-tokenizer">speech tokenizer</button>
     <button type="button" data-paper-tag="state-space-model">state space model</button>
     <button type="button" data-paper-tag="streaming-tts">streaming tts</button>
     <button type="button" data-paper-tag="target-speaker-extraction">target speaker extraction</button>
@@ -155,6 +161,11 @@ title: Paper Knowledge
   <div class="paper-date">2026-06-07</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2406_12045/">$τ$-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains</a> <span class="paper-meta">(2024, arXiv preprint / NeurIPS 2024 Datasets &amp; Benchmarks style submission)</span></div>
   <div class="paper-tags"><a class="tag-link internal" href="./tags/agent-evaluation/">#agent-evaluation</a> <a class="tag-link internal" href="./tags/tool-use/">#tool-use</a> <a class="tag-link internal" href="./tags/task-oriented-dialogue/">#task-oriented-dialogue</a> <a class="tag-link internal" href="./tags/user-simulation/">#user-simulation</a> <a class="tag-link internal" href="./tags/voice-agent/">#voice-agent</a> <a class="tag-link internal" href="./tags/project-audio-model-evaluation/">#project-audio-model-evaluation</a> <a class="tag-link internal" href="./tags/project-full-duplex-data/">#project-full-duplex-data</a></div>
+</div>
+<div class="paper-row" data-tags="speech-ssl acoustic-unit-discovery online-clustering speech-representation speech-tokenizer self-distillation project-tts-data-pipeline project-generative-speech-representation-evaluation" data-search="DinoSR: Self-Distillation and Online Clustering for Self-supervised Speech Representation Learning arxiv_2305_10005 2026-06-07 2023 NeurIPS 2023 arxiv:2305.10005 speech-ssl acoustic-unit-discovery online-clustering speech-representation speech-tokenizer self-distillation project-tts-data-pipeline project-generative-speech-representation-evaluation">
+  <div class="paper-date">2026-06-07</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2305_10005/">DinoSR: Self-Distillation and Online Clustering for Self-supervised Speech Representation Learning</a> <span class="paper-meta">(2023, NeurIPS 2023)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/speech-ssl/">#speech-ssl</a> <a class="tag-link internal" href="./tags/acoustic-unit-discovery/">#acoustic-unit-discovery</a> <a class="tag-link internal" href="./tags/online-clustering/">#online-clustering</a> <a class="tag-link internal" href="./tags/speech-representation/">#speech-representation</a> <a class="tag-link internal" href="./tags/speech-tokenizer/">#speech-tokenizer</a> <a class="tag-link internal" href="./tags/self-distillation/">#self-distillation</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a> <a class="tag-link internal" href="./tags/project-generative-speech-representation-evaluation/">#project-generative-speech-representation-evaluation</a></div>
 </div>
 <div class="paper-row" data-tags="video-generation diffusion-distillation adversarial-training autoregressive-generation one-step-generation project-one-step-audio-generation" data-search="AAD-1: Asymmetric Adversarial Distillation for One-Step Autoregressive Video Generation arxiv_2606_03972 2026-06-06 2026 ICML 2026 / arXiv arxiv:2606.03972 video-generation diffusion-distillation adversarial-training autoregressive-generation one-step-generation project-one-step-audio-generation">
   <div class="paper-date">2026-06-06</div>
