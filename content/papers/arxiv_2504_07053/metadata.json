@@ -1,0 +1,90 @@
+{
+  "paper_key": "arxiv_2504_07053",
+  "canonical_id": "arxiv:2504.07053",
+  "arxiv_id": "2504.07053",
+  "version": "latest",
+  "title": "TASTE: Text-Aligned Speech Tokenization and Embedding for Spoken Language Modeling",
+  "authors": [
+    "Liang-Hsuan Tseng",
+    "Yi-Chang Chen",
+    "Kuan-Yi Lee",
+    "Da-Shan Shiu",
+    "Hung-yi Lee"
+  ],
+  "venue": "ICLR 2026 (Poster)",
+  "year": 2025,
+  "abstract": "Recent efforts target spoken language models (SLMs) that not only listen but also speak for more natural human-LLM interaction. Joint speech-text modeling is a promising direction to achieve this. However, the effectiveness of recent speech tokens for joint modeling remains underexplored. To address this, we introduce Text-Aligned Speech Tokenization and Embedding (TASTE), a method that directly addresses the modality gap by aligning speech token with the corresponding text transcription during the tokenization stage. We propose a method that can achieve this through a attention-based aggregation mechanism and with speech reconstruction as the training objective. We conduct extensive experiments and show that TASTE can preserve essential paralinguistic information while dramatically reducing the token sequence length. With TASTE, we perform straightforward joint spoken language modeling by using Low-Rank Adaptation on the pre-trained text LLM. Experimental results show that TASTE-based SLMs perform comparable to previous work on SALMON and StoryCloze; while significantly outperform other pre-trained SLMs on speech continuation across subjective and objective evaluations. To our knowledge, TASTE is the first end-to-end approach that utilizes a reconstruction objective to automatically learn a text-aligned speech tokenization and embedding suitable for spoken language modeling. Our demo, code, and model are available at https://mtkresearch.github.io/TASTE-SpokenLM.github.io.",
+  "primaryClass": "cs.CL",
+  "categories": [
+    "cs.CL",
+    "cs.SD",
+    "eess.AS"
+  ],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2504.07053",
+    "pdf": "https://arxiv.org/pdf/2504.07053",
+    "source": "https://arxiv.org/src/2504.07053",
+    "project": "https://mtkresearch.github.io/TASTE-SpokenLM.github.io",
+    "repo": "https://github.com/mtkresearch/TASTE-SpokenLM",
+    "openreview": "https://openreview.net/forum?id=6STb8DauN1"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2504.07053-src.tar.gz",
+    "entrypoint": "source/main.tex"
+  },
+  "tags": [
+    "speech-llm",
+    "speech-tokenizer",
+    "text-aligned-tokenization",
+    "spoken-language-modeling",
+    "tts",
+    "speech-representation",
+    "paralinguistic-modeling",
+    "project-tts-data-pipeline",
+    "project-generative-speech-representation-evaluation",
+    "project-audio-model-evaluation"
+  ],
+  "concepts": [
+    "TASTE",
+    "TASLM",
+    "text-aligned speech tokenization",
+    "text-aligned speech embedding",
+    "joint text-speech modeling",
+    "spoken language model",
+    "Whisper encoder",
+    "cross-attention aggregator",
+    "residual vector quantization",
+    "S3 token",
+    "speech continuation",
+    "SALMON",
+    "StoryCloze",
+    "paralinguistic side channel",
+    "text-aligned speech editing",
+    "ASR-dependent tokenization",
+    "low-bitrate speech tokens"
+  ],
+  "status": "read",
+  "created": "2026-06-11",
+  "doi": "10.48550/arXiv.2504.07053",
+  "publication_status": "Accepted as ICLR 2026 Poster according to OpenReview forum 6STb8DauN1",
+  "bibtex_key": "tseng2025tastetextalignedspeechtokenization",
+  "summary_model": "GPT-5 Codex",
+  "citations": [
+    {
+      "paper_key": "arxiv_2504_08528",
+      "title": "On The Landscape of Spoken Language Models: A Comprehensive Survey",
+      "score": 1,
+      "matched_title": "On the landscape of spoken language models: A comprehensive survey",
+      "matched_first_author_last": "arora",
+      "source_file": "source/iclr2026_conference.bib"
+    }
+  ],
+  "openreview": {
+    "forum": "6STb8DauN1",
+    "url": "https://openreview.net/forum?id=6STb8DauN1",
+    "match_score": 1,
+    "notes_count": 22,
+    "local_path": "reviews/openreview.md"
+  }
+}

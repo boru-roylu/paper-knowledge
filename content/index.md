@@ -75,6 +75,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="one-step-generation">one step generation</button>
     <button type="button" data-paper-tag="online-clustering">online clustering</button>
     <button type="button" data-paper-tag="orthogonal-transform">orthogonal transform</button>
+    <button type="button" data-paper-tag="paralinguistic-modeling">paralinguistic modeling</button>
     <button type="button" data-paper-tag="positional-encoding">positional encoding</button>
     <button type="button" data-paper-tag="preference-distillation">preference distillation</button>
     <button type="button" data-paper-tag="project-generative-speech-representation-evaluation">project: generative speech representation evaluation</button>
@@ -101,12 +102,14 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="speech-separation">speech separation</button>
     <button type="button" data-paper-tag="speech-ssl">speech ssl</button>
     <button type="button" data-paper-tag="speech-tokenizer">speech tokenizer</button>
+    <button type="button" data-paper-tag="spoken-language-modeling">spoken language modeling</button>
     <button type="button" data-paper-tag="state-space-model">state space model</button>
     <button type="button" data-paper-tag="streaming-asr">streaming asr</button>
     <button type="button" data-paper-tag="streaming-tts">streaming tts</button>
     <button type="button" data-paper-tag="target-speaker-extraction">target speaker extraction</button>
     <button type="button" data-paper-tag="task-oriented-dialogue">task oriented dialogue</button>
     <button type="button" data-paper-tag="taxonomy">taxonomy</button>
+    <button type="button" data-paper-tag="text-aligned-tokenization">text aligned tokenization</button>
     <button type="button" data-paper-tag="text-to-audio">text to audio</button>
     <button type="button" data-paper-tag="text-to-image">text to image</button>
     <button type="button" data-paper-tag="tokenizer">tokenizer</button>
@@ -129,6 +132,11 @@ title: Paper Knowledge
 </div>
 
 <div class="paper-list">
+<div class="paper-row" data-tags="speech-llm speech-tokenizer text-aligned-tokenization spoken-language-modeling tts speech-representation paralinguistic-modeling project-tts-data-pipeline project-generative-speech-representation-evaluation project-audio-model-evaluation" data-search="TASTE: Text-Aligned Speech Tokenization and Embedding for Spoken Language Modeling arxiv_2504_07053 2026-06-11 2025 ICLR 2026 (Poster) arxiv:2504.07053 speech-llm speech-tokenizer text-aligned-tokenization spoken-language-modeling tts speech-representation paralinguistic-modeling project-tts-data-pipeline project-generative-speech-representation-evaluation project-audio-model-evaluation">
+  <div class="paper-date">2026-06-11</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2504_07053/">TASTE: Text-Aligned Speech Tokenization and Embedding for Spoken Language Modeling</a> <span class="paper-meta">(2025, ICLR 2026 (Poster))</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/speech-llm/">#speech-llm</a> <a class="tag-link internal" href="./tags/speech-tokenizer/">#speech-tokenizer</a> <a class="tag-link internal" href="./tags/text-aligned-tokenization/">#text-aligned-tokenization</a> <a class="tag-link internal" href="./tags/spoken-language-modeling/">#spoken-language-modeling</a> <a class="tag-link internal" href="./tags/tts/">#tts</a> <a class="tag-link internal" href="./tags/speech-representation/">#speech-representation</a> <a class="tag-link internal" href="./tags/paralinguistic-modeling/">#paralinguistic-modeling</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a> <a class="tag-link internal" href="./tags/project-generative-speech-representation-evaluation/">#project-generative-speech-representation-evaluation</a> <a class="tag-link internal" href="./tags/project-audio-model-evaluation/">#project-audio-model-evaluation</a></div>
+</div>
 <div class="paper-row" data-tags="diffusion representation-autoencoder latent-space training-efficiency generative-evaluation reconstruction-generation-tradeoff project-generative-speech-representation-evaluation project-audio-model-evaluation project-one-step-audio-generation" data-search="Improved Baselines with Representation Autoencoders arxiv_2605_18324 2026-06-07 2026 arXiv preprint arxiv:2605.18324 diffusion representation-autoencoder latent-space training-efficiency generative-evaluation reconstruction-generation-tradeoff project-generative-speech-representation-evaluation project-audio-model-evaluation project-one-step-audio-generation">
   <div class="paper-date">2026-06-07</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2605_18324/">Improved Baselines with Representation Autoencoders</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>

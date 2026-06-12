@@ -136,6 +136,25 @@
       ]
     },
     {
+      "id": "arxiv_2504_07053",
+      "title": "TASTE: Text-Aligned Speech Tokenization and Embedding for Spoken Language Modeling",
+      "year": 2025,
+      "venue": "ICLR 2026 (Poster)",
+      "url": "../papers/arxiv_2504_07053/",
+      "tags": [
+        "speech-llm",
+        "speech-tokenizer",
+        "text-aligned-tokenization",
+        "spoken-language-modeling",
+        "tts",
+        "speech-representation",
+        "paralinguistic-modeling",
+        "project-tts-data-pipeline",
+        "project-generative-speech-representation-evaluation",
+        "project-audio-model-evaluation"
+      ]
+    },
+    {
       "id": "arxiv_2504_08528",
       "title": "On The Landscape of Spoken Language Models: A Comprehensive Survey",
       "year": 2025,
@@ -770,6 +789,11 @@
     }
   ],
   "edges": [
+    {
+      "source": "arxiv_2504_07053",
+      "target": "arxiv_2504_08528",
+      "score": 1
+    },
     {
       "source": "arxiv_2504_08528",
       "target": "arxiv_2303_01037",
