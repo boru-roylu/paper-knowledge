@@ -168,6 +168,99 @@ overlap event present vs absent
 
 這可以避免 metric 只看 distribution naturalness，卻忽略 prompt / transcript / speaker adherence。
 
+## TASTE-aligned paired utterance benchmark
+
+[TASTE](../papers/arxiv_2504_07053/) 提供一個很有價值的 special case：當 audio A 和 audio B 說同一句話時，TASTE 的 speech embedding / token sequence 會天然對齊到同一組 transcript tokens。
+
+```text
+Audio A: speaker A says sentence S
+Audio B: speaker B says sentence S
+
+same transcript tokens:
+  [w1, w2, w3, ...]
+
+TASTE(A):
+  [w1: zA1, w2: zA2, w3: zA3, ...]
+
+TASTE(B):
+  [w1: zB1, w2: zB2, w3: zB3, ...]
+```
+
+這和固定 frame-rate codec / SSL representation 不同：普通 codec tokens 需要 DTW / forced alignment 才能比較同一句話不同 speaker/prosody 的局部差異；TASTE 因為 text-aligned，可以直接做 word-level comparison。
+
+### Why this is useful
+
+這個 setup 可以把 representation evaluation 拆成更乾淨的問題：
+
+- lexical content 固定：A/B 說同一句 transcript。
+- text token 固定：每個 word position 有明確對應。
+- speech side-channel 變動：speaker、duration、tone、emotion、speaking rate、local emphasis。
+
+因此可以直接問：
+
+```text
+zA_i vs zB_i
+  = 同一個 word/token 下，不同 speaker/prosody 的 acoustic side-channel 差異
+```
+
+這比直接比較整段 waveform 或固定頻率 codec token 更容易做 causal / localized analysis。
+
+### Proposed metrics
+
+1. **Word-local controllability**
+
+   swap 某個 word 的 TASTE embedding / token 後，decode 出來是否主要只改變該 word 的 duration、tone、emphasis，而不是整句崩掉。
+
+2. **Paralinguistic delta predictability**
+
+   用 `zA_i - zB_i` 預測同一 word 上的 duration delta、F0 delta、energy delta、speaking-rate delta。若可預測，表示 embedding 確實承載 word-local paralinguistic information。
+
+3. **Speaker leakage / speaker separability**
+
+   在 same transcript setting 下，檢查 aligned embeddings 是否主要差在 speaker/prosody，而不是重新編碼 lexical content。可以用 speaker classifier / content classifier / mutual information probing。
+
+4. **Interpolation quality**
+
+   對同一 word 做：
+
+   ```text
+   z_i(alpha) = (1 - alpha) * zA_i + alpha * zB_i
+   ```
+
+   decode 後檢查 speech 是否自然、content 是否不變、speaker/prosody 是否平滑過渡。
+
+5. **Localized transfer**
+
+   把 A 的某些 word-level embeddings 放到 B 的 sentence 裡，測是否能 transfer local rhythm / tone / duration，而不破壞 B 的 speaker identity。
+
+6. **Downstream learnability**
+
+   用 TASTE-aligned representation 訓練 small TTS / SLM，比較它是否比 fixed-rate codec tokens 更快達到同樣 WER、speaker similarity、UTMOS、human preference。
+
+### Datasets to try
+
+- same-transcript multi-speaker corpora：VCTK、LibriTTS speaker variants、parallel TTS corpora。
+- expressive same-content corpora：Expresso 類 emotional / style variation data。
+- synthetic paired data：用 strong TTS model 生成 same transcript under different speaker / emotion / rate controls，再用 human spot-check 過濾。
+
+### Caveats
+
+- TASTE 依賴 transcript / ASR；transcript 錯，alignment 就錯。
+- TASTE 主要對 lexical speech 友善；laugh、cough、breath、backchannel、silence、overlap 這些 non-lexical events 沒有自然 text token anchor。
+- embedding 可能仍 entangle speaker、duration、prosody，不保證自動 disentangle。
+- 這個 benchmark 主要評估 same-transcript paired utterances；對 full-duplex overlap separation 是間接幫助，不是直接解法。
+
+### Why it belongs in this project
+
+這個 benchmark 很適合 `Generative Speech Representation Evaluation`，因為它不是在問 reconstruction fidelity，而是在問：
+
+```text
+representation 是否提供一個對 downstream generation 有用、
+可對齊、可比較、可插值、可局部控制的 acoustic side-channel？
+```
+
+這正是 speech 版 reconstruction-vs-generation problem 的一個可操作切入點。
+
 ## Current work that supports this project
 
 ### Directly relevant
