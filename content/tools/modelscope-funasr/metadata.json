@@ -1,0 +1,47 @@
+{
+  "tool_key": "modelscope-funasr",
+  "title": "FunASR",
+  "owner": "ModelScope / Alibaba",
+  "repo": "modelscope/FunASR",
+  "url": "https://github.com/modelscope/FunASR",
+  "homepage": "https://modelscope.github.io/FunASR/",
+  "created": "2026-06-11",
+  "kind": "GitHub repo / industrial ASR toolkit",
+  "description": "Industrial speech recognition toolkit with ASR, VAD, punctuation, speaker diarization, emotion/event detection, streaming, OpenAI-compatible API, CLI, and agent integrations.",
+  "urls": {
+    "repo": "https://github.com/modelscope/FunASR",
+    "docs": "https://modelscope.github.io/FunASR/",
+    "modelscope_org": "https://www.modelscope.cn/organization/iic",
+    "huggingface_org": "https://huggingface.co/FunAudioLLM"
+  },
+  "tags": [
+    "asr",
+    "speech-data",
+    "diarization",
+    "vad",
+    "preprocessing",
+    "streaming-asr",
+    "tool",
+    "project-tts-data-pipeline",
+    "project-full-duplex-data",
+    "project-audio-model-evaluation"
+  ],
+  "concepts": [
+    "FunASR",
+    "SenseVoiceSmall",
+    "Fun-ASR-Nano",
+    "Qwen3-ASR",
+    "GLM-ASR-Nano",
+    "Paraformer",
+    "fsmn-vad",
+    "cam++ speaker diarization",
+    "ct-punc",
+    "emotion2vec",
+    "streaming ASR",
+    "OpenAI-compatible transcription API",
+    "MCP server for ASR"
+  ],
+  "status": "read",
+  "summary_model": "GPT-5 Codex",
+  "fetch_source": "github_readme"
+}

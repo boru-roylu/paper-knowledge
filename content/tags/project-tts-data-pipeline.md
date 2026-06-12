@@ -66,6 +66,7 @@ raw audio + transcript
 ## Overlap cleanup / separation references
 
 - [Dual-path Mamba](../papers/arxiv_2403_18257/)：不是 TTS paper，但可作 TTS data pipeline 的 upstream separation baseline。對 podcast / dialogue / web audio 來說，先用 efficient single-channel speech separation 把 overlap speaker contamination 降低，再進 ASR、forced alignment、speaker filtering 和 transcript validation，會比直接把 contaminated utterance 丟給 TTS training 更穩。限制是它只在 WSJ0-2mix 類 benchmark 驗證，不能替代 diarization、speaker consistency check 或 human spot-check。
+- [FunASR](../tools/modelscope-funasr/)：production-oriented ASR / VAD / punctuation / speaker diarization / emotion-event tagging toolkit。適合作為 TTS data cleaning 的 first-pass transcription 和 segmentation baseline，但在 overlap speech、short backchannels、speaker swaps 上仍需要和 separation / OSD / human spot-check 搭配。
 
 ## Related Tags
 

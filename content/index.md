@@ -102,6 +102,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="speech-ssl">speech ssl</button>
     <button type="button" data-paper-tag="speech-tokenizer">speech tokenizer</button>
     <button type="button" data-paper-tag="state-space-model">state space model</button>
+    <button type="button" data-paper-tag="streaming-asr">streaming asr</button>
     <button type="button" data-paper-tag="streaming-tts">streaming tts</button>
     <button type="button" data-paper-tag="target-speaker-extraction">target speaker extraction</button>
     <button type="button" data-paper-tag="task-oriented-dialogue">task oriented dialogue</button>
@@ -116,6 +117,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="transformer">transformer</button>
     <button type="button" data-paper-tag="turn-taking">turn taking</button>
     <button type="button" data-paper-tag="user-simulation">user simulation</button>
+    <button type="button" data-paper-tag="vad">vad</button>
     <button type="button" data-paper-tag="video-generation">video generation</button>
     <button type="button" data-paper-tag="visual-generation">visual generation</button>
     <button type="button" data-paper-tag="voice-agent">voice agent</button>
@@ -394,6 +396,12 @@ title: Paper Knowledge
 ## Tools / Repos / Notes
 
 <div class="paper-list tool-list">
+<div class="paper-row" data-tags="asr speech-data diarization vad preprocessing streaming-asr tool project-tts-data-pipeline project-full-duplex-data project-audio-model-evaluation" data-search="FunASR modelscope-funasr 2026-06-11 GitHub repo / industrial ASR toolkit modelscope/FunASR Industrial speech recognition toolkit with ASR, VAD, punctuation, speaker diarization, emotion/event detection, streaming, OpenAI-compatible API, CLI, and agent integrations. asr speech-data diarization vad preprocessing streaming-asr tool project-tts-data-pipeline project-full-duplex-data project-audio-model-evaluation">
+  <div class="paper-date">2026-06-11</div>
+  <div class="paper-main"><a class="internal" href="./tools/modelscope-funasr/">FunASR</a> <span class="paper-meta">(GitHub repo / industrial ASR toolkit, modelscope/FunASR)</span></div>
+  <div class="paper-summary">Industrial speech recognition toolkit with ASR, VAD, punctuation, speaker diarization, emotion/event detection, streaming, OpenAI-compatible API, CLI, and agent integrations.</div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/asr/">#asr</a> <a class="tag-link internal" href="./tags/speech-data/">#speech-data</a> <a class="tag-link internal" href="./tags/diarization/">#diarization</a> <a class="tag-link internal" href="./tags/vad/">#vad</a> <a class="tag-link internal" href="./tags/preprocessing/">#preprocessing</a> <a class="tag-link internal" href="./tags/streaming-asr/">#streaming-asr</a> <a class="tag-link internal" href="./tags/tool/">#tool</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a> <a class="tag-link internal" href="./tags/project-full-duplex-data/">#project-full-duplex-data</a> <a class="tag-link internal" href="./tags/project-audio-model-evaluation/">#project-audio-model-evaluation</a></div>
+</div>
 <div class="paper-row" data-tags="tts speech-llm voice-cloning multilingual-speech tool project-tts-data-pipeline project-full-duplex-data" data-search="VoxCPM / VoxCPM2 openbmb-voxcpm 2026-06-03 GitHub repo / multilingual TTS model family OpenBMB/VoxCPM Open-source tokenizer-free TTS model family. VoxCPM2 is a 2B multilingual TTS and voice cloning release supporting 30 languages, Voice Design, Controllable Voice Cloning, Ultimate Cloning, 48 kHz output, streaming, and production serving integrations. tts speech-llm voice-cloning multilingual-speech tool project-tts-data-pipeline project-full-duplex-data">
   <div class="paper-date">2026-06-03</div>
   <div class="paper-main"><a class="internal" href="./tools/openbmb-voxcpm/">VoxCPM / VoxCPM2</a> <span class="paper-meta">(GitHub repo / multilingual TTS model family, OpenBMB/VoxCPM)</span></div>

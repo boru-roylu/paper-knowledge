@@ -41,6 +41,7 @@ title: "Project: Full-duplex data and model"
 - [Sommelier](../papers/arxiv_2603_25750/)：web-scale open multi-turn audio preprocessing pipeline，包含 VAD、diarization、overlap disentanglement、background music removal、ASR ensemble。它的價值是工程 pipeline blueprint，尤其是保留 overlap / backchannel 而不是直接刪掉。
 - [MeanFlow-TSE](../papers/arxiv_2512_18572/)：one-step generative target speaker extraction。它用 enrollment + mixing-ratio-aware MeanFlow 從 mono mixture 直接抽 target speaker，可作 overlap cleanup / speaker-conditioned extraction baseline；但目前只在 Libri2Mix synthetic mixture 上驗證，不是完整 dialogue diarization 或 dual-channel recovery pipeline。
 - [WhisperD / Parakeet](../tools/jordandarefsky-parakeet-whisperd/)：提供 speaker/event transcript format：`[S1]`, `[S2]`, `(laughs)`, `(coughs)`。它是把 podcast data 轉成 dialogue TTS data 的實用中間層，但仍需要補 time alignment / channel-level annotation。
+- [FunASR](../tools/modelscope-funasr/)：可作 full-duplex preprocessing 的 ASR / VAD / punctuation / diarization / event-emotion tagging candidate。它不解決 mono overlap separation，但可提供 timestamps、speaker turns、structured transcript，作為後續 OSD / separation / transcript validation 的輸入。
 - [Miipher](../papers/arxiv_2303_01664/) / [Miipher-2](../papers/arxiv_2505_04457/)：speech restoration 可作為上游清理工具，但必須測它是否會抹掉 overlap、backchannel、breath、hesitation 等 conversational evidence。
 - [Mega-ASR](../papers/arxiv_2605_19833/)：不是 full-duplex paper，但它的 compound acoustic simulation 和 WER-gated acoustic-to-semantic training 對 robust ASR / transcript recovery 有參考價值。用在本 project 時，重點是提升 noisy / far-field / dropout 場景下的 transcript fidelity。
 
