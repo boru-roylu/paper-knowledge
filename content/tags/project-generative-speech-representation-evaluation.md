@@ -229,6 +229,37 @@ zA_i vs zB_i
 
    decode 後檢查 speech 是否自然、content 是否不變、speaker/prosody 是否平滑過渡。
 
+   這裡可以加入一個很直接的 **speaker similarity monotonicity test**：
+
+   ```text
+   audio_i(alpha) = decode(z_i(alpha), same text context)
+
+   SimA(alpha) = speaker_similarity(audio_i(alpha), speaker_A_ref)
+   SimB(alpha) = speaker_similarity(audio_i(alpha), speaker_B_ref)
+   ```
+
+   理論上：
+
+   ```text
+   alpha -> 0:
+     SimA(alpha) should be high
+     SimB(alpha) should be low
+
+   alpha -> 1:
+     SimA(alpha) should be low
+     SimB(alpha) should be high
+   ```
+
+   也就是 interpolation 從 A 走到 B 時，speaker similarity to A 應該單調下降或大致下降，speaker similarity to B 應該單調上升或大致上升。可以把這變成幾個量化指標：
+
+   - `monotonicity_A`：`SimA(alpha)` 是否隨 alpha 增加而下降。
+   - `monotonicity_B`：`SimB(alpha)` 是否隨 alpha 增加而上升。
+   - `crossover_alpha`：`SimA(alpha) = SimB(alpha)` 的位置是否接近 `0.5`。
+   - `speaker_path_smoothness`：相鄰 alpha steps 的 speaker embedding distance 是否平滑。
+   - `content_stability`：整條 interpolation path 的 ASR transcript 是否保持同一句話。
+
+   這個 test 可以檢查 representation 的 speaker dimension 是否可控、是否平滑，以及 decoder 是否會在中間 alpha 產生 speaker collapse / speaker averaging / unstable identity jump。
+
 5. **Localized transfer**
 
    把 A 的某些 word-level embeddings 放到 B 的 sentence 裡，測是否能 transfer local rhythm / tone / duration，而不破壞 B 的 speaker identity。
