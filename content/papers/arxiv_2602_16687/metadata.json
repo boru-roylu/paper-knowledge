@@ -1,0 +1,76 @@
+{
+  "paper_key": "arxiv_2602_16687",
+  "canonical_id": "arxiv:2602.16687",
+  "arxiv_id": "2602.16687",
+  "version": "latest",
+  "title": "Scaling Open Discrete Audio Foundation Models with Interleaved Semantic, Acoustic, and Text Tokens",
+  "authors": [
+    "Potsawee Manakul",
+    "Woody Haosheng Gan",
+    "Martijn Bartelds",
+    "Guangzhi Sun",
+    "William Held",
+    "Diyi Yang"
+  ],
+  "venue": "arXiv preprint",
+  "year": 2026,
+  "abstract": "Current audio language models are predominantly text-first, either extending pre-trained text LLM backbones or relying on semantic-only audio tokens, limiting general audio modeling. This paper presents a systematic empirical study of native audio foundation models that apply next-token prediction to audio at scale, jointly modeling semantic content, acoustic details, and text to support both general audio generation and cross-modal capabilities. We provide comprehensive empirical insights for building such models: (1) We systematically investigate design choices -- data sources, text mixture ratios, and token composition -- establishing a validated training recipe. (2) We conduct the first scaling law study for discrete audio models via IsoFLOP analysis on 64 models spanning $3{\\times}10^{18}$ to $3{\\times}10^{20}$ FLOPs, finding that optimal data grows 1.6$\\times$ faster than optimal model size. (3) We apply these lessons to train SODA (Scaling Open Discrete Audio), a suite of models from 135M to 4B parameters on 500B tokens, comparing against our scaling predictions and existing models. SODA serves as a flexible backbone for diverse audio/text tasks -- we demonstrate this by fine-tuning for voice-preserving speech-to-speech translation, using the same unified architecture.",
+  "primaryClass": "cs.SD",
+  "categories": [
+    "cs.SD",
+    "cs.CL",
+    "eess.AS"
+  ],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2602.16687",
+    "pdf": "https://arxiv.org/pdf/2602.16687",
+    "source": "https://arxiv.org/src/2602.16687",
+    "project": "https://soda-audio.github.io/",
+    "code": "https://github.com/potsawee/marin/tree/audio-release-pr/experiments/audio",
+    "models_data": "https://huggingface.co/collections/SALT-NLP/soda-discrete-audio-models",
+    "model_card": "https://huggingface.co/soda-research/soda-1.7b-base"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2602.16687-src.tar.gz",
+    "entrypoint": "source/main.tex"
+  },
+  "tags": [
+    "speech-llm",
+    "audio-foundation-model",
+    "discrete-audio",
+    "scaling-law",
+    "speech-tokenizer",
+    "audio-codec",
+    "speech-data",
+    "project-tts-data-pipeline",
+    "project-generative-speech-representation-evaluation",
+    "project-audio-model-evaluation"
+  ],
+  "concepts": [
+    "SODA",
+    "discrete audio foundation model",
+    "semantic-acoustic-text interleaving",
+    "Mimi tokenizer",
+    "RVQ codebooks",
+    "utterance-level interleaving",
+    "next-token prediction",
+    "audio scaling law",
+    "IsoFLOP analysis",
+    "validation NLL as downstream proxy",
+    "cold-start audio model training",
+    "warm-start instability",
+    "text mixture ratio",
+    "speech data source ablation",
+    "voice-preserving S2ST",
+    "representation learnability"
+  ],
+  "status": "read",
+  "created": "2026-06-18",
+  "doi": "10.48550/arXiv.2602.16687",
+  "publication_status": "No formal conference or journal reference found as of 2026-06-18",
+  "bibtex_key": "manakul2026scalingopendiscreteaudiofounda",
+  "fetch_source": "arxiv-tex",
+  "summary_model": "Codex GPT-5",
+  "citations": []
+}

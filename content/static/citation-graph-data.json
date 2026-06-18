@@ -366,6 +366,25 @@
       ]
     },
     {
+      "id": "arxiv_2602_16687",
+      "title": "Scaling Open Discrete Audio Foundation Models with Interleaved Semantic, Acoustic, and Text Tokens",
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "url": "../papers/arxiv_2602_16687/",
+      "tags": [
+        "speech-llm",
+        "audio-foundation-model",
+        "discrete-audio",
+        "scaling-law",
+        "speech-tokenizer",
+        "audio-codec",
+        "speech-data",
+        "project-tts-data-pipeline",
+        "project-generative-speech-representation-evaluation",
+        "project-audio-model-evaluation"
+      ]
+    },
+    {
       "id": "arxiv_2603_05630",
       "title": "Making Reconstruction FID Predictive of Diffusion Generation FID",
       "year": 2026,

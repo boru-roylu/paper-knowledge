@@ -29,8 +29,10 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="agentic-workflow">agentic workflow</button>
     <button type="button" data-paper-tag="ai-infrastructure">ai infrastructure</button>
     <button type="button" data-paper-tag="attribution">attribution</button>
+    <button type="button" data-paper-tag="audio-codec">audio codec</button>
     <button type="button" data-paper-tag="audio-data">audio data</button>
     <button type="button" data-paper-tag="audio-evaluation">audio evaluation</button>
+    <button type="button" data-paper-tag="audio-foundation-model">audio foundation model</button>
     <button type="button" data-paper-tag="audio-generation">audio generation</button>
     <button type="button" data-paper-tag="autoencoder">autoencoder</button>
     <button type="button" data-paper-tag="autoregressive-generation">autoregressive generation</button>
@@ -49,6 +51,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="dialogue">dialogue</button>
     <button type="button" data-paper-tag="diffusion">diffusion</button>
     <button type="button" data-paper-tag="diffusion-distillation">diffusion distillation</button>
+    <button type="button" data-paper-tag="discrete-audio">discrete audio</button>
     <button type="button" data-paper-tag="distribution-matching">distribution matching</button>
     <button type="button" data-paper-tag="dual-path-network">dual path network</button>
     <button type="button" data-paper-tag="duration-control">duration control</button>
@@ -91,6 +94,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="reward-model">reward model</button>
     <button type="button" data-paper-tag="reward-shaping">reward shaping</button>
     <button type="button" data-paper-tag="safety">safety</button>
+    <button type="button" data-paper-tag="scaling-law">scaling law</button>
     <button type="button" data-paper-tag="self-distillation">self distillation</button>
     <button type="button" data-paper-tag="separation">separation</button>
     <button type="button" data-paper-tag="sequence-modeling">sequence modeling</button>
@@ -140,6 +144,11 @@ title: Paper Knowledge
   <div class="paper-date">2026-06-18</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2605_20755/">DuplexSLA: A Full-Duplex Spoken Language Model with Synchronized Speech, Language, and Action</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>
   <div class="paper-tags"><a class="tag-link internal" href="./tags/speech-llm/">#speech-llm</a> <a class="tag-link internal" href="./tags/full-duplex/">#full-duplex</a> <a class="tag-link internal" href="./tags/speech-agent/">#speech-agent</a> <a class="tag-link internal" href="./tags/tool-calling/">#tool-calling</a> <a class="tag-link internal" href="./tags/turn-taking/">#turn-taking</a> <a class="tag-link internal" href="./tags/streaming-speech/">#streaming-speech</a> <a class="tag-link internal" href="./tags/action-channel/">#action-channel</a> <a class="tag-link internal" href="./tags/project-audio-model-evaluation/">#project-audio-model-evaluation</a> <a class="tag-link internal" href="./tags/project-full-duplex-data/">#project-full-duplex-data</a></div>
+</div>
+<div class="paper-row" data-tags="speech-llm audio-foundation-model discrete-audio scaling-law speech-tokenizer audio-codec speech-data project-tts-data-pipeline project-generative-speech-representation-evaluation project-audio-model-evaluation" data-search="Scaling Open Discrete Audio Foundation Models with Interleaved Semantic, Acoustic, and Text Tokens arxiv_2602_16687 2026-06-18 2026 arXiv preprint arxiv:2602.16687 speech-llm audio-foundation-model discrete-audio scaling-law speech-tokenizer audio-codec speech-data project-tts-data-pipeline project-generative-speech-representation-evaluation project-audio-model-evaluation">
+  <div class="paper-date">2026-06-18</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2602_16687/">Scaling Open Discrete Audio Foundation Models with Interleaved Semantic, Acoustic, and Text Tokens</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/speech-llm/">#speech-llm</a> <a class="tag-link internal" href="./tags/audio-foundation-model/">#audio-foundation-model</a> <a class="tag-link internal" href="./tags/discrete-audio/">#discrete-audio</a> <a class="tag-link internal" href="./tags/scaling-law/">#scaling-law</a> <a class="tag-link internal" href="./tags/speech-tokenizer/">#speech-tokenizer</a> <a class="tag-link internal" href="./tags/audio-codec/">#audio-codec</a> <a class="tag-link internal" href="./tags/speech-data/">#speech-data</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a> <a class="tag-link internal" href="./tags/project-generative-speech-representation-evaluation/">#project-generative-speech-representation-evaluation</a> <a class="tag-link internal" href="./tags/project-audio-model-evaluation/">#project-audio-model-evaluation</a></div>
 </div>
 <div class="paper-row" data-tags="speech-llm speech-tokenizer text-aligned-tokenization spoken-language-modeling tts speech-representation paralinguistic-modeling project-tts-data-pipeline project-generative-speech-representation-evaluation project-audio-model-evaluation" data-search="TASTE: Text-Aligned Speech Tokenization and Embedding for Spoken Language Modeling arxiv_2504_07053 2026-06-11 2025 ICLR 2026 (Poster) arxiv:2504.07053 speech-llm speech-tokenizer text-aligned-tokenization spoken-language-modeling tts speech-representation paralinguistic-modeling project-tts-data-pipeline project-generative-speech-representation-evaluation project-audio-model-evaluation">
   <div class="paper-date">2026-06-11</div>
