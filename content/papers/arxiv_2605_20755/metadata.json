@@ -1,0 +1,97 @@
+{
+  "paper_key": "arxiv_2605_20755",
+  "canonical_id": "arxiv:2605.20755",
+  "arxiv_id": "2605.20755",
+  "version": "latest",
+  "title": "DuplexSLA: A Full-Duplex Spoken Language Model with Synchronized Speech, Language, and Action",
+  "authors": [
+    "Haoyang Zhang",
+    "Jun Chen",
+    "Donghang Wu",
+    "Yuxin Li",
+    "Yuxin Zhang",
+    "Xiangyu Tony Zhang",
+    "Che Liu",
+    "Qingjian Lin",
+    "Yizhou Peng",
+    "Hexin Liu",
+    "Eng Siong Chng",
+    "Chao Yan",
+    "Boyong Wu",
+    "Yechang Huang",
+    "Xuerui Yang",
+    "Fei Tian"
+  ],
+  "venue": "arXiv preprint",
+  "year": 2026,
+  "abstract": "Recent advances in spoken dialogue language models have shifted from turn-based to full-duplex designs, where the model continuously listens to the user while generating responses. However, existing duplex backbones still lack a native channel for in-conversation planning and tool calling, leaving real-time agentic behaviour either tied to turn boundaries or relegated to an external cascade. We propose DuplexSLA, a native full-duplex Speech-Language-Action foundation model that decodes assistant audio together with a structured action stream on a shared 160 ms chunk timeline. DuplexSLA is built on a dual-stream three-channel formulation: a continuous user audio channel, a discrete assistant audio channel, and a rate-limited textual action channel, all decoded jointly by a single backbone, so that listening, speaking, planning, and tool calling unfold on one shared clock. Two capabilities define the model: (1) semantic-driven turn-taking control, where interruption, pause, and backchannel are handled inside the same backbone instead of by an external semantic VAD; and (2) in-conversation planning and tool calling, where planning text and structured tool calls are emitted on the action channel without halting assistant audio, so that multi-action and backchannel-triggered tool use are interleaved with ongoing speech. To evaluate these capabilities together, we further construct DuplexSLA-Bench, a duplex benchmark covering pause, interrupt, and backchannel turn-taking together with three styles of in-conversation tool calling. Our project page, interactive demos, and the DuplexSLA-Bench evaluation suite are publicly available at https://github.com/hyzhang24/DuplexSLA.",
+  "primaryClass": "eess.AS",
+  "categories": [
+    "eess.AS"
+  ],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2605.20755",
+    "pdf": "https://arxiv.org/pdf/2605.20755",
+    "source": "https://arxiv.org/src/2605.20755",
+    "repo": "https://github.com/hyzhang24/DuplexSLA",
+    "project": "https://github.com/hyzhang24/DuplexSLA"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2605.20755-src.tar.gz",
+    "entrypoint": "source/main.tex"
+  },
+  "tags": [
+    "speech-llm",
+    "full-duplex",
+    "speech-agent",
+    "tool-calling",
+    "turn-taking",
+    "streaming-speech",
+    "action-channel",
+    "project-audio-model-evaluation",
+    "project-full-duplex-data"
+  ],
+  "concepts": [
+    "DuplexSLA",
+    "Speech-Language-Action model",
+    "full-duplex spoken language model",
+    "dual-stream three-channel formulation",
+    "action channel",
+    "TA4 layout",
+    "160 ms chunk timeline",
+    "native interruption",
+    "pause detection",
+    "backchannel detection",
+    "in-conversation tool calling",
+    "multi-action tool calling",
+    "backchannel-triggered tool call",
+    "DuplexSLA-Bench",
+    "dual-side ASR alignment",
+    "full-duplex-aware masking"
+  ],
+  "status": "read",
+  "created": "2026-06-18",
+  "doi": "10.48550/arXiv.2605.20755",
+  "publication_status": "No formal conference or journal reference found as of 2026-06-18",
+  "bibtex_key": "zhang2026duplexslafullduplexspokenlanguage",
+  "summary_model": "GPT-5 Codex",
+  "citations": [
+    {
+      "paper_key": "arxiv_2405_19487",
+      "title": "A Full-duplex Speech Dialogue Scheme Based On Large Language Model",
+      "score": 1,
+      "matched_title": "A Full-duplex Speech Dialogue Scheme Based On Large Language Model",
+      "matched_first_author_last": "wang",
+      "source_file": "source/references.bib"
+    },
+    {
+      "paper_key": "arxiv_2602_06053",
+      "title": "PersonaPlex: Voice and Role Control for Full Duplex Conversational Speech Models",
+      "score": 1,
+      "matched_title": "PersonaPlex: Voice and Role Control for Full Duplex Conversational Speech Models",
+      "matched_first_author_last": "roy",
+      "source_file": "source/references.bib"
+    }
+  ]
+}

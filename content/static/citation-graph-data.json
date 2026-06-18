@@ -537,6 +537,24 @@
       ]
     },
     {
+      "id": "arxiv_2605_20755",
+      "title": "DuplexSLA: A Full-Duplex Spoken Language Model with Synchronized Speech, Language, and Action",
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "url": "../papers/arxiv_2605_20755/",
+      "tags": [
+        "speech-llm",
+        "full-duplex",
+        "speech-agent",
+        "tool-calling",
+        "turn-taking",
+        "streaming-speech",
+        "action-channel",
+        "project-audio-model-evaluation",
+        "project-full-duplex-data"
+      ]
+    },
+    {
       "id": "arxiv_2605_21008",
       "title": "A Survey of Audio Reasoning in Multimodal Foundation Models",
       "year": 2026,
@@ -872,6 +890,16 @@
     {
       "source": "arxiv_2605_18324",
       "target": "arxiv_2604_28190",
+      "score": 1
+    },
+    {
+      "source": "arxiv_2605_20755",
+      "target": "arxiv_2405_19487",
+      "score": 1
+    },
+    {
+      "source": "arxiv_2605_20755",
+      "target": "arxiv_2602_06053",
       "score": 1
     },
     {

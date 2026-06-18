@@ -22,6 +22,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="tts">tts</button>
     <button type="button" data-paper-tag="academic-retrieval">academic retrieval</button>
     <button type="button" data-paper-tag="acoustic-unit-discovery">acoustic unit discovery</button>
+    <button type="button" data-paper-tag="action-channel">action channel</button>
     <button type="button" data-paper-tag="adversarial-training">adversarial training</button>
     <button type="button" data-paper-tag="agent-evaluation">agent evaluation</button>
     <button type="button" data-paper-tag="agent-rl">agent rl</button>
@@ -94,6 +95,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="separation">separation</button>
     <button type="button" data-paper-tag="sequence-modeling">sequence modeling</button>
     <button type="button" data-paper-tag="source-separation">source separation</button>
+    <button type="button" data-paper-tag="speech-agent">speech agent</button>
     <button type="button" data-paper-tag="speech-data-cleaning">speech data cleaning</button>
     <button type="button" data-paper-tag="speech-enhancement">speech enhancement</button>
     <button type="button" data-paper-tag="speech-reasoning">speech reasoning</button>
@@ -105,6 +107,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="spoken-language-modeling">spoken language modeling</button>
     <button type="button" data-paper-tag="state-space-model">state space model</button>
     <button type="button" data-paper-tag="streaming-asr">streaming asr</button>
+    <button type="button" data-paper-tag="streaming-speech">streaming speech</button>
     <button type="button" data-paper-tag="streaming-tts">streaming tts</button>
     <button type="button" data-paper-tag="target-speaker-extraction">target speaker extraction</button>
     <button type="button" data-paper-tag="task-oriented-dialogue">task oriented dialogue</button>
@@ -115,6 +118,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="tokenizer">tokenizer</button>
     <button type="button" data-paper-tag="tokenizer-free">tokenizer free</button>
     <button type="button" data-paper-tag="tool">tool</button>
+    <button type="button" data-paper-tag="tool-calling">tool calling</button>
     <button type="button" data-paper-tag="tool-use">tool use</button>
     <button type="button" data-paper-tag="training-efficiency">training efficiency</button>
     <button type="button" data-paper-tag="transformer">transformer</button>
@@ -132,6 +136,11 @@ title: Paper Knowledge
 </div>
 
 <div class="paper-list">
+<div class="paper-row" data-tags="speech-llm full-duplex speech-agent tool-calling turn-taking streaming-speech action-channel project-audio-model-evaluation project-full-duplex-data" data-search="DuplexSLA: A Full-Duplex Spoken Language Model with Synchronized Speech, Language, and Action arxiv_2605_20755 2026-06-18 2026 arXiv preprint arxiv:2605.20755 speech-llm full-duplex speech-agent tool-calling turn-taking streaming-speech action-channel project-audio-model-evaluation project-full-duplex-data">
+  <div class="paper-date">2026-06-18</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2605_20755/">DuplexSLA: A Full-Duplex Spoken Language Model with Synchronized Speech, Language, and Action</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/speech-llm/">#speech-llm</a> <a class="tag-link internal" href="./tags/full-duplex/">#full-duplex</a> <a class="tag-link internal" href="./tags/speech-agent/">#speech-agent</a> <a class="tag-link internal" href="./tags/tool-calling/">#tool-calling</a> <a class="tag-link internal" href="./tags/turn-taking/">#turn-taking</a> <a class="tag-link internal" href="./tags/streaming-speech/">#streaming-speech</a> <a class="tag-link internal" href="./tags/action-channel/">#action-channel</a> <a class="tag-link internal" href="./tags/project-audio-model-evaluation/">#project-audio-model-evaluation</a> <a class="tag-link internal" href="./tags/project-full-duplex-data/">#project-full-duplex-data</a></div>
+</div>
 <div class="paper-row" data-tags="speech-llm speech-tokenizer text-aligned-tokenization spoken-language-modeling tts speech-representation paralinguistic-modeling project-tts-data-pipeline project-generative-speech-representation-evaluation project-audio-model-evaluation" data-search="TASTE: Text-Aligned Speech Tokenization and Embedding for Spoken Language Modeling arxiv_2504_07053 2026-06-11 2025 ICLR 2026 (Poster) arxiv:2504.07053 speech-llm speech-tokenizer text-aligned-tokenization spoken-language-modeling tts speech-representation paralinguistic-modeling project-tts-data-pipeline project-generative-speech-representation-evaluation project-audio-model-evaluation">
   <div class="paper-date">2026-06-11</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2504_07053/">TASTE: Text-Aligned Speech Tokenization and Embedding for Spoken Language Modeling</a> <span class="paper-meta">(2025, ICLR 2026 (Poster))</span></div>
