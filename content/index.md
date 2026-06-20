@@ -89,6 +89,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="recurrent-model">recurrent model</button>
     <button type="button" data-paper-tag="reinforcement-learning">reinforcement learning</button>
     <button type="button" data-paper-tag="representation-autoencoder">representation autoencoder</button>
+    <button type="button" data-paper-tag="representation-evaluation">representation evaluation</button>
     <button type="button" data-paper-tag="research-agent">research agent</button>
     <button type="button" data-paper-tag="restoration">restoration</button>
     <button type="button" data-paper-tag="reward-model">reward model</button>
@@ -108,6 +109,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="speech-separation">speech separation</button>
     <button type="button" data-paper-tag="speech-ssl">speech ssl</button>
     <button type="button" data-paper-tag="speech-tokenizer">speech tokenizer</button>
+    <button type="button" data-paper-tag="speech-vae">speech vae</button>
     <button type="button" data-paper-tag="spoken-language-modeling">spoken language modeling</button>
     <button type="button" data-paper-tag="state-space-model">state space model</button>
     <button type="button" data-paper-tag="streaming-asr">streaming asr</button>
@@ -133,6 +135,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="visual-generation">visual generation</button>
     <button type="button" data-paper-tag="voice-agent">voice agent</button>
     <button type="button" data-paper-tag="voice-cloning">voice cloning</button>
+    <button type="button" data-paper-tag="waveform-latent">waveform latent</button>
     <button type="button" data-paper-tag="whisperd">whisperd</button>
     <button type="button" data-paper-tag="wsj0-2mix">wsj0 2mix</button>
     <button type="button" data-paper-tag="zero-shot-tts">zero shot tts</button>
@@ -140,6 +143,11 @@ title: Paper Knowledge
 </div>
 
 <div class="paper-list">
+<div class="paper-row" data-tags="tts diffusion flow-matching speech-vae continuous-latent waveform-latent voice-cloning representation-evaluation audio-evaluation project-generative-speech-representation-evaluation project-tts-data-pipeline project-audio-model-evaluation" data-search="LongCat-AudioDiT: High-Fidelity Diffusion Text-to-Speech in the Waveform Latent Space arxiv_2603_29339 2026-06-20 2026 arXiv preprint arxiv:2603.29339 tts diffusion flow-matching speech-vae continuous-latent waveform-latent voice-cloning representation-evaluation audio-evaluation project-generative-speech-representation-evaluation project-tts-data-pipeline project-audio-model-evaluation">
+  <div class="paper-date">2026-06-20</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2603_29339/">LongCat-AudioDiT: High-Fidelity Diffusion Text-to-Speech in the Waveform Latent Space</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/tts/">#tts</a> <a class="tag-link internal" href="./tags/diffusion/">#diffusion</a> <a class="tag-link internal" href="./tags/flow-matching/">#flow-matching</a> <a class="tag-link internal" href="./tags/speech-vae/">#speech-vae</a> <a class="tag-link internal" href="./tags/continuous-latent/">#continuous-latent</a> <a class="tag-link internal" href="./tags/waveform-latent/">#waveform-latent</a> <a class="tag-link internal" href="./tags/voice-cloning/">#voice-cloning</a> <a class="tag-link internal" href="./tags/representation-evaluation/">#representation-evaluation</a> <a class="tag-link internal" href="./tags/audio-evaluation/">#audio-evaluation</a> <a class="tag-link internal" href="./tags/project-generative-speech-representation-evaluation/">#project-generative-speech-representation-evaluation</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a> <a class="tag-link internal" href="./tags/project-audio-model-evaluation/">#project-audio-model-evaluation</a></div>
+</div>
 <div class="paper-row" data-tags="speech-llm full-duplex speech-agent tool-calling turn-taking streaming-speech action-channel project-audio-model-evaluation project-full-duplex-data" data-search="DuplexSLA: A Full-Duplex Spoken Language Model with Synchronized Speech, Language, and Action arxiv_2605_20755 2026-06-18 2026 arXiv preprint arxiv:2605.20755 speech-llm full-duplex speech-agent tool-calling turn-taking streaming-speech action-channel project-audio-model-evaluation project-full-duplex-data">
   <div class="paper-date">2026-06-18</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2605_20755/">DuplexSLA: A Full-Duplex Spoken Language Model with Synchronized Speech, Language, and Action</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>

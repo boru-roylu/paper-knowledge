@@ -71,6 +71,7 @@ raw audio + transcript
 ## Data recipe / scaling references
 
 - [SODA](../papers/arxiv_2602_16687/)：對 TTS data pipeline 很有參考價值。作者比較 Yodas、Emilia、MLS，發現 MLS 因為 uncased / unpunctuated transcript 和 fixed chunking 在 cross-modal ASR/TTS 上很差；最後採用 Yodas + Emilia + 5% Nemotron-CC text。這支持我們把 punctuation、casing、utterance boundary、chunk length diversity 和 transcript normalization 視為 core filtering signals，而不是 ingestion 後的小修補。
+- [LongCat-AudioDiT](../papers/arxiv_2603_29339/)：不是 data-cleaning paper，但它把 100K/1M hours Chinese-English speech、ASR-generated transcripts、max 60s utterances、prompt audio 和 Wav-VAE waveform latent 組成一個可訓練的 zero-shot TTS setup。對 pipeline 的啟發是：若 downstream target 是 waveform latent / voice cloning，資料格式要保留 prompt audio、speaker similarity reference、duration、ASR transcript quality，以及可重建的 latent cache，而不只是 plain text + waveform。
 
 ## Related Tags
 

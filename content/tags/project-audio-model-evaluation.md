@@ -112,6 +112,7 @@ AnyAudio-Judge data / prompts
 - [TherapyGym](../papers/arxiv_2603_18008/)：不是 audio paper，也不是 clinical deployment evidence；但它提供 high-stakes rubric judge + expert calibration + GRPO safety penalty 的案例，可借來設計更嚴格的 audio / voice-agent evaluator。
 - [Making Reconstruction FID Predictive of Diffusion Generation FID](../papers/arxiv_2603_05630/)：image-side iFID 起點；啟發 audio / speech iFID project，重點是 reconstruction metric 不等於 generation metric。
 - [SODA](../papers/arxiv_2602_16687/)：提供 audio foundation model 的 multi-axis evaluation pattern：sBLIMP / sWUGGY、Salmon、tBLIMP / tWUGGY / HellaSwag、ASR WER、TTS WER、TTS speaker similarity，以及 validation NLL proxy。可作為 audio model dashboard 的參考。
+- [LongCat-AudioDiT](../papers/arxiv_2603_29339/)：open diffusion TTS / voice cloning generator，並提供 Wav-VAE reconstruction metrics 與 generated TTS metrics 的對照。可借來測 evaluator 是否能分辨 reconstruction quality、speaker similarity、naturalness、acoustic artifacts 和 prompt adherence。
 - [Full-Duplex-Bench-v3](../papers/arxiv_2604_04847/)：可提供 voice-agent / disfluency / tool-use rubrics 的 benchmark 場景。
 - [VoxCPM / VoxCPM2](../tools/openbmb-voxcpm/)：open TTS / voice design model，可作為可跑的 generation target。
 - [Dia](../tools/nari-labs-dia/)：open dialogue TTS baseline，可用於 dialogue event-control evaluation。

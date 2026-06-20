@@ -448,6 +448,27 @@
       ]
     },
     {
+      "id": "arxiv_2603_29339",
+      "title": "LongCat-AudioDiT: High-Fidelity Diffusion Text-to-Speech in the Waveform Latent Space",
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "url": "../papers/arxiv_2603_29339/",
+      "tags": [
+        "tts",
+        "diffusion",
+        "flow-matching",
+        "speech-vae",
+        "continuous-latent",
+        "waveform-latent",
+        "voice-cloning",
+        "representation-evaluation",
+        "audio-evaluation",
+        "project-generative-speech-representation-evaluation",
+        "project-tts-data-pipeline",
+        "project-audio-model-evaluation"
+      ]
+    },
+    {
       "id": "arxiv_2604_04847",
       "title": "Full-Duplex-Bench-v3: Benchmarking Tool Use for Full-Duplex Voice Agents Under Real-World Disfluency",
       "year": 2026,
@@ -885,6 +906,16 @@
       "source": "arxiv_2603_25750",
       "target": "arxiv_2405_19487",
       "score": 0.97
+    },
+    {
+      "source": "arxiv_2603_29339",
+      "target": "arxiv_2406_02430",
+      "score": 1
+    },
+    {
+      "source": "arxiv_2603_29339",
+      "target": "arxiv_2509_24650",
+      "score": 1
     },
     {
       "source": "arxiv_2604_28190",

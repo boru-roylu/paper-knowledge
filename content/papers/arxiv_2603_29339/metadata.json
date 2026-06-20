@@ -1,0 +1,96 @@
+{
+  "paper_key": "arxiv_2603_29339",
+  "canonical_id": "arxiv:2603.29339",
+  "arxiv_id": "2603.29339",
+  "version": "latest",
+  "title": "LongCat-AudioDiT: High-Fidelity Diffusion Text-to-Speech in the Waveform Latent Space",
+  "authors": [
+    "Detai Xin",
+    "Shujie Hu",
+    "Chengzuo Yang",
+    "Chen Huang",
+    "Guoqiao Yu",
+    "Guanglu Wan",
+    "Xunliang Cai"
+  ],
+  "venue": "arXiv preprint",
+  "year": 2026,
+  "abstract": "We present LongCat-AudioDiT, a novel, non-autoregressive diffusion-based text-to-speech (TTS) model that achieves state-of-the-art (SOTA) performance. Unlike previous methods that rely on intermediate acoustic representations such as mel-spectrograms, the core innovation of LongCat-AudioDiT lies in operating directly within the waveform latent space. This approach effectively mitigates compounding errors and drastically simplifies the TTS pipeline, requiring only a waveform variational autoencoder (Wav-VAE) and a diffusion backbone. Furthermore, we introduce two critical improvements to the inference process: first, we identify and rectify a long-standing training-inference mismatch; second, we replace traditional classifier-free guidance with adaptive projection guidance to elevate generation quality. Experimental results demonstrate that, despite the absence of complex multi-stage training pipelines or high-quality human-annotated datasets, LongCat-AudioDiT achieves SOTA zero-shot voice cloning performance on the Seed benchmark while maintaining competitive intelligibility. Specifically, our largest variant, LongCat-AudioDiT-3.5B, outperforms the previous SOTA model (Seed-TTS), improving the speaker similarity (SIM) scores from 0.809 to 0.818 on Seed-ZH, and from 0.776 to 0.797 on Seed-Hard. Finally, through comprehensive ablation studies and systematic analysis, we validate the effectiveness of our proposed modules. Notably, we investigate the interplay between the Wav-VAE and the TTS backbone, revealing the counterintuitive finding that superior reconstruction fidelity in the Wav-VAE does not necessarily lead to better overall TTS performance. Code and model weights are released to foster further research within the speech community.",
+  "primaryClass": "cs.SD",
+  "categories": [
+    "cs.SD",
+    "eess.AS"
+  ],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2603.29339",
+    "pdf": "https://arxiv.org/pdf/2603.29339",
+    "source": "https://arxiv.org/src/2603.29339",
+    "repo": "https://github.com/meituan-longcat/LongCat-AudioDiT",
+    "model_3_5b": "https://huggingface.co/meituan-longcat/LongCat-AudioDiT-3.5B",
+    "model_1b": "https://huggingface.co/meituan-longcat/LongCat-AudioDiT-1B"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2603.29339-src.tar.gz",
+    "entrypoint": "source/longcat_flash_exp.tex"
+  },
+  "tags": [
+    "tts",
+    "diffusion",
+    "flow-matching",
+    "speech-vae",
+    "continuous-latent",
+    "waveform-latent",
+    "voice-cloning",
+    "representation-evaluation",
+    "audio-evaluation",
+    "project-generative-speech-representation-evaluation",
+    "project-tts-data-pipeline",
+    "project-audio-model-evaluation"
+  ],
+  "concepts": [
+    "LongCat-AudioDiT",
+    "Wav-VAE",
+    "waveform latent space",
+    "continuous speech latent",
+    "Conditional Flow Matching",
+    "Diffusion Transformer",
+    "non-autoregressive TTS",
+    "zero-shot voice cloning",
+    "training-inference mismatch",
+    "noisy prompt latent drift",
+    "Adaptive Projection Guidance",
+    "CFG oversaturation",
+    "UMT5 text encoder",
+    "REPA with mHuBERT",
+    "latent dimension tradeoff",
+    "latent FPS sweet spot",
+    "reconstruction vs generation quality",
+    "representation learnability"
+  ],
+  "status": "read",
+  "created": "2026-06-20",
+  "doi": "10.48550/arXiv.2603.29339",
+  "publication_status": "No formal conference or journal reference found as of 2026-06-20",
+  "bibtex_key": "xin2026longcataudiodithighfidelitydif",
+  "fetch_source": "arxiv-tex",
+  "summary_model": "Codex GPT-5",
+  "citations": [
+    {
+      "paper_key": "arxiv_2406_02430",
+      "title": "Seed-TTS: A Family of High-Quality Versatile Speech Generation Models",
+      "score": 1,
+      "matched_title": "Seed-tts: A family of high-quality versatile speech generation models",
+      "matched_first_author_last": "anastassiou",
+      "source_file": "source/ref.bib"
+    },
+    {
+      "paper_key": "arxiv_2509_24650",
+      "title": "VoxCPM: Tokenizer-Free TTS for Context-Aware Speech Generation and True-to-Life Voice Cloning",
+      "score": 1,
+      "matched_title": "Voxcpm: Tokenizer-free TTS for context-aware speech generation and true-to-life voice cloning",
+      "matched_first_author_last": "zhou",
+      "source_file": "source/ref.bib"
+    }
+  ]
+}
