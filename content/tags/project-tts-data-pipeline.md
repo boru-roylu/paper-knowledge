@@ -72,6 +72,7 @@ raw audio + transcript
 
 - [SODA](../papers/arxiv_2602_16687/)：對 TTS data pipeline 很有參考價值。作者比較 Yodas、Emilia、MLS，發現 MLS 因為 uncased / unpunctuated transcript 和 fixed chunking 在 cross-modal ASR/TTS 上很差；最後採用 Yodas + Emilia + 5% Nemotron-CC text。這支持我們把 punctuation、casing、utterance boundary、chunk length diversity 和 transcript normalization 視為 core filtering signals，而不是 ingestion 後的小修補。
 - [LongCat-AudioDiT](../papers/arxiv_2603_29339/)：不是 data-cleaning paper，但它把 100K/1M hours Chinese-English speech、ASR-generated transcripts、max 60s utterances、prompt audio 和 Wav-VAE waveform latent 組成一個可訓練的 zero-shot TTS setup。對 pipeline 的啟發是：若 downstream target 是 waveform latent / voice cloning，資料格式要保留 prompt audio、speaker similarity reference、duration、ASR transcript quality，以及可重建的 latent cache，而不只是 plain text + waveform。
+- [DiTTo-TTS](../papers/arxiv_2406_11427/)：提供一個 scalable zero-shot TTS data formatting reference：82K hours / 9 languages / 12K+ speakers，prompt 取 3 秒 speech，訓練 speech length predictor 預測 total latent length，而不是 phoneme-level duration。對我們來說，它支持把 `text + prompt audio + prompt transcript + latent length + speaker similarity target` 作為 TTS example schema。
 
 ## Related Tags
 

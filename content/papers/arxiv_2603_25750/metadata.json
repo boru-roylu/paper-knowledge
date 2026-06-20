@@ -93,6 +93,14 @@
       "matched_title": "A full-duplex speech dialogue scheme based on large language models, 2024b.",
       "matched_first_author_last": "wang",
       "source_file": "arxiv-src:2603.25750-src.tar.gz/main_new.bbl"
+    },
+    {
+      "paper_key": "arxiv_2406_11427",
+      "title": "DiTTo-TTS: Diffusion Transformers for Scalable Text-to-Speech without Domain-Specific Factors",
+      "score": 0.97,
+      "matched_title": "Ditto-tts: Diffusion transformers for scalable text-to-speech without domain-specific factors, 2025.",
+      "matched_first_author_last": "lee",
+      "source_file": "arxiv-src:2603.25750-src.tar.gz/main_new.bbl"
     }
   ]
 }

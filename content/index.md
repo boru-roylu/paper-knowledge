@@ -51,6 +51,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="dialogue">dialogue</button>
     <button type="button" data-paper-tag="diffusion">diffusion</button>
     <button type="button" data-paper-tag="diffusion-distillation">diffusion distillation</button>
+    <button type="button" data-paper-tag="diffusion-transformer">diffusion transformer</button>
     <button type="button" data-paper-tag="discrete-audio">discrete audio</button>
     <button type="button" data-paper-tag="distribution-matching">distribution matching</button>
     <button type="button" data-paper-tag="dual-path-network">dual path network</button>
@@ -67,12 +68,14 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="grpo">grpo</button>
     <button type="button" data-paper-tag="information-gathering">information gathering</button>
     <button type="button" data-paper-tag="interpretability">interpretability</button>
+    <button type="button" data-paper-tag="latent-diffusion">latent diffusion</button>
     <button type="button" data-paper-tag="latent-space">latent space</button>
     <button type="button" data-paper-tag="llm">llm</button>
     <button type="button" data-paper-tag="llm-judge">llm judge</button>
     <button type="button" data-paper-tag="long-context">long context</button>
     <button type="button" data-paper-tag="mamba">mamba</button>
     <button type="button" data-paper-tag="meanflow">meanflow</button>
+    <button type="button" data-paper-tag="mel-vae">mel vae</button>
     <button type="button" data-paper-tag="model-editing">model editing</button>
     <button type="button" data-paper-tag="multilingual-asr">multilingual asr</button>
     <button type="button" data-paper-tag="multilingual-speech">multilingual speech</button>
@@ -147,6 +150,11 @@ title: Paper Knowledge
   <div class="paper-date">2026-06-20</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2603_29339/">LongCat-AudioDiT: High-Fidelity Diffusion Text-to-Speech in the Waveform Latent Space</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>
   <div class="paper-tags"><a class="tag-link internal" href="./tags/tts/">#tts</a> <a class="tag-link internal" href="./tags/diffusion/">#diffusion</a> <a class="tag-link internal" href="./tags/flow-matching/">#flow-matching</a> <a class="tag-link internal" href="./tags/speech-vae/">#speech-vae</a> <a class="tag-link internal" href="./tags/continuous-latent/">#continuous-latent</a> <a class="tag-link internal" href="./tags/waveform-latent/">#waveform-latent</a> <a class="tag-link internal" href="./tags/voice-cloning/">#voice-cloning</a> <a class="tag-link internal" href="./tags/representation-evaluation/">#representation-evaluation</a> <a class="tag-link internal" href="./tags/audio-evaluation/">#audio-evaluation</a> <a class="tag-link internal" href="./tags/project-generative-speech-representation-evaluation/">#project-generative-speech-representation-evaluation</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a> <a class="tag-link internal" href="./tags/project-audio-model-evaluation/">#project-audio-model-evaluation</a></div>
+</div>
+<div class="paper-row" data-tags="tts diffusion diffusion-transformer latent-diffusion speech-vae mel-vae voice-cloning zero-shot-tts representation-evaluation project-generative-speech-representation-evaluation project-tts-data-pipeline project-audio-model-evaluation" data-search="DiTTo-TTS: Diffusion Transformers for Scalable Text-to-Speech without Domain-Specific Factors arxiv_2406_11427 2026-06-20 2025 ICLR 2025 arxiv:2406.11427 tts diffusion diffusion-transformer latent-diffusion speech-vae mel-vae voice-cloning zero-shot-tts representation-evaluation project-generative-speech-representation-evaluation project-tts-data-pipeline project-audio-model-evaluation">
+  <div class="paper-date">2026-06-20</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2406_11427/">DiTTo-TTS: Diffusion Transformers for Scalable Text-to-Speech without Domain-Specific Factors</a> <span class="paper-meta">(2025, ICLR 2025)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/tts/">#tts</a> <a class="tag-link internal" href="./tags/diffusion/">#diffusion</a> <a class="tag-link internal" href="./tags/diffusion-transformer/">#diffusion-transformer</a> <a class="tag-link internal" href="./tags/latent-diffusion/">#latent-diffusion</a> <a class="tag-link internal" href="./tags/speech-vae/">#speech-vae</a> <a class="tag-link internal" href="./tags/mel-vae/">#mel-vae</a> <a class="tag-link internal" href="./tags/voice-cloning/">#voice-cloning</a> <a class="tag-link internal" href="./tags/zero-shot-tts/">#zero-shot-tts</a> <a class="tag-link internal" href="./tags/representation-evaluation/">#representation-evaluation</a> <a class="tag-link internal" href="./tags/project-generative-speech-representation-evaluation/">#project-generative-speech-representation-evaluation</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a> <a class="tag-link internal" href="./tags/project-audio-model-evaluation/">#project-audio-model-evaluation</a></div>
 </div>
 <div class="paper-row" data-tags="speech-llm full-duplex speech-agent tool-calling turn-taking streaming-speech action-channel project-audio-model-evaluation project-full-duplex-data" data-search="DuplexSLA: A Full-Duplex Spoken Language Model with Synchronized Speech, Language, and Action arxiv_2605_20755 2026-06-18 2026 arXiv preprint arxiv:2605.20755 speech-llm full-duplex speech-agent tool-calling turn-taking streaming-speech action-channel project-audio-model-evaluation project-full-duplex-data">
   <div class="paper-date">2026-06-18</div>

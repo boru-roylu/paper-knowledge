@@ -61,5 +61,14 @@
   "bibtex_key": "ma2025efficientspeechlanguagemodelin",
   "fetch_source": "arxiv_tex",
   "summary_model": "Codex GPT-5",
-  "citations": []
+  "citations": [
+    {
+      "paper_key": "arxiv_2406_11427",
+      "title": "DiTTo-TTS: Diffusion Transformers for Scalable Text-to-Speech without Domain-Specific Factors",
+      "score": 0.97,
+      "matched_title": "Ditto-tts: Diffusion transformers for scalable text-to-speech without domain-specific factors, 2025.",
+      "matched_first_author_last": "lee",
+      "source_file": "source/neurips_2025.bbl"
+    }
+  ]
 }

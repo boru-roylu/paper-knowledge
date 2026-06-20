@@ -77,6 +77,14 @@
   "summary_model": "Codex GPT-5",
   "citations": [
     {
+      "paper_key": "arxiv_2406_11427",
+      "title": "DiTTo-TTS: Diffusion Transformers for Scalable Text-to-Speech without Domain-Specific Factors",
+      "score": 1,
+      "matched_title": "DiTTo-TTS: Diffusion transformers for scalable text-to-speech without domain-specific factors",
+      "matched_first_author_last": "lee",
+      "source_file": "source/ref.bib"
+    },
+    {
       "paper_key": "arxiv_2406_02430",
       "title": "Seed-TTS: A Family of High-Quality Versatile Speech Generation Models",
       "score": 1,

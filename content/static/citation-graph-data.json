@@ -89,6 +89,27 @@
       ]
     },
     {
+      "id": "arxiv_2406_11427",
+      "title": "DiTTo-TTS: Diffusion Transformers for Scalable Text-to-Speech without Domain-Specific Factors",
+      "year": 2025,
+      "venue": "ICLR 2025",
+      "url": "../papers/arxiv_2406_11427/",
+      "tags": [
+        "tts",
+        "diffusion",
+        "diffusion-transformer",
+        "latent-diffusion",
+        "speech-vae",
+        "mel-vae",
+        "voice-cloning",
+        "zero-shot-tts",
+        "representation-evaluation",
+        "project-generative-speech-representation-evaluation",
+        "project-tts-data-pipeline",
+        "project-audio-model-evaluation"
+      ]
+    },
+    {
       "id": "arxiv_2406_12045",
       "title": "$τ$-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains",
       "year": 2024,
@@ -848,6 +869,11 @@
   ],
   "edges": [
     {
+      "source": "arxiv_2406_11427",
+      "target": "arxiv_2406_02430",
+      "score": 1
+    },
+    {
       "source": "arxiv_2504_07053",
       "target": "arxiv_2504_08528",
       "score": 1
@@ -873,6 +899,11 @@
       "score": 1
     },
     {
+      "source": "arxiv_2505_13181",
+      "target": "arxiv_2406_11427",
+      "score": 0.97
+    },
+    {
       "source": "arxiv_2506_00338",
       "target": "arxiv_2303_01037",
       "score": 1
@@ -885,6 +916,11 @@
     {
       "source": "arxiv_2510_11690",
       "target": "arxiv_2501_01423",
+      "score": 1
+    },
+    {
+      "source": "arxiv_2601_03170",
+      "target": "arxiv_2406_11427",
       "score": 1
     },
     {
@@ -906,6 +942,16 @@
       "source": "arxiv_2603_25750",
       "target": "arxiv_2405_19487",
       "score": 0.97
+    },
+    {
+      "source": "arxiv_2603_25750",
+      "target": "arxiv_2406_11427",
+      "score": 0.97
+    },
+    {
+      "source": "arxiv_2603_29339",
+      "target": "arxiv_2406_11427",
+      "score": 1
     },
     {
       "source": "arxiv_2603_29339",

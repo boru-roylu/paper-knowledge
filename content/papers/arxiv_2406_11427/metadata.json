@@ -1,0 +1,92 @@
+{
+  "paper_key": "arxiv_2406_11427",
+  "canonical_id": "arxiv:2406.11427",
+  "arxiv_id": "2406.11427",
+  "version": "latest",
+  "title": "DiTTo-TTS: Diffusion Transformers for Scalable Text-to-Speech without Domain-Specific Factors",
+  "authors": [
+    "Keon Lee",
+    "Dong Won Kim",
+    "Jaehyeon Kim",
+    "Seungjun Chung",
+    "Jaewoong Cho"
+  ],
+  "venue": "ICLR 2025",
+  "year": 2025,
+  "abstract": "Large-scale latent diffusion models (LDMs) excel in content generation across various modalities, but their reliance on phonemes and durations in text-to-speech (TTS) limits scalability and access from other fields. While recent studies show potential in removing these domain-specific factors, performance remains suboptimal. In this work, we introduce DiTTo-TTS, a Diffusion Transformer (DiT)-based TTS model, to investigate whether LDM-based TTS can achieve state-of-the-art performance without domain-specific factors. Through rigorous analysis and empirical exploration, we find that (1) DiT with minimal modifications outperforms U-Net, (2) variable-length modeling with a speech length predictor significantly improves results over fixed-length approaches, and (3) conditions like semantic alignment in speech latent representations are key to further enhancement. By scaling our training data to 82K hours and the model size to 790M parameters, we achieve superior or comparable zero-shot performance to state-of-the-art TTS models in naturalness, intelligibility, and speaker similarity, all without relying on domain-specific factors. Speech samples are available at https://ditto-tts.github.io.",
+  "primaryClass": "eess.AS",
+  "categories": [
+    "eess.AS",
+    "cs.AI",
+    "cs.CL",
+    "cs.LG",
+    "cs.SD"
+  ],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2406.11427",
+    "pdf": "https://arxiv.org/pdf/2406.11427",
+    "source": "https://arxiv.org/src/2406.11427",
+    "project": "https://ditto-tts.github.io/",
+    "openreview": "https://openreview.net/forum?id=hQvX9MBowC",
+    "demo_repo": "https://github.com/ditto-tts/ditto-tts.github.io"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2406.11427-src.tar.gz",
+    "entrypoint": "source/iclr2025_conference.tex",
+    "openreview": "reviews/openreview.md"
+  },
+  "tags": [
+    "tts",
+    "diffusion",
+    "diffusion-transformer",
+    "latent-diffusion",
+    "speech-vae",
+    "mel-vae",
+    "voice-cloning",
+    "zero-shot-tts",
+    "representation-evaluation",
+    "project-generative-speech-representation-evaluation",
+    "project-tts-data-pipeline",
+    "project-audio-model-evaluation"
+  ],
+  "concepts": [
+    "DiTTo-TTS",
+    "Diffusion Transformer",
+    "latent diffusion TTS",
+    "Mel-VAE",
+    "Mel-VAE++",
+    "speech length predictor",
+    "zero-shot TTS",
+    "cross-sentence TTS",
+    "continuation TTS",
+    "domain-specific factors",
+    "phoneme-free TTS",
+    "duration-free TTS",
+    "semantic injection",
+    "text-speech latent alignment",
+    "SIM-o",
+    "SIM-r",
+    "variable-length modeling",
+    "speech rate control",
+    "codec learnability",
+    "latent sequence length"
+  ],
+  "status": "read",
+  "created": "2026-06-20",
+  "doi": "10.48550/arXiv.2406.11427",
+  "publication_status": "Accepted as ICLR 2025 poster; OpenReview forum hQvX9MBowC",
+  "bibtex_key": "lee2025dittotts",
+  "fetch_source": "arxiv-tex",
+  "summary_model": "Codex GPT-5",
+  "citations": [
+    {
+      "paper_key": "arxiv_2406_02430",
+      "title": "Seed-TTS: A Family of High-Quality Versatile Speech Generation Models",
+      "score": 1,
+      "matched_title": "Seed-tts: A family of high-quality versatile speech generation models.",
+      "matched_first_author_last": "anastassiou",
+      "source_file": "source/iclr2025_conference.bbl"
+    }
+  ]
+}
