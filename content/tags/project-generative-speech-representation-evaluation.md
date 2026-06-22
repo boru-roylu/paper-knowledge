@@ -53,6 +53,8 @@ audio clip
 
 另一個同等重要的目標是 **compute-to-quality**：好的 representation 應該讓 downstream generator 更早學好、用更少 GPU-hours / audio-hours / training tokens 達到可用品質。這點受到 [Improved Baselines with Representation Autoencoders](../papers/arxiv_2605_18324/) 的 `EP_FID@k` 啟發。
 
+[WavCube](../papers/arxiv_2605_06407/) 讓這個方向更具體：同樣是 SSL-derived representation，raw 1024-d WavLM feature 對 diffusion target 太難學，壓縮到 128-d 後才變得 tractable；但只壓 semantic 又不夠，還要 acoustic enrichment 才能保住 speaker similarity。這表示我們的 evaluation 不只要問「latent 是否 smooth/interpolatable」，也要問「下游 generator 需要多少 model size / steps 才學得起來」。
+
 ## Representation candidates
 
 這個 project 應該明確涵蓋五類 representation：
@@ -306,7 +308,7 @@ representation 是否提供一個對 downstream generation 有用、
 - [DiTTo-TTS](../papers/arxiv_2406_11427/)：ICLR 2025。它比較 Mel-VAE、EnCodec、DAC 和 mel-spectrogram target，顯示 latent sequence length / dimension / semantic alignment 對 diffusion TTS downstream WER、SIM、inference cost 更關鍵；高 PESQ/ViSQOL codec 不一定是最好 generation target。
 - [LongCat-AudioDiT](../papers/arxiv_2603_29339/)：core speech-side evidence。它在 Wav-VAE latent dimension / FPS ablation 中發現，reconstruction fidelity 越高不一定讓 downstream TTS 越好；高維或高 FPS continuous latent 會加重 diffusion backbone 的 modeling burden。這正是本 project 要量化的 representation learnability / compute-to-quality 問題。
 - [On the Distillation Loss Functions of Speech VAE](https://arxiv.org/abs/2604.12383)：系統比較 speech VAE distillation/alignment loss 對 reconstruction、understanding、generation 三個軸的影響。這正是我們要避免只看 reconstruction 的原因。
-- [WavCube](https://arxiv.org/abs/2605.06407)：從 SSL speech encoder 得到 compact continuous latent，同時支援 understanding、reconstruction、generation；兩階段訓練先去掉讓 diffusion 難學的 off-manifold redundancy，再補 acoustic details。這和 latent geometry framing 很一致。
+- [WavCube](../papers/arxiv_2605_06407/)：從 WavLM-Large 得到 128-dim / 50Hz compact continuous latent，同時支援 understanding、reconstruction、generation。它的 ablation 很關鍵：raw 1024-d WavLM target 讓 338M DiT collapse 到 WER 110.28；只做 semantic compression 後可學性改善但 speaker similarity 仍差；Stage 2 acoustic enrichment + semantic anchoring 才把 zero-shot TTS 拉到 WER 1.86 / SIM-o 0.678。這是本 project 目前最直接的 speech-side evidence：representation quality 應包含 downstream learnability / convergence speed，而不是只看 reconstruction。
 - [Diffusion Transformers with Representation Autoencoders](../papers/arxiv_2510_11690/)：原始 RAE paper。它用 frozen pretrained representation encoder 加 trained decoder 取代 SD-VAE，並證明 high-dimensional semantic latent 需要配套的 generator width、dimension-aware noise schedule、noise-augmented decoder。對本 project 來說，它是「speech VAE / codec / continuous encoder 不只看 reconstruction，也要看 downstream generator learnability」的核心 image-side 參考。
 - [Improved Baselines with Representation Autoencoders](../papers/arxiv_2605_18324/)：image-side but highly relevant。它提出 `EP_FID@k` 作為 training efficiency metric，明確衡量 representation / autoencoder 讓 downstream diffusion model 多快學好。這支持本 project 從 final quality evaluation 擴展到 **representation learnability / compute-to-quality evaluation**。
 

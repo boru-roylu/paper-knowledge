@@ -1,0 +1,103 @@
+{
+  "paper_key": "arxiv_2605_06407",
+  "canonical_id": "arxiv:2605.06407",
+  "arxiv_id": "2605.06407",
+  "version": "latest",
+  "title": "WavCube: Unifying Speech Representation for Understanding and Generation via Semantic-Acoustic Joint Modeling",
+  "authors": [
+    "Guanrou Yang",
+    "Tian Tan",
+    "Qian Chen",
+    "Zhikang Niu",
+    "Yakun Song",
+    "Ziyang Ma",
+    "Yushen Chen",
+    "Zeyu Xie",
+    "Tianrui Wang",
+    "Yifan Yang",
+    "Wenxi Chen",
+    "Qi Chen",
+    "Wenrui Liu",
+    "Shan Yang",
+    "Xie Chen"
+  ],
+  "venue": "arXiv preprint",
+  "year": 2026,
+  "abstract": "WavCube proposes a compact 128-dimensional, 50Hz continuous speech latent derived from WavLM-Large that aims to support speech understanding, reconstruction, and generation in a single representation. The method first compresses high-dimensional SSL features into a semantic bottleneck, then injects acoustic details through reconstruction while semantic anchoring keeps the representation close to the frozen SSL manifold. Experiments show strong SUPERB understanding performance, competitive reconstruction, improved zero-shot TTS WER and speaker similarity, faster DiT convergence, and better SUPERB-SG generation performance than VAE-style acoustic baselines.",
+  "primaryClass": "eess.AS",
+  "categories": [
+    "eess.AS",
+    "cs.AI",
+    "cs.CL"
+  ],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2605.06407",
+    "pdf": "https://arxiv.org/pdf/2605.06407",
+    "source": "https://arxiv.org/src/2605.06407",
+    "repo": "https://github.com/yanghaha0908/WavCube"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2605.06407-src.tar.gz",
+    "entrypoint": "source/neurips_2026.tex"
+  },
+  "tags": [
+    "speech-representation",
+    "continuous-latent",
+    "semantic-acoustic-modeling",
+    "diffusion-tts",
+    "zero-shot-tts",
+    "speech-vae",
+    "ssl-speech",
+    "project-generative-speech-representation-evaluation",
+    "project-audio-model-evaluation",
+    "project-tts-data-pipeline",
+    "project-one-step-audio-generation"
+  ],
+  "concepts": [
+    "WavCube",
+    "WavCube-Pro",
+    "SSL-derived continuous latent",
+    "semantic bottleneck",
+    "semantic anchoring",
+    "acoustic enrichment",
+    "reconstruction-generation dilemma",
+    "diffusion-friendly latent",
+    "representation learnability",
+    "compute-to-quality",
+    "SUPERB",
+    "SUPERB-SG",
+    "zero-shot TTS",
+    "WavLM-Large",
+    "Vocos"
+  ],
+  "status": "read",
+  "created": "2026-06-22",
+  "doi": "10.48550/arXiv.2605.06407",
+  "publication_status": "No formal conference or journal reference found as of 2026-06-22",
+  "bibtex_key": "yang2026wavcubeunifyingspeechrepresent",
+  "fetch_source": "arxiv-tex",
+  "summary_model": "Codex GPT-5",
+  "openreview": {
+    "status": "not-found",
+    "note": "No public OpenReview review/rebuttal context found as of 2026-06-22."
+  },
+  "citations": [
+    {
+      "paper_key": "arxiv_2510_11690",
+      "title": "Diffusion Transformers with Representation Autoencoders",
+      "score": 1,
+      "matched_title": "Diffusion transformers with representation autoencoders.",
+      "matched_first_author_last": "zheng",
+      "source_file": "source/neurips_2026.bbl"
+    },
+    {
+      "paper_key": "arxiv_2501_01423",
+      "title": "Reconstruction vs. Generation: Taming Optimization Dilemma in Latent Diffusion Models",
+      "score": 1,
+      "matched_title": "Reconstruction vs. generation: Taming optimization dilemma in latent diffusion models.",
+      "matched_first_author_last": "yao",
+      "source_file": "source/neurips_2026.bbl"
+    }
+  ]
+}

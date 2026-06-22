@@ -52,6 +52,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="diffusion">diffusion</button>
     <button type="button" data-paper-tag="diffusion-distillation">diffusion distillation</button>
     <button type="button" data-paper-tag="diffusion-transformer">diffusion transformer</button>
+    <button type="button" data-paper-tag="diffusion-tts">diffusion tts</button>
     <button type="button" data-paper-tag="discrete-audio">discrete audio</button>
     <button type="button" data-paper-tag="distribution-matching">distribution matching</button>
     <button type="button" data-paper-tag="dual-path-network">dual path network</button>
@@ -105,6 +106,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="safety">safety</button>
     <button type="button" data-paper-tag="scaling-law">scaling law</button>
     <button type="button" data-paper-tag="self-distillation">self distillation</button>
+    <button type="button" data-paper-tag="semantic-acoustic-modeling">semantic acoustic modeling</button>
     <button type="button" data-paper-tag="separation">separation</button>
     <button type="button" data-paper-tag="sequence-modeling">sequence modeling</button>
     <button type="button" data-paper-tag="source-separation">source separation</button>
@@ -119,6 +121,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="speech-tokenizer">speech tokenizer</button>
     <button type="button" data-paper-tag="speech-vae">speech vae</button>
     <button type="button" data-paper-tag="spoken-language-modeling">spoken language modeling</button>
+    <button type="button" data-paper-tag="ssl-speech">ssl speech</button>
     <button type="button" data-paper-tag="state-space-model">state space model</button>
     <button type="button" data-paper-tag="streaming-asr">streaming asr</button>
     <button type="button" data-paper-tag="streaming-speech">streaming speech</button>
@@ -155,6 +158,11 @@ title: Paper Knowledge
   <div class="paper-date">2026-06-22</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2602_19083/">ChordEdit: One-Step Low-Energy Transport for Image Editing</a> <span class="paper-meta">(2026, CVPR 2026)</span></div>
   <div class="paper-tags"><a class="tag-link internal" href="./tags/image-editing/">#image-editing</a> <a class="tag-link internal" href="./tags/one-step-generation/">#one-step-generation</a> <a class="tag-link internal" href="./tags/optimal-transport/">#optimal-transport</a> <a class="tag-link internal" href="./tags/diffusion/">#diffusion</a> <a class="tag-link internal" href="./tags/flow-matching/">#flow-matching</a> <a class="tag-link internal" href="./tags/guidance/">#guidance</a> <a class="tag-link internal" href="./tags/real-time-generation/">#real-time-generation</a> <a class="tag-link internal" href="./tags/low-energy-transport/">#low-energy-transport</a> <a class="tag-link internal" href="./tags/project-one-step-audio-generation/">#project-one-step-audio-generation</a></div>
+</div>
+<div class="paper-row" data-tags="speech-representation continuous-latent semantic-acoustic-modeling diffusion-tts zero-shot-tts speech-vae ssl-speech project-generative-speech-representation-evaluation project-audio-model-evaluation project-tts-data-pipeline project-one-step-audio-generation" data-search="WavCube: Unifying Speech Representation for Understanding and Generation via Semantic-Acoustic Joint Modeling arxiv_2605_06407 2026-06-22 2026 arXiv preprint arxiv:2605.06407 speech-representation continuous-latent semantic-acoustic-modeling diffusion-tts zero-shot-tts speech-vae ssl-speech project-generative-speech-representation-evaluation project-audio-model-evaluation project-tts-data-pipeline project-one-step-audio-generation">
+  <div class="paper-date">2026-06-22</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2605_06407/">WavCube: Unifying Speech Representation for Understanding and Generation via Semantic-Acoustic Joint Modeling</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/speech-representation/">#speech-representation</a> <a class="tag-link internal" href="./tags/continuous-latent/">#continuous-latent</a> <a class="tag-link internal" href="./tags/semantic-acoustic-modeling/">#semantic-acoustic-modeling</a> <a class="tag-link internal" href="./tags/diffusion-tts/">#diffusion-tts</a> <a class="tag-link internal" href="./tags/zero-shot-tts/">#zero-shot-tts</a> <a class="tag-link internal" href="./tags/speech-vae/">#speech-vae</a> <a class="tag-link internal" href="./tags/ssl-speech/">#ssl-speech</a> <a class="tag-link internal" href="./tags/project-generative-speech-representation-evaluation/">#project-generative-speech-representation-evaluation</a> <a class="tag-link internal" href="./tags/project-audio-model-evaluation/">#project-audio-model-evaluation</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a> <a class="tag-link internal" href="./tags/project-one-step-audio-generation/">#project-one-step-audio-generation</a></div>
 </div>
 <div class="paper-row" data-tags="tts diffusion flow-matching speech-vae continuous-latent waveform-latent voice-cloning representation-evaluation audio-evaluation project-generative-speech-representation-evaluation project-tts-data-pipeline project-audio-model-evaluation" data-search="LongCat-AudioDiT: High-Fidelity Diffusion Text-to-Speech in the Waveform Latent Space arxiv_2603_29339 2026-06-20 2026 arXiv preprint arxiv:2603.29339 tts diffusion flow-matching speech-vae continuous-latent waveform-latent voice-cloning representation-evaluation audio-evaluation project-generative-speech-representation-evaluation project-tts-data-pipeline project-audio-model-evaluation">
   <div class="paper-date">2026-06-20</div>

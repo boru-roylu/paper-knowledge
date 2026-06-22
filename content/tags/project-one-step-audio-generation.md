@@ -190,6 +190,7 @@ Data quality 會直接影響 one-step student：如果 long-form speech、pause�
 - [MeanFlow-TSE](../papers/arxiv_2512_18572/)：speech-side one-step MeanFlow example。它把 mixture 當成 background-to-target flow path 上的中間點，利用 enrollment 和 estimated mixing ratio 一步抽出 target speaker；對 full-duplex overlap cleanup / low-latency speaker-conditioned generation 很有參考價值。
 - [Representation Fréchet Loss](../papers/arxiv_2604_28190/)：FD-loss 把 Fréchet Distance 變成 trainable distributional objective，可改善 one-step generators，也能把 multi-step generators repurpose 成 one-step。
 - [Making Reconstruction FID Predictive of Diffusion Generation FID](../papers/arxiv_2603_05630/)：iFID 顯示 reconstruction quality 不一定預測 latent diffusion generation quality；對 audio codec / VAE / tokenizer selection 是重要警告。
+- [WavCube](../papers/arxiv_2605_06407/)：speech-side compact continuous latent reference。raw WavLM 1024-d target 讓 DiT collapse，但 128-d semantic-acoustic WavCube latent 收斂更快、TTS WER/SIM 更好；對 one-step audio generation 來說，它是值得優先測的 target latent。
 - [PlanAudio](../papers/arxiv_2605_28063/)：composite speech+sound generation target；未來可測 one-step composite audio。
 - [AnyAudio-Judge](../papers/arxiv_2606_03116/)：可作 audio rubric critic / reward model 的起點。
 - [DialogueSidon](../papers/arxiv_2604_09344/)：dual-channel dialogue recovery，可提供 full-duplex one-step generator 的 pseudo labels。
