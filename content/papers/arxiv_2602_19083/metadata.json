@@ -1,0 +1,72 @@
+{
+  "paper_key": "arxiv_2602_19083",
+  "canonical_id": "arxiv:2602.19083",
+  "arxiv_id": "2602.19083",
+  "version": "latest",
+  "title": "ChordEdit: One-Step Low-Energy Transport for Image Editing",
+  "authors": [
+    "Liangsi Lu",
+    "Xuhang Chen",
+    "Minzhe Guo",
+    "Shichu Li",
+    "Jingchao Wang",
+    "Yang Shi"
+  ],
+  "venue": "CVPR 2026",
+  "year": 2026,
+  "abstract": "The advent of one-step text-to-image (T2I) models offers unprecedented synthesis speed. However, their application to text-guided image editing remains severely hampered, as forcing existing training-free editors into a single inference step fails. This failure manifests as severe object distortion and a critical loss of consistency in non-edited regions, resulting from the high-energy, erratic trajectories produced by naive vector arithmetic on the models' structured fields. To address this problem, we introduce ChordEdit, a model agnostic, training-free, and inversion-free method that facilitates high-fidelity one-step editing. We recast editing as a transport problem between the source and target distributions defined by the source and target text prompts. Leveraging dynamic optimal transport theory, we derive a principled, low-energy control strategy. This strategy yields a smoothed, variance-reduced editing field that is inherently stable, facilitating the field to be traversed in a single, large integration step. A theoretically grounded and experimentally validated approach allows ChordEdit to deliver fast, lightweight and precise edits, finally achieving true real-time editing on these challenging models.",
+  "primaryClass": "cs.CV",
+  "categories": [
+    "cs.CV"
+  ],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2602.19083",
+    "pdf": "https://arxiv.org/pdf/2602.19083",
+    "source": "https://arxiv.org/src/2602.19083",
+    "project": "https://chordedit.github.io/",
+    "repo": "https://github.com/ChordEdit/ChordEdit",
+    "openreview": "https://openreview.net/forum?id=upyHp7LT8N"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2602.19083-src.tar.gz",
+    "entrypoint": "source/main.tex"
+  },
+  "tags": [
+    "image-editing",
+    "one-step-generation",
+    "optimal-transport",
+    "diffusion",
+    "flow-matching",
+    "guidance",
+    "real-time-generation",
+    "low-energy-transport",
+    "project-one-step-audio-generation"
+  ],
+  "concepts": [
+    "ChordEdit",
+    "Chord Control Field",
+    "one-step image editing",
+    "low-energy transport",
+    "dynamic optimal transport",
+    "Benamou-Brenier energy",
+    "training-free editing",
+    "inversion-free editing",
+    "temporal smoothing",
+    "guidance field stability",
+    "one-step integration",
+    "proximal refinement",
+    "PIE-bench",
+    "edited-region semantic alignment",
+    "non-edited region preservation",
+    "model-agnostic one-step control"
+  ],
+  "status": "read",
+  "created": "2026-06-22",
+  "doi": "10.48550/arXiv.2602.19083",
+  "publication_status": "Accepted by CVPR 2026; project page marks Oral / Best Student Paper Honorable Mention",
+  "bibtex_key": "lu2026chordedit",
+  "fetch_source": "arxiv-tex",
+  "summary_model": "Codex GPT-5",
+  "citations": []
+}

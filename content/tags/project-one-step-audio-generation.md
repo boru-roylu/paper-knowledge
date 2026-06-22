@@ -25,6 +25,10 @@ Representation Fréchet Loss 補上另一個互補原則：
 
 > **One-step generator 不一定只能靠 teacher distillation 或 GAN；也可以直接用 frozen representation statistics 做 distribution-level post-training。**
 
+ChordEdit 再補上一個 inference-time control 原則：
+
+> **one-step failure 可能不是生成模型本身不夠強，而是 guidance / edit control field 太 high-energy；要先把 control field 變成 low-energy、low-variance，才能安全走 single large step。**
+
 這對 one-step audio generation 很重要，因為很多失敗不是單一 frame / codec token 能看出來，而是要跨 phrase、utterance、dialogue 才能判斷：
 
 - speaker identity 是否慢慢漂移
@@ -109,6 +113,29 @@ FD-loss: how do we push generated samples toward the real distribution?
 
 這也說明為什麼它們和 one-step audio 特別相關：one-step model 沒有多步 refinement，latent space 如果不好取樣，錯誤會被直接 decode 出來；而 generator 如果只靠 per-sample regression，很容易產生 over-smoothed speech 或 flat prosody。iFID 負責挑一個比較可生成的空間，FD-loss 負責讓 one-step output 的整體 distribution 更像真實資料。
 
+## Low-energy control fields for one-step editing
+
+[ChordEdit](../papers/arxiv_2602_19083/) 是 image editing paper，但它提供一個可借到 audio 的 framing：one-step edit / guidance 的失敗，常來自 naive target-source residual field 在 single large integration step 裡 energy 太高、variance 太大。
+
+audio 對應可以這樣想：
+
+```text
+source audio condition
+  -> target speaker / emotion / style / scene condition
+  -> naive residual guidance field
+  -> high-energy latent jump
+  -> artifacts, speaker collapse, background discontinuity
+```
+
+ChordEdit 的解法是把 observable residual field 做短時間窗 smoothing，形成 **Chord Control Field**。audio 版可以嘗試：
+
+- 在 speech latent / codec latent flow 上計算 source-condition vs target-condition residual。
+- 對 residual 做 time-window / noise-level smoothing，避免單步 guidance shock。
+- 先做 preservation-first transport，再用一個 target-conditioned refinement step 補語義或 speaker/style strength。
+- 評估 target span correctness 和 non-target span preservation 的 Pareto front。
+
+這對 full-duplex audio editing 特別有用：如果只想改 speaker A 的 style / emotion / content，不能破壞 speaker B、background、overlap timing 和 mixture consistency。ChordEdit 的「edited region semantics vs non-edited region preservation」剛好可以改成 audio 的「target speaker/span correctness vs other speaker/background preservation」。
+
 ## Audio-specific failure modes
 
 AAD-1 的 motion collapse 可以類比成 audio 裡的：
@@ -156,6 +183,7 @@ Data quality 會直接影響 one-step student：如果 long-form speech、pause�
 ## Reading map
 
 - [AAD-1](../papers/arxiv_2606_03972/)：video-side core reference。重點是 asymmetric adversarial distillation、DMD warmup、causal generator + bidirectional holistic discriminator。
+- [ChordEdit](../papers/arxiv_2602_19083/)：image-side one-step editing reference。重點是 naive edit/guidance field 在 single-step 下 high-energy collapse；用 Chord Control Field 做 low-energy temporal smoothing，可啟發 audio latent editing / speaker-style transfer / scene editing 的 guidance stability。
 - [Reconstruction vs. Generation](../papers/arxiv_2501_01423/)：VA-VAE / VF Loss 顯示 tokenizer latent space 可以用 foundation model alignment 改善 generation suitability，對 audio codec / VAE 設計很重要。
 - [SLED](../papers/arxiv_2505_13181/)：continuous latent speech LM；每個 autoregressive step 用 lightweight MLP + Energy Distance 做 one-forward sampling，對 low-latency / one-step-per-frame audio generation 很重要。
 - [VoxCPM](../papers/arxiv_2509_24650/)：tokenizer-free TTS；用 FSQ semi-discrete skeleton + RALM residual acoustic modeling + local DiT patch decoder，提供 SLED 之外的 semi-discrete / residual hierarchy route。

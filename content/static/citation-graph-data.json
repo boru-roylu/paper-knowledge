@@ -406,6 +406,24 @@
       ]
     },
     {
+      "id": "arxiv_2602_19083",
+      "title": "ChordEdit: One-Step Low-Energy Transport for Image Editing",
+      "year": 2026,
+      "venue": "CVPR 2026",
+      "url": "../papers/arxiv_2602_19083/",
+      "tags": [
+        "image-editing",
+        "one-step-generation",
+        "optimal-transport",
+        "diffusion",
+        "flow-matching",
+        "guidance",
+        "real-time-generation",
+        "low-energy-transport",
+        "project-one-step-audio-generation"
+      ]
+    },
+    {
       "id": "arxiv_2603_05630",
       "title": "Making Reconstruction FID Predictive of Diffusion Generation FID",
       "year": 2026,

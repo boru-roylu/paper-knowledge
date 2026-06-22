@@ -66,6 +66,8 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="forecasting">forecasting</button>
     <button type="button" data-paper-tag="generative-evaluation">generative evaluation</button>
     <button type="button" data-paper-tag="grpo">grpo</button>
+    <button type="button" data-paper-tag="guidance">guidance</button>
+    <button type="button" data-paper-tag="image-editing">image editing</button>
     <button type="button" data-paper-tag="information-gathering">information gathering</button>
     <button type="button" data-paper-tag="interpretability">interpretability</button>
     <button type="button" data-paper-tag="latent-diffusion">latent diffusion</button>
@@ -73,6 +75,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="llm">llm</button>
     <button type="button" data-paper-tag="llm-judge">llm judge</button>
     <button type="button" data-paper-tag="long-context">long context</button>
+    <button type="button" data-paper-tag="low-energy-transport">low energy transport</button>
     <button type="button" data-paper-tag="mamba">mamba</button>
     <button type="button" data-paper-tag="meanflow">meanflow</button>
     <button type="button" data-paper-tag="mel-vae">mel vae</button>
@@ -81,12 +84,14 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="multilingual-speech">multilingual speech</button>
     <button type="button" data-paper-tag="one-step-generation">one step generation</button>
     <button type="button" data-paper-tag="online-clustering">online clustering</button>
+    <button type="button" data-paper-tag="optimal-transport">optimal transport</button>
     <button type="button" data-paper-tag="orthogonal-transform">orthogonal transform</button>
     <button type="button" data-paper-tag="paralinguistic-modeling">paralinguistic modeling</button>
     <button type="button" data-paper-tag="positional-encoding">positional encoding</button>
     <button type="button" data-paper-tag="preference-distillation">preference distillation</button>
     <button type="button" data-paper-tag="project-generative-speech-representation-evaluation">project: generative speech representation evaluation</button>
     <button type="button" data-paper-tag="proxy-metrics">proxy metrics</button>
+    <button type="button" data-paper-tag="real-time-generation">real time generation</button>
     <button type="button" data-paper-tag="reasoning">reasoning</button>
     <button type="button" data-paper-tag="reconstruction-generation-tradeoff">reconstruction generation tradeoff</button>
     <button type="button" data-paper-tag="recurrent-model">recurrent model</button>
@@ -146,6 +151,11 @@ title: Paper Knowledge
 </div>
 
 <div class="paper-list">
+<div class="paper-row" data-tags="image-editing one-step-generation optimal-transport diffusion flow-matching guidance real-time-generation low-energy-transport project-one-step-audio-generation" data-search="ChordEdit: One-Step Low-Energy Transport for Image Editing arxiv_2602_19083 2026-06-22 2026 CVPR 2026 arxiv:2602.19083 image-editing one-step-generation optimal-transport diffusion flow-matching guidance real-time-generation low-energy-transport project-one-step-audio-generation">
+  <div class="paper-date">2026-06-22</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2602_19083/">ChordEdit: One-Step Low-Energy Transport for Image Editing</a> <span class="paper-meta">(2026, CVPR 2026)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/image-editing/">#image-editing</a> <a class="tag-link internal" href="./tags/one-step-generation/">#one-step-generation</a> <a class="tag-link internal" href="./tags/optimal-transport/">#optimal-transport</a> <a class="tag-link internal" href="./tags/diffusion/">#diffusion</a> <a class="tag-link internal" href="./tags/flow-matching/">#flow-matching</a> <a class="tag-link internal" href="./tags/guidance/">#guidance</a> <a class="tag-link internal" href="./tags/real-time-generation/">#real-time-generation</a> <a class="tag-link internal" href="./tags/low-energy-transport/">#low-energy-transport</a> <a class="tag-link internal" href="./tags/project-one-step-audio-generation/">#project-one-step-audio-generation</a></div>
+</div>
 <div class="paper-row" data-tags="tts diffusion flow-matching speech-vae continuous-latent waveform-latent voice-cloning representation-evaluation audio-evaluation project-generative-speech-representation-evaluation project-tts-data-pipeline project-audio-model-evaluation" data-search="LongCat-AudioDiT: High-Fidelity Diffusion Text-to-Speech in the Waveform Latent Space arxiv_2603_29339 2026-06-20 2026 arXiv preprint arxiv:2603.29339 tts diffusion flow-matching speech-vae continuous-latent waveform-latent voice-cloning representation-evaluation audio-evaluation project-generative-speech-representation-evaluation project-tts-data-pipeline project-audio-model-evaluation">
   <div class="paper-date">2026-06-20</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2603_29339/">LongCat-AudioDiT: High-Fidelity Diffusion Text-to-Speech in the Waveform Latent Space</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>
