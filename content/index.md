@@ -41,6 +41,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="clustering">clustering</button>
     <button type="button" data-paper-tag="compositional-audio">compositional audio</button>
     <button type="button" data-paper-tag="concept-erasure">concept erasure</button>
+    <button type="button" data-paper-tag="consistency-mid-training">consistency mid training</button>
     <button type="button" data-paper-tag="continuous-latent">continuous latent</button>
     <button type="button" data-paper-tag="controllable-tts">controllable tts</button>
     <button type="button" data-paper-tag="credit-assignment">credit assignment</button>
@@ -54,6 +55,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="diffusion-transformer">diffusion transformer</button>
     <button type="button" data-paper-tag="diffusion-tts">diffusion tts</button>
     <button type="button" data-paper-tag="discrete-audio">discrete audio</button>
+    <button type="button" data-paper-tag="distillation">distillation</button>
     <button type="button" data-paper-tag="distribution-matching">distribution matching</button>
     <button type="button" data-paper-tag="dual-path-network">dual path network</button>
     <button type="button" data-paper-tag="duration-control">duration control</button>
@@ -63,6 +65,8 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="evaluation">evaluation</button>
     <button type="button" data-paper-tag="evaluation-metrics">evaluation metrics</button>
     <button type="button" data-paper-tag="expressive-speech">expressive speech</button>
+    <button type="button" data-paper-tag="few-step-generation">few step generation</button>
+    <button type="button" data-paper-tag="flow-map-model">flow map model</button>
     <button type="button" data-paper-tag="flow-matching">flow matching</button>
     <button type="button" data-paper-tag="forecasting">forecasting</button>
     <button type="button" data-paper-tag="generative-evaluation">generative evaluation</button>
@@ -163,6 +167,11 @@ title: Paper Knowledge
   <div class="paper-date">2026-06-22</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2605_06407/">WavCube: Unifying Speech Representation for Understanding and Generation via Semantic-Acoustic Joint Modeling</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>
   <div class="paper-tags"><a class="tag-link internal" href="./tags/speech-representation/">#speech-representation</a> <a class="tag-link internal" href="./tags/continuous-latent/">#continuous-latent</a> <a class="tag-link internal" href="./tags/semantic-acoustic-modeling/">#semantic-acoustic-modeling</a> <a class="tag-link internal" href="./tags/diffusion-tts/">#diffusion-tts</a> <a class="tag-link internal" href="./tags/zero-shot-tts/">#zero-shot-tts</a> <a class="tag-link internal" href="./tags/speech-vae/">#speech-vae</a> <a class="tag-link internal" href="./tags/ssl-speech/">#ssl-speech</a> <a class="tag-link internal" href="./tags/project-generative-speech-representation-evaluation/">#project-generative-speech-representation-evaluation</a> <a class="tag-link internal" href="./tags/project-audio-model-evaluation/">#project-audio-model-evaluation</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a> <a class="tag-link internal" href="./tags/project-one-step-audio-generation/">#project-one-step-audio-generation</a></div>
+</div>
+<div class="paper-row" data-tags="meanflow flow-map-model representation-autoencoder one-step-generation few-step-generation diffusion-transformer distillation consistency-mid-training project-one-step-audio-generation project-generative-speech-representation-evaluation" data-search="MeanFlow Transformers with Representation Autoencoders arxiv_2511_13019 2026-06-22 2025 arXiv preprint arxiv:2511.13019 meanflow flow-map-model representation-autoencoder one-step-generation few-step-generation diffusion-transformer distillation consistency-mid-training project-one-step-audio-generation project-generative-speech-representation-evaluation">
+  <div class="paper-date">2026-06-22</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2511_13019/">MeanFlow Transformers with Representation Autoencoders</a> <span class="paper-meta">(2025, arXiv preprint)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/meanflow/">#meanflow</a> <a class="tag-link internal" href="./tags/flow-map-model/">#flow-map-model</a> <a class="tag-link internal" href="./tags/representation-autoencoder/">#representation-autoencoder</a> <a class="tag-link internal" href="./tags/one-step-generation/">#one-step-generation</a> <a class="tag-link internal" href="./tags/few-step-generation/">#few-step-generation</a> <a class="tag-link internal" href="./tags/diffusion-transformer/">#diffusion-transformer</a> <a class="tag-link internal" href="./tags/distillation/">#distillation</a> <a class="tag-link internal" href="./tags/consistency-mid-training/">#consistency-mid-training</a> <a class="tag-link internal" href="./tags/project-one-step-audio-generation/">#project-one-step-audio-generation</a> <a class="tag-link internal" href="./tags/project-generative-speech-representation-evaluation/">#project-generative-speech-representation-evaluation</a></div>
 </div>
 <div class="paper-row" data-tags="tts diffusion flow-matching speech-vae continuous-latent waveform-latent voice-cloning representation-evaluation audio-evaluation project-generative-speech-representation-evaluation project-tts-data-pipeline project-audio-model-evaluation" data-search="LongCat-AudioDiT: High-Fidelity Diffusion Text-to-Speech in the Waveform Latent Space arxiv_2603_29339 2026-06-20 2026 arXiv preprint arxiv:2603.29339 tts diffusion flow-matching speech-vae continuous-latent waveform-latent voice-cloning representation-evaluation audio-evaluation project-generative-speech-representation-evaluation project-tts-data-pipeline project-audio-model-evaluation">
   <div class="paper-date">2026-06-20</div>

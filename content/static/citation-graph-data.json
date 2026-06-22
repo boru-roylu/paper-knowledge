@@ -293,6 +293,25 @@
       ]
     },
     {
+      "id": "arxiv_2511_13019",
+      "title": "MeanFlow Transformers with Representation Autoencoders",
+      "year": 2025,
+      "venue": "arXiv preprint",
+      "url": "../papers/arxiv_2511_13019/",
+      "tags": [
+        "meanflow",
+        "flow-map-model",
+        "representation-autoencoder",
+        "one-step-generation",
+        "few-step-generation",
+        "diffusion-transformer",
+        "distillation",
+        "consistency-mid-training",
+        "project-one-step-audio-generation",
+        "project-generative-speech-representation-evaluation"
+      ]
+    },
+    {
       "id": "arxiv_2512_07805",
       "title": "Group Representational Position Encoding",
       "year": 2025,
@@ -957,6 +976,11 @@
       "score": 1
     },
     {
+      "source": "arxiv_2511_13019",
+      "target": "arxiv_2510_11690",
+      "score": 1
+    },
+    {
       "source": "arxiv_2601_03170",
       "target": "arxiv_2406_11427",
       "score": 1
@@ -1014,6 +1038,11 @@
     {
       "source": "arxiv_2605_06407",
       "target": "arxiv_2510_11690",
+      "score": 1
+    },
+    {
+      "source": "arxiv_2605_06407",
+      "target": "arxiv_2511_13019",
       "score": 1
     },
     {

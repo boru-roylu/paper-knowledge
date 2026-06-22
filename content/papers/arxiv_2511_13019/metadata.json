@@ -1,0 +1,86 @@
+{
+  "paper_key": "arxiv_2511_13019",
+  "canonical_id": "arxiv:2511.13019",
+  "arxiv_id": "2511.13019",
+  "version": "latest",
+  "title": "MeanFlow Transformers with Representation Autoencoders",
+  "authors": [
+    "Zheyuan Hu",
+    "Chieh-Hsin Lai",
+    "Ge Wu",
+    "Yuki Mitsufuji",
+    "Stefano Ermon"
+  ],
+  "venue": "arXiv preprint",
+  "year": 2025,
+  "abstract": "MeanFlow Transformers with Representation Autoencoders trains MeanFlow in a Representation Autoencoder latent space to enable efficient guidance-free one-step and few-step image generation. The method combines RAE latents and a DiT-DH backbone with Consistency Mid-Training initialization, MeanFlow Distillation, optional MeanFlow Training bootstrapping, and finite-difference transport derivatives. It reaches 1-step FID 2.03 on ImageNet 256 while reducing sampling GFLOPS and total training cost compared with vanilla MeanFlow.",
+  "primaryClass": "cs.CV",
+  "categories": [
+    "cs.CV",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2511.13019",
+    "pdf": "https://arxiv.org/pdf/2511.13019",
+    "source": "https://arxiv.org/src/2511.13019",
+    "repo": "https://github.com/sony/mf-rae",
+    "openreview": "https://openreview.net/forum?id=JIzA7lK0Cv"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2511.13019-src.tar.gz",
+    "entrypoint": "source/main.tex"
+  },
+  "tags": [
+    "meanflow",
+    "flow-map-model",
+    "representation-autoencoder",
+    "one-step-generation",
+    "few-step-generation",
+    "diffusion-transformer",
+    "distillation",
+    "consistency-mid-training",
+    "project-one-step-audio-generation",
+    "project-generative-speech-representation-evaluation"
+  ],
+  "concepts": [
+    "MeanFlow",
+    "MF-RAE",
+    "Representation Autoencoder",
+    "RAE latent",
+    "DiT-DH",
+    "Consistency Mid-Training",
+    "MeanFlow Distillation",
+    "MeanFlow Training",
+    "finite-difference JVP",
+    "guidance-free generation",
+    "decoder bottleneck",
+    "training cost",
+    "sampling GFLOPS",
+    "representation learnability"
+  ],
+  "status": "read",
+  "created": "2026-06-22",
+  "doi": "10.48550/arXiv.2511.13019",
+  "publication_status": "No formal conference or journal reference found as of 2026-06-22",
+  "bibtex_key": "hu2025meanflowtransformerswithrepres",
+  "fetch_source": "arxiv-tex",
+  "summary_model": "Codex GPT-5",
+  "openreview": {
+    "forum": "https://openreview.net/forum?id=JIzA7lK0Cv",
+    "status": "forum-found-no-public-notes",
+    "public_notes": 0,
+    "note": "OpenReview forum matched, but no public review/rebuttal notes were available as of 2026-06-22."
+  },
+  "citations": [
+    {
+      "paper_key": "arxiv_2510_11690",
+      "title": "Diffusion Transformers with Representation Autoencoders",
+      "score": 1,
+      "matched_title": "Diffusion Transformers with Representation Autoencoders",
+      "matched_first_author_last": "zheng",
+      "source_file": "source/main.bib"
+    }
+  ]
+}
