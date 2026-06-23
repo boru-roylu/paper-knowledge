@@ -1,0 +1,81 @@
+{
+  "paper_key": "arxiv_2606_14700",
+  "canonical_id": "arxiv:2606.14700",
+  "arxiv_id": "2606.14700",
+  "version": "latest",
+  "title": "RepFusion: Leveraging Multimodal Priors for Denoising in Representation Space",
+  "authors": [
+    "Xichen Pan",
+    "Aashu Singh",
+    "Satya Narayan Shukla",
+    "Xiangjun Fan",
+    "Shlok Kumar Mishra",
+    "Saining Xie"
+  ],
+  "venue": "arXiv preprint",
+  "year": 2026,
+  "abstract": "RepFusion repurposes a frozen multimodal LLM as a noisy representation encoder for text-to-image diffusion in Representation Autoencoder space. Instead of using the LLM only once as a static text encoder, it feeds the evolving noisy RAE latent into the MLLM at each denoising step, then uses the token-aligned MLLM outputs to condition a DiT via AdaLN-Single. The paper shows that noisy representation input, RAE latents, and preserved multimodal perception priors improve prompt alignment under controlled compute comparisons.",
+  "primaryClass": "cs.CV",
+  "categories": [
+    "cs.CV"
+  ],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2606.14700",
+    "pdf": "https://arxiv.org/pdf/2606.14700",
+    "source": "https://arxiv.org/src/2606.14700",
+    "project": "https://xichenpan.com/repfusion/"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2606.14700-src.tar.gz",
+    "entrypoint": "source/paper.tex"
+  },
+  "tags": [
+    "representation-autoencoder",
+    "multimodal-llm",
+    "text-to-image",
+    "diffusion-transformer",
+    "representation-space-generation",
+    "noisy-representation-conditioning",
+    "project-generative-speech-representation-evaluation",
+    "project-audio-model-evaluation"
+  ],
+  "concepts": [
+    "RepFusion",
+    "Representation Autoencoder",
+    "RAE latent",
+    "noisy representation encoder",
+    "frozen MLLM prior",
+    "evolving noisy representations",
+    "AdaLN-Single conditioning",
+    "token-aligned conditioning",
+    "test-time compute scaling",
+    "representation-space diffusion",
+    "decoder artifact",
+    "GenEval",
+    "GenEval2",
+    "DPG-Bench",
+    "WISE"
+  ],
+  "status": "read",
+  "created": "2026-06-23",
+  "doi": "10.48550/arXiv.2606.14700",
+  "publication_status": "No formal conference or journal reference found as of 2026-06-23",
+  "bibtex_key": "pan2026repfusionleveragingmultimodalp",
+  "fetch_source": "arxiv-tex",
+  "summary_model": "Codex GPT-5",
+  "openreview": {
+    "status": "not-found",
+    "note": "No public OpenReview review/rebuttal context found as of 2026-06-23."
+  },
+  "citations": [
+    {
+      "paper_key": "arxiv_2510_11690",
+      "title": "Diffusion Transformers with Representation Autoencoders",
+      "score": 1,
+      "matched_title": "Diffusion transformers with representation autoencoders",
+      "matched_first_author_last": "zheng",
+      "source_file": "source/paper.bib"
+    }
+  ]
+}

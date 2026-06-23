@@ -87,6 +87,8 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="model-editing">model editing</button>
     <button type="button" data-paper-tag="multilingual-asr">multilingual asr</button>
     <button type="button" data-paper-tag="multilingual-speech">multilingual speech</button>
+    <button type="button" data-paper-tag="multimodal-llm">multimodal llm</button>
+    <button type="button" data-paper-tag="noisy-representation-conditioning">noisy representation conditioning</button>
     <button type="button" data-paper-tag="one-step-generation">one step generation</button>
     <button type="button" data-paper-tag="online-clustering">online clustering</button>
     <button type="button" data-paper-tag="optimal-transport">optimal transport</button>
@@ -103,6 +105,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="reinforcement-learning">reinforcement learning</button>
     <button type="button" data-paper-tag="representation-autoencoder">representation autoencoder</button>
     <button type="button" data-paper-tag="representation-evaluation">representation evaluation</button>
+    <button type="button" data-paper-tag="representation-space-generation">representation space generation</button>
     <button type="button" data-paper-tag="research-agent">research agent</button>
     <button type="button" data-paper-tag="restoration">restoration</button>
     <button type="button" data-paper-tag="reward-model">reward model</button>
@@ -158,6 +161,11 @@ title: Paper Knowledge
 </div>
 
 <div class="paper-list">
+<div class="paper-row" data-tags="representation-autoencoder multimodal-llm text-to-image diffusion-transformer representation-space-generation noisy-representation-conditioning project-generative-speech-representation-evaluation project-audio-model-evaluation" data-search="RepFusion: Leveraging Multimodal Priors for Denoising in Representation Space arxiv_2606_14700 2026-06-23 2026 arXiv preprint arxiv:2606.14700 representation-autoencoder multimodal-llm text-to-image diffusion-transformer representation-space-generation noisy-representation-conditioning project-generative-speech-representation-evaluation project-audio-model-evaluation">
+  <div class="paper-date">2026-06-23</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2606_14700/">RepFusion: Leveraging Multimodal Priors for Denoising in Representation Space</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/representation-autoencoder/">#representation-autoencoder</a> <a class="tag-link internal" href="./tags/multimodal-llm/">#multimodal-llm</a> <a class="tag-link internal" href="./tags/text-to-image/">#text-to-image</a> <a class="tag-link internal" href="./tags/diffusion-transformer/">#diffusion-transformer</a> <a class="tag-link internal" href="./tags/representation-space-generation/">#representation-space-generation</a> <a class="tag-link internal" href="./tags/noisy-representation-conditioning/">#noisy-representation-conditioning</a> <a class="tag-link internal" href="./tags/project-generative-speech-representation-evaluation/">#project-generative-speech-representation-evaluation</a> <a class="tag-link internal" href="./tags/project-audio-model-evaluation/">#project-audio-model-evaluation</a></div>
+</div>
 <div class="paper-row" data-tags="image-editing one-step-generation optimal-transport diffusion flow-matching guidance real-time-generation low-energy-transport project-one-step-audio-generation" data-search="ChordEdit: One-Step Low-Energy Transport for Image Editing arxiv_2602_19083 2026-06-22 2026 CVPR 2026 arxiv:2602.19083 image-editing one-step-generation optimal-transport diffusion flow-matching guidance real-time-generation low-energy-transport project-one-step-audio-generation">
   <div class="paper-date">2026-06-22</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2602_19083/">ChordEdit: One-Step Low-Energy Transport for Image Editing</a> <span class="paper-meta">(2026, CVPR 2026)</span></div>
