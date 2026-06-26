@@ -157,6 +157,22 @@
       ]
     },
     {
+      "id": "arxiv_2503_13423",
+      "title": "SuperBPE: Space Travel for Language Models",
+      "year": 2025,
+      "venue": "COLM 2025",
+      "url": "../papers/arxiv_2503_13423/",
+      "tags": [
+        "tokenization",
+        "bpe",
+        "superword-tokenization",
+        "efficient-inference",
+        "language-modeling",
+        "multi-word-expression",
+        "project-tts-data-pipeline"
+      ]
+    },
+    {
       "id": "arxiv_2504_07053",
       "title": "TASTE: Text-Aligned Speech Tokenization and Embedding for Spoken Language Modeling",
       "year": 2025,

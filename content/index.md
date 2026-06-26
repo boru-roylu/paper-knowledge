@@ -36,6 +36,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="audio-generation">audio generation</button>
     <button type="button" data-paper-tag="autoencoder">autoencoder</button>
     <button type="button" data-paper-tag="autoregressive-generation">autoregressive generation</button>
+    <button type="button" data-paper-tag="bpe">bpe</button>
     <button type="button" data-paper-tag="chatbot-evaluation">chatbot evaluation</button>
     <button type="button" data-paper-tag="clinical-ai">clinical ai</button>
     <button type="button" data-paper-tag="clustering">clustering</button>
@@ -59,6 +60,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="distribution-matching">distribution matching</button>
     <button type="button" data-paper-tag="dual-path-network">dual path network</button>
     <button type="button" data-paper-tag="duration-control">duration control</button>
+    <button type="button" data-paper-tag="efficient-inference">efficient inference</button>
     <button type="button" data-paper-tag="efficient-pretraining">efficient pretraining</button>
     <button type="button" data-paper-tag="emotion-control">emotion control</button>
     <button type="button" data-paper-tag="energy-distance">energy distance</button>
@@ -75,6 +77,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="image-editing">image editing</button>
     <button type="button" data-paper-tag="information-gathering">information gathering</button>
     <button type="button" data-paper-tag="interpretability">interpretability</button>
+    <button type="button" data-paper-tag="language-modeling">language modeling</button>
     <button type="button" data-paper-tag="latent-diffusion">latent diffusion</button>
     <button type="button" data-paper-tag="latent-space">latent space</button>
     <button type="button" data-paper-tag="llm">llm</button>
@@ -85,6 +88,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="meanflow">meanflow</button>
     <button type="button" data-paper-tag="mel-vae">mel vae</button>
     <button type="button" data-paper-tag="model-editing">model editing</button>
+    <button type="button" data-paper-tag="multi-word-expression">multi word expression</button>
     <button type="button" data-paper-tag="multilingual-asr">multilingual asr</button>
     <button type="button" data-paper-tag="multilingual-speech">multilingual speech</button>
     <button type="button" data-paper-tag="multimodal-llm">multimodal llm</button>
@@ -133,12 +137,14 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="streaming-asr">streaming asr</button>
     <button type="button" data-paper-tag="streaming-speech">streaming speech</button>
     <button type="button" data-paper-tag="streaming-tts">streaming tts</button>
+    <button type="button" data-paper-tag="superword-tokenization">superword tokenization</button>
     <button type="button" data-paper-tag="target-speaker-extraction">target speaker extraction</button>
     <button type="button" data-paper-tag="task-oriented-dialogue">task oriented dialogue</button>
     <button type="button" data-paper-tag="taxonomy">taxonomy</button>
     <button type="button" data-paper-tag="text-aligned-tokenization">text aligned tokenization</button>
     <button type="button" data-paper-tag="text-to-audio">text to audio</button>
     <button type="button" data-paper-tag="text-to-image">text to image</button>
+    <button type="button" data-paper-tag="tokenization">tokenization</button>
     <button type="button" data-paper-tag="tokenizer">tokenizer</button>
     <button type="button" data-paper-tag="tokenizer-free">tokenizer free</button>
     <button type="button" data-paper-tag="tool">tool</button>
@@ -161,6 +167,11 @@ title: Paper Knowledge
 </div>
 
 <div class="paper-list">
+<div class="paper-row" data-tags="tokenization bpe superword-tokenization efficient-inference language-modeling multi-word-expression project-tts-data-pipeline" data-search="SuperBPE: Space Travel for Language Models arxiv_2503_13423 2026-06-25 2025 COLM 2025 arxiv:2503.13423 tokenization bpe superword-tokenization efficient-inference language-modeling multi-word-expression project-tts-data-pipeline">
+  <div class="paper-date">2026-06-25</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2503_13423/">SuperBPE: Space Travel for Language Models</a> <span class="paper-meta">(2025, COLM 2025)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/tokenization/">#tokenization</a> <a class="tag-link internal" href="./tags/bpe/">#bpe</a> <a class="tag-link internal" href="./tags/superword-tokenization/">#superword-tokenization</a> <a class="tag-link internal" href="./tags/efficient-inference/">#efficient-inference</a> <a class="tag-link internal" href="./tags/language-modeling/">#language-modeling</a> <a class="tag-link internal" href="./tags/multi-word-expression/">#multi-word-expression</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a></div>
+</div>
 <div class="paper-row" data-tags="representation-autoencoder multimodal-llm text-to-image diffusion-transformer representation-space-generation noisy-representation-conditioning project-generative-speech-representation-evaluation project-audio-model-evaluation" data-search="RepFusion: Leveraging Multimodal Priors for Denoising in Representation Space arxiv_2606_14700 2026-06-23 2026 arXiv preprint arxiv:2606.14700 representation-autoencoder multimodal-llm text-to-image diffusion-transformer representation-space-generation noisy-representation-conditioning project-generative-speech-representation-evaluation project-audio-model-evaluation">
   <div class="paper-date">2026-06-23</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2606_14700/">RepFusion: Leveraging Multimodal Priors for Denoising in Representation Space</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>

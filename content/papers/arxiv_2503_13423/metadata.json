@@ -1,0 +1,79 @@
+{
+  "paper_key": "arxiv_2503_13423",
+  "canonical_id": "arxiv:2503.13423",
+  "arxiv_id": "2503.13423",
+  "version": "latest",
+  "title": "SuperBPE: Space Travel for Language Models",
+  "authors": [
+    "Alisa Liu",
+    "Jonathan Hayase",
+    "Valentin Hofmann",
+    "Sewoong Oh",
+    "Noah A. Smith",
+    "Yejin Choi"
+  ],
+  "venue": "COLM 2025",
+  "year": 2025,
+  "abstract": "SuperBPE introduces a two-stage pretokenization curriculum for BPE: first learn ordinary subword units with whitespace pretokenization, then lift the whitespace boundary constraint to learn multi-word superword tokens. At fixed model size, vocabulary size, and training FLOPs, 8B language models trained with SuperBPE outperform BPE baselines across 30 downstream tasks while requiring substantially less inference compute. The paper also analyzes why BPB and downstream accuracy can disagree, showing that SuperBPE changes the per-token difficulty distribution by merging very easy high-frequency words into larger semantic units.",
+  "primaryClass": "cs.CL",
+  "categories": [
+    "cs.CL",
+    "cs.LG"
+  ],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2503.13423",
+    "pdf": "https://arxiv.org/pdf/2503.13423",
+    "source": "https://arxiv.org/src/2503.13423",
+    "project": "https://superbpe.github.io/",
+    "repo": "https://github.com/PythonNut/superbpe",
+    "huggingface": "https://huggingface.co/collections/UW/superbpe",
+    "openreview": "https://openreview.net/forum?id=LwTWkSXIpt"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2503.13423-src.tar.gz",
+    "entrypoint": "source/main.tex"
+  },
+  "tags": [
+    "tokenization",
+    "bpe",
+    "superword-tokenization",
+    "efficient-inference",
+    "language-modeling",
+    "multi-word-expression",
+    "project-tts-data-pipeline"
+  ],
+  "concepts": [
+    "SuperBPE",
+    "superword tokens",
+    "pretokenization curriculum",
+    "whitespace pretokenization",
+    "transition point",
+    "bytes-per-token",
+    "bits-per-byte",
+    "inference compute",
+    "multi-word expressions",
+    "prompt boundary distortion",
+    "tokenizer compression",
+    "downstream task performance"
+  ],
+  "status": "read",
+  "created": "2026-06-25",
+  "doi": "10.48550/arXiv.2503.13423",
+  "publication_status": "Accepted to the Second Conference on Language Modeling (COLM 2025); arXiv preprint also available.",
+  "bibtex_key": "liu2025superbpespacetravelforlanguage",
+  "fetch_source": "arxiv-tex",
+  "summary_model": "Codex GPT-5",
+  "openreview": {
+    "forum": "https://openreview.net/forum?id=LwTWkSXIpt",
+    "status": "accepted",
+    "decision": "Accept",
+    "ratings": [
+      7,
+      8,
+      6
+    ],
+    "note": "Reviewers praised the simple and practical tokenizer change, controlled experiments, encoding efficiency, and downstream gains. Main concerns were limited multilingual validation, missing same-step comparisons, unknown scaling to much larger LMs, and transition-point analysis."
+  },
+  "citations": []
+}
