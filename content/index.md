@@ -31,11 +31,13 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="attribution">attribution</button>
     <button type="button" data-paper-tag="audio-codec">audio codec</button>
     <button type="button" data-paper-tag="audio-data">audio data</button>
+    <button type="button" data-paper-tag="audio-editing">audio editing</button>
     <button type="button" data-paper-tag="audio-evaluation">audio evaluation</button>
     <button type="button" data-paper-tag="audio-foundation-model">audio foundation model</button>
     <button type="button" data-paper-tag="audio-generation">audio generation</button>
     <button type="button" data-paper-tag="autoencoder">autoencoder</button>
     <button type="button" data-paper-tag="autoregressive-generation">autoregressive generation</button>
+    <button type="button" data-paper-tag="benchmark">benchmark</button>
     <button type="button" data-paper-tag="bpe">bpe</button>
     <button type="button" data-paper-tag="chatbot-evaluation">chatbot evaluation</button>
     <button type="button" data-paper-tag="clinical-ai">clinical ai</button>
@@ -119,6 +121,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="reward-model">reward model</button>
     <button type="button" data-paper-tag="reward-modeling">reward modeling</button>
     <button type="button" data-paper-tag="reward-shaping">reward shaping</button>
+    <button type="button" data-paper-tag="rubric-judge">rubric judge</button>
     <button type="button" data-paper-tag="safety">safety</button>
     <button type="button" data-paper-tag="scaling-law">scaling law</button>
     <button type="button" data-paper-tag="self-distillation">self distillation</button>
@@ -172,6 +175,11 @@ title: Paper Knowledge
 </div>
 
 <div class="paper-list">
+<div class="paper-row" data-tags="audio-editing audio-evaluation rubric-judge benchmark audio-reasoning speech-llm project-audio-model-evaluation project-full-duplex-data project-tts-data-pipeline" data-search="MMAE: A Massive Multitask Audio Editing Benchmark arxiv_2606_07229 2026-06-27 2026 arXiv preprint arxiv:2606.07229 audio-editing audio-evaluation rubric-judge benchmark audio-reasoning speech-llm project-audio-model-evaluation project-full-duplex-data project-tts-data-pipeline">
+  <div class="paper-date">2026-06-27</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2606_07229/">MMAE: A Massive Multitask Audio Editing Benchmark</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/audio-editing/">#audio-editing</a> <a class="tag-link internal" href="./tags/audio-evaluation/">#audio-evaluation</a> <a class="tag-link internal" href="./tags/rubric-judge/">#rubric-judge</a> <a class="tag-link internal" href="./tags/benchmark/">#benchmark</a> <a class="tag-link internal" href="./tags/audio-reasoning/">#audio-reasoning</a> <a class="tag-link internal" href="./tags/speech-llm/">#speech-llm</a> <a class="tag-link internal" href="./tags/project-audio-model-evaluation/">#project-audio-model-evaluation</a> <a class="tag-link internal" href="./tags/project-full-duplex-data/">#project-full-duplex-data</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a></div>
+</div>
 <div class="paper-row" data-tags="diffusion-rl preference-optimization reward-modeling direct-preference-optimization group-preference text-to-image project-audio-model-evaluation project-one-step-audio-generation" data-search="Reinforcing Diffusion Models by Direct Group Preference Optimization arxiv_2510_08425 2026-06-27 2026 ICLR 2026 arxiv:2510.08425 diffusion-rl preference-optimization reward-modeling direct-preference-optimization group-preference text-to-image project-audio-model-evaluation project-one-step-audio-generation">
   <div class="paper-date">2026-06-27</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2510_08425/">Reinforcing Diffusion Models by Direct Group Preference Optimization</a> <span class="paper-meta">(2026, ICLR 2026)</span></div>

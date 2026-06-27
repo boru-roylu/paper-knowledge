@@ -930,6 +930,24 @@
       ]
     },
     {
+      "id": "arxiv_2606_07229",
+      "title": "MMAE: A Massive Multitask Audio Editing Benchmark",
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "url": "../papers/arxiv_2606_07229/",
+      "tags": [
+        "audio-editing",
+        "audio-evaluation",
+        "rubric-judge",
+        "benchmark",
+        "audio-reasoning",
+        "speech-llm",
+        "project-audio-model-evaluation",
+        "project-full-duplex-data",
+        "project-tts-data-pipeline"
+      ]
+    },
+    {
       "id": "arxiv_2606_14700",
       "title": "RepFusion: Leveraging Multimodal Priors for Denoising in Representation Space",
       "year": 2026,
