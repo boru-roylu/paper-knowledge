@@ -291,6 +291,23 @@
       ]
     },
     {
+      "id": "arxiv_2510_08425",
+      "title": "Reinforcing Diffusion Models by Direct Group Preference Optimization",
+      "year": 2026,
+      "venue": "ICLR 2026",
+      "url": "../papers/arxiv_2510_08425/",
+      "tags": [
+        "diffusion-rl",
+        "preference-optimization",
+        "reward-modeling",
+        "direct-preference-optimization",
+        "group-preference",
+        "text-to-image",
+        "project-audio-model-evaluation",
+        "project-one-step-audio-generation"
+      ]
+    },
+    {
       "id": "arxiv_2510_11690",
       "title": "Diffusion Transformers with Representation Autoencoders",
       "year": 2025,

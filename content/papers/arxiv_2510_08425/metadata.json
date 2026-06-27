@@ -1,0 +1,79 @@
+{
+  "paper_key": "arxiv_2510_08425",
+  "canonical_id": "arxiv:2510.08425",
+  "arxiv_id": "2510.08425",
+  "version": "latest",
+  "title": "Reinforcing Diffusion Models by Direct Group Preference Optimization",
+  "authors": [
+    "Yihong Luo",
+    "Tianyang Hu",
+    "Jing Tang"
+  ],
+  "venue": "ICLR 2026",
+  "year": 2026,
+  "abstract": "Direct Group Preference Optimization (DGPO) is an online reinforcement learning method for post-training diffusion models. It keeps the group-relative preference signal that makes GRPO useful, but removes the need for stochastic SDE policy rollouts by learning group-level preferences directly in a DPO-style objective. This enables deterministic ODE rollouts, avoids full-trajectory policy-gradient training, and yields around 20x faster training than Flow-GRPO while improving GenEval, OCR text rendering, PickScore alignment, and several out-of-domain reward metrics.",
+  "primaryClass": "cs.LG",
+  "categories": [
+    "cs.LG",
+    "cs.CV"
+  ],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2510.08425",
+    "pdf": "https://arxiv.org/pdf/2510.08425",
+    "source": "https://arxiv.org/src/2510.08425",
+    "repo": "https://github.com/Luo-Yihong/DGPO",
+    "openreview": "https://openreview.net/forum?id=jymuXl8GYi"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2510.08425-src.tar.gz",
+    "entrypoint": "source/main.tex"
+  },
+  "tags": [
+    "diffusion-rl",
+    "preference-optimization",
+    "reward-modeling",
+    "direct-preference-optimization",
+    "group-preference",
+    "text-to-image",
+    "project-audio-model-evaluation",
+    "project-one-step-audio-generation"
+  ],
+  "concepts": [
+    "DGPO",
+    "Direct Group Preference Optimization",
+    "group-level preference",
+    "advantage-based weights",
+    "deterministic ODE rollout",
+    "stochastic policy mismatch",
+    "diffusion RL",
+    "reward hacking",
+    "timestep clip strategy",
+    "Flow-GRPO",
+    "Diffusion-DPO",
+    "GenEval",
+    "OCR reward",
+    "PickScore",
+    "out-of-domain metrics"
+  ],
+  "status": "read",
+  "created": "2026-06-27",
+  "doi": "10.48550/arXiv.2510.08425",
+  "publication_status": "Accepted as poster at ICLR 2026; arXiv preprint also available.",
+  "bibtex_key": "luo2026dgpo",
+  "fetch_source": "arxiv-tex",
+  "summary_model": "Codex GPT-5",
+  "openreview": {
+    "forum": "https://openreview.net/forum?id=jymuXl8GYi",
+    "status": "accepted-poster",
+    "decision": "Accept (Poster)",
+    "ratings": [
+      8,
+      6,
+      6,
+      4
+    ],
+    "note": "Reviewers praised the clear motivation, 20-30x faster training, strong benchmark performance, and evaluation. Main concerns involved novelty relative to DPO/GRPO, missing derivation details, beta/group-size/timestep-clip sensitivity, comparison to concurrent DiffusionNFT, reward quality, CFG, and PPO-style clipping."
+  },
+  "citations": []
+}

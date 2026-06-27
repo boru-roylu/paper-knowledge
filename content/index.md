@@ -53,8 +53,10 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="dialogue">dialogue</button>
     <button type="button" data-paper-tag="diffusion">diffusion</button>
     <button type="button" data-paper-tag="diffusion-distillation">diffusion distillation</button>
+    <button type="button" data-paper-tag="diffusion-rl">diffusion rl</button>
     <button type="button" data-paper-tag="diffusion-transformer">diffusion transformer</button>
     <button type="button" data-paper-tag="diffusion-tts">diffusion tts</button>
+    <button type="button" data-paper-tag="direct-preference-optimization">direct preference optimization</button>
     <button type="button" data-paper-tag="discrete-audio">discrete audio</button>
     <button type="button" data-paper-tag="distillation">distillation</button>
     <button type="button" data-paper-tag="distribution-matching">distribution matching</button>
@@ -72,6 +74,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="flow-matching">flow matching</button>
     <button type="button" data-paper-tag="forecasting">forecasting</button>
     <button type="button" data-paper-tag="generative-evaluation">generative evaluation</button>
+    <button type="button" data-paper-tag="group-preference">group preference</button>
     <button type="button" data-paper-tag="grpo">grpo</button>
     <button type="button" data-paper-tag="guidance">guidance</button>
     <button type="button" data-paper-tag="image-editing">image editing</button>
@@ -100,6 +103,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="paralinguistic-modeling">paralinguistic modeling</button>
     <button type="button" data-paper-tag="positional-encoding">positional encoding</button>
     <button type="button" data-paper-tag="preference-distillation">preference distillation</button>
+    <button type="button" data-paper-tag="preference-optimization">preference optimization</button>
     <button type="button" data-paper-tag="project-generative-speech-representation-evaluation">project: generative speech representation evaluation</button>
     <button type="button" data-paper-tag="proxy-metrics">proxy metrics</button>
     <button type="button" data-paper-tag="real-time-generation">real time generation</button>
@@ -113,6 +117,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="research-agent">research agent</button>
     <button type="button" data-paper-tag="restoration">restoration</button>
     <button type="button" data-paper-tag="reward-model">reward model</button>
+    <button type="button" data-paper-tag="reward-modeling">reward modeling</button>
     <button type="button" data-paper-tag="reward-shaping">reward shaping</button>
     <button type="button" data-paper-tag="safety">safety</button>
     <button type="button" data-paper-tag="scaling-law">scaling law</button>
@@ -167,6 +172,11 @@ title: Paper Knowledge
 </div>
 
 <div class="paper-list">
+<div class="paper-row" data-tags="diffusion-rl preference-optimization reward-modeling direct-preference-optimization group-preference text-to-image project-audio-model-evaluation project-one-step-audio-generation" data-search="Reinforcing Diffusion Models by Direct Group Preference Optimization arxiv_2510_08425 2026-06-27 2026 ICLR 2026 arxiv:2510.08425 diffusion-rl preference-optimization reward-modeling direct-preference-optimization group-preference text-to-image project-audio-model-evaluation project-one-step-audio-generation">
+  <div class="paper-date">2026-06-27</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2510_08425/">Reinforcing Diffusion Models by Direct Group Preference Optimization</a> <span class="paper-meta">(2026, ICLR 2026)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/diffusion-rl/">#diffusion-rl</a> <a class="tag-link internal" href="./tags/preference-optimization/">#preference-optimization</a> <a class="tag-link internal" href="./tags/reward-modeling/">#reward-modeling</a> <a class="tag-link internal" href="./tags/direct-preference-optimization/">#direct-preference-optimization</a> <a class="tag-link internal" href="./tags/group-preference/">#group-preference</a> <a class="tag-link internal" href="./tags/text-to-image/">#text-to-image</a> <a class="tag-link internal" href="./tags/project-audio-model-evaluation/">#project-audio-model-evaluation</a> <a class="tag-link internal" href="./tags/project-one-step-audio-generation/">#project-one-step-audio-generation</a></div>
+</div>
 <div class="paper-row" data-tags="tokenization bpe superword-tokenization efficient-inference language-modeling multi-word-expression project-tts-data-pipeline" data-search="SuperBPE: Space Travel for Language Models arxiv_2503_13423 2026-06-25 2025 COLM 2025 arxiv:2503.13423 tokenization bpe superword-tokenization efficient-inference language-modeling multi-word-expression project-tts-data-pipeline">
   <div class="paper-date">2026-06-25</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2503_13423/">SuperBPE: Space Travel for Language Models</a> <span class="paper-meta">(2025, COLM 2025)</span></div>
