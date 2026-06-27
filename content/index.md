@@ -91,6 +91,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="low-energy-transport">low energy transport</button>
     <button type="button" data-paper-tag="mamba">mamba</button>
     <button type="button" data-paper-tag="meanflow">meanflow</button>
+    <button type="button" data-paper-tag="MeanFlow">MeanFlow</button>
     <button type="button" data-paper-tag="mel-vae">mel vae</button>
     <button type="button" data-paper-tag="model-editing">model editing</button>
     <button type="button" data-paper-tag="multi-word-expression">multi word expression</button>
@@ -163,6 +164,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="turn-taking">turn taking</button>
     <button type="button" data-paper-tag="user-simulation">user simulation</button>
     <button type="button" data-paper-tag="vad">vad</button>
+    <button type="button" data-paper-tag="VAE">VAE</button>
     <button type="button" data-paper-tag="video-generation">video generation</button>
     <button type="button" data-paper-tag="visual-generation">visual generation</button>
     <button type="button" data-paper-tag="voice-agent">voice agent</button>
@@ -175,6 +177,11 @@ title: Paper Knowledge
 </div>
 
 <div class="paper-list">
+<div class="paper-row" data-tags="diffusion diffusion-transformer evaluation-metrics benchmark text-to-image representation-autoencoder VAE MeanFlow one-step-generation project-audio-model-evaluation project-generative-speech-representation-evaluation project-one-step-audio-generation" data-search="DiffusionBench: On Holistic Evaluation of Diffusion Transformers arxiv_2606_24888 2026-06-27 2026 arXiv preprint arxiv:2606.24888 diffusion diffusion-transformer evaluation-metrics benchmark text-to-image representation-autoencoder VAE MeanFlow one-step-generation project-audio-model-evaluation project-generative-speech-representation-evaluation project-one-step-audio-generation">
+  <div class="paper-date">2026-06-27</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2606_24888/">DiffusionBench: On Holistic Evaluation of Diffusion Transformers</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/diffusion/">#diffusion</a> <a class="tag-link internal" href="./tags/diffusion-transformer/">#diffusion-transformer</a> <a class="tag-link internal" href="./tags/evaluation-metrics/">#evaluation-metrics</a> <a class="tag-link internal" href="./tags/benchmark/">#benchmark</a> <a class="tag-link internal" href="./tags/text-to-image/">#text-to-image</a> <a class="tag-link internal" href="./tags/representation-autoencoder/">#representation-autoencoder</a> <a class="tag-link internal" href="./tags/VAE/">#VAE</a> <a class="tag-link internal" href="./tags/MeanFlow/">#MeanFlow</a> <a class="tag-link internal" href="./tags/one-step-generation/">#one-step-generation</a> <a class="tag-link internal" href="./tags/project-audio-model-evaluation/">#project-audio-model-evaluation</a> <a class="tag-link internal" href="./tags/project-generative-speech-representation-evaluation/">#project-generative-speech-representation-evaluation</a> <a class="tag-link internal" href="./tags/project-one-step-audio-generation/">#project-one-step-audio-generation</a></div>
+</div>
 <div class="paper-row" data-tags="audio-editing audio-evaluation rubric-judge benchmark audio-reasoning speech-llm project-audio-model-evaluation project-full-duplex-data project-tts-data-pipeline" data-search="MMAE: A Massive Multitask Audio Editing Benchmark arxiv_2606_07229 2026-06-27 2026 arXiv preprint arxiv:2606.07229 audio-editing audio-evaluation rubric-judge benchmark audio-reasoning speech-llm project-audio-model-evaluation project-full-duplex-data project-tts-data-pipeline">
   <div class="paper-date">2026-06-27</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2606_07229/">MMAE: A Massive Multitask Audio Editing Benchmark</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>

@@ -1,0 +1,111 @@
+{
+  "paper_key": "arxiv_2606_24888",
+  "canonical_id": "arxiv:2606.24888",
+  "arxiv_id": "2606.24888",
+  "version": "latest",
+  "title": "DiffusionBench: On Holistic Evaluation of Diffusion Transformers",
+  "authors": [
+    "Xingjian Leng",
+    "Jaskirat Singh",
+    "Zhanhao Liang",
+    "Ethan Smith",
+    "Martin Bell",
+    "Aninda Saha",
+    "Yuhui Yuan",
+    "Liang Zheng"
+  ],
+  "venue": "arXiv preprint",
+  "year": 2026,
+  "abstract": "Diffusion transformer (DiT) research on image generation has converged to a single evaluation setup: class-conditional generation on ImageNet. While methods improve the FID and related metrics, it is increasingly unclear whether they reflect real progress in generative modeling. The natural alternative, i.e., text-to-image (T2I) generation, is perceived as too costly or inconvenient to train and evaluate and is often skipped. We argue that this perception no longer holds. We introduce NanoGen, a unified DiT training and evaluation framework. NanoGen matches state-of-the-art DiT baselines on ImageNet and, with 12 lines of configuration change, also trains competitive text-to-image models. It currently supports RAE, VAE, pixel-space, and MeanFlow diffusion methods under both ImageNet and T2I setups. Under NanoGen, training T2I requires comparable compute to ImageNet. After training 21 latent diffusion models with NanoGen, we observe that method ranking shows no strong correlation between ImageNet and T2I generation: Pearson correlation is between -0.377 and -0.580 across three metrics. This suggests that a method which improves class-conditional ImageNet FID may show no corresponding improvement on T2I, clearly indicating the necessity of evaluating DiTs on both tasks. To this end, we summarize ImageNet and text-to-image results, which yields DiffusionBench, a holistic benchmark for DiT research. We recommend reporting DiffusionBench in place of ImageNet alone: methods that improve DiffusionBench are more likely to reflect broader progress.",
+  "primaryClass": "cs.CV",
+  "categories": [
+    "cs.CV"
+  ],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2606.24888",
+    "pdf": "https://arxiv.org/pdf/2606.24888",
+    "source": "https://arxiv.org/src/2606.24888",
+    "repo": "https://github.com/End2End-Diffusion/diffusion-bench",
+    "models": "https://huggingface.co/diffusion-bench",
+    "project": "https://end2end-diffusion.github.io/diffusion-bench/",
+    "discord": "https://discord.gg/jh5Bz8uHEr"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2606.24888-src.tar.gz",
+    "entrypoint": "source/main.tex"
+  },
+  "tags": [
+    "diffusion",
+    "diffusion-transformer",
+    "evaluation-metrics",
+    "benchmark",
+    "text-to-image",
+    "representation-autoencoder",
+    "VAE",
+    "MeanFlow",
+    "one-step-generation",
+    "project-audio-model-evaluation",
+    "project-generative-speech-representation-evaluation",
+    "project-one-step-audio-generation"
+  ],
+  "concepts": [
+    "DiffusionBench",
+    "NanoGen",
+    "holistic evaluation",
+    "ImageNet FID vs T2I metrics",
+    "cross-task ranking correlation",
+    "Representation Autoencoder",
+    "VAE tokenizer",
+    "pixel-space diffusion",
+    "MeanFlow",
+    "GenEval",
+    "DPG-Bench",
+    "GenAIBench",
+    "FDr",
+    "MIND",
+    "benchmark hacking",
+    "multi-axis reporting"
+  ],
+  "status": "read",
+  "created": "2026-06-27",
+  "doi": "10.48550/arXiv.2606.24888",
+  "publication_status": "No formal conference or journal reference found as of 2026-06-27",
+  "bibtex_key": "leng2026diffusionbenchonholisticevalua",
+  "fetch_source": "arxiv-tex",
+  "summary_model": "Codex GPT-5",
+  "citations": [
+    {
+      "paper_key": "arxiv_2510_11690",
+      "title": "Diffusion Transformers with Representation Autoencoders",
+      "score": 1,
+      "matched_title": "Diffusion Transformers with Representation Autoencoders",
+      "matched_first_author_last": "zheng",
+      "source_file": "source/main.bib"
+    },
+    {
+      "paper_key": "arxiv_2605_18324",
+      "title": "Improved Baselines with Representation Autoencoders",
+      "score": 1,
+      "matched_title": "Improved Baselines with Representation Autoencoders",
+      "matched_first_author_last": "singh",
+      "source_file": "source/main.bib"
+    },
+    {
+      "paper_key": "arxiv_2501_01423",
+      "title": "Reconstruction vs. Generation: Taming Optimization Dilemma in Latent Diffusion Models",
+      "score": 1,
+      "matched_title": "Reconstruction vs. Generation: Taming Optimization Dilemma in Latent Diffusion Models",
+      "matched_first_author_last": "yao",
+      "source_file": "source/main.bib"
+    },
+    {
+      "paper_key": "arxiv_2604_28190",
+      "title": "Representation Fréchet Loss for Visual Generation",
+      "score": 1,
+      "matched_title": "Representation Fr'echet Loss for Visual Generation",
+      "matched_first_author_last": "yang",
+      "source_file": "source/main.bib"
+    }
+  ]
+}

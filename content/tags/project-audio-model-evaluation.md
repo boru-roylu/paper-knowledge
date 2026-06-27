@@ -105,6 +105,7 @@ AnyAudio-Judge data / prompts
 
 - [AnyAudio-Judge](../papers/arxiv_2606_03116/)：dynamic rubric-based evaluator / reward model，是這條 project 的核心 evaluator pattern。
 - [MMAE](../papers/arxiv_2606_07229/)：massive multitask audio editing benchmark。它把 editing correctness 拆成 IFR、CR、EMR，並用 17,741 個 rubrics 評估 speech / sound / music / mixed audio；特別適合補 AnyAudio-Judge 缺少的 edit-consistency 和 exact-match reliability framing。
+- [DiffusionBench](../papers/arxiv_2606_24888/)：image-side but important evaluation methodology。它證明 ImageNet FID ranking 不可靠預測 T2I performance，提醒 audio generator 也不能只看 FAD / WER / MOS；需要 distribution quality、instruction rubrics、speaker/content correctness、latency/compute 等 multi-axis reporting。
 - [PlanAudio](../papers/arxiv_2605_28063/)：free-form prompt -> unified speech+sound generation，是 composite audio evaluation 的重要 target task。
 - [FlashTrace](../papers/arxiv_2602_01914/)：multi-token attribution，可以補上 judge / reasoning / tool-call grounding analysis。
 - [StepOPSD](../papers/arxiv_2605_27140/)：不是 audio paper，但提供 step-aware credit assignment pattern，可借來把 rubric yes/no 轉成 span-level grounded reward / training signal。

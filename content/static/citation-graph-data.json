@@ -965,6 +965,27 @@
       ]
     },
     {
+      "id": "arxiv_2606_24888",
+      "title": "DiffusionBench: On Holistic Evaluation of Diffusion Transformers",
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "url": "../papers/arxiv_2606_24888/",
+      "tags": [
+        "diffusion",
+        "diffusion-transformer",
+        "evaluation-metrics",
+        "benchmark",
+        "text-to-image",
+        "representation-autoencoder",
+        "VAE",
+        "MeanFlow",
+        "one-step-generation",
+        "project-audio-model-evaluation",
+        "project-generative-speech-representation-evaluation",
+        "project-one-step-audio-generation"
+      ]
+    },
+    {
       "id": "microsoft_mai_thinking_1",
       "title": "MAI-Thinking-1: Building a Hill-Climbing Machine",
       "year": 2026,
@@ -1171,6 +1192,26 @@
     {
       "source": "arxiv_2606_14700",
       "target": "arxiv_2510_11690",
+      "score": 1
+    },
+    {
+      "source": "arxiv_2606_24888",
+      "target": "arxiv_2510_11690",
+      "score": 1
+    },
+    {
+      "source": "arxiv_2606_24888",
+      "target": "arxiv_2605_18324",
+      "score": 1
+    },
+    {
+      "source": "arxiv_2606_24888",
+      "target": "arxiv_2501_01423",
+      "score": 1
+    },
+    {
+      "source": "arxiv_2606_24888",
+      "target": "arxiv_2604_28190",
       "score": 1
     }
   ]
