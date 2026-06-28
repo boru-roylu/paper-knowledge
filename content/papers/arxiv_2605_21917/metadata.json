@@ -1,0 +1,76 @@
+{
+  "paper_key": "arxiv_2605_21917",
+  "canonical_id": "arxiv:2605.21917",
+  "arxiv_id": "2605.21917",
+  "version": "latest",
+  "title": "MAVEN: A Multi-stage Agentic Annotation Pipeline for Video Reasoning Tasks",
+  "authors": [
+    "Han Zhang",
+    "Wanting Jiang",
+    "Tomasz Kornuta",
+    "Tian Zheng",
+    "Vidya Murali"
+  ],
+  "venue": "CVPR 2026 VidLLMs Workshop non-archival",
+  "year": 2026,
+  "abstract": "MAVEN is a multi-stage agentic pipeline for turning raw videos into structured Chain-of-Thought training data around an Event of Focus. It synthesizes a Multi-Scale Spatio-Temporal Event Description from global, dense, and chunk-level captions, uses that intermediate to generate multi-task Q&A, and supports agent-driven domain adaptation plus hierarchical refinement from human feedback. Applied to over 5,300 traffic videos, MAVEN-labeled data improves Cosmos-Reason2-8B on private CCTV evaluation and AccidentBench, with RL post-training surpassing Gemini baselines.",
+  "primaryClass": "cs.CV",
+  "categories": [
+    "cs.CV",
+    "cs.AI",
+    "cs.MM"
+  ],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2605.21917",
+    "pdf": "https://arxiv.org/pdf/2605.21917",
+    "source": "https://arxiv.org/src/2605.21917",
+    "openreview": "https://openreview.net/forum?id=PYVXTkO3Yb"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2605.21917-src.tar.gz",
+    "entrypoint": "source/main.tex"
+  },
+  "tags": [
+    "video-reasoning",
+    "agentic-annotation",
+    "data-pipeline",
+    "chain-of-thought",
+    "multimodal-reasoning",
+    "agent-skill",
+    "project-audio-model-evaluation",
+    "project-full-duplex-data",
+    "project-tts-data-pipeline"
+  ],
+  "concepts": [
+    "MAVEN",
+    "Multi-stage Agentic Video Event aNnotation",
+    "MSTED",
+    "Multi-Scale Spatio-Temporal Event Description",
+    "Event of Focus",
+    "three-level video captioning",
+    "agent-driven domain adaptation",
+    "hierarchical pipeline refinement",
+    "error taxonomy",
+    "root cause tracing",
+    "structured CoT data",
+    "video reasoning dataset",
+    "Cosmos-Reason2-8B",
+    "AccidentBench",
+    "DAPO",
+    "Agent Skill"
+  ],
+  "status": "read",
+  "created": "2026-06-28",
+  "doi": "10.48550/arXiv.2605.21917",
+  "publication_status": "CVPR 2026 VidLLMs Workshop non-archival submission; arXiv preprint",
+  "bibtex_key": "zhang2026mavenmultistageagenticannotation",
+  "fetch_source": "arxiv-tex",
+  "summary_model": "Codex GPT-5",
+  "openreview": {
+    "forum": "https://openreview.net/forum?id=PYVXTkO3Yb",
+    "public_notes": 0,
+    "note": "OpenReview forum found, but no public reviews or rebuttal notes were available when fetched."
+  },
+  "citations": []
+}

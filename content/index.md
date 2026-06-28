@@ -26,6 +26,8 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="adversarial-training">adversarial training</button>
     <button type="button" data-paper-tag="agent-evaluation">agent evaluation</button>
     <button type="button" data-paper-tag="agent-rl">agent rl</button>
+    <button type="button" data-paper-tag="agent-skill">agent skill</button>
+    <button type="button" data-paper-tag="agentic-annotation">agentic annotation</button>
     <button type="button" data-paper-tag="agentic-workflow">agentic workflow</button>
     <button type="button" data-paper-tag="ai-infrastructure">ai infrastructure</button>
     <button type="button" data-paper-tag="attribution">attribution</button>
@@ -39,6 +41,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="autoregressive-generation">autoregressive generation</button>
     <button type="button" data-paper-tag="benchmark">benchmark</button>
     <button type="button" data-paper-tag="bpe">bpe</button>
+    <button type="button" data-paper-tag="chain-of-thought">chain of thought</button>
     <button type="button" data-paper-tag="chatbot-evaluation">chatbot evaluation</button>
     <button type="button" data-paper-tag="clinical-ai">clinical ai</button>
     <button type="button" data-paper-tag="clustering">clustering</button>
@@ -51,6 +54,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="data-cleaning">data cleaning</button>
     <button type="button" data-paper-tag="data-curation">data curation</button>
     <button type="button" data-paper-tag="data-mixing">data mixing</button>
+    <button type="button" data-paper-tag="data-pipeline">data pipeline</button>
     <button type="button" data-paper-tag="deep-research">deep research</button>
     <button type="button" data-paper-tag="dialogue">dialogue</button>
     <button type="button" data-paper-tag="diffusion">diffusion</button>
@@ -98,6 +102,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="multilingual-asr">multilingual asr</button>
     <button type="button" data-paper-tag="multilingual-speech">multilingual speech</button>
     <button type="button" data-paper-tag="multimodal-llm">multimodal llm</button>
+    <button type="button" data-paper-tag="multimodal-reasoning">multimodal reasoning</button>
     <button type="button" data-paper-tag="noisy-representation-conditioning">noisy representation conditioning</button>
     <button type="button" data-paper-tag="one-step-generation">one step generation</button>
     <button type="button" data-paper-tag="online-clustering">online clustering</button>
@@ -166,6 +171,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="vad">vad</button>
     <button type="button" data-paper-tag="VAE">VAE</button>
     <button type="button" data-paper-tag="video-generation">video generation</button>
+    <button type="button" data-paper-tag="video-reasoning">video reasoning</button>
     <button type="button" data-paper-tag="visual-generation">visual generation</button>
     <button type="button" data-paper-tag="voice-agent">voice agent</button>
     <button type="button" data-paper-tag="voice-cloning">voice cloning</button>
@@ -177,6 +183,11 @@ title: Paper Knowledge
 </div>
 
 <div class="paper-list">
+<div class="paper-row" data-tags="video-reasoning agentic-annotation data-pipeline chain-of-thought multimodal-reasoning agent-skill project-audio-model-evaluation project-full-duplex-data project-tts-data-pipeline" data-search="MAVEN: A Multi-stage Agentic Annotation Pipeline for Video Reasoning Tasks arxiv_2605_21917 2026-06-28 2026 CVPR 2026 VidLLMs Workshop non-archival arxiv:2605.21917 video-reasoning agentic-annotation data-pipeline chain-of-thought multimodal-reasoning agent-skill project-audio-model-evaluation project-full-duplex-data project-tts-data-pipeline">
+  <div class="paper-date">2026-06-28</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2605_21917/">MAVEN: A Multi-stage Agentic Annotation Pipeline for Video Reasoning Tasks</a> <span class="paper-meta">(2026, CVPR 2026 VidLLMs Workshop non-archival)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/video-reasoning/">#video-reasoning</a> <a class="tag-link internal" href="./tags/agentic-annotation/">#agentic-annotation</a> <a class="tag-link internal" href="./tags/data-pipeline/">#data-pipeline</a> <a class="tag-link internal" href="./tags/chain-of-thought/">#chain-of-thought</a> <a class="tag-link internal" href="./tags/multimodal-reasoning/">#multimodal-reasoning</a> <a class="tag-link internal" href="./tags/agent-skill/">#agent-skill</a> <a class="tag-link internal" href="./tags/project-audio-model-evaluation/">#project-audio-model-evaluation</a> <a class="tag-link internal" href="./tags/project-full-duplex-data/">#project-full-duplex-data</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a></div>
+</div>
 <div class="paper-row" data-tags="diffusion diffusion-transformer evaluation-metrics benchmark text-to-image representation-autoencoder VAE MeanFlow one-step-generation project-audio-model-evaluation project-generative-speech-representation-evaluation project-one-step-audio-generation" data-search="DiffusionBench: On Holistic Evaluation of Diffusion Transformers arxiv_2606_24888 2026-06-27 2026 arXiv preprint arxiv:2606.24888 diffusion diffusion-transformer evaluation-metrics benchmark text-to-image representation-autoencoder VAE MeanFlow one-step-generation project-audio-model-evaluation project-generative-speech-representation-evaluation project-one-step-audio-generation">
   <div class="paper-date">2026-06-27</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2606_24888/">DiffusionBench: On Holistic Evaluation of Diffusion Transformers</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>

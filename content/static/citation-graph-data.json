@@ -720,6 +720,24 @@
       ]
     },
     {
+      "id": "arxiv_2605_21917",
+      "title": "MAVEN: A Multi-stage Agentic Annotation Pipeline for Video Reasoning Tasks",
+      "year": 2026,
+      "venue": "CVPR 2026 VidLLMs Workshop non-archival",
+      "url": "../papers/arxiv_2605_21917/",
+      "tags": [
+        "video-reasoning",
+        "agentic-annotation",
+        "data-pipeline",
+        "chain-of-thought",
+        "multimodal-reasoning",
+        "agent-skill",
+        "project-audio-model-evaluation",
+        "project-full-duplex-data",
+        "project-tts-data-pipeline"
+      ]
+    },
+    {
       "id": "arxiv_2605_22083",
       "title": "RobustSpeechFlow: Learning Robust Text-to-Speech Trajectories via Augmentation-based Contrastive Flow Matching",
       "year": 2026,
