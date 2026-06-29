@@ -65,6 +65,7 @@ title: "Project: Full-duplex data and model"
 ### Evaluation / debugging
 
 - [AnyAudio-Judge](../papers/arxiv_2606_03116/)：dynamic rubric-based audio evaluator。很適合把 full-duplex behavior 拆成 binary checks：speaker role 是否正確、backchannel 是否存在、overlap timing 是否合理、self-correction 是否被遵守、tool action 是否和最後 intent 一致。
+- [ELSA](../papers/arxiv_2606_17404/)：reference-free event-level Text-to-Audio evaluator。可借它的 prompt -> acoustic events -> event-level alignment 流程，把 full-duplex control plan 拆成 speaker utterance、backchannel、overlap、interruption、nonverbal event，再檢查 generated dual-channel audio 是否逐項出現；但它目前不顯式建模 temporal order / duration，因此還要搭配 timestamp-aware rubrics。
 - [MMAE](../papers/arxiv_2606_07229/)：audio editing benchmark。它的 IFR / CR / EMR framing 可直接借來評估 dual-channel dialogue repair：target speaker / overlap 是否被正確修改，non-target speaker、背景與 timing 是否被保留。
 - [MAVEN](../papers/arxiv_2605_21917/)：video-side agentic annotation pipeline。它的 MSTED intermediate 可改成 full-duplex dialogue event description：global dialogue context、dense speaker/event timeline、chunk-level overlap/backchannel details，再用來生成 rubrics、SFT/RL data 和 root-cause tracing。
 - [τ-bench](../papers/arxiv_2406_12045/)：text-based tool-agent-user benchmark，但提供 final database state / required output 的 deterministic task success 和 `pass^k` reliability metric。可和 Full-Duplex-Bench 類 turn-taking metrics 結合，檢查 full-duplex voice agent 不只聽起來自然，也真的在 tool/database 層做對事情。

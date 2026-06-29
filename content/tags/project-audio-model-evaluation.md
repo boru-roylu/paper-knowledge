@@ -104,6 +104,7 @@ AnyAudio-Judge data / prompts
 ## Related Papers
 
 - [AnyAudio-Judge](../papers/arxiv_2606_03116/)：dynamic rubric-based evaluator / reward model，是這條 project 的核心 evaluator pattern。
+- [ELSA](../papers/arxiv_2606_17404/)：reference-free Text-to-Audio event-level metric。它把 prompt 拆成 acoustic events，再用 LASS + Human-CLAP 做 event-level precision / recall / F1；可補 AnyAudio-Judge 的 yes/no rubrics，尤其適合 speech+sound composite generation、event coverage 和 prompt adherence checks。
 - [MMAE](../papers/arxiv_2606_07229/)：massive multitask audio editing benchmark。它把 editing correctness 拆成 IFR、CR、EMR，並用 17,741 個 rubrics 評估 speech / sound / music / mixed audio；特別適合補 AnyAudio-Judge 缺少的 edit-consistency 和 exact-match reliability framing。
 - [DiffusionBench](../papers/arxiv_2606_24888/)：image-side but important evaluation methodology。它證明 ImageNet FID ranking 不可靠預測 T2I performance，提醒 audio generator 也不能只看 FAD / WER / MOS；需要 distribution quality、instruction rubrics、speaker/content correctness、latency/compute 等 multi-axis reporting。
 - [MAVEN](../papers/arxiv_2605_21917/)：video-side agentic annotation pipeline。它的 three-level captioning -> structured intermediate -> Q&A/rubric generation pattern，可借到 audio evaluation：先生成可審核的 transcript/event/intermediate，再產生 AnyAudio-Judge / MMAE-style rubrics，降低 hallucinated checks。

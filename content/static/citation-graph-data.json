@@ -983,6 +983,21 @@
       ]
     },
     {
+      "id": "arxiv_2606_17404",
+      "title": "ELSA: Acoustic Event-Level Semantic Alignment for Fine-Grained Reference-Free Text-to-Audio Evaluation",
+      "year": 2026,
+      "venue": "Interspeech 2026",
+      "url": "../papers/arxiv_2606_17404/",
+      "tags": [
+        "text-to-audio",
+        "audio-evaluation",
+        "reference-free-evaluation",
+        "event-level-alignment",
+        "audio-language",
+        "project-audio-model-evaluation"
+      ]
+    },
+    {
       "id": "arxiv_2606_24888",
       "title": "DiffusionBench: On Holistic Evaluation of Diffusion Transformers",
       "year": 2026,

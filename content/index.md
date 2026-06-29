@@ -37,6 +37,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="audio-evaluation">audio evaluation</button>
     <button type="button" data-paper-tag="audio-foundation-model">audio foundation model</button>
     <button type="button" data-paper-tag="audio-generation">audio generation</button>
+    <button type="button" data-paper-tag="audio-language">audio language</button>
     <button type="button" data-paper-tag="autoencoder">autoencoder</button>
     <button type="button" data-paper-tag="autoregressive-generation">autoregressive generation</button>
     <button type="button" data-paper-tag="benchmark">benchmark</button>
@@ -74,6 +75,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="energy-distance">energy distance</button>
     <button type="button" data-paper-tag="evaluation">evaluation</button>
     <button type="button" data-paper-tag="evaluation-metrics">evaluation metrics</button>
+    <button type="button" data-paper-tag="event-level-alignment">event level alignment</button>
     <button type="button" data-paper-tag="expressive-speech">expressive speech</button>
     <button type="button" data-paper-tag="few-step-generation">few step generation</button>
     <button type="button" data-paper-tag="flow-map-model">flow map model</button>
@@ -118,6 +120,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="reasoning">reasoning</button>
     <button type="button" data-paper-tag="reconstruction-generation-tradeoff">reconstruction generation tradeoff</button>
     <button type="button" data-paper-tag="recurrent-model">recurrent model</button>
+    <button type="button" data-paper-tag="reference-free-evaluation">reference free evaluation</button>
     <button type="button" data-paper-tag="reinforcement-learning">reinforcement learning</button>
     <button type="button" data-paper-tag="representation-autoencoder">representation autoencoder</button>
     <button type="button" data-paper-tag="representation-evaluation">representation evaluation</button>
@@ -183,6 +186,11 @@ title: Paper Knowledge
 </div>
 
 <div class="paper-list">
+<div class="paper-row" data-tags="text-to-audio audio-evaluation reference-free-evaluation event-level-alignment audio-language project-audio-model-evaluation" data-search="ELSA: Acoustic Event-Level Semantic Alignment for Fine-Grained Reference-Free Text-to-Audio Evaluation arxiv_2606_17404 2026-06-28 2026 Interspeech 2026 arxiv:2606.17404 text-to-audio audio-evaluation reference-free-evaluation event-level-alignment audio-language project-audio-model-evaluation">
+  <div class="paper-date">2026-06-28</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2606_17404/">ELSA: Acoustic Event-Level Semantic Alignment for Fine-Grained Reference-Free Text-to-Audio Evaluation</a> <span class="paper-meta">(2026, Interspeech 2026)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/text-to-audio/">#text-to-audio</a> <a class="tag-link internal" href="./tags/audio-evaluation/">#audio-evaluation</a> <a class="tag-link internal" href="./tags/reference-free-evaluation/">#reference-free-evaluation</a> <a class="tag-link internal" href="./tags/event-level-alignment/">#event-level-alignment</a> <a class="tag-link internal" href="./tags/audio-language/">#audio-language</a> <a class="tag-link internal" href="./tags/project-audio-model-evaluation/">#project-audio-model-evaluation</a></div>
+</div>
 <div class="paper-row" data-tags="video-reasoning agentic-annotation data-pipeline chain-of-thought multimodal-reasoning agent-skill project-audio-model-evaluation project-full-duplex-data project-tts-data-pipeline" data-search="MAVEN: A Multi-stage Agentic Annotation Pipeline for Video Reasoning Tasks arxiv_2605_21917 2026-06-28 2026 CVPR 2026 VidLLMs Workshop non-archival arxiv:2605.21917 video-reasoning agentic-annotation data-pipeline chain-of-thought multimodal-reasoning agent-skill project-audio-model-evaluation project-full-duplex-data project-tts-data-pipeline">
   <div class="paper-date">2026-06-28</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2605_21917/">MAVEN: A Multi-stage Agentic Annotation Pipeline for Video Reasoning Tasks</a> <span class="paper-meta">(2026, CVPR 2026 VidLLMs Workshop non-archival)</span></div>
