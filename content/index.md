@@ -56,6 +56,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="data-curation">data curation</button>
     <button type="button" data-paper-tag="data-mixing">data mixing</button>
     <button type="button" data-paper-tag="data-pipeline">data pipeline</button>
+    <button type="button" data-paper-tag="decontamination">decontamination</button>
     <button type="button" data-paper-tag="deep-research">deep research</button>
     <button type="button" data-paper-tag="dialogue">dialogue</button>
     <button type="button" data-paper-tag="diffusion">diffusion</button>
@@ -75,9 +76,11 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="energy-distance">energy distance</button>
     <button type="button" data-paper-tag="evaluation">evaluation</button>
     <button type="button" data-paper-tag="evaluation-metrics">evaluation metrics</button>
+    <button type="button" data-paper-tag="evaluation-suite">evaluation suite</button>
     <button type="button" data-paper-tag="event-level-alignment">event level alignment</button>
     <button type="button" data-paper-tag="expressive-speech">expressive speech</button>
     <button type="button" data-paper-tag="few-step-generation">few step generation</button>
+    <button type="button" data-paper-tag="filtering">filtering</button>
     <button type="button" data-paper-tag="flow-map-model">flow map model</button>
     <button type="button" data-paper-tag="flow-matching">flow matching</button>
     <button type="button" data-paper-tag="forecasting">forecasting</button>
@@ -103,6 +106,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="multi-word-expression">multi word expression</button>
     <button type="button" data-paper-tag="multilingual-asr">multilingual asr</button>
     <button type="button" data-paper-tag="multilingual-speech">multilingual speech</button>
+    <button type="button" data-paper-tag="multimodal-data">multimodal data</button>
     <button type="button" data-paper-tag="multimodal-llm">multimodal llm</button>
     <button type="button" data-paper-tag="multimodal-reasoning">multimodal reasoning</button>
     <button type="button" data-paper-tag="noisy-representation-conditioning">noisy representation conditioning</button>
@@ -134,6 +138,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="reward-shaping">reward shaping</button>
     <button type="button" data-paper-tag="rubric-judge">rubric judge</button>
     <button type="button" data-paper-tag="safety">safety</button>
+    <button type="button" data-paper-tag="scaling">scaling</button>
     <button type="button" data-paper-tag="scaling-law">scaling law</button>
     <button type="button" data-paper-tag="self-distillation">self distillation</button>
     <button type="button" data-paper-tag="semantic-acoustic-modeling">semantic acoustic modeling</button>
@@ -179,6 +184,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="VAE">VAE</button>
     <button type="button" data-paper-tag="video-generation">video generation</button>
     <button type="button" data-paper-tag="video-reasoning">video reasoning</button>
+    <button type="button" data-paper-tag="vision-language-models">vision language models</button>
     <button type="button" data-paper-tag="visual-generation">visual generation</button>
     <button type="button" data-paper-tag="voice-agent">voice agent</button>
     <button type="button" data-paper-tag="voice-cloning">voice cloning</button>
@@ -191,6 +197,11 @@ title: Paper Knowledge
 </div>
 
 <div class="paper-list">
+<div class="paper-row" data-tags="vision-language-models data-curation benchmark multimodal-data data-mixing filtering scaling evaluation-suite decontamination project-tts-data-pipeline project-audio-model-evaluation" data-search="DataComp-VLM: Improved Open Datasets for Vision-Language Models arxiv_2606_28551 2026-07-01 2026 NeurIPS 2026 / arXiv arxiv:2606.28551 vision-language-models data-curation benchmark multimodal-data data-mixing filtering scaling evaluation-suite decontamination project-tts-data-pipeline project-audio-model-evaluation">
+  <div class="paper-date">2026-07-01</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2606_28551/">DataComp-VLM: Improved Open Datasets for Vision-Language Models</a> <span class="paper-meta">(2026, NeurIPS 2026 / arXiv)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/vision-language-models/">#vision-language-models</a> <a class="tag-link internal" href="./tags/data-curation/">#data-curation</a> <a class="tag-link internal" href="./tags/benchmark/">#benchmark</a> <a class="tag-link internal" href="./tags/multimodal-data/">#multimodal-data</a> <a class="tag-link internal" href="./tags/data-mixing/">#data-mixing</a> <a class="tag-link internal" href="./tags/filtering/">#filtering</a> <a class="tag-link internal" href="./tags/scaling/">#scaling</a> <a class="tag-link internal" href="./tags/evaluation-suite/">#evaluation-suite</a> <a class="tag-link internal" href="./tags/decontamination/">#decontamination</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a> <a class="tag-link internal" href="./tags/project-audio-model-evaluation/">#project-audio-model-evaluation</a></div>
+</div>
 <div class="paper-row" data-tags="visual-generation autoregressive-generation tokenizer VQVAE representation-alignment REPA project-generative-speech-representation-evaluation project-one-step-audio-generation" data-search="GEAR: Guided End-to-End AutoRegression for Image Synthesis arxiv_2606_32039 2026-07-01 2026 arXiv preprint arxiv:2606.32039 visual-generation autoregressive-generation tokenizer VQVAE representation-alignment REPA project-generative-speech-representation-evaluation project-one-step-audio-generation">
   <div class="paper-date">2026-07-01</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2606_32039/">GEAR: Guided End-to-End AutoRegression for Image Synthesis</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>

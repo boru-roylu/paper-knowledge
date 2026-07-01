@@ -1038,6 +1038,26 @@
       ]
     },
     {
+      "id": "arxiv_2606_28551",
+      "title": "DataComp-VLM: Improved Open Datasets for Vision-Language Models",
+      "year": 2026,
+      "venue": "NeurIPS 2026 / arXiv",
+      "url": "../papers/arxiv_2606_28551/",
+      "tags": [
+        "vision-language-models",
+        "data-curation",
+        "benchmark",
+        "multimodal-data",
+        "data-mixing",
+        "filtering",
+        "scaling",
+        "evaluation-suite",
+        "decontamination",
+        "project-tts-data-pipeline",
+        "project-audio-model-evaluation"
+      ]
+    },
+    {
       "id": "arxiv_2606_32039",
       "title": "GEAR: Guided End-to-End AutoRegression for Image Synthesis",
       "year": 2026,
@@ -1306,6 +1326,11 @@
     {
       "source": "arxiv_2606_24888",
       "target": "arxiv_2604_28190",
+      "score": 1
+    },
+    {
+      "source": "arxiv_2606_28551",
+      "target": "microsoft_mai_thinking_1",
       "score": 1
     },
     {
