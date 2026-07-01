@@ -81,6 +81,14 @@
   "summary_model": "Codex GPT-5",
   "citations": [
     {
+      "paper_key": "arxiv_2304_09116",
+      "title": "NaturalSpeech 2: Latent Diffusion Models are Natural and Zero-Shot Speech and Singing Synthesizers",
+      "score": 1,
+      "matched_title": "Naturalspeech 2: Latent diffusion models are natural and zero-shot speech and singing synthesizers.",
+      "matched_first_author_last": "shen",
+      "source_file": "source/iclr2025_conference.bbl"
+    },
+    {
       "paper_key": "arxiv_2406_02430",
       "title": "Seed-TTS: A Family of High-Quality Versatile Speech Generation Models",
       "score": 1,

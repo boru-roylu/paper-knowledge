@@ -29,6 +29,25 @@
       ]
     },
     {
+      "id": "arxiv_2304_09116",
+      "title": "NaturalSpeech 2: Latent Diffusion Models are Natural and Zero-Shot Speech and Singing Synthesizers",
+      "year": 2023,
+      "venue": "arXiv preprint",
+      "url": "../papers/arxiv_2304_09116/",
+      "tags": [
+        "tts",
+        "zero-shot-tts",
+        "latent-diffusion",
+        "speech-codec",
+        "continuous-latent",
+        "speech-prompting",
+        "speech-data",
+        "project-tts-data-pipeline",
+        "project-generative-speech-representation-evaluation",
+        "project-one-step-audio-generation"
+      ]
+    },
+    {
       "id": "arxiv_2305_10005",
       "title": "DinoSR: Self-Distillation and Online Clustering for Self-supervised Speech Representation Learning",
       "year": 2023,
@@ -1065,6 +1084,16 @@
   ],
   "edges": [
     {
+      "source": "arxiv_2406_02430",
+      "target": "arxiv_2304_09116",
+      "score": 0.97
+    },
+    {
+      "source": "arxiv_2406_11427",
+      "target": "arxiv_2304_09116",
+      "score": 1
+    },
+    {
       "source": "arxiv_2406_11427",
       "target": "arxiv_2406_02430",
       "score": 1
@@ -1102,6 +1131,11 @@
     {
       "source": "arxiv_2506_00338",
       "target": "arxiv_2303_01037",
+      "score": 1
+    },
+    {
+      "source": "arxiv_2509_24650",
+      "target": "arxiv_2304_09116",
       "score": 1
     },
     {
@@ -1152,6 +1186,11 @@
     {
       "source": "arxiv_2603_29339",
       "target": "arxiv_2406_11427",
+      "score": 1
+    },
+    {
+      "source": "arxiv_2603_29339",
+      "target": "arxiv_2304_09116",
       "score": 1
     },
     {
@@ -1212,6 +1251,11 @@
     {
       "source": "arxiv_2605_20755",
       "target": "arxiv_2602_06053",
+      "score": 1
+    },
+    {
+      "source": "arxiv_2605_30748",
+      "target": "arxiv_2304_09116",
       "score": 1
     },
     {

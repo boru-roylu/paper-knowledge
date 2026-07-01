@@ -141,8 +141,10 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="sequence-modeling">sequence modeling</button>
     <button type="button" data-paper-tag="source-separation">source separation</button>
     <button type="button" data-paper-tag="speech-agent">speech agent</button>
+    <button type="button" data-paper-tag="speech-codec">speech codec</button>
     <button type="button" data-paper-tag="speech-data-cleaning">speech data cleaning</button>
     <button type="button" data-paper-tag="speech-enhancement">speech enhancement</button>
+    <button type="button" data-paper-tag="speech-prompting">speech prompting</button>
     <button type="button" data-paper-tag="speech-reasoning">speech reasoning</button>
     <button type="button" data-paper-tag="speech-representation">speech representation</button>
     <button type="button" data-paper-tag="speech-restoration">speech restoration</button>
@@ -193,6 +195,11 @@ title: Paper Knowledge
   <div class="paper-date">2026-07-01</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2606_32039/">GEAR: Guided End-to-End AutoRegression for Image Synthesis</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>
   <div class="paper-tags"><a class="tag-link internal" href="./tags/visual-generation/">#visual-generation</a> <a class="tag-link internal" href="./tags/autoregressive-generation/">#autoregressive-generation</a> <a class="tag-link internal" href="./tags/tokenizer/">#tokenizer</a> <a class="tag-link internal" href="./tags/VQVAE/">#VQVAE</a> <a class="tag-link internal" href="./tags/representation-alignment/">#representation-alignment</a> <a class="tag-link internal" href="./tags/REPA/">#REPA</a> <a class="tag-link internal" href="./tags/project-generative-speech-representation-evaluation/">#project-generative-speech-representation-evaluation</a> <a class="tag-link internal" href="./tags/project-one-step-audio-generation/">#project-one-step-audio-generation</a></div>
+</div>
+<div class="paper-row" data-tags="tts zero-shot-tts latent-diffusion speech-codec continuous-latent speech-prompting speech-data project-tts-data-pipeline project-generative-speech-representation-evaluation project-one-step-audio-generation" data-search="NaturalSpeech 2: Latent Diffusion Models are Natural and Zero-Shot Speech and Singing Synthesizers arxiv_2304_09116 2026-07-01 2023 arXiv preprint arxiv:2304.09116 tts zero-shot-tts latent-diffusion speech-codec continuous-latent speech-prompting speech-data project-tts-data-pipeline project-generative-speech-representation-evaluation project-one-step-audio-generation">
+  <div class="paper-date">2026-07-01</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2304_09116/">NaturalSpeech 2: Latent Diffusion Models are Natural and Zero-Shot Speech and Singing Synthesizers</a> <span class="paper-meta">(2023, arXiv preprint)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/tts/">#tts</a> <a class="tag-link internal" href="./tags/zero-shot-tts/">#zero-shot-tts</a> <a class="tag-link internal" href="./tags/latent-diffusion/">#latent-diffusion</a> <a class="tag-link internal" href="./tags/speech-codec/">#speech-codec</a> <a class="tag-link internal" href="./tags/continuous-latent/">#continuous-latent</a> <a class="tag-link internal" href="./tags/speech-prompting/">#speech-prompting</a> <a class="tag-link internal" href="./tags/speech-data/">#speech-data</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a> <a class="tag-link internal" href="./tags/project-generative-speech-representation-evaluation/">#project-generative-speech-representation-evaluation</a> <a class="tag-link internal" href="./tags/project-one-step-audio-generation/">#project-one-step-audio-generation</a></div>
 </div>
 <div class="paper-row" data-tags="text-to-audio audio-evaluation reference-free-evaluation event-level-alignment audio-language project-audio-model-evaluation" data-search="ELSA: Acoustic Event-Level Semantic Alignment for Fine-Grained Reference-Free Text-to-Audio Evaluation arxiv_2606_17404 2026-06-28 2026 Interspeech 2026 arxiv:2606.17404 text-to-audio audio-evaluation reference-free-evaluation event-level-alignment audio-language project-audio-model-evaluation">
   <div class="paper-date">2026-06-28</div>

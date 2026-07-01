@@ -34,7 +34,16 @@
   "publication_status": "No formal conference or journal reference found as of 2026-06-01",
   "bibtex_key": "bytedance2024seedttsafamilyofhighqualityver",
   "summary_model": "gpt-5.4-mini",
-  "citations": [],
+  "citations": [
+    {
+      "paper_key": "arxiv_2304_09116",
+      "title": "NaturalSpeech 2: Latent Diffusion Models are Natural and Zero-Shot Speech and Singing Synthesizers",
+      "score": 0.97,
+      "matched_title": "NaturalSpeech 2: Latent diffusion models are natural and zero-shot speech and singing synthesizers, 2023.",
+      "matched_first_author_last": "shen",
+      "source_file": "arxiv-src:2406.02430-src.tar.gz/main.bbl"
+    }
+  ],
   "openreview": {
     "forum": "XbdA3rXi2R",
     "url": "https://openreview.net/forum?id=XbdA3rXi2R",

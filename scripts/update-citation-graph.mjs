@@ -201,6 +201,11 @@ function scoreTitle(refTitle, paperTitle) {
   const a = titleTokens(refTitle)
   const b = titleTokens(paperTitle)
   if (!a.length || !b.length) return 0
+  const genericTitles = new Set([
+    "text speech synthesis",
+    "speech synthesis",
+  ])
+  if (genericTitles.has(normalizeTitle(refTitle))) return 0
   const as = new Set(a)
   const bs = new Set(b)
   let inter = 0

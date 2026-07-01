@@ -299,6 +299,7 @@ representation 是否提供一個對 downstream generation 有用、
 ### Directly relevant
 
 - [Investigating Neural Audio Codecs for Speech Language Model-Based Speech Generation](https://arxiv.org/abs/2409.04016)：最直接。作者在 SLM speech generation framework 裡比較 neural audio codecs，明確指出 better speech reconstruction does not guarantee better speech generation；decoder quality 影響 naturalness，quantization mechanism 更影響 intelligibility。
+- [NaturalSpeech 2](../papers/arxiv_2304_09116/)：continuous latent diffusion TTS 的早期強 baseline。它把 RVQ 多 codebook embeddings 加總成 frame-level latent vector，而不是 flatten 成長 discrete token sequence；這直接支持本 project 的核心問題：codec representation 要看 downstream generator 是否容易學、是否保留 speaker/prosody/detail，而不是只看 compression 或 reconstruction。
 - [Discrete Audio Tokens: More Than a Survey!](https://arxiv.org/abs/2506.10274)：可作 tokenizer / codec landscape 和 benchmark taxonomy。它整理 speech、music、general audio 的 discrete audio tokens，也包含 reconstruction、downstream performance、acoustic language modeling 等評估面向。
 - [ESPnet-Codec](https://arxiv.org/abs/2409.15897)：提供 codec training/evaluation platform 和 VERSA toolkit，涵蓋 20+ audio metrics，也示範 codec 可接到多個 ESPnet downstream tasks。它是 benchmark infrastructure，但還不是 generative representation metric。
 - [Language-Codec](https://arxiv.org/abs/2402.12208)：指出 codec 和 speech language model 的 gap：reconstruction paradigm / RVQ structure 讓第一 codebook 承載過多資訊，多 codebooks 也增加 downstream LM burden；並用 downstream SLM 驗證 codec representation。
