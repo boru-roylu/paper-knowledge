@@ -1,0 +1,92 @@
+{
+  "paper_key": "arxiv_2606_32039",
+  "canonical_id": "arxiv:2606.32039",
+  "arxiv_id": "2606.32039",
+  "version": "latest",
+  "title": "GEAR: Guided End-to-End AutoRegression for Image Synthesis",
+  "authors": [
+    "Bin Lin",
+    "Zheyuan Liu",
+    "Chenguo Lin",
+    "Sixiang Chen",
+    "Yunyang Ge",
+    "Yunlong Lin",
+    "Jianwei Zhang",
+    "Miles Yang",
+    "Zhao Zhong",
+    "Liefeng Bo",
+    "Li Yuan"
+  ],
+  "venue": "arXiv preprint",
+  "year": 2026,
+  "abstract": "Visual generative models are typically trained in two stages. A tokenizer is first trained for reconstruction and then frozen, after which a generator is trained on its discrete indices or continuous latents. This decoupling leaves the tokenizer unaware of what the generator finds easy to model. We present GEAR (Guided End-to-end AutoRegression), which trains a vector-quantized (VQ) tokenizer and an autoregressive (AR) generator jointly and end-to-end, guided by representation alignment. The key obstacle is that the VQ index fed to the AR model is non-differentiable, so gradients cannot reach the tokenizer, and a straight-through estimator collapses. GEAR resolves this with a dual read-out of the codebook assignment. A hard, one-hot branch trains the AR with next-token prediction, while a differentiable soft branch carries a representation-alignment loss that flows back to guide only the tokenizer. The AR model thereby steers its tokenizer toward an index distribution it can predict more easily. This shifts the alignment burden from the tokenizer to the AR: the tokenizer's own features become less DINOv2-like while the AR's become more so, the opposite of diffusion-side recipes that make the latent itself semantic. GEAR speeds up ImageNet gFID convergence by up to 10x relative to the strong LlamaGen-REPA baseline, learns markedly better patch-level and spatially-coherent features, and generalizes across quantizers (VQVAE, LFQ, IBQ) and to text-to-image generation.",
+  "primaryClass": "cs.CV",
+  "categories": [
+    "cs.CV"
+  ],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2606.32039",
+    "pdf": "https://arxiv.org/pdf/2606.32039",
+    "source": "https://arxiv.org/src/2606.32039",
+    "project": "https://linb203.github.io/gear",
+    "repo": "https://github.com/Tencent-Hunyuan/GEAR",
+    "huggingface": "https://huggingface.co/collections/BinLin203"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2606.32039-src.tar.gz",
+    "entrypoint": "source/main.tex"
+  },
+  "tags": [
+    "visual-generation",
+    "autoregressive-generation",
+    "tokenizer",
+    "VQVAE",
+    "representation-alignment",
+    "REPA",
+    "project-generative-speech-representation-evaluation",
+    "project-one-step-audio-generation"
+  ],
+  "concepts": [
+    "GEAR",
+    "guided end-to-end autoregression",
+    "VQ tokenizer",
+    "autoregressive image generation",
+    "hard and soft assignment",
+    "representation alignment",
+    "REPA",
+    "DINOv2 alignment",
+    "tokenizer learnability",
+    "codebook usage",
+    "next-token prediction",
+    "straight-through estimator collapse",
+    "compute-to-quality",
+    "reconstruction-generation tension",
+    "generator-guided tokenizer"
+  ],
+  "status": "read",
+  "created": "2026-07-01",
+  "doi": "10.48550/arXiv.2606.32039",
+  "publication_status": "No formal conference or journal reference found as of 2026-07-01",
+  "bibtex_key": "lin2026gearguidedendtoendautoregressi",
+  "fetch_source": "arxiv-tex",
+  "summary_model": "Codex GPT-5",
+  "citations": [
+    {
+      "paper_key": "arxiv_2510_11690",
+      "title": "Diffusion Transformers with Representation Autoencoders",
+      "score": 1,
+      "matched_title": "Diffusion transformers with representation autoencoders.",
+      "matched_first_author_last": "zheng",
+      "source_file": "source/main.bbl"
+    },
+    {
+      "paper_key": "arxiv_2501_01423",
+      "title": "Reconstruction vs. Generation: Taming Optimization Dilemma in Latent Diffusion Models",
+      "score": 1,
+      "matched_title": "Reconstruction vs. generation: Taming optimization dilemma in latent diffusion models.",
+      "matched_first_author_last": "yao",
+      "source_file": "source/main.bbl"
+    }
+  ]
+}

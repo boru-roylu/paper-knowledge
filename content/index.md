@@ -122,6 +122,8 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="recurrent-model">recurrent model</button>
     <button type="button" data-paper-tag="reference-free-evaluation">reference free evaluation</button>
     <button type="button" data-paper-tag="reinforcement-learning">reinforcement learning</button>
+    <button type="button" data-paper-tag="REPA">REPA</button>
+    <button type="button" data-paper-tag="representation-alignment">representation alignment</button>
     <button type="button" data-paper-tag="representation-autoencoder">representation autoencoder</button>
     <button type="button" data-paper-tag="representation-evaluation">representation evaluation</button>
     <button type="button" data-paper-tag="representation-space-generation">representation space generation</button>
@@ -178,6 +180,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="visual-generation">visual generation</button>
     <button type="button" data-paper-tag="voice-agent">voice agent</button>
     <button type="button" data-paper-tag="voice-cloning">voice cloning</button>
+    <button type="button" data-paper-tag="VQVAE">VQVAE</button>
     <button type="button" data-paper-tag="waveform-latent">waveform latent</button>
     <button type="button" data-paper-tag="whisperd">whisperd</button>
     <button type="button" data-paper-tag="wsj0-2mix">wsj0 2mix</button>
@@ -186,6 +189,11 @@ title: Paper Knowledge
 </div>
 
 <div class="paper-list">
+<div class="paper-row" data-tags="visual-generation autoregressive-generation tokenizer VQVAE representation-alignment REPA project-generative-speech-representation-evaluation project-one-step-audio-generation" data-search="GEAR: Guided End-to-End AutoRegression for Image Synthesis arxiv_2606_32039 2026-07-01 2026 arXiv preprint arxiv:2606.32039 visual-generation autoregressive-generation tokenizer VQVAE representation-alignment REPA project-generative-speech-representation-evaluation project-one-step-audio-generation">
+  <div class="paper-date">2026-07-01</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2606_32039/">GEAR: Guided End-to-End AutoRegression for Image Synthesis</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/visual-generation/">#visual-generation</a> <a class="tag-link internal" href="./tags/autoregressive-generation/">#autoregressive-generation</a> <a class="tag-link internal" href="./tags/tokenizer/">#tokenizer</a> <a class="tag-link internal" href="./tags/VQVAE/">#VQVAE</a> <a class="tag-link internal" href="./tags/representation-alignment/">#representation-alignment</a> <a class="tag-link internal" href="./tags/REPA/">#REPA</a> <a class="tag-link internal" href="./tags/project-generative-speech-representation-evaluation/">#project-generative-speech-representation-evaluation</a> <a class="tag-link internal" href="./tags/project-one-step-audio-generation/">#project-one-step-audio-generation</a></div>
+</div>
 <div class="paper-row" data-tags="text-to-audio audio-evaluation reference-free-evaluation event-level-alignment audio-language project-audio-model-evaluation" data-search="ELSA: Acoustic Event-Level Semantic Alignment for Fine-Grained Reference-Free Text-to-Audio Evaluation arxiv_2606_17404 2026-06-28 2026 Interspeech 2026 arxiv:2606.17404 text-to-audio audio-evaluation reference-free-evaluation event-level-alignment audio-language project-audio-model-evaluation">
   <div class="paper-date">2026-06-28</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2606_17404/">ELSA: Acoustic Event-Level Semantic Alignment for Fine-Grained Reference-Free Text-to-Audio Evaluation</a> <span class="paper-meta">(2026, Interspeech 2026)</span></div>

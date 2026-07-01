@@ -315,6 +315,7 @@ representation 是否提供一個對 downstream generation 有用、
 - [DGPO](../papers/arxiv_2510_08425/)：reward post-training reference。對本 project 的提醒是：如果 representation 不好學，即使 downstream generator 可以用 rubric reward 對齊，也可能花更多 rollout / reward queries 才達到同等品質；因此 representation benchmark 應同時量 final quality 和 reward-tuning sample efficiency。
 - [RepFusion](../papers/arxiv_2606_14700/)：image-side but conceptually important。它把 frozen MLLM 從 static text encoder 變成 noisy representation encoder，反覆讀 evolving RAE latent 來 condition DiT。對 speech/audio 版的問題是：WavCube / VoxCPM AudioVAE / codec latent 是否也能被 pretrained speech/audio LLM 讀懂，並在 denoising loop 中提供 input-dependent condition？
 - [Improved Baselines with Representation Autoencoders](../papers/arxiv_2605_18324/)：image-side but highly relevant。它提出 `EP_FID@k` 作為 training efficiency metric，明確衡量 representation / autoencoder 讓 downstream diffusion model 多快學好。這支持本 project 從 final quality evaluation 擴展到 **representation learnability / compute-to-quality evaluation**。
+- [GEAR](../papers/arxiv_2606_32039/)：image-side discrete AR / tokenizer reference。它讓 AR generator 透過 differentiable soft assignment 和 representation-alignment loss guide VQ tokenizer，使 token distribution 更容易被 downstream AR 學會，並讓 ImageNet / GPIC convergence 明顯加速。對本 project 的啟發是：speech codec / tokenizer / VAE 的好壞應納入 **downstream learnability**，不只看 reconstruction；也可以探索 generator-guided speech tokenizer tuning，但要避免 NTP loss 直接回傳造成 code collapse。
 
 ### Tokenizer-free / continuous encoder candidate
 
