@@ -1,0 +1,71 @@
+{
+  "paper_key": "arxiv_2505_19273",
+  "canonical_id": "arxiv:2505.19273",
+  "arxiv_id": "2505.19273",
+  "version": "latest",
+  "title": "Eta-WavLM: Efficient Speaker Identity Removal in Self-Supervised Speech Representations Using a Simple Linear Equation",
+  "authors": [
+    "Giuseppe Ruggiero",
+    "Matteo Testa",
+    "Jurgen Van De Walle",
+    "Luigi Di Caro"
+  ],
+  "venue": "Findings of ACL 2025",
+  "year": 2025,
+  "abstract": "Self-supervised learning (SSL) has reduced the reliance on expensive labeling in speech technologies by learning meaningful representations from unannotated data. Since most SSL-based downstream tasks prioritize content information in speech, ideal representations should disentangle content from unwanted variations like speaker characteristics in the SSL representations. However, removing speaker information often degrades other speech components, and existing methods either fail to fully disentangle speaker identity or require resource-intensive models. In this paper, we propose a novel disentanglement method that linearly decomposes SSL representations into speaker-specific and speaker-independent components, effectively generating speaker disentangled representations. Comprehensive experiments show that our approach achieves speaker independence and as such, when applied to content-driven tasks such as voice conversion, our representations yield significant improvements over state-of-the-art methods.",
+  "primaryClass": "cs.SD",
+  "categories": [
+    "cs.SD",
+    "cs.AI",
+    "eess.AS"
+  ],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2505.19273",
+    "pdf": "https://arxiv.org/pdf/2505.19273",
+    "source": "https://arxiv.org/src/2505.19273",
+    "acl": "https://aclanthology.org/2025.findings-acl.127/",
+    "acl_pdf": "https://aclanthology.org/2025.findings-acl.127.pdf",
+    "demo": "https://giuseppe-ruggiero.github.io/eta-wavlm-vc-demo/"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2505.19273-src.tar.gz",
+    "entrypoint": "source/acl_latex.tex"
+  },
+  "tags": [
+    "speech-representation",
+    "speaker-disentanglement",
+    "self-supervised-speech",
+    "WavLM",
+    "voice-conversion",
+    "speaker-leakage",
+    "content-preservation",
+    "project-generative-speech-representation-evaluation",
+    "project-tts-data-pipeline"
+  ],
+  "concepts": [
+    "Eta-WavLM",
+    "speaker identity removal",
+    "speaker-independent representation",
+    "speaker leakage probe",
+    "linear residualization",
+    "pseudo-inverse latent basis",
+    "WavLM layer-15 representation",
+    "ECAPA-TDNN speaker embedding",
+    "PCA speaker embedding",
+    "Any-to-One voice conversion",
+    "target speaker similarity",
+    "source speaker similarity",
+    "content preservation",
+    "voice conversion content encoder"
+  ],
+  "status": "read",
+  "created": "2026-07-01",
+  "doi": "10.18653/v1/2025.findings-acl.127",
+  "arxiv_doi": "10.48550/arXiv.2505.19273",
+  "publication_status": "Published in Findings of the Association for Computational Linguistics: ACL 2025, pages 2494-2504; ACL Anthology entry verified 2026-07-02",
+  "bibtex_key": "ruggiero-etal-2025-eta",
+  "fetch_source": "arxiv-tex",
+  "summary_model": "Codex GPT-5",
+  "citations": []
+}

@@ -49,6 +49,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="compositional-audio">compositional audio</button>
     <button type="button" data-paper-tag="concept-erasure">concept erasure</button>
     <button type="button" data-paper-tag="consistency-mid-training">consistency mid training</button>
+    <button type="button" data-paper-tag="content-preservation">content preservation</button>
     <button type="button" data-paper-tag="continuous-latent">continuous latent</button>
     <button type="button" data-paper-tag="controllable-tts">controllable tts</button>
     <button type="button" data-paper-tag="credit-assignment">credit assignment</button>
@@ -141,10 +142,13 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="scaling">scaling</button>
     <button type="button" data-paper-tag="scaling-law">scaling law</button>
     <button type="button" data-paper-tag="self-distillation">self distillation</button>
+    <button type="button" data-paper-tag="self-supervised-speech">self supervised speech</button>
     <button type="button" data-paper-tag="semantic-acoustic-modeling">semantic acoustic modeling</button>
     <button type="button" data-paper-tag="separation">separation</button>
     <button type="button" data-paper-tag="sequence-modeling">sequence modeling</button>
     <button type="button" data-paper-tag="source-separation">source separation</button>
+    <button type="button" data-paper-tag="speaker-disentanglement">speaker disentanglement</button>
+    <button type="button" data-paper-tag="speaker-leakage">speaker leakage</button>
     <button type="button" data-paper-tag="speech-agent">speech agent</button>
     <button type="button" data-paper-tag="speech-codec">speech codec</button>
     <button type="button" data-paper-tag="speech-data-cleaning">speech data cleaning</button>
@@ -188,8 +192,10 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="visual-generation">visual generation</button>
     <button type="button" data-paper-tag="voice-agent">voice agent</button>
     <button type="button" data-paper-tag="voice-cloning">voice cloning</button>
+    <button type="button" data-paper-tag="voice-conversion">voice conversion</button>
     <button type="button" data-paper-tag="VQVAE">VQVAE</button>
     <button type="button" data-paper-tag="waveform-latent">waveform latent</button>
+    <button type="button" data-paper-tag="WavLM">WavLM</button>
     <button type="button" data-paper-tag="whisperd">whisperd</button>
     <button type="button" data-paper-tag="wsj0-2mix">wsj0 2mix</button>
     <button type="button" data-paper-tag="zero-shot-tts">zero shot tts</button>
@@ -206,6 +212,11 @@ title: Paper Knowledge
   <div class="paper-date">2026-07-01</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2606_32039/">GEAR: Guided End-to-End AutoRegression for Image Synthesis</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>
   <div class="paper-tags"><a class="tag-link internal" href="./tags/visual-generation/">#visual-generation</a> <a class="tag-link internal" href="./tags/autoregressive-generation/">#autoregressive-generation</a> <a class="tag-link internal" href="./tags/tokenizer/">#tokenizer</a> <a class="tag-link internal" href="./tags/VQVAE/">#VQVAE</a> <a class="tag-link internal" href="./tags/representation-alignment/">#representation-alignment</a> <a class="tag-link internal" href="./tags/REPA/">#REPA</a> <a class="tag-link internal" href="./tags/project-generative-speech-representation-evaluation/">#project-generative-speech-representation-evaluation</a> <a class="tag-link internal" href="./tags/project-one-step-audio-generation/">#project-one-step-audio-generation</a></div>
+</div>
+<div class="paper-row" data-tags="speech-representation speaker-disentanglement self-supervised-speech WavLM voice-conversion speaker-leakage content-preservation project-generative-speech-representation-evaluation project-tts-data-pipeline" data-search="Eta-WavLM: Efficient Speaker Identity Removal in Self-Supervised Speech Representations Using a Simple Linear Equation arxiv_2505_19273 2026-07-01 2025 Findings of ACL 2025 arxiv:2505.19273 speech-representation speaker-disentanglement self-supervised-speech WavLM voice-conversion speaker-leakage content-preservation project-generative-speech-representation-evaluation project-tts-data-pipeline">
+  <div class="paper-date">2026-07-01</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2505_19273/">Eta-WavLM: Efficient Speaker Identity Removal in Self-Supervised Speech Representations Using a Simple Linear Equation</a> <span class="paper-meta">(2025, Findings of ACL 2025)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/speech-representation/">#speech-representation</a> <a class="tag-link internal" href="./tags/speaker-disentanglement/">#speaker-disentanglement</a> <a class="tag-link internal" href="./tags/self-supervised-speech/">#self-supervised-speech</a> <a class="tag-link internal" href="./tags/WavLM/">#WavLM</a> <a class="tag-link internal" href="./tags/voice-conversion/">#voice-conversion</a> <a class="tag-link internal" href="./tags/speaker-leakage/">#speaker-leakage</a> <a class="tag-link internal" href="./tags/content-preservation/">#content-preservation</a> <a class="tag-link internal" href="./tags/project-generative-speech-representation-evaluation/">#project-generative-speech-representation-evaluation</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a></div>
 </div>
 <div class="paper-row" data-tags="tts zero-shot-tts latent-diffusion speech-codec continuous-latent speech-prompting speech-data project-tts-data-pipeline project-generative-speech-representation-evaluation project-one-step-audio-generation" data-search="NaturalSpeech 2: Latent Diffusion Models are Natural and Zero-Shot Speech and Singing Synthesizers arxiv_2304_09116 2026-07-01 2023 arXiv preprint arxiv:2304.09116 tts zero-shot-tts latent-diffusion speech-codec continuous-latent speech-prompting speech-data project-tts-data-pipeline project-generative-speech-representation-evaluation project-one-step-audio-generation">
   <div class="paper-date">2026-07-01</div>

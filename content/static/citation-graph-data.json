@@ -265,6 +265,24 @@
       ]
     },
     {
+      "id": "arxiv_2505_19273",
+      "title": "Eta-WavLM: Efficient Speaker Identity Removal in Self-Supervised Speech Representations Using a Simple Linear Equation",
+      "year": 2025,
+      "venue": "Findings of ACL 2025",
+      "url": "../papers/arxiv_2505_19273/",
+      "tags": [
+        "speech-representation",
+        "speaker-disentanglement",
+        "self-supervised-speech",
+        "WavLM",
+        "voice-conversion",
+        "speaker-leakage",
+        "content-preservation",
+        "project-generative-speech-representation-evaluation",
+        "project-tts-data-pipeline"
+      ]
+    },
+    {
       "id": "arxiv_2506_00338",
       "title": "OWSM v4: Improving Open Whisper-Style Speech Models via Data Scaling and Cleaning",
       "year": 2025,
