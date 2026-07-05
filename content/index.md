@@ -31,13 +31,16 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="agentic-workflow">agentic workflow</button>
     <button type="button" data-paper-tag="ai-infrastructure">ai infrastructure</button>
     <button type="button" data-paper-tag="attribution">attribution</button>
+    <button type="button" data-paper-tag="audio-benchmark">audio benchmark</button>
     <button type="button" data-paper-tag="audio-codec">audio codec</button>
     <button type="button" data-paper-tag="audio-data">audio data</button>
     <button type="button" data-paper-tag="audio-editing">audio editing</button>
     <button type="button" data-paper-tag="audio-evaluation">audio evaluation</button>
     <button type="button" data-paper-tag="audio-foundation-model">audio foundation model</button>
     <button type="button" data-paper-tag="audio-generation">audio generation</button>
+    <button type="button" data-paper-tag="audio-judge">audio judge</button>
     <button type="button" data-paper-tag="audio-language">audio language</button>
+    <button type="button" data-paper-tag="audio-source-separation">audio source separation</button>
     <button type="button" data-paper-tag="autoencoder">autoencoder</button>
     <button type="button" data-paper-tag="autoregressive-generation">autoregressive generation</button>
     <button type="button" data-paper-tag="benchmark">benchmark</button>
@@ -113,6 +116,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="multi-word-expression">multi word expression</button>
     <button type="button" data-paper-tag="multilingual-asr">multilingual asr</button>
     <button type="button" data-paper-tag="multilingual-speech">multilingual speech</button>
+    <button type="button" data-paper-tag="multimodal-audio">multimodal audio</button>
     <button type="button" data-paper-tag="multimodal-data">multimodal data</button>
     <button type="button" data-paper-tag="multimodal-llm">multimodal llm</button>
     <button type="button" data-paper-tag="multimodal-reasoning">multimodal reasoning</button>
@@ -126,6 +130,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="preference-distillation">preference distillation</button>
     <button type="button" data-paper-tag="preference-optimization">preference optimization</button>
     <button type="button" data-paper-tag="project-generative-speech-representation-evaluation">project: generative speech representation evaluation</button>
+    <button type="button" data-paper-tag="promptable-audio-separation">promptable audio separation</button>
     <button type="button" data-paper-tag="proxy-metrics">proxy metrics</button>
     <button type="button" data-paper-tag="real-time-generation">real time generation</button>
     <button type="button" data-paper-tag="reasoning">reasoning</button>
@@ -214,6 +219,11 @@ title: Paper Knowledge
   <div class="paper-date">2026-07-05</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2601_21996/">Mechanistic Data Attribution: Tracing the Training Origins of Interpretable LLM Units</a> <span class="paper-meta">(2026, ICML 2026 Oral / arXiv)</span></div>
   <div class="paper-tags"><a class="tag-link internal" href="./tags/mechanistic-interpretability/">#mechanistic-interpretability</a> <a class="tag-link internal" href="./tags/data-attribution/">#data-attribution</a> <a class="tag-link internal" href="./tags/influence-functions/">#influence-functions</a> <a class="tag-link internal" href="./tags/induction-heads/">#induction-heads</a> <a class="tag-link internal" href="./tags/in-context-learning/">#in-context-learning</a> <a class="tag-link internal" href="./tags/training-data-curation/">#training-data-curation</a> <a class="tag-link internal" href="./tags/mechanistic-data-augmentation/">#mechanistic-data-augmentation</a> <a class="tag-link internal" href="./tags/project-audio-model-evaluation/">#project-audio-model-evaluation</a></div>
+</div>
+<div class="paper-row" data-tags="audio-source-separation promptable-audio-separation flow-matching audio-benchmark audio-judge multimodal-audio project-audio-model-evaluation project-tts-data-pipeline project-full-duplex-data" data-search="SAM Audio: Segment Anything in Audio arxiv_2512_18099 2026-07-05 2025 arXiv preprint arxiv:2512.18099 audio-source-separation promptable-audio-separation flow-matching audio-benchmark audio-judge multimodal-audio project-audio-model-evaluation project-tts-data-pipeline project-full-duplex-data">
+  <div class="paper-date">2026-07-05</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2512_18099/">SAM Audio: Segment Anything in Audio</a> <span class="paper-meta">(2025, arXiv preprint)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/audio-source-separation/">#audio-source-separation</a> <a class="tag-link internal" href="./tags/promptable-audio-separation/">#promptable-audio-separation</a> <a class="tag-link internal" href="./tags/flow-matching/">#flow-matching</a> <a class="tag-link internal" href="./tags/audio-benchmark/">#audio-benchmark</a> <a class="tag-link internal" href="./tags/audio-judge/">#audio-judge</a> <a class="tag-link internal" href="./tags/multimodal-audio/">#multimodal-audio</a> <a class="tag-link internal" href="./tags/project-audio-model-evaluation/">#project-audio-model-evaluation</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a> <a class="tag-link internal" href="./tags/project-full-duplex-data/">#project-full-duplex-data</a></div>
 </div>
 <div class="paper-row" data-tags="vision-language-models data-curation benchmark multimodal-data data-mixing filtering scaling evaluation-suite decontamination project-tts-data-pipeline project-audio-model-evaluation" data-search="DataComp-VLM: Improved Open Datasets for Vision-Language Models arxiv_2606_28551 2026-07-01 2026 NeurIPS 2026 / arXiv arxiv:2606.28551 vision-language-models data-curation benchmark multimodal-data data-mixing filtering scaling evaluation-suite decontamination project-tts-data-pipeline project-audio-model-evaluation">
   <div class="paper-date">2026-07-01</div>

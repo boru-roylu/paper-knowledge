@@ -65,5 +65,14 @@
   "bibtex_key": "suzuki2026elsaacousticeventlevelsemantic",
   "fetch_source": "arxiv-tex",
   "summary_model": "Codex GPT-5",
-  "citations": []
+  "citations": [
+    {
+      "paper_key": "arxiv_2512_18099",
+      "title": "SAM Audio: Segment Anything in Audio",
+      "score": 1,
+      "matched_title": "SAM Audio: Segment Anything in Audio",
+      "matched_first_author_last": "shi",
+      "source_file": "source/mybib.bib"
+    }
+  ]
 }

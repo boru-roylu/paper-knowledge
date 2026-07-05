@@ -1,0 +1,88 @@
+{
+  "paper_key": "arxiv_2512_18099",
+  "canonical_id": "arxiv:2512.18099",
+  "arxiv_id": "2512.18099",
+  "version": "latest",
+  "title": "SAM Audio: Segment Anything in Audio",
+  "authors": [
+    "Bowen Shi",
+    "Andros Tjandra",
+    "John Hoffman",
+    "Helin Wang",
+    "Yi-Chiao Wu",
+    "Luya Gao",
+    "Julius Richter",
+    "Matt Le",
+    "Apoorv Vyas",
+    "Sanyuan Chen",
+    "Christoph Feichtenhofer",
+    "Piotr Dollár",
+    "Wei-Ning Hsu",
+    "Ann Lee"
+  ],
+  "venue": "arXiv preprint",
+  "year": 2025,
+  "abstract": "General audio source separation is a key capability for multimodal AI systems that can perceive and reason about sound. Despite substantial progress in recent years, existing separation models are either domain-specific, designed for fixed categories such as speech or music, or limited in controllability, supporting only a single prompting modality such as text. In this work, we present SAM Audio, a foundation model for general audio separation that unifies text, visual, and temporal span prompting within a single framework. Built on a diffusion transformer architecture, SAM Audio is trained with flow matching on large-scale audio data spanning speech, music, and general sounds, and can flexibly separate target sources described by language, visual masks, or temporal spans. The model achieves state-of-the-art performance across a diverse suite of benchmarks, including general sound, speech, music, and musical instrument separation in both in-the-wild and professionally produced audios, substantially outperforming prior general-purpose and specialized systems. Furthermore, we introduce a new real-world separation benchmark with human-labeled multimodal prompts and a reference-free evaluation model that correlates strongly with human judgment.",
+  "primaryClass": "eess.AS",
+  "categories": [
+    "eess.AS",
+    "cs.CV"
+  ],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2512.18099",
+    "pdf": "https://arxiv.org/pdf/2512.18099",
+    "source": "https://arxiv.org/src/2512.18099",
+    "demo": "https://aidemos.meta.com/segment-anything/editor/segment-audio",
+    "code": "https://github.com/facebookresearch/sam-audio",
+    "website": "https://ai.meta.com/samaudio/"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2512.18099-src.tar.gz",
+    "entrypoint": "source/paper.tex"
+  },
+  "tags": [
+    "audio-source-separation",
+    "promptable-audio-separation",
+    "flow-matching",
+    "audio-benchmark",
+    "audio-judge",
+    "multimodal-audio",
+    "project-audio-model-evaluation",
+    "project-tts-data-pipeline",
+    "project-full-duplex-data"
+  ],
+  "concepts": [
+    "SAM Audio",
+    "SAMAUDIOBENCH",
+    "SAM Audio Judge",
+    "promptable audio separation",
+    "text prompt",
+    "visual prompt",
+    "temporal span prompt",
+    "target residual joint modeling",
+    "DAC-VAE",
+    "flow matching",
+    "DiT",
+    "PE-A-Frame",
+    "PLM-Audio",
+    "pseudo-labeled stems",
+    "reference-free evaluation",
+    "recall precision faithfulness",
+    "overlap difficulty",
+    "multi-diffusion longform separation"
+  ],
+  "status": "read",
+  "rating": 9,
+  "created": "2026-07-05",
+  "doi": "10.48550/arXiv.2512.18099",
+  "publication_status": "No formal conference or journal reference found as of 2026-07-05",
+  "bibtex_key": "shi2025samaudiosegmentanythinginaudio",
+  "fetch_source": "arxiv-tex",
+  "summary_model": "Codex GPT-5",
+  "openreview": {
+    "status": "unavailable",
+    "note": "Potential OpenReview forum lookup returned API 403; no public review/rebuttal context was available during ingest."
+  },
+  "citations": []
+}

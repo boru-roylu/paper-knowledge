@@ -397,6 +397,24 @@
       ]
     },
     {
+      "id": "arxiv_2512_18099",
+      "title": "SAM Audio: Segment Anything in Audio",
+      "year": 2025,
+      "venue": "arXiv preprint",
+      "url": "../papers/arxiv_2512_18099/",
+      "tags": [
+        "audio-source-separation",
+        "promptable-audio-separation",
+        "flow-matching",
+        "audio-benchmark",
+        "audio-judge",
+        "multimodal-audio",
+        "project-audio-model-evaluation",
+        "project-tts-data-pipeline",
+        "project-full-duplex-data"
+      ]
+    },
+    {
       "id": "arxiv_2512_18572",
       "title": "MeanFlow-TSE: One-Step Generative Target Speaker Extraction with Mean Flow",
       "year": 2025,
@@ -1239,6 +1257,11 @@
       "score": 0.97
     },
     {
+      "source": "arxiv_2603_25750",
+      "target": "arxiv_2512_18099",
+      "score": 0.97
+    },
+    {
       "source": "arxiv_2603_29339",
       "target": "arxiv_2406_11427",
       "score": 1
@@ -1341,6 +1364,11 @@
     {
       "source": "arxiv_2606_14700",
       "target": "arxiv_2510_11690",
+      "score": 1
+    },
+    {
+      "source": "arxiv_2606_17404",
+      "target": "arxiv_2512_18099",
       "score": 1
     },
     {
