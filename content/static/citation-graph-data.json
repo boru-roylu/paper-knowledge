@@ -162,6 +162,23 @@
       ]
     },
     {
+      "id": "arxiv_2501_14350",
+      "title": "FireRedASR: Open-Source Industrial-Grade Mandarin Speech Recognition Models from Encoder-Decoder to LLM Integration",
+      "year": 2025,
+      "venue": "arXiv preprint",
+      "url": "../papers/arxiv_2501_14350/",
+      "tags": [
+        "asr",
+        "speech-llm",
+        "mandarin",
+        "speech-recognition",
+        "open-source-model",
+        "speech-data",
+        "project-tts-data-pipeline",
+        "project-full-duplex-data"
+      ]
+    },
+    {
       "id": "arxiv_2502_14145",
       "title": "LLM-Enhanced Dialogue Management for Full-Duplex Spoken Dialogue Systems",
       "year": 2025,
@@ -1189,6 +1206,11 @@
       "score": 1
     },
     {
+      "source": "arxiv_2501_14350",
+      "target": "arxiv_2303_01037",
+      "score": 1
+    },
+    {
       "source": "arxiv_2504_07053",
       "target": "arxiv_2504_08528",
       "score": 1
@@ -1221,6 +1243,11 @@
     {
       "source": "arxiv_2506_00338",
       "target": "arxiv_2303_01037",
+      "score": 1
+    },
+    {
+      "source": "arxiv_2509_03959",
+      "target": "arxiv_2501_14350",
       "score": 1
     },
     {

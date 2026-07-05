@@ -1,0 +1,83 @@
+{
+  "paper_key": "arxiv_2501_14350",
+  "canonical_id": "arxiv:2501.14350",
+  "arxiv_id": "2501.14350",
+  "version": "latest",
+  "title": "FireRedASR: Open-Source Industrial-Grade Mandarin Speech Recognition Models from Encoder-Decoder to LLM Integration",
+  "authors": [
+    "Kai-Tuo Xu",
+    "Feng-Long Xie",
+    "Xu Tang",
+    "Yao Hu"
+  ],
+  "venue": "arXiv preprint",
+  "year": 2025,
+  "abstract": "We present FireRedASR, a family of large-scale automatic speech recognition (ASR) models for Mandarin, designed to meet diverse requirements in superior performance and optimal efficiency across various applications. FireRedASR comprises two variants: FireRedASR-LLM: Designed to achieve state-of-the-art (SOTA) performance and to enable seamless end-to-end speech interaction. It adopts an Encoder-Adapter-LLM framework leveraging large language model (LLM) capabilities. On public Mandarin benchmarks, FireRedASR-LLM (8.3B parameters) achieves an average Character Error Rate (CER) of 3.05%, surpassing the latest SOTA of 3.33% with an 8.4% relative CER reduction (CERR). It demonstrates superior generalization capability over industrial-grade baselines, achieving 24%-40% CERR in multi-source Mandarin ASR scenarios such as video, live, and intelligent assistant. FireRedASR-AED: Designed to balance high performance and computational efficiency and to serve as an effective speech representation module in LLM-based speech models. It utilizes an Attention-based Encoder-Decoder (AED) architecture. On public Mandarin benchmarks, FireRedASR-AED (1.1B parameters) achieves an average CER of 3.18%, slightly worse than FireRedASR-LLM but still outperforming the latest SOTA model with over 12B parameters. It offers a more compact size, making it suitable for resource-constrained applications. Moreover, both models exhibit competitive results on Chinese dialects and English speech benchmarks and excel in singing lyrics recognition. To advance research in speech processing, we release our models and inference code at https://github.com/FireRedTeam/FireRedASR.",
+  "primaryClass": "eess.AS",
+  "categories": [
+    "eess.AS",
+    "cs.SD"
+  ],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2501.14350",
+    "pdf": "https://arxiv.org/pdf/2501.14350",
+    "source": "https://arxiv.org/src/2501.14350",
+    "code": "https://github.com/FireRedTeam/FireRedASR",
+    "repo": "https://github.com/FireRedTeam/FireRedASR"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2501.14350-src.tar.gz",
+    "entrypoint": "source/main.tex"
+  },
+  "tags": [
+    "asr",
+    "speech-llm",
+    "mandarin",
+    "speech-recognition",
+    "open-source-model",
+    "speech-data",
+    "project-tts-data-pipeline",
+    "project-full-duplex-data"
+  ],
+  "concepts": [
+    "FireRedASR",
+    "FireRedASR-LLM",
+    "FireRedASR-AED",
+    "Encoder-Adapter-LLM",
+    "Qwen2-7B-Instruct",
+    "LoRA",
+    "Conformer encoder",
+    "Transformer decoder",
+    "attention-based encoder-decoder",
+    "progressive regularization training",
+    "Mandarin ASR",
+    "singing lyrics recognition",
+    "CER",
+    "CERR",
+    "speech transcript QA",
+    "ASR-based TTS data cleaning"
+  ],
+  "status": "read",
+  "rating": 8,
+  "created": "2026-07-05",
+  "doi": "10.48550/arXiv.2501.14350",
+  "publication_status": "No formal conference or journal reference found as of 2026-07-05",
+  "bibtex_key": "xu2025fireredasropensourceindustrial",
+  "fetch_source": "arxiv-tex",
+  "summary_model": "Codex GPT-5",
+  "openreview": {
+    "status": "not_found",
+    "note": "No public OpenReview review/rebuttal context found during ingest."
+  },
+  "citations": [
+    {
+      "paper_key": "arxiv_2303_01037",
+      "title": "Google USM: Scaling Automatic Speech Recognition Beyond 100 Languages",
+      "score": 1,
+      "matched_title": "Google usm: Scaling automatic speech recognition beyond 100 languages.",
+      "matched_first_author_last": "zhang",
+      "source_file": "source/main.bbl"
+    }
+  ]
+}

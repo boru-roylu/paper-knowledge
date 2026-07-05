@@ -108,6 +108,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="long-context">long context</button>
     <button type="button" data-paper-tag="low-energy-transport">low energy transport</button>
     <button type="button" data-paper-tag="mamba">mamba</button>
+    <button type="button" data-paper-tag="mandarin">mandarin</button>
     <button type="button" data-paper-tag="meanflow">meanflow</button>
     <button type="button" data-paper-tag="MeanFlow">MeanFlow</button>
     <button type="button" data-paper-tag="mechanistic-data-augmentation">mechanistic data augmentation</button>
@@ -124,6 +125,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="noisy-representation-conditioning">noisy representation conditioning</button>
     <button type="button" data-paper-tag="one-step-generation">one step generation</button>
     <button type="button" data-paper-tag="online-clustering">online clustering</button>
+    <button type="button" data-paper-tag="open-source-model">open source model</button>
     <button type="button" data-paper-tag="optimal-transport">optimal transport</button>
     <button type="button" data-paper-tag="orthogonal-transform">orthogonal transform</button>
     <button type="button" data-paper-tag="paralinguistic-modeling">paralinguistic modeling</button>
@@ -168,6 +170,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="speech-enhancement">speech enhancement</button>
     <button type="button" data-paper-tag="speech-prompting">speech prompting</button>
     <button type="button" data-paper-tag="speech-reasoning">speech reasoning</button>
+    <button type="button" data-paper-tag="speech-recognition">speech recognition</button>
     <button type="button" data-paper-tag="speech-representation">speech representation</button>
     <button type="button" data-paper-tag="speech-restoration">speech restoration</button>
     <button type="button" data-paper-tag="speech-separation">speech separation</button>
@@ -221,6 +224,11 @@ title: Paper Knowledge
   <div class="paper-date">2026-07-05</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2601_21996/">Mechanistic Data Attribution: Tracing the Training Origins of Interpretable LLM Units</a> <span class="paper-meta">(2026, ICML 2026 Oral / arXiv)</span></div>
   <div class="paper-tags"><a class="tag-link internal" href="./tags/mechanistic-interpretability/">#mechanistic-interpretability</a> <a class="tag-link internal" href="./tags/data-attribution/">#data-attribution</a> <a class="tag-link internal" href="./tags/influence-functions/">#influence-functions</a> <a class="tag-link internal" href="./tags/induction-heads/">#induction-heads</a> <a class="tag-link internal" href="./tags/in-context-learning/">#in-context-learning</a> <a class="tag-link internal" href="./tags/training-data-curation/">#training-data-curation</a> <a class="tag-link internal" href="./tags/mechanistic-data-augmentation/">#mechanistic-data-augmentation</a> <a class="tag-link internal" href="./tags/project-audio-model-evaluation/">#project-audio-model-evaluation</a></div>
+</div>
+<div class="paper-row" data-tags="asr speech-llm mandarin speech-recognition open-source-model speech-data project-tts-data-pipeline project-full-duplex-data" data-search="FireRedASR: Open-Source Industrial-Grade Mandarin Speech Recognition Models from Encoder-Decoder to LLM Integration arxiv_2501_14350 2026-07-05 2025 arXiv preprint arxiv:2501.14350 asr speech-llm mandarin speech-recognition open-source-model speech-data project-tts-data-pipeline project-full-duplex-data">
+  <div class="paper-date">2026-07-05</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2501_14350/">FireRedASR: Open-Source Industrial-Grade Mandarin Speech Recognition Models from Encoder-Decoder to LLM Integration</a> <span class="paper-meta">(2025, arXiv preprint)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/asr/">#asr</a> <a class="tag-link internal" href="./tags/speech-llm/">#speech-llm</a> <a class="tag-link internal" href="./tags/mandarin/">#mandarin</a> <a class="tag-link internal" href="./tags/speech-recognition/">#speech-recognition</a> <a class="tag-link internal" href="./tags/open-source-model/">#open-source-model</a> <a class="tag-link internal" href="./tags/speech-data/">#speech-data</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a> <a class="tag-link internal" href="./tags/project-full-duplex-data/">#project-full-duplex-data</a></div>
 </div>
 <div class="paper-row" data-tags="audio-source-separation promptable-audio-separation flow-matching audio-benchmark audio-judge multimodal-audio project-audio-model-evaluation project-tts-data-pipeline project-full-duplex-data" data-search="SAM Audio: Segment Anything in Audio arxiv_2512_18099 2026-07-05 2025 arXiv preprint arxiv:2512.18099 audio-source-separation promptable-audio-separation flow-matching audio-benchmark audio-judge multimodal-audio project-audio-model-evaluation project-tts-data-pipeline project-full-duplex-data">
   <div class="paper-date">2026-07-05</div>

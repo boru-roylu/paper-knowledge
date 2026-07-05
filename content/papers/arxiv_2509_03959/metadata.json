@@ -88,5 +88,14 @@
     "status": "unavailable",
     "note": "Potential OpenReview forum lookup returned API 403; no public review/rebuttal context was available during ingest."
   },
-  "citations": []
+  "citations": [
+    {
+      "paper_key": "arxiv_2501_14350",
+      "title": "FireRedASR: Open-Source Industrial-Grade Mandarin Speech Recognition Models from Encoder-Decoder to LLM Integration",
+      "score": 1,
+      "matched_title": "Fireredasr: Open-source industrial-grade mandarin speech recognition models from encoder-decoder to LLM integration.",
+      "matched_first_author_last": "xu",
+      "source_file": "source/neurips_2024.bbl"
+    }
+  ]
 }
