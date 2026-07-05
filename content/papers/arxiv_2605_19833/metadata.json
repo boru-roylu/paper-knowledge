@@ -67,5 +67,14 @@
   "publication_status": "No formal conference or journal reference found as of 2026-06-01",
   "bibtex_key": "xie2026megaasrtowardsinthewild2speech",
   "summary_model": "gpt-5.4-mini",
-  "citations": []
+  "citations": [
+    {
+      "paper_key": "arxiv_2603_10420",
+      "title": "FireRedASR2S: A State-of-the-Art Industrial-Grade All-in-One Automatic Speech Recognition System",
+      "score": 1,
+      "matched_title": "FireRedASR2S: A State-of-the-Art Industrial-Grade All-in-One Automatic Speech Recognition System",
+      "matched_first_author_last": "xu",
+      "source_file": "arxiv-src:2605.19833-src.tar.gz/main.bib"
+    }
+  ]
 }

@@ -97,9 +97,11 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="image-editing">image editing</button>
     <button type="button" data-paper-tag="in-context-learning">in context learning</button>
     <button type="button" data-paper-tag="induction-heads">induction heads</button>
+    <button type="button" data-paper-tag="industrial-asr">industrial asr</button>
     <button type="button" data-paper-tag="influence-functions">influence functions</button>
     <button type="button" data-paper-tag="information-gathering">information gathering</button>
     <button type="button" data-paper-tag="interpretability">interpretability</button>
+    <button type="button" data-paper-tag="language-identification">language identification</button>
     <button type="button" data-paper-tag="language-modeling">language modeling</button>
     <button type="button" data-paper-tag="latent-diffusion">latent diffusion</button>
     <button type="button" data-paper-tag="latent-space">latent space</button>
@@ -135,6 +137,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="project-generative-speech-representation-evaluation">project: generative speech representation evaluation</button>
     <button type="button" data-paper-tag="promptable-audio-separation">promptable audio separation</button>
     <button type="button" data-paper-tag="proxy-metrics">proxy metrics</button>
+    <button type="button" data-paper-tag="punctuation">punctuation</button>
     <button type="button" data-paper-tag="real-time-generation">real time generation</button>
     <button type="button" data-paper-tag="reasoning">reasoning</button>
     <button type="button" data-paper-tag="reconstruction-generation-tradeoff">reconstruction generation tradeoff</button>
@@ -220,6 +223,11 @@ title: Paper Knowledge
 </div>
 
 <div class="paper-list">
+<div class="paper-row" data-tags="asr vad language-identification punctuation speech-data industrial-asr project-tts-data-pipeline project-full-duplex-data project-audio-model-evaluation" data-search="FireRedASR2S: A State-of-the-Art Industrial-Grade All-in-One Automatic Speech Recognition System arxiv_2603_10420 2026-07-05 2026 arXiv preprint arxiv:2603.10420 asr vad language-identification punctuation speech-data industrial-asr project-tts-data-pipeline project-full-duplex-data project-audio-model-evaluation">
+  <div class="paper-date">2026-07-05</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2603_10420/">FireRedASR2S: A State-of-the-Art Industrial-Grade All-in-One Automatic Speech Recognition System</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/asr/">#asr</a> <a class="tag-link internal" href="./tags/vad/">#vad</a> <a class="tag-link internal" href="./tags/language-identification/">#language-identification</a> <a class="tag-link internal" href="./tags/punctuation/">#punctuation</a> <a class="tag-link internal" href="./tags/speech-data/">#speech-data</a> <a class="tag-link internal" href="./tags/industrial-asr/">#industrial-asr</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a> <a class="tag-link internal" href="./tags/project-full-duplex-data/">#project-full-duplex-data</a> <a class="tag-link internal" href="./tags/project-audio-model-evaluation/">#project-audio-model-evaluation</a></div>
+</div>
 <div class="paper-row" data-tags="mechanistic-interpretability data-attribution influence-functions induction-heads in-context-learning training-data-curation mechanistic-data-augmentation project-audio-model-evaluation" data-search="Mechanistic Data Attribution: Tracing the Training Origins of Interpretable LLM Units arxiv_2601_21996 2026-07-05 2026 ICML 2026 Oral / arXiv arxiv:2601.21996 mechanistic-interpretability data-attribution influence-functions induction-heads in-context-learning training-data-curation mechanistic-data-augmentation project-audio-model-evaluation">
   <div class="paper-date">2026-07-05</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2601_21996/">Mechanistic Data Attribution: Tracing the Training Origins of Interpretable LLM Units</a> <span class="paper-meta">(2026, ICML 2026 Oral / arXiv)</span></div>

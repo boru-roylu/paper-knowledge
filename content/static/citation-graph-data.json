@@ -600,6 +600,24 @@
       ]
     },
     {
+      "id": "arxiv_2603_10420",
+      "title": "FireRedASR2S: A State-of-the-Art Industrial-Grade All-in-One Automatic Speech Recognition System",
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "url": "../papers/arxiv_2603_10420/",
+      "tags": [
+        "asr",
+        "vad",
+        "language-identification",
+        "punctuation",
+        "speech-data",
+        "industrial-asr",
+        "project-tts-data-pipeline",
+        "project-full-duplex-data",
+        "project-audio-model-evaluation"
+      ]
+    },
+    {
       "id": "arxiv_2603_14877",
       "title": "SoulX-Duplug: Plug-and-Play Streaming State Prediction Module for Realtime Full-Duplex Speech Conversation",
       "year": 2026,
@@ -1286,6 +1304,16 @@
       "score": 1
     },
     {
+      "source": "arxiv_2603_10420",
+      "target": "arxiv_2501_14350",
+      "score": 1
+    },
+    {
+      "source": "arxiv_2603_10420",
+      "target": "arxiv_2509_03959",
+      "score": 1
+    },
+    {
       "source": "arxiv_2603_25750",
       "target": "arxiv_2602_06053",
       "score": 1
@@ -1363,6 +1391,11 @@
     {
       "source": "arxiv_2605_18324",
       "target": "arxiv_2604_28190",
+      "score": 1
+    },
+    {
+      "source": "arxiv_2605_19833",
+      "target": "arxiv_2603_10420",
       "score": 1
     },
     {

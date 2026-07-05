@@ -69,6 +69,7 @@ raw audio + transcript
 - [SAM Audio](../papers/arxiv_2512_18099/)：general promptable audio separation foundation model。對 TTS data cleaning 可作 de-overlap / speech extraction / music removal / sound-effect removal upstream；尤其 text+span prompt 可把 target event 限在時間段，SAJ 可評估 recall/precision/faithfulness。限制是它是 large generative model，latency/cost 高，visual prompt 不如 text 穩。
 - [FunASR](../tools/modelscope-funasr/)：production-oriented ASR / VAD / punctuation / speaker diarization / emotion-event tagging toolkit。適合作為 TTS data cleaning 的 first-pass transcription 和 segmentation baseline，但在 overlap speech、short backchannels、speaker swaps 上仍需要和 separation / OSD / human spot-check 搭配。
 - [FireRedASR](../papers/arxiv_2501_14350/)：open-source industrial-grade Mandarin ASR。對 Chinese / code-switch TTS data cleaning 可作 transcript QA baseline；它也提供一個重要 data lesson：作者聲稱 1K hours high-quality human-labeled data 比 10K hours weak labels 更有效，支持我們把 transcript provenance / confidence / human spot-check 當核心欄位。
+- [FireRedASR2S](../papers/arxiv_2603_10420/)：all-in-one ASR preprocessing system，直接對應 raw audio -> VAD -> LID -> ASR -> Punc -> structured transcript。對 TTS pipeline 特別有用的是 mVAD 的 speech/singing/music labels、ASR confidence、token/word timestamps、language/dialect tags 和 punctuation restoration；可作 Chinese / multilingual data cleaning 的 strong reference schema。
 
 ## Data recipe / scaling references
 
