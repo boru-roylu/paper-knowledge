@@ -1,0 +1,92 @@
+{
+  "paper_key": "arxiv_2509_03959",
+  "canonical_id": "arxiv:2509.03959",
+  "arxiv_id": "2509.03959",
+  "version": "latest",
+  "title": "WenetSpeech-Yue: A Large-scale Cantonese Speech Corpus with Multi-dimensional Annotation",
+  "authors": [
+    "Longhao Li",
+    "Zhao Guo",
+    "Hongjie Chen",
+    "Yuhang Dai",
+    "Ziyu Zhang",
+    "Hongfei Xue",
+    "Tianlun Zuo",
+    "Chengyou Wang",
+    "Shuiyuan Wang",
+    "Jie Li",
+    "Jian Kang",
+    "Xin Xu",
+    "Hui Bu",
+    "Binbin Zhang",
+    "Ruibin Yuan",
+    "Ziya Zhou",
+    "Wei Xue",
+    "Lei Xie"
+  ],
+  "venue": "arXiv preprint",
+  "year": 2025,
+  "abstract": "The development of speech understanding and generation has been significantly accelerated by the availability of large-scale, high-quality speech datasets. Among these, ASR and TTS are regarded as the most established and fundamental tasks. However, for Cantonese (Yue Chinese), spoken by approximately 84.9 million native speakers worldwide, limited annotated resources have hindered progress and resulted in suboptimal ASR and TTS performance. To address this challenge, we propose WenetSpeech-Pipe, an integrated pipeline for building large-scale speech corpus with multi-dimensional annotation tailored for speech understanding and generation. It comprises six modules: Audio Collection, Speaker Attributes Annotation, Speech Quality Annotation, Automatic Speech Recognition, Text Postprocessing and Recognizer Output Voting, enabling rich and high-quality annotations. Based on this pipeline, we release WenetSpeech-Yue, the first large-scale Cantonese speech corpus with multi-dimensional annotation for ASR and TTS, covering 21,800 hours across 10 domains with annotations including ASR transcription, text confidence, speaker identity, age, gender, speech quality scores, among other annotations. We also release WSYue-eval, a comprehensive Cantonese benchmark with two components: WSYue-ASR-eval, a manually annotated set for evaluating ASR on short and long utterances, code-switching, and diverse acoustic conditions, and WSYue-TTS-eval, with base and coverage subsets for standard and generalization testing. Experimental results show that models trained on WenetSpeech-Yue achieve competitive results against state-of-the-art (SOTA) Cantonese ASR and TTS systems, including commercial and LLM-based models, highlighting the value of our dataset and pipeline.",
+  "primaryClass": "cs.SD",
+  "categories": [
+    "cs.SD"
+  ],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2509.03959",
+    "pdf": "https://arxiv.org/pdf/2509.03959",
+    "source": "https://arxiv.org/src/2509.03959",
+    "code": "https://github.com/ASLP-lab/WenetSpeech-Yue",
+    "project": "https://github.com/ASLP-lab/WenetSpeech-Yue"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2509.03959-src.tar.gz",
+    "entrypoint": "source/neurips_2024.tex"
+  },
+  "tags": [
+    "speech-data",
+    "cantonese",
+    "asr",
+    "tts",
+    "data-cleaning",
+    "speech-corpus",
+    "project-tts-data-pipeline",
+    "project-full-duplex-data"
+  ],
+  "concepts": [
+    "WenetSpeech-Yue",
+    "WenetSpeech-Pipe",
+    "Cantonese speech corpus",
+    "multi-dimensional annotation",
+    "ROVER",
+    "ASR ensemble",
+    "text confidence",
+    "jyutping confidence",
+    "Qwen3-4B LLM corrector",
+    "pyannote diarization",
+    "Vox-Profile",
+    "DNSMOS",
+    "SNR",
+    "Brouhaha",
+    "forced alignment",
+    "WSYue-ASR-eval",
+    "WSYue-TTS-eval",
+    "Base/Coverage split",
+    "MER",
+    "SIM",
+    "UTMOSv2"
+  ],
+  "status": "read",
+  "rating": 8,
+  "created": "2026-07-05",
+  "doi": "10.48550/arXiv.2509.03959",
+  "publication_status": "No formal conference or journal reference found as of 2026-07-05",
+  "bibtex_key": "li2025wenetspeechyuealargescalecanto",
+  "fetch_source": "arxiv-tex",
+  "summary_model": "Codex GPT-5",
+  "openreview": {
+    "status": "unavailable",
+    "note": "Potential OpenReview forum lookup returned API 403; no public review/rebuttal context was available during ingest."
+  },
+  "citations": []
+}

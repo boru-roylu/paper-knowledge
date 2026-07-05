@@ -298,6 +298,23 @@
       ]
     },
     {
+      "id": "arxiv_2509_03959",
+      "title": "WenetSpeech-Yue: A Large-scale Cantonese Speech Corpus with Multi-dimensional Annotation",
+      "year": 2025,
+      "venue": "arXiv preprint",
+      "url": "../papers/arxiv_2509_03959/",
+      "tags": [
+        "speech-data",
+        "cantonese",
+        "asr",
+        "tts",
+        "data-cleaning",
+        "speech-corpus",
+        "project-tts-data-pipeline",
+        "project-full-duplex-data"
+      ]
+    },
+    {
       "id": "arxiv_2509_24650",
       "title": "VoxCPM: Tokenizer-Free TTS for Context-Aware Speech Generation and True-to-Life Voice Cloning",
       "year": 2025,

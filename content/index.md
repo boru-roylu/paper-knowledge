@@ -45,6 +45,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="autoregressive-generation">autoregressive generation</button>
     <button type="button" data-paper-tag="benchmark">benchmark</button>
     <button type="button" data-paper-tag="bpe">bpe</button>
+    <button type="button" data-paper-tag="cantonese">cantonese</button>
     <button type="button" data-paper-tag="chain-of-thought">chain of thought</button>
     <button type="button" data-paper-tag="chatbot-evaluation">chatbot evaluation</button>
     <button type="button" data-paper-tag="clinical-ai">clinical ai</button>
@@ -162,6 +163,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="speaker-leakage">speaker leakage</button>
     <button type="button" data-paper-tag="speech-agent">speech agent</button>
     <button type="button" data-paper-tag="speech-codec">speech codec</button>
+    <button type="button" data-paper-tag="speech-corpus">speech corpus</button>
     <button type="button" data-paper-tag="speech-data-cleaning">speech data cleaning</button>
     <button type="button" data-paper-tag="speech-enhancement">speech enhancement</button>
     <button type="button" data-paper-tag="speech-prompting">speech prompting</button>
@@ -224,6 +226,11 @@ title: Paper Knowledge
   <div class="paper-date">2026-07-05</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2512_18099/">SAM Audio: Segment Anything in Audio</a> <span class="paper-meta">(2025, arXiv preprint)</span></div>
   <div class="paper-tags"><a class="tag-link internal" href="./tags/audio-source-separation/">#audio-source-separation</a> <a class="tag-link internal" href="./tags/promptable-audio-separation/">#promptable-audio-separation</a> <a class="tag-link internal" href="./tags/flow-matching/">#flow-matching</a> <a class="tag-link internal" href="./tags/audio-benchmark/">#audio-benchmark</a> <a class="tag-link internal" href="./tags/audio-judge/">#audio-judge</a> <a class="tag-link internal" href="./tags/multimodal-audio/">#multimodal-audio</a> <a class="tag-link internal" href="./tags/project-audio-model-evaluation/">#project-audio-model-evaluation</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a> <a class="tag-link internal" href="./tags/project-full-duplex-data/">#project-full-duplex-data</a></div>
+</div>
+<div class="paper-row" data-tags="speech-data cantonese asr tts data-cleaning speech-corpus project-tts-data-pipeline project-full-duplex-data" data-search="WenetSpeech-Yue: A Large-scale Cantonese Speech Corpus with Multi-dimensional Annotation arxiv_2509_03959 2026-07-05 2025 arXiv preprint arxiv:2509.03959 speech-data cantonese asr tts data-cleaning speech-corpus project-tts-data-pipeline project-full-duplex-data">
+  <div class="paper-date">2026-07-05</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2509_03959/">WenetSpeech-Yue: A Large-scale Cantonese Speech Corpus with Multi-dimensional Annotation</a> <span class="paper-meta">(2025, arXiv preprint)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/speech-data/">#speech-data</a> <a class="tag-link internal" href="./tags/cantonese/">#cantonese</a> <a class="tag-link internal" href="./tags/asr/">#asr</a> <a class="tag-link internal" href="./tags/tts/">#tts</a> <a class="tag-link internal" href="./tags/data-cleaning/">#data-cleaning</a> <a class="tag-link internal" href="./tags/speech-corpus/">#speech-corpus</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a> <a class="tag-link internal" href="./tags/project-full-duplex-data/">#project-full-duplex-data</a></div>
 </div>
 <div class="paper-row" data-tags="vision-language-models data-curation benchmark multimodal-data data-mixing filtering scaling evaluation-suite decontamination project-tts-data-pipeline project-audio-model-evaluation" data-search="DataComp-VLM: Improved Open Datasets for Vision-Language Models arxiv_2606_28551 2026-07-01 2026 NeurIPS 2026 / arXiv arxiv:2606.28551 vision-language-models data-curation benchmark multimodal-data data-mixing filtering scaling evaluation-suite decontamination project-tts-data-pipeline project-audio-model-evaluation">
   <div class="paper-date">2026-07-01</div>
