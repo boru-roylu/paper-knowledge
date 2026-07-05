@@ -53,6 +53,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="continuous-latent">continuous latent</button>
     <button type="button" data-paper-tag="controllable-tts">controllable tts</button>
     <button type="button" data-paper-tag="credit-assignment">credit assignment</button>
+    <button type="button" data-paper-tag="data-attribution">data attribution</button>
     <button type="button" data-paper-tag="data-cleaning">data cleaning</button>
     <button type="button" data-paper-tag="data-curation">data curation</button>
     <button type="button" data-paper-tag="data-mixing">data mixing</button>
@@ -90,6 +91,9 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="grpo">grpo</button>
     <button type="button" data-paper-tag="guidance">guidance</button>
     <button type="button" data-paper-tag="image-editing">image editing</button>
+    <button type="button" data-paper-tag="in-context-learning">in context learning</button>
+    <button type="button" data-paper-tag="induction-heads">induction heads</button>
+    <button type="button" data-paper-tag="influence-functions">influence functions</button>
     <button type="button" data-paper-tag="information-gathering">information gathering</button>
     <button type="button" data-paper-tag="interpretability">interpretability</button>
     <button type="button" data-paper-tag="language-modeling">language modeling</button>
@@ -102,6 +106,8 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="mamba">mamba</button>
     <button type="button" data-paper-tag="meanflow">meanflow</button>
     <button type="button" data-paper-tag="MeanFlow">MeanFlow</button>
+    <button type="button" data-paper-tag="mechanistic-data-augmentation">mechanistic data augmentation</button>
+    <button type="button" data-paper-tag="mechanistic-interpretability">mechanistic interpretability</button>
     <button type="button" data-paper-tag="mel-vae">mel vae</button>
     <button type="button" data-paper-tag="model-editing">model editing</button>
     <button type="button" data-paper-tag="multi-word-expression">multi word expression</button>
@@ -180,6 +186,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="tool">tool</button>
     <button type="button" data-paper-tag="tool-calling">tool calling</button>
     <button type="button" data-paper-tag="tool-use">tool use</button>
+    <button type="button" data-paper-tag="training-data-curation">training data curation</button>
     <button type="button" data-paper-tag="training-efficiency">training efficiency</button>
     <button type="button" data-paper-tag="transformer">transformer</button>
     <button type="button" data-paper-tag="turn-taking">turn taking</button>
@@ -203,6 +210,11 @@ title: Paper Knowledge
 </div>
 
 <div class="paper-list">
+<div class="paper-row" data-tags="mechanistic-interpretability data-attribution influence-functions induction-heads in-context-learning training-data-curation mechanistic-data-augmentation project-audio-model-evaluation" data-search="Mechanistic Data Attribution: Tracing the Training Origins of Interpretable LLM Units arxiv_2601_21996 2026-07-05 2026 ICML 2026 Oral / arXiv arxiv:2601.21996 mechanistic-interpretability data-attribution influence-functions induction-heads in-context-learning training-data-curation mechanistic-data-augmentation project-audio-model-evaluation">
+  <div class="paper-date">2026-07-05</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2601_21996/">Mechanistic Data Attribution: Tracing the Training Origins of Interpretable LLM Units</a> <span class="paper-meta">(2026, ICML 2026 Oral / arXiv)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/mechanistic-interpretability/">#mechanistic-interpretability</a> <a class="tag-link internal" href="./tags/data-attribution/">#data-attribution</a> <a class="tag-link internal" href="./tags/influence-functions/">#influence-functions</a> <a class="tag-link internal" href="./tags/induction-heads/">#induction-heads</a> <a class="tag-link internal" href="./tags/in-context-learning/">#in-context-learning</a> <a class="tag-link internal" href="./tags/training-data-curation/">#training-data-curation</a> <a class="tag-link internal" href="./tags/mechanistic-data-augmentation/">#mechanistic-data-augmentation</a> <a class="tag-link internal" href="./tags/project-audio-model-evaluation/">#project-audio-model-evaluation</a></div>
+</div>
 <div class="paper-row" data-tags="vision-language-models data-curation benchmark multimodal-data data-mixing filtering scaling evaluation-suite decontamination project-tts-data-pipeline project-audio-model-evaluation" data-search="DataComp-VLM: Improved Open Datasets for Vision-Language Models arxiv_2606_28551 2026-07-01 2026 NeurIPS 2026 / arXiv arxiv:2606.28551 vision-language-models data-curation benchmark multimodal-data data-mixing filtering scaling evaluation-suite decontamination project-tts-data-pipeline project-audio-model-evaluation">
   <div class="paper-date">2026-07-01</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2606_28551/">DataComp-VLM: Improved Open Datasets for Vision-Language Models</a> <span class="paper-meta">(2026, NeurIPS 2026 / arXiv)</span></div>

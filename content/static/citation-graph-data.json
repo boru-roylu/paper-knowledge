@@ -447,6 +447,23 @@
       ]
     },
     {
+      "id": "arxiv_2601_21996",
+      "title": "Mechanistic Data Attribution: Tracing the Training Origins of Interpretable LLM Units",
+      "year": 2026,
+      "venue": "ICML 2026 Oral / arXiv",
+      "url": "../papers/arxiv_2601_21996/",
+      "tags": [
+        "mechanistic-interpretability",
+        "data-attribution",
+        "influence-functions",
+        "induction-heads",
+        "in-context-learning",
+        "training-data-curation",
+        "mechanistic-data-augmentation",
+        "project-audio-model-evaluation"
+      ]
+    },
+    {
       "id": "arxiv_2602_01914",
       "title": "Towards Long-Horizon Interpretability: Efficient and Faithful Multi-Token Attribution for Reasoning LLMs",
       "year": 2026,

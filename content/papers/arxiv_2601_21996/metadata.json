@@ -1,0 +1,70 @@
+{
+  "paper_key": "arxiv_2601_21996",
+  "canonical_id": "arxiv:2601.21996",
+  "arxiv_id": "2601.21996",
+  "version": "latest",
+  "title": "Mechanistic Data Attribution: Tracing the Training Origins of Interpretable LLM Units",
+  "authors": [
+    "Jianhui Chen",
+    "Yuzhang Luo",
+    "Liangming Pan"
+  ],
+  "venue": "ICML 2026 Oral / arXiv",
+  "year": 2026,
+  "abstract": "Mechanistic Data Attribution (MDA) traces interpretable LLM units, such as induction heads, previous-token heads, and SAE features, back to influential training samples. It replaces global loss-based training data attribution with unit-specific influence functions computed over target parameter subspaces and approximated with EK-FAC. Counterfactual retraining on Pythia models shows that deleting or augmenting high-influence samples delays or accelerates circuit emergence, repetitive structural data such as LaTeX/XML acts as a catalyst for induction heads, and intervention on induction-head formation causally co-varies with in-context learning.",
+  "primaryClass": "cs.CL",
+  "categories": [
+    "cs.CL",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2601.21996",
+    "pdf": "https://arxiv.org/pdf/2601.21996",
+    "source": "https://arxiv.org/src/2601.21996",
+    "repo": "https://github.com/chenjianhuii/Mechanistic-Data-Attribution",
+    "author_news": "https://liangmingpan.bio/news/"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2601.21996-src.tar.gz",
+    "entrypoint": "source/main.tex"
+  },
+  "tags": [
+    "mechanistic-interpretability",
+    "data-attribution",
+    "influence-functions",
+    "induction-heads",
+    "in-context-learning",
+    "training-data-curation",
+    "mechanistic-data-augmentation",
+    "project-audio-model-evaluation"
+  ],
+  "concepts": [
+    "Mechanistic Data Attribution",
+    "MDA",
+    "influence functions",
+    "EK-FAC",
+    "interpretable units",
+    "induction heads",
+    "previous-token heads",
+    "sparse autoencoder features",
+    "critical formation window",
+    "high-influence samples",
+    "mechanistic data augmentation",
+    "repetitive structural data",
+    "LaTeX catalysts",
+    "XML catalysts",
+    "in-context learning",
+    "training-time causal intervention",
+    "unit-specific influence function"
+  ],
+  "status": "read",
+  "created": "2026-07-05",
+  "doi": "10.48550/arXiv.2601.21996",
+  "publication_status": "Author page notes ICML 2026 Oral in May 2026; arXiv TeX source uses ICML 2026 accepted style. Formal proceedings BibTeX not separately located as of 2026-07-05.",
+  "bibtex_key": "chen2026mechanisticdataattribution",
+  "fetch_source": "arxiv-tex",
+  "summary_model": "Codex GPT-5",
+  "citations": []
+}
