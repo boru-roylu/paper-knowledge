@@ -1,6 +1,24 @@
 {
   "nodes": [
     {
+      "id": "arxiv_2009_09761",
+      "title": "DiffWave: A Versatile Diffusion Model for Audio Synthesis",
+      "year": 2021,
+      "venue": "ICLR 2021 Oral",
+      "url": "../papers/arxiv_2009_09761/",
+      "tags": [
+        "diffusion-vocoder",
+        "waveform-generation",
+        "audio-diffusion",
+        "neural-vocoder",
+        "tts",
+        "unconditional-audio-generation",
+        "project-tts-data-pipeline",
+        "project-audio-model-evaluation",
+        "project-one-step-audio-generation"
+      ]
+    },
+    {
       "id": "arxiv_2303_01037",
       "title": "Google USM: Scaling Automatic Speech Recognition Beyond 100 Languages",
       "year": 2023,
@@ -1228,9 +1246,19 @@
   ],
   "edges": [
     {
+      "source": "arxiv_2304_09116",
+      "target": "arxiv_2009_09761",
+      "score": 1
+    },
+    {
       "source": "arxiv_2406_02430",
       "target": "arxiv_2304_09116",
       "score": 0.97
+    },
+    {
+      "source": "arxiv_2406_11427",
+      "target": "arxiv_2009_09761",
+      "score": 1
     },
     {
       "source": "arxiv_2406_11427",

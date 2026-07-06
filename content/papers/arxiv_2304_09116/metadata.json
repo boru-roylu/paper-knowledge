@@ -81,5 +81,14 @@
     "status": "api_403",
     "note": "OpenReview lookup returned API 403 for a matching forum; no review text was retrieved."
   },
-  "citations": []
+  "citations": [
+    {
+      "paper_key": "arxiv_2009_09761",
+      "title": "DiffWave: A Versatile Diffusion Model for Audio Synthesis",
+      "score": 1,
+      "matched_title": "DiffWave: A versatile diffusion model for audio synthesis.",
+      "matched_first_author_last": "kong",
+      "source_file": "source/main_arxiv.bbl"
+    }
+  ]
 }

@@ -34,6 +34,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="audio-benchmark">audio benchmark</button>
     <button type="button" data-paper-tag="audio-codec">audio codec</button>
     <button type="button" data-paper-tag="audio-data">audio data</button>
+    <button type="button" data-paper-tag="audio-diffusion">audio diffusion</button>
     <button type="button" data-paper-tag="audio-editing">audio editing</button>
     <button type="button" data-paper-tag="audio-evaluation">audio evaluation</button>
     <button type="button" data-paper-tag="audio-foundation-model">audio foundation model</button>
@@ -72,6 +73,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="diffusion-rl">diffusion rl</button>
     <button type="button" data-paper-tag="diffusion-transformer">diffusion transformer</button>
     <button type="button" data-paper-tag="diffusion-tts">diffusion tts</button>
+    <button type="button" data-paper-tag="diffusion-vocoder">diffusion vocoder</button>
     <button type="button" data-paper-tag="direct-preference-optimization">direct preference optimization</button>
     <button type="button" data-paper-tag="discrete-audio">discrete audio</button>
     <button type="button" data-paper-tag="distillation">distillation</button>
@@ -126,6 +128,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="multimodal-data">multimodal data</button>
     <button type="button" data-paper-tag="multimodal-llm">multimodal llm</button>
     <button type="button" data-paper-tag="multimodal-reasoning">multimodal reasoning</button>
+    <button type="button" data-paper-tag="neural-vocoder">neural vocoder</button>
     <button type="button" data-paper-tag="noisy-representation-conditioning">noisy representation conditioning</button>
     <button type="button" data-paper-tag="one-step-generation">one step generation</button>
     <button type="button" data-paper-tag="online-clustering">online clustering</button>
@@ -206,6 +209,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="training-efficiency">training efficiency</button>
     <button type="button" data-paper-tag="transformer">transformer</button>
     <button type="button" data-paper-tag="turn-taking">turn taking</button>
+    <button type="button" data-paper-tag="unconditional-audio-generation">unconditional audio generation</button>
     <button type="button" data-paper-tag="user-simulation">user simulation</button>
     <button type="button" data-paper-tag="vad">vad</button>
     <button type="button" data-paper-tag="VAE">VAE</button>
@@ -217,6 +221,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="voice-cloning">voice cloning</button>
     <button type="button" data-paper-tag="voice-conversion">voice conversion</button>
     <button type="button" data-paper-tag="VQVAE">VQVAE</button>
+    <button type="button" data-paper-tag="waveform-generation">waveform generation</button>
     <button type="button" data-paper-tag="waveform-latent">waveform latent</button>
     <button type="button" data-paper-tag="WavLM">WavLM</button>
     <button type="button" data-paper-tag="whisperd">whisperd</button>
@@ -230,6 +235,11 @@ title: Paper Knowledge
   <div class="paper-date">2026-07-06</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2605_27840/">LoSATok: Low-dimensional Semantic-Acoustic Tokenizer for Cross-Domain Audio Understanding and Generation</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>
   <div class="paper-tags"><a class="tag-link internal" href="./tags/audio-tokenizer/">#audio-tokenizer</a> <a class="tag-link internal" href="./tags/continuous-audio-tokenizer/">#continuous-audio-tokenizer</a> <a class="tag-link internal" href="./tags/semantic-acoustic-representation/">#semantic-acoustic-representation</a> <a class="tag-link internal" href="./tags/diffusion-transformer/">#diffusion-transformer</a> <a class="tag-link internal" href="./tags/audio-generation/">#audio-generation</a> <a class="tag-link internal" href="./tags/speech-representation/">#speech-representation</a> <a class="tag-link internal" href="./tags/project-generative-speech-representation-evaluation/">#project-generative-speech-representation-evaluation</a> <a class="tag-link internal" href="./tags/project-audio-model-evaluation/">#project-audio-model-evaluation</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a> <a class="tag-link internal" href="./tags/project-one-step-audio-generation/">#project-one-step-audio-generation</a></div>
+</div>
+<div class="paper-row" data-tags="diffusion-vocoder waveform-generation audio-diffusion neural-vocoder tts unconditional-audio-generation project-tts-data-pipeline project-audio-model-evaluation project-one-step-audio-generation" data-search="DiffWave: A Versatile Diffusion Model for Audio Synthesis arxiv_2009_09761 2026-07-06 2021 ICLR 2021 Oral arxiv:2009.09761 diffusion-vocoder waveform-generation audio-diffusion neural-vocoder tts unconditional-audio-generation project-tts-data-pipeline project-audio-model-evaluation project-one-step-audio-generation">
+  <div class="paper-date">2026-07-06</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2009_09761/">DiffWave: A Versatile Diffusion Model for Audio Synthesis</a> <span class="paper-meta">(2021, ICLR 2021 Oral)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/diffusion-vocoder/">#diffusion-vocoder</a> <a class="tag-link internal" href="./tags/waveform-generation/">#waveform-generation</a> <a class="tag-link internal" href="./tags/audio-diffusion/">#audio-diffusion</a> <a class="tag-link internal" href="./tags/neural-vocoder/">#neural-vocoder</a> <a class="tag-link internal" href="./tags/tts/">#tts</a> <a class="tag-link internal" href="./tags/unconditional-audio-generation/">#unconditional-audio-generation</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a> <a class="tag-link internal" href="./tags/project-audio-model-evaluation/">#project-audio-model-evaluation</a> <a class="tag-link internal" href="./tags/project-one-step-audio-generation/">#project-one-step-audio-generation</a></div>
 </div>
 <div class="paper-row" data-tags="asr vad language-identification punctuation speech-data industrial-asr project-tts-data-pipeline project-full-duplex-data project-audio-model-evaluation" data-search="FireRedASR2S: A State-of-the-Art Industrial-Grade All-in-One Automatic Speech Recognition System arxiv_2603_10420 2026-07-05 2026 arXiv preprint arxiv:2603.10420 asr vad language-identification punctuation speech-data industrial-asr project-tts-data-pipeline project-full-duplex-data project-audio-model-evaluation">
   <div class="paper-date">2026-07-05</div>

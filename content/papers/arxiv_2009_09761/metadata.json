@@ -1,0 +1,71 @@
+{
+  "paper_key": "arxiv_2009_09761",
+  "canonical_id": "arxiv:2009.09761",
+  "arxiv_id": "2009.09761",
+  "version": "latest",
+  "title": "DiffWave: A Versatile Diffusion Model for Audio Synthesis",
+  "authors": [
+    "Zhifeng Kong",
+    "Wei Ping",
+    "Jiaji Huang",
+    "Kexin Zhao",
+    "Bryan Catanzaro"
+  ],
+  "venue": "ICLR 2021 Oral",
+  "year": 2021,
+  "abstract": "In this work, we propose DiffWave, a versatile diffusion probabilistic model for conditional and unconditional waveform generation. The model is non-autoregressive, and converts the white noise signal into structured waveform through a Markov chain with a constant number of steps at synthesis. It is efficiently trained by optimizing a variant of variational bound on the data likelihood. DiffWave produces high-fidelity audios in different waveform generation tasks, including neural vocoding conditioned on mel spectrogram, class-conditional generation, and unconditional generation. We demonstrate that DiffWave matches a strong WaveNet vocoder in terms of speech quality (MOS: 4.44 versus 4.43), while synthesizing orders of magnitude faster. In particular, it significantly outperforms autoregressive and GAN-based waveform models in the challenging unconditional generation task in terms of audio quality and sample diversity from various automatic and human evaluations.",
+  "primaryClass": "eess.AS",
+  "categories": [
+    "eess.AS",
+    "cs.CL",
+    "cs.LG",
+    "cs.SD",
+    "stat.ML"
+  ],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2009.09761",
+    "pdf": "https://arxiv.org/pdf/2009.09761",
+    "source": "https://arxiv.org/src/2009.09761",
+    "openreview": "https://openreview.net/forum?id=a-xFK8Ymz5J",
+    "demo": "https://diffwave-demo.github.io/",
+    "community_code": "https://github.com/lmnt-com/diffwave"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2009.09761-src.tar.gz",
+    "entrypoint": "source/DiffWave - ICLR21/paper.tex"
+  },
+  "tags": [
+    "diffusion-vocoder",
+    "waveform-generation",
+    "audio-diffusion",
+    "neural-vocoder",
+    "tts",
+    "unconditional-audio-generation",
+    "project-tts-data-pipeline",
+    "project-audio-model-evaluation",
+    "project-one-step-audio-generation"
+  ],
+  "concepts": [
+    "DiffWave",
+    "DDPM for waveform",
+    "neural vocoder",
+    "bidirectional dilated convolution",
+    "mel-conditioned waveform synthesis",
+    "unconditional waveform generation",
+    "class-conditional waveform generation",
+    "fast sampling",
+    "MOS",
+    "audio FID",
+    "SC09",
+    "LJ Speech"
+  ],
+  "status": "read",
+  "created": "2026-07-06",
+  "doi": "10.48550/arXiv.2009.09761",
+  "publication_status": "Published as ICLR 2021 Oral; OpenReview decision: Accept (Oral)",
+  "bibtex_key": "kong2021diffwave",
+  "fetch_source": "arxiv-tex",
+  "summary_model": "Codex GPT-5",
+  "citations": []
+}
