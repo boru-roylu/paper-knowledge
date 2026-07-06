@@ -1,0 +1,90 @@
+{
+  "paper_key": "arxiv_2605_27840",
+  "canonical_id": "arxiv:2605.27840",
+  "arxiv_id": "2605.27840",
+  "version": "latest",
+  "title": "LoSATok: Low-dimensional Semantic-Acoustic Tokenizer for Cross-Domain Audio Understanding and Generation",
+  "authors": [
+    "Zhisheng Zhang",
+    "Xiang Li",
+    "Yixuan Zhou",
+    "Jing Peng",
+    "Guoyang Zeng",
+    "Zhiyong Wu"
+  ],
+  "venue": "arXiv preprint",
+  "year": 2026,
+  "abstract": "Audio tokenizers are fundamental to unifying audio understanding and generation. Understanding requires high-level semantics, while generation demands semantic and acoustic details. Existing unified tokenizers jointly encode both in high-dimensional continuous latents, which increases the modeling burden of Diffusion Transformers (DiTs) for generation. We propose LoSATok, a low-dimensional audio tokenizer for cross-domain audio understanding and generation. Motivated by the observation that 1280-dimensional semantic encoder features are compressible, we introduce a Semantic Bottleneck that compresses them into 128 dimensions, regularized by the proposed time-relation loss for temporal feature consistency. We further design a dual-level semantic supervision method that leverages both high- and low-dimensional semantic signals, enabling the tokenizer to jointly capture semantics and acoustic details within a compact latent space. Experiments on speech, music, and general audio show that SemBo preserves strong low-dimensional semantic capacity and LoSATok retains competitive understanding performance compared with several semantic representations, while consistently improving DiT modeling performance on speech, music, and audio generation. These results demonstrate that LoSATok's low-dimensional representations can effectively support audio understanding and generation. Our code is provided at https://github.com/wxzyd123/LoSATok.",
+  "primaryClass": "eess.AS",
+  "categories": [
+    "eess.AS",
+    "cs.AI",
+    "cs.SD"
+  ],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2605.27840",
+    "pdf": "https://arxiv.org/pdf/2605.27840",
+    "source": "https://arxiv.org/src/2605.27840",
+    "code": "https://github.com/wxzyd123/LoSATok"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2605.27840-src.tar.gz",
+    "entrypoint": "source/arxiv.tex"
+  },
+  "tags": [
+    "audio-tokenizer",
+    "continuous-audio-tokenizer",
+    "semantic-acoustic-representation",
+    "diffusion-transformer",
+    "audio-generation",
+    "speech-representation",
+    "project-generative-speech-representation-evaluation",
+    "project-audio-model-evaluation",
+    "project-tts-data-pipeline",
+    "project-one-step-audio-generation"
+  ],
+  "concepts": [
+    "Semantic Bottleneck",
+    "SemBo",
+    "low-dimensional semantic-acoustic tokenizer",
+    "continuous audio tokenizer",
+    "dual-level semantic supervision",
+    "time-relation loss",
+    "representation learnability",
+    "compute-to-quality",
+    "reconstruction-generation mismatch",
+    "DiT modeling burden"
+  ],
+  "status": "read",
+  "created": "2026-07-06",
+  "doi": "10.48550/arXiv.2605.27840",
+  "publication_status": "No formal conference or journal reference found as of 2026-07-06",
+  "bibtex_key": "zhang2026losatoklowdimensionalsemantica",
+  "citations": [
+    {
+      "paper_key": "arxiv_2510_11690",
+      "title": "Diffusion Transformers with Representation Autoencoders",
+      "score": 1,
+      "matched_title": "Diffusion Transformers with Representation Autoencoders",
+      "matched_first_author_last": "zheng",
+      "source_file": "source/reference.bib"
+    },
+    {
+      "paper_key": "arxiv_2406_02430",
+      "title": "Seed-TTS: A Family of High-Quality Versatile Speech Generation Models",
+      "score": 1,
+      "matched_title": "Seed-tts: A family of high-quality versatile speech generation models",
+      "matched_first_author_last": "anastassiou",
+      "source_file": "source/reference.bib"
+    },
+    {
+      "paper_key": "arxiv_2605_06407",
+      "title": "WavCube: Unifying Speech Representation for Understanding and Generation via Semantic-Acoustic Joint Modeling",
+      "score": 1,
+      "matched_title": "WavCube: Unifying Speech Representation for Understanding and Generation via Semantic-Acoustic Joint Modeling",
+      "matched_first_author_last": "yang",
+      "source_file": "source/reference.bib"
+    }
+  ]
+}

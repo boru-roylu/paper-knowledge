@@ -41,6 +41,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="audio-judge">audio judge</button>
     <button type="button" data-paper-tag="audio-language">audio language</button>
     <button type="button" data-paper-tag="audio-source-separation">audio source separation</button>
+    <button type="button" data-paper-tag="audio-tokenizer">audio tokenizer</button>
     <button type="button" data-paper-tag="autoencoder">autoencoder</button>
     <button type="button" data-paper-tag="autoregressive-generation">autoregressive generation</button>
     <button type="button" data-paper-tag="benchmark">benchmark</button>
@@ -54,6 +55,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="concept-erasure">concept erasure</button>
     <button type="button" data-paper-tag="consistency-mid-training">consistency mid training</button>
     <button type="button" data-paper-tag="content-preservation">content preservation</button>
+    <button type="button" data-paper-tag="continuous-audio-tokenizer">continuous audio tokenizer</button>
     <button type="button" data-paper-tag="continuous-latent">continuous latent</button>
     <button type="button" data-paper-tag="controllable-tts">controllable tts</button>
     <button type="button" data-paper-tag="credit-assignment">credit assignment</button>
@@ -161,6 +163,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="self-distillation">self distillation</button>
     <button type="button" data-paper-tag="self-supervised-speech">self supervised speech</button>
     <button type="button" data-paper-tag="semantic-acoustic-modeling">semantic acoustic modeling</button>
+    <button type="button" data-paper-tag="semantic-acoustic-representation">semantic acoustic representation</button>
     <button type="button" data-paper-tag="separation">separation</button>
     <button type="button" data-paper-tag="sequence-modeling">sequence modeling</button>
     <button type="button" data-paper-tag="source-separation">source separation</button>
@@ -223,6 +226,11 @@ title: Paper Knowledge
 </div>
 
 <div class="paper-list">
+<div class="paper-row" data-tags="audio-tokenizer continuous-audio-tokenizer semantic-acoustic-representation diffusion-transformer audio-generation speech-representation project-generative-speech-representation-evaluation project-audio-model-evaluation project-tts-data-pipeline project-one-step-audio-generation" data-search="LoSATok: Low-dimensional Semantic-Acoustic Tokenizer for Cross-Domain Audio Understanding and Generation arxiv_2605_27840 2026-07-06 2026 arXiv preprint arxiv:2605.27840 audio-tokenizer continuous-audio-tokenizer semantic-acoustic-representation diffusion-transformer audio-generation speech-representation project-generative-speech-representation-evaluation project-audio-model-evaluation project-tts-data-pipeline project-one-step-audio-generation">
+  <div class="paper-date">2026-07-06</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2605_27840/">LoSATok: Low-dimensional Semantic-Acoustic Tokenizer for Cross-Domain Audio Understanding and Generation</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/audio-tokenizer/">#audio-tokenizer</a> <a class="tag-link internal" href="./tags/continuous-audio-tokenizer/">#continuous-audio-tokenizer</a> <a class="tag-link internal" href="./tags/semantic-acoustic-representation/">#semantic-acoustic-representation</a> <a class="tag-link internal" href="./tags/diffusion-transformer/">#diffusion-transformer</a> <a class="tag-link internal" href="./tags/audio-generation/">#audio-generation</a> <a class="tag-link internal" href="./tags/speech-representation/">#speech-representation</a> <a class="tag-link internal" href="./tags/project-generative-speech-representation-evaluation/">#project-generative-speech-representation-evaluation</a> <a class="tag-link internal" href="./tags/project-audio-model-evaluation/">#project-audio-model-evaluation</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a> <a class="tag-link internal" href="./tags/project-one-step-audio-generation/">#project-one-step-audio-generation</a></div>
+</div>
 <div class="paper-row" data-tags="asr vad language-identification punctuation speech-data industrial-asr project-tts-data-pipeline project-full-duplex-data project-audio-model-evaluation" data-search="FireRedASR2S: A State-of-the-Art Industrial-Grade All-in-One Automatic Speech Recognition System arxiv_2603_10420 2026-07-05 2026 arXiv preprint arxiv:2603.10420 asr vad language-identification punctuation speech-data industrial-asr project-tts-data-pipeline project-full-duplex-data project-audio-model-evaluation">
   <div class="paper-date">2026-07-05</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2603_10420/">FireRedASR2S: A State-of-the-Art Industrial-Grade All-in-One Automatic Speech Recognition System</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>

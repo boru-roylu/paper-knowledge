@@ -929,6 +929,25 @@
       ]
     },
     {
+      "id": "arxiv_2605_27840",
+      "title": "LoSATok: Low-dimensional Semantic-Acoustic Tokenizer for Cross-Domain Audio Understanding and Generation",
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "url": "../papers/arxiv_2605_27840/",
+      "tags": [
+        "audio-tokenizer",
+        "continuous-audio-tokenizer",
+        "semantic-acoustic-representation",
+        "diffusion-transformer",
+        "audio-generation",
+        "speech-representation",
+        "project-generative-speech-representation-evaluation",
+        "project-audio-model-evaluation",
+        "project-tts-data-pipeline",
+        "project-one-step-audio-generation"
+      ]
+    },
+    {
       "id": "arxiv_2605_28063",
       "title": "Unified Synthesis of Compositional Speech and Sound from Free-Form Text Prompts",
       "year": 2026,
@@ -1406,6 +1425,21 @@
     {
       "source": "arxiv_2605_20755",
       "target": "arxiv_2602_06053",
+      "score": 1
+    },
+    {
+      "source": "arxiv_2605_27840",
+      "target": "arxiv_2510_11690",
+      "score": 1
+    },
+    {
+      "source": "arxiv_2605_27840",
+      "target": "arxiv_2406_02430",
+      "score": 1
+    },
+    {
+      "source": "arxiv_2605_27840",
+      "target": "arxiv_2605_06407",
       "score": 1
     },
     {
