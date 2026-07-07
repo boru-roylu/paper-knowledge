@@ -1,0 +1,66 @@
+{
+  "paper_key": "arxiv_2606_31729",
+  "canonical_id": "arxiv:2606.31729",
+  "arxiv_id": "2606.31729",
+  "version": "latest",
+  "title": "Is Natural Always Appropriate? Investigating Naturalness and Appropriateness Across Different Domains for TTS Evaluation",
+  "authors": [
+    "Dominika Woszczyk",
+    "Andreas Triantafyllopoulos",
+    "Jura Miniota",
+    "Éva Székely",
+    "Bjoern Schuller"
+  ],
+  "venue": "Interspeech 2026 / arXiv",
+  "year": 2026,
+  "abstract": "Text-to-speech (TTS) evaluation is an open challenge. While the primary target was \"naturalness,\" recent fidelity gains shifted focus toward \"appropriateness\" and whether speech is correct for its context. In this work, we examine how perception changes when the expected downstream use varies. We measure the appropriateness and human-likeness of five SOTA TTS systems across five domains: AI assistant, reader, actor, animated character, and spontaneous speaker. Results show appropriateness varies across domains independently of naturalness. While systems shine at reading, expressive domains remain challenging, and optimizing for one can degrade others. Furthermore, naturalness scores tend to penalize stylized speech while rewarding spontaneity. Finally, our study also highlights blind spots in one-size-fits-all evaluation metrics across more expressive domains. We demonstrate that TTS performance is not \"solved\" but depends on the target domain, requiring context-aware evaluation.",
+  "primaryClass": "eess.AS",
+  "categories": [
+    "eess.AS",
+    "cs.LG"
+  ],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2606.31729",
+    "pdf": "https://arxiv.org/pdf/2606.31729",
+    "source": "https://arxiv.org/src/2606.31729",
+    "code": "https://github.com/domiwk/domain-aware-tts-eval",
+    "demo": "https://researcht81.github.io/unconvincing-human"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2606.31729-src.tar.gz",
+    "entrypoint": "source/main.tex"
+  },
+  "tags": [
+    "tts-evaluation",
+    "speech-evaluation",
+    "human-evaluation",
+    "appropriateness",
+    "naturalness",
+    "expressive-tts",
+    "audio-metrics",
+    "project-audio-model-evaluation",
+    "project-tts-data-pipeline"
+  ],
+  "concepts": [
+    "domain-aware TTS evaluation",
+    "appropriateness",
+    "human-likeness",
+    "naturalness vs appropriateness",
+    "MOS limitation",
+    "contextual speech evaluation",
+    "expressive TTS",
+    "spontaneous speech",
+    "AI assistant voice",
+    "acoustic feature correlation",
+    "automatic metric failure modes"
+  ],
+  "status": "read",
+  "created": "2026-07-06",
+  "doi": "10.48550/arXiv.2606.31729",
+  "publication_status": "Accepted at Interspeech 2026 according to arXiv recent-list comments; proceedings URL not yet recorded",
+  "bibtex_key": "woszczyk2026isnaturalalwaysappropriateinve",
+  "fetch_source": "arxiv-tex",
+  "summary_model": "Codex GPT-5",
+  "citations": []
+}

@@ -1200,6 +1200,24 @@
       ]
     },
     {
+      "id": "arxiv_2606_31729",
+      "title": "Is Natural Always Appropriate? Investigating Naturalness and Appropriateness Across Different Domains for TTS Evaluation",
+      "year": 2026,
+      "venue": "Interspeech 2026 / arXiv",
+      "url": "../papers/arxiv_2606_31729/",
+      "tags": [
+        "tts-evaluation",
+        "speech-evaluation",
+        "human-evaluation",
+        "appropriateness",
+        "naturalness",
+        "expressive-tts",
+        "audio-metrics",
+        "project-audio-model-evaluation",
+        "project-tts-data-pipeline"
+      ]
+    },
+    {
       "id": "arxiv_2606_32039",
       "title": "GEAR: Guided End-to-End AutoRegression for Image Synthesis",
       "year": 2026,

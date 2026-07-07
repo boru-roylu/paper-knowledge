@@ -30,6 +30,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="agentic-annotation">agentic annotation</button>
     <button type="button" data-paper-tag="agentic-workflow">agentic workflow</button>
     <button type="button" data-paper-tag="ai-infrastructure">ai infrastructure</button>
+    <button type="button" data-paper-tag="appropriateness">appropriateness</button>
     <button type="button" data-paper-tag="attribution">attribution</button>
     <button type="button" data-paper-tag="audio-benchmark">audio benchmark</button>
     <button type="button" data-paper-tag="audio-codec">audio codec</button>
@@ -41,6 +42,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="audio-generation">audio generation</button>
     <button type="button" data-paper-tag="audio-judge">audio judge</button>
     <button type="button" data-paper-tag="audio-language">audio language</button>
+    <button type="button" data-paper-tag="audio-metrics">audio metrics</button>
     <button type="button" data-paper-tag="audio-source-separation">audio source separation</button>
     <button type="button" data-paper-tag="audio-tokenizer">audio tokenizer</button>
     <button type="button" data-paper-tag="autoencoder">autoencoder</button>
@@ -89,6 +91,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="evaluation-suite">evaluation suite</button>
     <button type="button" data-paper-tag="event-level-alignment">event level alignment</button>
     <button type="button" data-paper-tag="expressive-speech">expressive speech</button>
+    <button type="button" data-paper-tag="expressive-tts">expressive tts</button>
     <button type="button" data-paper-tag="few-step-generation">few step generation</button>
     <button type="button" data-paper-tag="filtering">filtering</button>
     <button type="button" data-paper-tag="flow-map-model">flow map model</button>
@@ -98,6 +101,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="group-preference">group preference</button>
     <button type="button" data-paper-tag="grpo">grpo</button>
     <button type="button" data-paper-tag="guidance">guidance</button>
+    <button type="button" data-paper-tag="human-evaluation">human evaluation</button>
     <button type="button" data-paper-tag="image-editing">image editing</button>
     <button type="button" data-paper-tag="in-context-learning">in context learning</button>
     <button type="button" data-paper-tag="induction-heads">induction heads</button>
@@ -128,6 +132,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="multimodal-data">multimodal data</button>
     <button type="button" data-paper-tag="multimodal-llm">multimodal llm</button>
     <button type="button" data-paper-tag="multimodal-reasoning">multimodal reasoning</button>
+    <button type="button" data-paper-tag="naturalness">naturalness</button>
     <button type="button" data-paper-tag="neural-vocoder">neural vocoder</button>
     <button type="button" data-paper-tag="noisy-representation-conditioning">noisy representation conditioning</button>
     <button type="button" data-paper-tag="one-step-generation">one step generation</button>
@@ -177,6 +182,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="speech-corpus">speech corpus</button>
     <button type="button" data-paper-tag="speech-data-cleaning">speech data cleaning</button>
     <button type="button" data-paper-tag="speech-enhancement">speech enhancement</button>
+    <button type="button" data-paper-tag="speech-evaluation">speech evaluation</button>
     <button type="button" data-paper-tag="speech-prompting">speech prompting</button>
     <button type="button" data-paper-tag="speech-reasoning">speech reasoning</button>
     <button type="button" data-paper-tag="speech-recognition">speech recognition</button>
@@ -208,6 +214,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="training-data-curation">training data curation</button>
     <button type="button" data-paper-tag="training-efficiency">training efficiency</button>
     <button type="button" data-paper-tag="transformer">transformer</button>
+    <button type="button" data-paper-tag="tts-evaluation">tts evaluation</button>
     <button type="button" data-paper-tag="turn-taking">turn taking</button>
     <button type="button" data-paper-tag="unconditional-audio-generation">unconditional audio generation</button>
     <button type="button" data-paper-tag="user-simulation">user simulation</button>
@@ -231,6 +238,11 @@ title: Paper Knowledge
 </div>
 
 <div class="paper-list">
+<div class="paper-row" data-tags="tts-evaluation speech-evaluation human-evaluation appropriateness naturalness expressive-tts audio-metrics project-audio-model-evaluation project-tts-data-pipeline" data-search="Is Natural Always Appropriate? Investigating Naturalness and Appropriateness Across Different Domains for TTS Evaluation arxiv_2606_31729 2026-07-06 2026 Interspeech 2026 / arXiv arxiv:2606.31729 tts-evaluation speech-evaluation human-evaluation appropriateness naturalness expressive-tts audio-metrics project-audio-model-evaluation project-tts-data-pipeline">
+  <div class="paper-date">2026-07-06</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2606_31729/">Is Natural Always Appropriate? Investigating Naturalness and Appropriateness Across Different Domains for TTS Evaluation</a> <span class="paper-meta">(2026, Interspeech 2026 / arXiv)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/tts-evaluation/">#tts-evaluation</a> <a class="tag-link internal" href="./tags/speech-evaluation/">#speech-evaluation</a> <a class="tag-link internal" href="./tags/human-evaluation/">#human-evaluation</a> <a class="tag-link internal" href="./tags/appropriateness/">#appropriateness</a> <a class="tag-link internal" href="./tags/naturalness/">#naturalness</a> <a class="tag-link internal" href="./tags/expressive-tts/">#expressive-tts</a> <a class="tag-link internal" href="./tags/audio-metrics/">#audio-metrics</a> <a class="tag-link internal" href="./tags/project-audio-model-evaluation/">#project-audio-model-evaluation</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a></div>
+</div>
 <div class="paper-row" data-tags="audio-tokenizer continuous-audio-tokenizer semantic-acoustic-representation diffusion-transformer audio-generation speech-representation project-generative-speech-representation-evaluation project-audio-model-evaluation project-tts-data-pipeline project-one-step-audio-generation" data-search="LoSATok: Low-dimensional Semantic-Acoustic Tokenizer for Cross-Domain Audio Understanding and Generation arxiv_2605_27840 2026-07-06 2026 arXiv preprint arxiv:2605.27840 audio-tokenizer continuous-audio-tokenizer semantic-acoustic-representation diffusion-transformer audio-generation speech-representation project-generative-speech-representation-evaluation project-audio-model-evaluation project-tts-data-pipeline project-one-step-audio-generation">
   <div class="paper-date">2026-07-06</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2605_27840/">LoSATok: Low-dimensional Semantic-Acoustic Tokenizer for Cross-Domain Audio Understanding and Generation</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>
