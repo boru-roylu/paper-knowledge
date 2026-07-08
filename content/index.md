@@ -45,8 +45,10 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="audio-metrics">audio metrics</button>
     <button type="button" data-paper-tag="audio-source-separation">audio source separation</button>
     <button type="button" data-paper-tag="audio-tokenizer">audio tokenizer</button>
+    <button type="button" data-paper-tag="audio-vae">audio vae</button>
     <button type="button" data-paper-tag="autoencoder">autoencoder</button>
     <button type="button" data-paper-tag="autoregressive-generation">autoregressive generation</button>
+    <button type="button" data-paper-tag="autoregressive-tts">autoregressive tts</button>
     <button type="button" data-paper-tag="benchmark">benchmark</button>
     <button type="button" data-paper-tag="bpe">bpe</button>
     <button type="button" data-paper-tag="cantonese">cantonese</button>
@@ -60,6 +62,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="content-preservation">content preservation</button>
     <button type="button" data-paper-tag="continuous-audio-tokenizer">continuous audio tokenizer</button>
     <button type="button" data-paper-tag="continuous-latent">continuous latent</button>
+    <button type="button" data-paper-tag="continuous-tts">continuous tts</button>
     <button type="button" data-paper-tag="controllable-tts">controllable tts</button>
     <button type="button" data-paper-tag="credit-assignment">credit assignment</button>
     <button type="button" data-paper-tag="data-attribution">data attribution</button>
@@ -238,6 +241,11 @@ title: Paper Knowledge
 </div>
 
 <div class="paper-list">
+<div class="paper-row" data-tags="tts continuous-tts autoregressive-tts flow-matching audio-vae meanflow streaming-tts voice-cloning project-tts-data-pipeline project-generative-speech-representation-evaluation project-one-step-audio-generation project-full-duplex-data project-audio-model-evaluation" data-search="dots.tts Technical Report arxiv_2606_07080 2026-07-08 2026 arXiv preprint arxiv:2606.07080 tts continuous-tts autoregressive-tts flow-matching audio-vae meanflow streaming-tts voice-cloning project-tts-data-pipeline project-generative-speech-representation-evaluation project-one-step-audio-generation project-full-duplex-data project-audio-model-evaluation">
+  <div class="paper-date">2026-07-08</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2606_07080/">dots.tts Technical Report</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/tts/">#tts</a> <a class="tag-link internal" href="./tags/continuous-tts/">#continuous-tts</a> <a class="tag-link internal" href="./tags/autoregressive-tts/">#autoregressive-tts</a> <a class="tag-link internal" href="./tags/flow-matching/">#flow-matching</a> <a class="tag-link internal" href="./tags/audio-vae/">#audio-vae</a> <a class="tag-link internal" href="./tags/meanflow/">#meanflow</a> <a class="tag-link internal" href="./tags/streaming-tts/">#streaming-tts</a> <a class="tag-link internal" href="./tags/voice-cloning/">#voice-cloning</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a> <a class="tag-link internal" href="./tags/project-generative-speech-representation-evaluation/">#project-generative-speech-representation-evaluation</a> <a class="tag-link internal" href="./tags/project-one-step-audio-generation/">#project-one-step-audio-generation</a> <a class="tag-link internal" href="./tags/project-full-duplex-data/">#project-full-duplex-data</a> <a class="tag-link internal" href="./tags/project-audio-model-evaluation/">#project-audio-model-evaluation</a></div>
+</div>
 <div class="paper-row" data-tags="tts-evaluation speech-evaluation human-evaluation appropriateness naturalness expressive-tts audio-metrics project-audio-model-evaluation project-tts-data-pipeline" data-search="Is Natural Always Appropriate? Investigating Naturalness and Appropriateness Across Different Domains for TTS Evaluation arxiv_2606_31729 2026-07-06 2026 Interspeech 2026 / arXiv arxiv:2606.31729 tts-evaluation speech-evaluation human-evaluation appropriateness naturalness expressive-tts audio-metrics project-audio-model-evaluation project-tts-data-pipeline">
   <div class="paper-date">2026-07-06</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2606_31729/">Is Natural Always Appropriate? Investigating Naturalness and Appropriateness Across Different Domains for TTS Evaluation</a> <span class="paper-meta">(2026, Interspeech 2026 / arXiv)</span></div>

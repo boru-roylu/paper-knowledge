@@ -1,0 +1,103 @@
+{
+  "paper_key": "arxiv_2606_07080",
+  "canonical_id": "arxiv:2606.07080",
+  "arxiv_id": "2606.07080",
+  "version": "latest",
+  "title": "dots.tts Technical Report",
+  "authors": [
+    "Shi Lian",
+    "Changtao Li",
+    "Bohan Li",
+    "Hankun Wang",
+    "Da Zheng",
+    "Junfeng Tian",
+    "Yufeng Ma",
+    "Colin Zhang",
+    "Kai Yu"
+  ],
+  "venue": "arXiv preprint",
+  "year": 2026,
+  "abstract": "We present dots.tts, a 2B-parameter continuous autoregressive text-to-speech (TTS) foundation model that models speech in a continuous latent space. Compared with existing continuous autoregressive models, our key innovations are threefold. First, we train an AudioVAE with multiple objectives to build a semantically structured and prediction-friendly continuous speech space. Second, we use full-history conditioning in the flow-matching head to preserve long-range consistency and reduce drift during generation. Third, we apply reward-free self-corrective post-training to the flow-matching head to further improve robustness and acoustic quality. After being trained on a large-scale multilingual corpus, dots.tts achieves the best average performance on Seed-TTS-Eval, with WERs of 0.94%/1.30%/6.60% and SIM scores of 81.0/77.1/79.5 on the zh/en/zh-hard test sets, respectively. Across other benchmarks, dots.tts also consistently demonstrates open-source state-of-the-art performance, exhibiting strong generation stability, voice cloning ability, and emotional expressiveness. For efficient inference, we further apply CFG-aware MeanFlow distillation, enabling low-latency speech generation with first-packet latencies of 85/54 ms in output streaming and dual-streaming modes, respectively. To facilitate reproducible research and practical deployment, we release the training and inference code, together with the pretrained, post-trained, and MeanFlow-distilled checkpoints, under the Apache 2.0 license.",
+  "primaryClass": "cs.SD",
+  "categories": [
+    "cs.SD",
+    "cs.AI",
+    "eess.AS"
+  ],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2606.07080",
+    "pdf": "https://arxiv.org/pdf/2606.07080",
+    "source": "https://arxiv.org/src/2606.07080",
+    "code": "https://github.com/rednote-hilab/dots.tts",
+    "model": "https://huggingface.co/collections/rednote-hilab/dotstts",
+    "demo": "https://rednote-hilab.github.io/dots.tts-demo"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2606.07080-src.tar.gz",
+    "entrypoint": "source/main.tex"
+  },
+  "tags": [
+    "tts",
+    "continuous-tts",
+    "autoregressive-tts",
+    "flow-matching",
+    "audio-vae",
+    "meanflow",
+    "streaming-tts",
+    "voice-cloning",
+    "project-tts-data-pipeline",
+    "project-generative-speech-representation-evaluation",
+    "project-one-step-audio-generation",
+    "project-full-duplex-data",
+    "project-audio-model-evaluation"
+  ],
+  "concepts": [
+    "dots.tts",
+    "continuous autoregressive TTS",
+    "AudioVAE",
+    "25 Hz continuous latent",
+    "semantic encoder",
+    "AR flow-matching head",
+    "block-causal attention mask",
+    "self-corrective alignment",
+    "SOAR",
+    "CFG-aware MeanFlow distillation",
+    "1T1A interleaved streaming",
+    "Seed-TTS-Eval",
+    "cross-lingual voice cloning"
+  ],
+  "status": "read",
+  "created": "2026-07-08",
+  "doi": "10.48550/arXiv.2606.07080",
+  "publication_status": "No formal conference or journal reference found as of 2026-07-08",
+  "bibtex_key": "lian2026dotsttstechnicalreport",
+  "fetch_source": "arxiv-tex",
+  "summary_model": "Codex GPT-5",
+  "citations": [
+    {
+      "paper_key": "arxiv_2603_29339",
+      "title": "LongCat-AudioDiT: High-Fidelity Diffusion Text-to-Speech in the Waveform Latent Space",
+      "score": 1,
+      "matched_title": "LongCat-AudioDiT: High-Fidelity Diffusion Text-to-Speech in the Waveform Latent Space",
+      "matched_first_author_last": "xin",
+      "source_file": "source/references.bib"
+    },
+    {
+      "paper_key": "arxiv_2406_02430",
+      "title": "Seed-TTS: A Family of High-Quality Versatile Speech Generation Models",
+      "score": 1,
+      "matched_title": "Seed-TTS: A Family of High-Quality Versatile Speech Generation Models",
+      "matched_first_author_last": "team",
+      "source_file": "source/references.bib"
+    },
+    {
+      "paper_key": "arxiv_2509_24650",
+      "title": "VoxCPM: Tokenizer-Free TTS for Context-Aware Speech Generation and True-to-Life Voice Cloning",
+      "score": 1,
+      "matched_title": "VoxCPM: Tokenizer-Free TTS for Context-Aware Speech Generation and True-to-Life Voice Cloning",
+      "matched_first_author_last": "zhou",
+      "source_file": "source/references.bib"
+    }
+  ]
+}

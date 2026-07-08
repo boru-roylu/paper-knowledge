@@ -1109,6 +1109,28 @@
       ]
     },
     {
+      "id": "arxiv_2606_07080",
+      "title": "dots.tts Technical Report",
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "url": "../papers/arxiv_2606_07080/",
+      "tags": [
+        "tts",
+        "continuous-tts",
+        "autoregressive-tts",
+        "flow-matching",
+        "audio-vae",
+        "meanflow",
+        "streaming-tts",
+        "voice-cloning",
+        "project-tts-data-pipeline",
+        "project-generative-speech-representation-evaluation",
+        "project-one-step-audio-generation",
+        "project-full-duplex-data",
+        "project-audio-model-evaluation"
+      ]
+    },
+    {
       "id": "arxiv_2606_07229",
       "title": "MMAE: A Massive Multitask Audio Editing Benchmark",
       "year": 2026,
@@ -1516,6 +1538,21 @@
     {
       "source": "arxiv_2605_31530",
       "target": "arxiv_2406_02430",
+      "score": 1
+    },
+    {
+      "source": "arxiv_2606_07080",
+      "target": "arxiv_2603_29339",
+      "score": 1
+    },
+    {
+      "source": "arxiv_2606_07080",
+      "target": "arxiv_2406_02430",
+      "score": 1
+    },
+    {
+      "source": "arxiv_2606_07080",
+      "target": "arxiv_2509_24650",
       "score": 1
     },
     {
