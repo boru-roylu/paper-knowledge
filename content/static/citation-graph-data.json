@@ -1257,6 +1257,26 @@
       ]
     },
     {
+      "id": "arxiv_2607_09134",
+      "title": "ReGen: Hierarchical Multi-Prompt Representation Generation for Efficient Waveform Diffusion Models",
+      "year": 2026,
+      "venue": "ICML 2026",
+      "url": "../papers/arxiv_2607_09134/",
+      "tags": [
+        "waveform-diffusion",
+        "representation-generation",
+        "flow-matching",
+        "audio-codec",
+        "speech-vae",
+        "latent-diffusion",
+        "tts",
+        "project-generative-speech-representation-evaluation",
+        "project-one-step-audio-generation",
+        "project-audio-model-evaluation",
+        "project-tts-data-pipeline"
+      ]
+    },
+    {
       "id": "microsoft_mai_thinking_1",
       "title": "MAI-Thinking-1: Building a Hill-Climbing Machine",
       "year": 2026,
@@ -1598,6 +1618,21 @@
     {
       "source": "arxiv_2606_32039",
       "target": "arxiv_2501_01423",
+      "score": 1
+    },
+    {
+      "source": "arxiv_2607_09134",
+      "target": "arxiv_2510_11690",
+      "score": 1
+    },
+    {
+      "source": "arxiv_2607_09134",
+      "target": "arxiv_2303_01664",
+      "score": 1
+    },
+    {
+      "source": "arxiv_2607_09134",
+      "target": "arxiv_2509_24650",
       "score": 1
     }
   ]

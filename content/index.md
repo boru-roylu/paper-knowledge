@@ -161,6 +161,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="representation-alignment">representation alignment</button>
     <button type="button" data-paper-tag="representation-autoencoder">representation autoencoder</button>
     <button type="button" data-paper-tag="representation-evaluation">representation evaluation</button>
+    <button type="button" data-paper-tag="representation-generation">representation generation</button>
     <button type="button" data-paper-tag="representation-space-generation">representation space generation</button>
     <button type="button" data-paper-tag="research-agent">research agent</button>
     <button type="button" data-paper-tag="restoration">restoration</button>
@@ -231,6 +232,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="voice-cloning">voice cloning</button>
     <button type="button" data-paper-tag="voice-conversion">voice conversion</button>
     <button type="button" data-paper-tag="VQVAE">VQVAE</button>
+    <button type="button" data-paper-tag="waveform-diffusion">waveform diffusion</button>
     <button type="button" data-paper-tag="waveform-generation">waveform generation</button>
     <button type="button" data-paper-tag="waveform-latent">waveform latent</button>
     <button type="button" data-paper-tag="WavLM">WavLM</button>
@@ -241,6 +243,11 @@ title: Paper Knowledge
 </div>
 
 <div class="paper-list">
+<div class="paper-row" data-tags="waveform-diffusion representation-generation flow-matching audio-codec speech-vae latent-diffusion tts project-generative-speech-representation-evaluation project-one-step-audio-generation project-audio-model-evaluation project-tts-data-pipeline" data-search="ReGen: Hierarchical Multi-Prompt Representation Generation for Efficient Waveform Diffusion Models arxiv_2607_09134 2026-07-13 2026 ICML 2026 arxiv:2607.09134 waveform-diffusion representation-generation flow-matching audio-codec speech-vae latent-diffusion tts project-generative-speech-representation-evaluation project-one-step-audio-generation project-audio-model-evaluation project-tts-data-pipeline">
+  <div class="paper-date">2026-07-13</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2607_09134/">ReGen: Hierarchical Multi-Prompt Representation Generation for Efficient Waveform Diffusion Models</a> <span class="paper-meta">(2026, ICML 2026)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/waveform-diffusion/">#waveform-diffusion</a> <a class="tag-link internal" href="./tags/representation-generation/">#representation-generation</a> <a class="tag-link internal" href="./tags/flow-matching/">#flow-matching</a> <a class="tag-link internal" href="./tags/audio-codec/">#audio-codec</a> <a class="tag-link internal" href="./tags/speech-vae/">#speech-vae</a> <a class="tag-link internal" href="./tags/latent-diffusion/">#latent-diffusion</a> <a class="tag-link internal" href="./tags/tts/">#tts</a> <a class="tag-link internal" href="./tags/project-generative-speech-representation-evaluation/">#project-generative-speech-representation-evaluation</a> <a class="tag-link internal" href="./tags/project-one-step-audio-generation/">#project-one-step-audio-generation</a> <a class="tag-link internal" href="./tags/project-audio-model-evaluation/">#project-audio-model-evaluation</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a></div>
+</div>
 <div class="paper-row" data-tags="tts continuous-tts autoregressive-tts flow-matching audio-vae meanflow streaming-tts voice-cloning project-tts-data-pipeline project-generative-speech-representation-evaluation project-one-step-audio-generation project-full-duplex-data project-audio-model-evaluation" data-search="dots.tts Technical Report arxiv_2606_07080 2026-07-08 2026 arXiv preprint arxiv:2606.07080 tts continuous-tts autoregressive-tts flow-matching audio-vae meanflow streaming-tts voice-cloning project-tts-data-pipeline project-generative-speech-representation-evaluation project-one-step-audio-generation project-full-duplex-data project-audio-model-evaluation">
   <div class="paper-date">2026-07-08</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2606_07080/">dots.tts Technical Report</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>

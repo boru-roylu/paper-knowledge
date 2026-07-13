@@ -1,0 +1,96 @@
+{
+  "paper_key": "arxiv_2607_09134",
+  "canonical_id": "arxiv:2607.09134",
+  "arxiv_id": "2607.09134",
+  "version": "latest",
+  "title": "ReGen: Hierarchical Multi-Prompt Representation Generation for Efficient Waveform Diffusion Models",
+  "authors": [
+    "Sang-Hoon Lee",
+    "Ha-Yeong Choi"
+  ],
+  "venue": "ICML 2026",
+  "year": 2026,
+  "abstract": "Representation alignment (REPA) has been investigated to accelerate diffusion training, but we observe that regularizing intermediate representations in diffusion Transformers (DiT) may implicitly entangle latents and limit generative capacity. To address this issue, we propose ReGen, a hierarchical multi-prompt representation generation framework that jointly estimates multiple vector fields for both representations and data within a single diffusion model. We further introduce generalized flow matching (GFM) to improve the generalization of conditional flow matching (CFM). We validate ReGen on single-stage waveform diffusion models including neural audio codec and Wave-VAE. ReGen significantly improves waveform generation quality from highly compressed latent representations at 12.5 Hz. We also present ReGenVoice, a latent diffusion model (LDM)-based text-to-speech model that achieves strong speech intelligibility (WER) and speaker similarity (SIM) with a small dataset. Moreover, operating the LDM at 6.25 Hz with rich semantic and acoustic latent representation enables efficient training and sampling, requiring only 1 day of training on 4 GPUs and fast inference with an RTF of 0.08. Audio samples are available at https://regenvoice.github.io/demo/.",
+  "primaryClass": "cs.SD",
+  "categories": [
+    "cs.SD",
+    "cs.AI",
+    "eess.AS",
+    "eess.SP"
+  ],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2607.09134",
+    "pdf": "https://arxiv.org/pdf/2607.09134",
+    "source": "https://arxiv.org/src/2607.09134",
+    "demo": "https://regenvoice.github.io/demo/",
+    "openreview": "https://openreview.net/forum?id=T8Y9elIrXa"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2607.09134-src.tar.gz",
+    "entrypoint": "source/Regen_arXiv.tex"
+  },
+  "tags": [
+    "waveform-diffusion",
+    "representation-generation",
+    "flow-matching",
+    "audio-codec",
+    "speech-vae",
+    "latent-diffusion",
+    "tts",
+    "project-generative-speech-representation-evaluation",
+    "project-one-step-audio-generation",
+    "project-audio-model-evaluation",
+    "project-tts-data-pipeline"
+  ],
+  "concepts": [
+    "ReGen",
+    "representation generation",
+    "REPA vs ReGen",
+    "hierarchical multi-prompt representation generation",
+    "generalized flow matching",
+    "conditional flow matching",
+    "ReGenTokenizer",
+    "ReGenVAE",
+    "ReGenVoice",
+    "Wave-DiT",
+    "low-bitrate waveform diffusion",
+    "12.5 Hz speech VAE",
+    "6.25 Hz latent diffusion",
+    "adversarial post-training",
+    "AdaLN-SOLA",
+    "speaker similarity",
+    "speech representation learnability"
+  ],
+  "status": "read",
+  "created": "2026-07-13",
+  "doi": "10.48550/arXiv.2607.09134",
+  "publication_status": "Accepted to ICML 2026; public listings checked on 2026-07-13",
+  "bibtex_key": "lee2026regenhierarchicalmultipromptre",
+  "citations": [
+    {
+      "paper_key": "arxiv_2510_11690",
+      "title": "Diffusion Transformers with Representation Autoencoders",
+      "score": 1,
+      "matched_title": "Diffusion transformers with representation autoencoders",
+      "matched_first_author_last": "zheng",
+      "source_file": "source/regen.bib"
+    },
+    {
+      "paper_key": "arxiv_2303_01664",
+      "title": "Miipher: A Robust Speech Restoration Model Integrating Self-Supervised Speech and Text Representations",
+      "score": 1,
+      "matched_title": "Miipher: A robust speech restoration model integrating self-supervised speech and text representations",
+      "matched_first_author_last": "koizumi",
+      "source_file": "source/regen.bib"
+    },
+    {
+      "paper_key": "arxiv_2509_24650",
+      "title": "VoxCPM: Tokenizer-Free TTS for Context-Aware Speech Generation and True-to-Life Voice Cloning",
+      "score": 1,
+      "matched_title": "Voxcpm: Tokenizer-free TTS for context-aware speech generation and true-to-life voice cloning",
+      "matched_first_author_last": "zhou",
+      "source_file": "source/regen.bib"
+    }
+  ]
+}
