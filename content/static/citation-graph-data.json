@@ -1257,6 +1257,25 @@
       ]
     },
     {
+      "id": "arxiv_2607_06540",
+      "title": "Hierarchical Acoustic-Semantic Modeling: Modality Separation and Semantic Coherence for Full-Duplex SLMs",
+      "year": 2026,
+      "venue": "ACL 2026",
+      "url": "../papers/arxiv_2607_06540/",
+      "tags": [
+        "speech-llm",
+        "full-duplex",
+        "modality-interference",
+        "acoustic-semantic-modeling",
+        "turn-taking",
+        "backchannel",
+        "interruption",
+        "project-full-duplex-data",
+        "project-audio-model-evaluation",
+        "project-tts-data-pipeline"
+      ]
+    },
+    {
       "id": "arxiv_2607_09134",
       "title": "ReGen: Hierarchical Multi-Prompt Representation Generation for Efficient Waveform Diffusion Models",
       "year": 2026,
@@ -1618,6 +1637,16 @@
     {
       "source": "arxiv_2606_32039",
       "target": "arxiv_2501_01423",
+      "score": 1
+    },
+    {
+      "source": "arxiv_2607_06540",
+      "target": "arxiv_2502_14145",
+      "score": 1
+    },
+    {
+      "source": "arxiv_2607_06540",
+      "target": "arxiv_2504_08528",
       "score": 1
     },
     {

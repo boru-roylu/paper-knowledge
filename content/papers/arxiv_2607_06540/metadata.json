@@ -1,0 +1,106 @@
+{
+  "paper_key": "arxiv_2607_06540",
+  "canonical_id": "arxiv:2607.06540",
+  "arxiv_id": "2607.06540",
+  "version": "latest",
+  "title": "Hierarchical Acoustic-Semantic Modeling: Modality Separation and Semantic Coherence for Full-Duplex SLMs",
+  "authors": [
+    "Zhenyu Liu",
+    "Xuanyu Zhang",
+    "Yunxin Li",
+    "Qixun Teng",
+    "Shenyuan Jiang",
+    "Haolan Chen",
+    "Minjun Zhao",
+    "Fanbo Meng",
+    "Yu Xu",
+    "Yancheng He",
+    "Baotian Hu",
+    "Haizhou Li",
+    "Min Zhang"
+  ],
+  "venue": "ACL 2026",
+  "year": 2026,
+  "abstract": "Developing seamless, high-performance, native intelligent full-duplex Spoken Language Models (SLMs) remains a critical challenge and long-standing goal for the speech and NLP community. Despite notable progress, recent endeavors are fundamentally constrained by severe modality interference, which causes substantial knowledge degradation and compromises semantic integrity -- ultimately making full-duplex SLMs feel unnatural and unintelligent. In this paper, through an exhaustive fine-grained analysis of model optimization dynamics, we uncover the root cause of such performance degradation, revealing that modality interference arises from inherent gradient conflicts between acoustic and semantic modeling when the two modalities are forced to share a deep parameter space. Guided by this key insight, we introduce Lychee-FD, a native end-to-end full-duplex framework designed to mitigate modality interference. Importantly, we propose a hierarchical parameter separation strategy that decouples conflicting modalities in deep layers while preserving cross-modality coherence via a dedicated semantic alignment channel. Extensive experiments on multiple full-duplex benchmarks demonstrate that our method significantly advances the state of the art, yielding substantial improvements in both speech intelligence (+7.4% on Spoken QA) and full-duplex interaction fluidity (+28.5% on FullDuplexBench 1.5) without compromising inference efficiency. To the best of our knowledge, this work is the first to achieve two key advances: 1) uncovering and elucidating the root cause of modality interference in full-duplex SLMs, and 2) designing an elegant hierarchical model together with a practical solution for seamless, high-performance, native intelligent full-duplex SLMs.",
+  "primaryClass": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2607.06540",
+    "pdf": "https://arxiv.org/pdf/2607.06540",
+    "source": "https://arxiv.org/src/2607.06540",
+    "acl_pdf": "https://aclanthology.org/2026.acl-long.419.pdf",
+    "repo": "https://github.com/HITsz-TMG/Lychee-FD",
+    "huggingface": "https://huggingface.co/HIT-TMG/Lychee-FD",
+    "project": "https://hitsz-tmg.github.io/Lychee-FD",
+    "openreview": "https://openreview.net/forum?id=iZ2y0sqJJD"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2607.06540-src.tar.gz",
+    "entrypoint": "source/main.tex"
+  },
+  "tags": [
+    "speech-llm",
+    "full-duplex",
+    "modality-interference",
+    "acoustic-semantic-modeling",
+    "turn-taking",
+    "backchannel",
+    "interruption",
+    "project-full-duplex-data",
+    "project-audio-model-evaluation",
+    "project-tts-data-pipeline"
+  ],
+  "concepts": [
+    "Lychee-FD",
+    "full-duplex SLM",
+    "modality interference",
+    "optimization divergence",
+    "semantic dilution",
+    "gradient cosine similarity",
+    "gradient magnitude ratio",
+    "hierarchical parameter separation",
+    "semantic alignment channel",
+    "acoustic head",
+    "semantic head",
+    "control head",
+    "internal monologue",
+    "channel-division multiplexing",
+    "full-duplex data synthesis",
+    "interruption generation",
+    "backchannel injection",
+    "side-talk error",
+    "DAG pipeline parallelism"
+  ],
+  "status": "read",
+  "created": "2026-07-13",
+  "doi": "10.48550/arXiv.2607.06540",
+  "publication_status": "ACL 2026 long paper; GitHub project page notes ACL 2026 Outstanding Paper status; checked 2026-07-13",
+  "bibtex_key": "liu2026hierarchicalacousticsemanticmo",
+  "summary_model": "Codex GPT-5",
+  "openreview": {
+    "forum_id": "iZ2y0sqJJD",
+    "url": "https://openreview.net/forum?id=iZ2y0sqJJD",
+    "status": "Forum found; public review/rebuttal notes were not available to the local fetcher on 2026-07-13."
+  },
+  "citations": [
+    {
+      "paper_key": "arxiv_2502_14145",
+      "title": "LLM-Enhanced Dialogue Management for Full-Duplex Spoken Dialogue Systems",
+      "score": 1,
+      "matched_title": "LLM-Enhanced Dialogue Management for Full-Duplex Spoken Dialogue Systems",
+      "matched_first_author_last": "zhang",
+      "source_file": "source/custom.bib"
+    },
+    {
+      "paper_key": "arxiv_2504_08528",
+      "title": "On The Landscape of Spoken Language Models: A Comprehensive Survey",
+      "score": 1,
+      "matched_title": "On The Landscape of Spoken Language Models: A Comprehensive Survey",
+      "matched_first_author_last": "arora",
+      "source_file": "source/custom.bib"
+    }
+  ]
+}

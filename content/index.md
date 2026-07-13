@@ -21,6 +21,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="speech-llm">speech llm</button>
     <button type="button" data-paper-tag="tts">tts</button>
     <button type="button" data-paper-tag="academic-retrieval">academic retrieval</button>
+    <button type="button" data-paper-tag="acoustic-semantic-modeling">acoustic semantic modeling</button>
     <button type="button" data-paper-tag="acoustic-unit-discovery">acoustic unit discovery</button>
     <button type="button" data-paper-tag="action-channel">action channel</button>
     <button type="button" data-paper-tag="adversarial-training">adversarial training</button>
@@ -49,6 +50,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="autoencoder">autoencoder</button>
     <button type="button" data-paper-tag="autoregressive-generation">autoregressive generation</button>
     <button type="button" data-paper-tag="autoregressive-tts">autoregressive tts</button>
+    <button type="button" data-paper-tag="backchannel">backchannel</button>
     <button type="button" data-paper-tag="benchmark">benchmark</button>
     <button type="button" data-paper-tag="bpe">bpe</button>
     <button type="button" data-paper-tag="cantonese">cantonese</button>
@@ -112,6 +114,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="influence-functions">influence functions</button>
     <button type="button" data-paper-tag="information-gathering">information gathering</button>
     <button type="button" data-paper-tag="interpretability">interpretability</button>
+    <button type="button" data-paper-tag="interruption">interruption</button>
     <button type="button" data-paper-tag="language-identification">language identification</button>
     <button type="button" data-paper-tag="language-modeling">language modeling</button>
     <button type="button" data-paper-tag="latent-diffusion">latent diffusion</button>
@@ -127,6 +130,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="mechanistic-data-augmentation">mechanistic data augmentation</button>
     <button type="button" data-paper-tag="mechanistic-interpretability">mechanistic interpretability</button>
     <button type="button" data-paper-tag="mel-vae">mel vae</button>
+    <button type="button" data-paper-tag="modality-interference">modality interference</button>
     <button type="button" data-paper-tag="model-editing">model editing</button>
     <button type="button" data-paper-tag="multi-word-expression">multi word expression</button>
     <button type="button" data-paper-tag="multilingual-asr">multilingual asr</button>
@@ -243,6 +247,11 @@ title: Paper Knowledge
 </div>
 
 <div class="paper-list">
+<div class="paper-row" data-tags="speech-llm full-duplex modality-interference acoustic-semantic-modeling turn-taking backchannel interruption project-full-duplex-data project-audio-model-evaluation project-tts-data-pipeline" data-search="Hierarchical Acoustic-Semantic Modeling: Modality Separation and Semantic Coherence for Full-Duplex SLMs arxiv_2607_06540 2026-07-13 2026 ACL 2026 arxiv:2607.06540 speech-llm full-duplex modality-interference acoustic-semantic-modeling turn-taking backchannel interruption project-full-duplex-data project-audio-model-evaluation project-tts-data-pipeline">
+  <div class="paper-date">2026-07-13</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2607_06540/">Hierarchical Acoustic-Semantic Modeling: Modality Separation and Semantic Coherence for Full-Duplex SLMs</a> <span class="paper-meta">(2026, ACL 2026)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/speech-llm/">#speech-llm</a> <a class="tag-link internal" href="./tags/full-duplex/">#full-duplex</a> <a class="tag-link internal" href="./tags/modality-interference/">#modality-interference</a> <a class="tag-link internal" href="./tags/acoustic-semantic-modeling/">#acoustic-semantic-modeling</a> <a class="tag-link internal" href="./tags/turn-taking/">#turn-taking</a> <a class="tag-link internal" href="./tags/backchannel/">#backchannel</a> <a class="tag-link internal" href="./tags/interruption/">#interruption</a> <a class="tag-link internal" href="./tags/project-full-duplex-data/">#project-full-duplex-data</a> <a class="tag-link internal" href="./tags/project-audio-model-evaluation/">#project-audio-model-evaluation</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a></div>
+</div>
 <div class="paper-row" data-tags="waveform-diffusion representation-generation flow-matching audio-codec speech-vae latent-diffusion tts project-generative-speech-representation-evaluation project-one-step-audio-generation project-audio-model-evaluation project-tts-data-pipeline" data-search="ReGen: Hierarchical Multi-Prompt Representation Generation for Efficient Waveform Diffusion Models arxiv_2607_09134 2026-07-13 2026 ICML 2026 arxiv:2607.09134 waveform-diffusion representation-generation flow-matching audio-codec speech-vae latent-diffusion tts project-generative-speech-representation-evaluation project-one-step-audio-generation project-audio-model-evaluation project-tts-data-pipeline">
   <div class="paper-date">2026-07-13</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2607_09134/">ReGen: Hierarchical Multi-Prompt Representation Generation for Efficient Waveform Diffusion Models</a> <span class="paper-meta">(2026, ICML 2026)</span></div>
