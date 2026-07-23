@@ -1278,6 +1278,25 @@
       ]
     },
     {
+      "id": "arxiv_2607_02770",
+      "title": "Gemma 4 Technical Report",
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "url": "../papers/arxiv_2607_02770/",
+      "tags": [
+        "speech-llm",
+        "audio-reasoning",
+        "multimodal-llm",
+        "open-weight-model",
+        "encoder-free-audio",
+        "audio-asr",
+        "speech-translation",
+        "long-context",
+        "project-audio-model-evaluation",
+        "project-full-duplex-data"
+      ]
+    },
+    {
       "id": "arxiv_2607_06540",
       "title": "Hierarchical Acoustic-Semantic Modeling: Modality Separation and Semantic Coherence for Full-Duplex SLMs",
       "year": 2026,
@@ -1496,6 +1515,11 @@
       "score": 1
     },
     {
+      "source": "arxiv_2603_18008",
+      "target": "arxiv_2607_02770",
+      "score": 1
+    },
+    {
       "source": "arxiv_2603_25750",
       "target": "arxiv_2602_06053",
       "score": 1
@@ -1583,6 +1607,11 @@
     {
       "source": "arxiv_2605_19833",
       "target": "arxiv_2603_10420",
+      "score": 1
+    },
+    {
+      "source": "arxiv_2605_20613",
+      "target": "arxiv_2607_02770",
       "score": 1
     },
     {
@@ -1696,6 +1725,11 @@
       "score": 1
     },
     {
+      "source": "arxiv_2606_14700",
+      "target": "arxiv_2607_02770",
+      "score": 1
+    },
+    {
       "source": "arxiv_2606_17404",
       "target": "arxiv_2512_18099",
       "score": 1
@@ -1726,6 +1760,11 @@
       "score": 1
     },
     {
+      "source": "arxiv_2606_28551",
+      "target": "arxiv_2607_02770",
+      "score": 0.857
+    },
+    {
       "source": "arxiv_2606_32039",
       "target": "arxiv_2510_11690",
       "score": 1
@@ -1733,6 +1772,11 @@
     {
       "source": "arxiv_2606_32039",
       "target": "arxiv_2501_01423",
+      "score": 1
+    },
+    {
+      "source": "arxiv_2607_02770",
+      "target": "arxiv_2303_01037",
       "score": 1
     },
     {

@@ -76,6 +76,14 @@
       "matched_title": "Diffusion transformers with representation autoencoders",
       "matched_first_author_last": "zheng",
       "source_file": "source/paper.bib"
+    },
+    {
+      "paper_key": "arxiv_2607_02770",
+      "title": "Gemma 4 Technical Report",
+      "score": 1,
+      "matched_title": "Gemma 3 technical report",
+      "matched_first_author_last": "team",
+      "source_file": "source/paper.bib"
     }
   ]
 }

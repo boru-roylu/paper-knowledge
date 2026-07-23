@@ -33,6 +33,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="ai-infrastructure">ai infrastructure</button>
     <button type="button" data-paper-tag="appropriateness">appropriateness</button>
     <button type="button" data-paper-tag="attribution">attribution</button>
+    <button type="button" data-paper-tag="audio-asr">audio asr</button>
     <button type="button" data-paper-tag="audio-benchmark">audio benchmark</button>
     <button type="button" data-paper-tag="audio-codec">audio codec</button>
     <button type="button" data-paper-tag="audio-data">audio data</button>
@@ -90,6 +91,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="efficient-inference">efficient inference</button>
     <button type="button" data-paper-tag="efficient-pretraining">efficient pretraining</button>
     <button type="button" data-paper-tag="emotion-control">emotion control</button>
+    <button type="button" data-paper-tag="encoder-free-audio">encoder free audio</button>
     <button type="button" data-paper-tag="energy-distance">energy distance</button>
     <button type="button" data-paper-tag="evaluation">evaluation</button>
     <button type="button" data-paper-tag="evaluation-metrics">evaluation metrics</button>
@@ -146,6 +148,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="one-step-generation">one step generation</button>
     <button type="button" data-paper-tag="online-clustering">online clustering</button>
     <button type="button" data-paper-tag="open-source-model">open source model</button>
+    <button type="button" data-paper-tag="open-weight-model">open weight model</button>
     <button type="button" data-paper-tag="optimal-transport">optimal transport</button>
     <button type="button" data-paper-tag="orthogonal-transform">orthogonal transform</button>
     <button type="button" data-paper-tag="paralinguistic-modeling">paralinguistic modeling</button>
@@ -200,6 +203,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="speech-separation">speech separation</button>
     <button type="button" data-paper-tag="speech-ssl">speech ssl</button>
     <button type="button" data-paper-tag="speech-tokenizer">speech tokenizer</button>
+    <button type="button" data-paper-tag="speech-translation">speech translation</button>
     <button type="button" data-paper-tag="speech-vae">speech vae</button>
     <button type="button" data-paper-tag="spoken-language-modeling">spoken language modeling</button>
     <button type="button" data-paper-tag="ssl-speech">ssl speech</button>
@@ -248,6 +252,11 @@ title: Paper Knowledge
 </div>
 
 <div class="paper-list">
+<div class="paper-row" data-tags="speech-llm audio-reasoning multimodal-llm open-weight-model encoder-free-audio audio-asr speech-translation long-context project-audio-model-evaluation project-full-duplex-data" data-search="Gemma 4 Technical Report arxiv_2607_02770 2026-07-23 2026 arXiv preprint arxiv:2607.02770 speech-llm audio-reasoning multimodal-llm open-weight-model encoder-free-audio audio-asr speech-translation long-context project-audio-model-evaluation project-full-duplex-data">
+  <div class="paper-date">2026-07-23</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2607_02770/">Gemma 4 Technical Report</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/speech-llm/">#speech-llm</a> <a class="tag-link internal" href="./tags/audio-reasoning/">#audio-reasoning</a> <a class="tag-link internal" href="./tags/multimodal-llm/">#multimodal-llm</a> <a class="tag-link internal" href="./tags/open-weight-model/">#open-weight-model</a> <a class="tag-link internal" href="./tags/encoder-free-audio/">#encoder-free-audio</a> <a class="tag-link internal" href="./tags/audio-asr/">#audio-asr</a> <a class="tag-link internal" href="./tags/speech-translation/">#speech-translation</a> <a class="tag-link internal" href="./tags/long-context/">#long-context</a> <a class="tag-link internal" href="./tags/project-audio-model-evaluation/">#project-audio-model-evaluation</a> <a class="tag-link internal" href="./tags/project-full-duplex-data/">#project-full-duplex-data</a></div>
+</div>
 <div class="paper-row" data-tags="tts speech-llm streaming-tts flow-matching speech-tokenizer zero-shot-tts voice-cloning instructed-tts project-tts-data-pipeline project-full-duplex-data project-generative-speech-representation-evaluation project-audio-model-evaluation" data-search="CosyVoice 2: Scalable Streaming Speech Synthesis with Large Language Models arxiv_2412_10117 2026-07-22 2024 arXiv preprint arxiv:2412.10117 tts speech-llm streaming-tts flow-matching speech-tokenizer zero-shot-tts voice-cloning instructed-tts project-tts-data-pipeline project-full-duplex-data project-generative-speech-representation-evaluation project-audio-model-evaluation">
   <div class="paper-date">2026-07-22</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2412_10117/">CosyVoice 2: Scalable Streaming Speech Synthesis with Large Language Models</a> <span class="paper-meta">(2024, arXiv preprint)</span></div>

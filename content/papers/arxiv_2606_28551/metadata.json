@@ -113,6 +113,14 @@
       "matched_title": "Mai-thinking-1: Building a hill-climbing machine.",
       "matched_first_author_last": "team",
       "source_file": "source/neurips_main.bbl"
+    },
+    {
+      "paper_key": "arxiv_2607_02770",
+      "title": "Gemma 4 Technical Report",
+      "score": 0.857,
+      "matched_title": "Gemma 3 technical report, 2025b.",
+      "matched_first_author_last": "team",
+      "source_file": "source/neurips_main.bbl"
     }
   ]
 }

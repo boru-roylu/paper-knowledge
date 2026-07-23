@@ -82,5 +82,14 @@
     "Official project page links to a GitHub repo that was public but empty when checked on 2026-06-07.",
     "OpenReview reviewers raised concerns about simulated patient realism, annotation details, judge validity, reward hacking, and limited novelty of GRPO."
   ],
-  "citations": []
+  "citations": [
+    {
+      "paper_key": "arxiv_2607_02770",
+      "title": "Gemma 4 Technical Report",
+      "score": 1,
+      "matched_title": "Gemma 3 Technical Report",
+      "matched_first_author_last": "team",
+      "source_file": "source/example_paper.bib"
+    }
+  ]
 }

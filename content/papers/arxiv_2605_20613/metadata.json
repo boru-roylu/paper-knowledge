@@ -65,5 +65,14 @@
   "bibtex_key": "wang2026hrmtextefficientpretrainingbey",
   "fetch_source": "arxiv_tex",
   "summary_model": "Codex GPT-5",
-  "citations": []
+  "citations": [
+    {
+      "paper_key": "arxiv_2607_02770",
+      "title": "Gemma 4 Technical Report",
+      "score": 1,
+      "matched_title": "Gemma 3 Technical Report",
+      "matched_first_author_last": "team",
+      "source_file": "source/main.bib"
+    }
+  ]
 }
