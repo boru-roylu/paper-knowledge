@@ -69,6 +69,14 @@
   "bibtex_key": "lee2026regenhierarchicalmultipromptre",
   "citations": [
     {
+      "paper_key": "arxiv_2412_10117",
+      "title": "CosyVoice 2: Scalable Streaming Speech Synthesis with Large Language Models",
+      "score": 1,
+      "matched_title": "CosyVoice 2: Scalable Streaming Speech Synthesis with Large Language Models",
+      "matched_first_author_last": "du",
+      "source_file": "source/regen.bib"
+    },
+    {
       "paper_key": "arxiv_2510_11690",
       "title": "Diffusion Transformers with Representation Autoencoders",
       "score": 1,

@@ -113,6 +113,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="industrial-asr">industrial asr</button>
     <button type="button" data-paper-tag="influence-functions">influence functions</button>
     <button type="button" data-paper-tag="information-gathering">information gathering</button>
+    <button type="button" data-paper-tag="instructed-tts">instructed tts</button>
     <button type="button" data-paper-tag="interpretability">interpretability</button>
     <button type="button" data-paper-tag="interruption">interruption</button>
     <button type="button" data-paper-tag="language-identification">language identification</button>
@@ -247,6 +248,11 @@ title: Paper Knowledge
 </div>
 
 <div class="paper-list">
+<div class="paper-row" data-tags="tts speech-llm streaming-tts flow-matching speech-tokenizer zero-shot-tts voice-cloning instructed-tts project-tts-data-pipeline project-full-duplex-data project-generative-speech-representation-evaluation project-audio-model-evaluation" data-search="CosyVoice 2: Scalable Streaming Speech Synthesis with Large Language Models arxiv_2412_10117 2026-07-22 2024 arXiv preprint arxiv:2412.10117 tts speech-llm streaming-tts flow-matching speech-tokenizer zero-shot-tts voice-cloning instructed-tts project-tts-data-pipeline project-full-duplex-data project-generative-speech-representation-evaluation project-audio-model-evaluation">
+  <div class="paper-date">2026-07-22</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2412_10117/">CosyVoice 2: Scalable Streaming Speech Synthesis with Large Language Models</a> <span class="paper-meta">(2024, arXiv preprint)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/tts/">#tts</a> <a class="tag-link internal" href="./tags/speech-llm/">#speech-llm</a> <a class="tag-link internal" href="./tags/streaming-tts/">#streaming-tts</a> <a class="tag-link internal" href="./tags/flow-matching/">#flow-matching</a> <a class="tag-link internal" href="./tags/speech-tokenizer/">#speech-tokenizer</a> <a class="tag-link internal" href="./tags/zero-shot-tts/">#zero-shot-tts</a> <a class="tag-link internal" href="./tags/voice-cloning/">#voice-cloning</a> <a class="tag-link internal" href="./tags/instructed-tts/">#instructed-tts</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a> <a class="tag-link internal" href="./tags/project-full-duplex-data/">#project-full-duplex-data</a> <a class="tag-link internal" href="./tags/project-generative-speech-representation-evaluation/">#project-generative-speech-representation-evaluation</a> <a class="tag-link internal" href="./tags/project-audio-model-evaluation/">#project-audio-model-evaluation</a></div>
+</div>
 <div class="paper-row" data-tags="speech-llm full-duplex modality-interference acoustic-semantic-modeling turn-taking backchannel interruption project-full-duplex-data project-audio-model-evaluation project-tts-data-pipeline" data-search="Hierarchical Acoustic-Semantic Modeling: Modality Separation and Semantic Coherence for Full-Duplex SLMs arxiv_2607_06540 2026-07-13 2026 ACL 2026 arxiv:2607.06540 speech-llm full-duplex modality-interference acoustic-semantic-modeling turn-taking backchannel interruption project-full-duplex-data project-audio-model-evaluation project-tts-data-pipeline">
   <div class="paper-date">2026-07-13</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2607_06540/">Hierarchical Acoustic-Semantic Modeling: Modality Separation and Semantic Coherence for Full-Duplex SLMs</a> <span class="paper-meta">(2026, ACL 2026)</span></div>

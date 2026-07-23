@@ -49,6 +49,14 @@
   "bibtex_key": "song2026uniaudiotokenempoweringsemanti",
   "citations": [
     {
+      "paper_key": "arxiv_2412_10117",
+      "title": "CosyVoice 2: Scalable Streaming Speech Synthesis with Large Language Models",
+      "score": 1,
+      "matched_title": "CosyVoice 2: Scalable Streaming Speech Synthesis with Large Language Models",
+      "matched_first_author_last": "du",
+      "source_file": "source/references.bib"
+    },
+    {
       "paper_key": "arxiv_2406_02430",
       "title": "Seed-TTS: A Family of High-Quality Versatile Speech Generation Models",
       "score": 1,

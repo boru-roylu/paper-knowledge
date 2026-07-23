@@ -76,6 +76,14 @@
   "summary_model": "Codex GPT-5",
   "citations": [
     {
+      "paper_key": "arxiv_2412_10117",
+      "title": "CosyVoice 2: Scalable Streaming Speech Synthesis with Large Language Models",
+      "score": 1,
+      "matched_title": "CosyVoice 2: Scalable Streaming Speech Synthesis with Large Language Models",
+      "matched_first_author_last": "du",
+      "source_file": "source/references.bib"
+    },
+    {
       "paper_key": "arxiv_2603_29339",
       "title": "LongCat-AudioDiT: High-Fidelity Diffusion Text-to-Speech in the Waveform Latent Space",
       "score": 1,

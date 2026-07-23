@@ -72,6 +72,14 @@
   "summary_model": "GPT-5 Codex",
   "citations": [
     {
+      "paper_key": "arxiv_2412_10117",
+      "title": "CosyVoice 2: Scalable Streaming Speech Synthesis with Large Language Models",
+      "score": 1,
+      "matched_title": "Cosyvoice 2: Scalable streaming speech synthesis with large language models",
+      "matched_first_author_last": "du",
+      "source_file": "source/iclr2026_conference.bib"
+    },
+    {
       "paper_key": "arxiv_2504_08528",
       "title": "On The Landscape of Spoken Language Models: A Comprehensive Survey",
       "score": 1,

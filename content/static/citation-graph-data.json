@@ -163,6 +163,27 @@
       ]
     },
     {
+      "id": "arxiv_2412_10117",
+      "title": "CosyVoice 2: Scalable Streaming Speech Synthesis with Large Language Models",
+      "year": 2024,
+      "venue": "arXiv preprint",
+      "url": "../papers/arxiv_2412_10117/",
+      "tags": [
+        "tts",
+        "speech-llm",
+        "streaming-tts",
+        "flow-matching",
+        "speech-tokenizer",
+        "zero-shot-tts",
+        "voice-cloning",
+        "instructed-tts",
+        "project-tts-data-pipeline",
+        "project-full-duplex-data",
+        "project-generative-speech-representation-evaluation",
+        "project-audio-model-evaluation"
+      ]
+    },
+    {
       "id": "arxiv_2501_01423",
       "title": "Reconstruction vs. Generation: Taming Optimization Dilemma in Latent Diffusion Models",
       "year": 2025,
@@ -1350,8 +1371,18 @@
       "score": 1
     },
     {
+      "source": "arxiv_2412_10117",
+      "target": "arxiv_2406_02430",
+      "score": 1
+    },
+    {
       "source": "arxiv_2501_14350",
       "target": "arxiv_2303_01037",
+      "score": 1
+    },
+    {
+      "source": "arxiv_2504_07053",
+      "target": "arxiv_2412_10117",
       "score": 1
     },
     {
@@ -1381,6 +1412,11 @@
     },
     {
       "source": "arxiv_2505_13181",
+      "target": "arxiv_2412_10117",
+      "score": 0.97
+    },
+    {
+      "source": "arxiv_2505_13181",
       "target": "arxiv_2406_11427",
       "score": 0.97
     },
@@ -1391,7 +1427,17 @@
     },
     {
       "source": "arxiv_2509_03959",
+      "target": "arxiv_2412_10117",
+      "score": 1
+    },
+    {
+      "source": "arxiv_2509_03959",
       "target": "arxiv_2501_14350",
+      "score": 1
+    },
+    {
+      "source": "arxiv_2509_24650",
+      "target": "arxiv_2412_10117",
       "score": 1
     },
     {
@@ -1416,7 +1462,17 @@
     },
     {
       "source": "arxiv_2601_03170",
+      "target": "arxiv_2412_10117",
+      "score": 1
+    },
+    {
+      "source": "arxiv_2601_03170",
       "target": "arxiv_2406_11427",
+      "score": 1
+    },
+    {
+      "source": "arxiv_2602_16687",
+      "target": "arxiv_2412_10117",
       "score": 1
     },
     {
@@ -1458,6 +1514,11 @@
       "source": "arxiv_2603_25750",
       "target": "arxiv_2512_18099",
       "score": 0.97
+    },
+    {
+      "source": "arxiv_2603_29339",
+      "target": "arxiv_2412_10117",
+      "score": 1
     },
     {
       "source": "arxiv_2603_29339",
@@ -1550,6 +1611,16 @@
       "score": 1
     },
     {
+      "source": "arxiv_2605_28063",
+      "target": "arxiv_2412_10117",
+      "score": 1
+    },
+    {
+      "source": "arxiv_2605_30748",
+      "target": "arxiv_2412_10117",
+      "score": 1
+    },
+    {
       "source": "arxiv_2605_30748",
       "target": "arxiv_2304_09116",
       "score": 1
@@ -1566,7 +1637,22 @@
     },
     {
       "source": "arxiv_2605_30993",
+      "target": "arxiv_2412_10117",
+      "score": 1
+    },
+    {
+      "source": "arxiv_2605_30993",
       "target": "arxiv_2406_02430",
+      "score": 1
+    },
+    {
+      "source": "arxiv_2605_31173",
+      "target": "arxiv_2412_10117",
+      "score": 1
+    },
+    {
+      "source": "arxiv_2605_31521",
+      "target": "arxiv_2412_10117",
       "score": 1
     },
     {
@@ -1576,7 +1662,17 @@
     },
     {
       "source": "arxiv_2605_31530",
+      "target": "arxiv_2412_10117",
+      "score": 1
+    },
+    {
+      "source": "arxiv_2605_31530",
       "target": "arxiv_2406_02430",
+      "score": 1
+    },
+    {
+      "source": "arxiv_2606_07080",
+      "target": "arxiv_2412_10117",
       "score": 1
     },
     {
@@ -1641,12 +1737,22 @@
     },
     {
       "source": "arxiv_2607_06540",
+      "target": "arxiv_2412_10117",
+      "score": 1
+    },
+    {
+      "source": "arxiv_2607_06540",
       "target": "arxiv_2502_14145",
       "score": 1
     },
     {
       "source": "arxiv_2607_06540",
       "target": "arxiv_2504_08528",
+      "score": 1
+    },
+    {
+      "source": "arxiv_2607_09134",
+      "target": "arxiv_2412_10117",
       "score": 1
     },
     {

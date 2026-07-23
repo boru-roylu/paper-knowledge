@@ -59,5 +59,14 @@
   "bibtex_key": "wang2026unifiedsynthesiscompositional",
   "fetch_source": "arxiv_tex",
   "summary_model": "Codex GPT-5",
-  "citations": []
+  "citations": [
+    {
+      "paper_key": "arxiv_2412_10117",
+      "title": "CosyVoice 2: Scalable Streaming Speech Synthesis with Large Language Models",
+      "score": 1,
+      "matched_title": "CosyVoice 2: Scalable Streaming Speech Synthesis with Large Language\n                  Models",
+      "matched_first_author_last": "du",
+      "source_file": "source/ref.bib"
+    }
+  ]
 }

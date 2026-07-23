@@ -43,6 +43,14 @@
   "bibtex_key": "seo2026chatterboxflashpriorcalibrated",
   "citations": [
     {
+      "paper_key": "arxiv_2412_10117",
+      "title": "CosyVoice 2: Scalable Streaming Speech Synthesis with Large Language Models",
+      "score": 1,
+      "matched_title": "Cosyvoice 2: Scalable streaming speech synthesis with large language models",
+      "matched_first_author_last": "du",
+      "source_file": "source/custom.bib"
+    },
+    {
       "paper_key": "arxiv_2304_09116",
       "title": "NaturalSpeech 2: Latent Diffusion Models are Natural and Zero-Shot Speech and Singing Synthesizers",
       "score": 1,

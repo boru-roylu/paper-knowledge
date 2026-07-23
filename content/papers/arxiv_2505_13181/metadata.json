@@ -63,6 +63,14 @@
   "summary_model": "Codex GPT-5",
   "citations": [
     {
+      "paper_key": "arxiv_2412_10117",
+      "title": "CosyVoice 2: Scalable Streaming Speech Synthesis with Large Language Models",
+      "score": 0.97,
+      "matched_title": "Cosyvoice 2: Scalable streaming speech synthesis with large language models, 2024b.",
+      "matched_first_author_last": "du",
+      "source_file": "source/neurips_2025.bbl"
+    },
+    {
       "paper_key": "arxiv_2406_11427",
       "title": "DiTTo-TTS: Diffusion Transformers for Scalable Text-to-Speech without Domain-Specific Factors",
       "score": 0.97,
