@@ -1336,6 +1336,25 @@
       ]
     },
     {
+      "id": "arxiv_2608_10606",
+      "title": "ASR-Roundtrip Evaluation Can Mask Context- and Convention-Dependent Reading Errors in Chinese News TTS",
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "url": "../papers/arxiv_2608_10606/",
+      "tags": [
+        "tts",
+        "asr",
+        "tts-evaluation",
+        "chinese-tts",
+        "text-normalization",
+        "reading-errors",
+        "evaluation-dataset",
+        "audio-benchmark",
+        "project-audio-model-evaluation",
+        "project-tts-data-pipeline"
+      ]
+    },
+    {
       "id": "microsoft_mai_thinking_1",
       "title": "MAI-Thinking-1: Building a Hill-Climbing Machine",
       "year": 2026,

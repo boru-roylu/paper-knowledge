@@ -57,6 +57,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="cantonese">cantonese</button>
     <button type="button" data-paper-tag="chain-of-thought">chain of thought</button>
     <button type="button" data-paper-tag="chatbot-evaluation">chatbot evaluation</button>
+    <button type="button" data-paper-tag="chinese-tts">chinese tts</button>
     <button type="button" data-paper-tag="clinical-ai">clinical ai</button>
     <button type="button" data-paper-tag="clustering">clustering</button>
     <button type="button" data-paper-tag="compositional-audio">compositional audio</button>
@@ -94,6 +95,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="encoder-free-audio">encoder free audio</button>
     <button type="button" data-paper-tag="energy-distance">energy distance</button>
     <button type="button" data-paper-tag="evaluation">evaluation</button>
+    <button type="button" data-paper-tag="evaluation-dataset">evaluation dataset</button>
     <button type="button" data-paper-tag="evaluation-metrics">evaluation metrics</button>
     <button type="button" data-paper-tag="evaluation-suite">evaluation suite</button>
     <button type="button" data-paper-tag="event-level-alignment">event level alignment</button>
@@ -159,6 +161,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="promptable-audio-separation">promptable audio separation</button>
     <button type="button" data-paper-tag="proxy-metrics">proxy metrics</button>
     <button type="button" data-paper-tag="punctuation">punctuation</button>
+    <button type="button" data-paper-tag="reading-errors">reading errors</button>
     <button type="button" data-paper-tag="real-time-generation">real time generation</button>
     <button type="button" data-paper-tag="reasoning">reasoning</button>
     <button type="button" data-paper-tag="reconstruction-generation-tradeoff">reconstruction generation tradeoff</button>
@@ -216,6 +219,7 @@ title: Paper Knowledge
     <button type="button" data-paper-tag="task-oriented-dialogue">task oriented dialogue</button>
     <button type="button" data-paper-tag="taxonomy">taxonomy</button>
     <button type="button" data-paper-tag="text-aligned-tokenization">text aligned tokenization</button>
+    <button type="button" data-paper-tag="text-normalization">text normalization</button>
     <button type="button" data-paper-tag="text-to-audio">text to audio</button>
     <button type="button" data-paper-tag="text-to-image">text to image</button>
     <button type="button" data-paper-tag="tokenization">tokenization</button>
@@ -252,6 +256,11 @@ title: Paper Knowledge
 </div>
 
 <div class="paper-list">
+<div class="paper-row" data-tags="tts asr tts-evaluation chinese-tts text-normalization reading-errors evaluation-dataset audio-benchmark project-audio-model-evaluation project-tts-data-pipeline" data-search="ASR-Roundtrip Evaluation Can Mask Context- and Convention-Dependent Reading Errors in Chinese News TTS arxiv_2608_10606 2026-08-15 2026 arXiv preprint arxiv:2608.10606 tts asr tts-evaluation chinese-tts text-normalization reading-errors evaluation-dataset audio-benchmark project-audio-model-evaluation project-tts-data-pipeline">
+  <div class="paper-date">2026-08-15</div>
+  <div class="paper-main"><a class="internal" href="./papers/arxiv_2608_10606/">ASR-Roundtrip Evaluation Can Mask Context- and Convention-Dependent Reading Errors in Chinese News TTS</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>
+  <div class="paper-tags"><a class="tag-link internal" href="./tags/tts/">#tts</a> <a class="tag-link internal" href="./tags/asr/">#asr</a> <a class="tag-link internal" href="./tags/tts-evaluation/">#tts-evaluation</a> <a class="tag-link internal" href="./tags/chinese-tts/">#chinese-tts</a> <a class="tag-link internal" href="./tags/text-normalization/">#text-normalization</a> <a class="tag-link internal" href="./tags/reading-errors/">#reading-errors</a> <a class="tag-link internal" href="./tags/evaluation-dataset/">#evaluation-dataset</a> <a class="tag-link internal" href="./tags/audio-benchmark/">#audio-benchmark</a> <a class="tag-link internal" href="./tags/project-audio-model-evaluation/">#project-audio-model-evaluation</a> <a class="tag-link internal" href="./tags/project-tts-data-pipeline/">#project-tts-data-pipeline</a></div>
+</div>
 <div class="paper-row" data-tags="speech-llm audio-reasoning multimodal-llm open-weight-model encoder-free-audio audio-asr speech-translation long-context project-audio-model-evaluation project-full-duplex-data" data-search="Gemma 4 Technical Report arxiv_2607_02770 2026-07-23 2026 arXiv preprint arxiv:2607.02770 speech-llm audio-reasoning multimodal-llm open-weight-model encoder-free-audio audio-asr speech-translation long-context project-audio-model-evaluation project-full-duplex-data">
   <div class="paper-date">2026-07-23</div>
   <div class="paper-main"><a class="internal" href="./papers/arxiv_2607_02770/">Gemma 4 Technical Report</a> <span class="paper-meta">(2026, arXiv preprint)</span></div>

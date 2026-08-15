@@ -1,0 +1,72 @@
+{
+  "paper_key": "arxiv_2608_10606",
+  "canonical_id": "arxiv:2608.10606",
+  "arxiv_id": "2608.10606",
+  "version": "latest",
+  "title": "ASR-Roundtrip Evaluation Can Mask Context- and Convention-Dependent Reading Errors in Chinese News TTS",
+  "authors": [
+    "Shijun Luo",
+    "Lizhi Wan"
+  ],
+  "venue": "arXiv preprint",
+  "year": 2026,
+  "abstract": "ASR-roundtrip evaluation is widely used as a scalable proxy for text-to-speech (TTS) intelligibility, but it can produce false negatives for reading errors perceived by listeners. We study Chinese news TTS spans whose correct reading depends on context or domain conventions, such as sports scores, aircraft models, technical units, and membership names. In these cases, Raw TTS can choose a plausible but wrong reading while ASR transcribes the audio as the intended or surface-correct text. A targeted audit over 110 high-risk MiMo TTS cases, reported with a complete denominator, confirms 46 masked false negatives, 9 exposed TTS errors, and 55 cases with no Raw TTS error. A span-isolation diagnostic re-exposes 18/46 previously masked errors. A Raw-only CosyVoice audit on the same targeted pool confirms 51 masked cases. Across the 97 TTS-specific audio files labeled confirmed masked across the two audits, Qwen3-ASR surface-recovers 40 cases, whereas Paraformer does so in only 2. The results suggest that ASR-roundtrip is useful for screening but insufficient as standalone ground truth for Chinese news reading-risk evaluation.",
+  "primaryClass": "cs.CL",
+  "categories": [
+    "cs.CL"
+  ],
+  "urls": {
+    "abs": "https://arxiv.org/abs/2608.10606",
+    "pdf": "https://arxiv.org/pdf/2608.10606",
+    "source": "https://arxiv.org/src/2608.10606",
+    "repo": "https://github.com/Jayden-X-L/cn-newstts-asr-roundtrip-masking",
+    "zenodo": "https://doi.org/10.5281/zenodo.21454402"
+  },
+  "local_paths": {
+    "source_dir": "source",
+    "source_archive": "../../../cache/arxiv/2608.10606-src.tar.gz",
+    "entrypoint": "source/main.tex"
+  },
+  "tags": [
+    "tts",
+    "asr",
+    "tts-evaluation",
+    "chinese-tts",
+    "text-normalization",
+    "reading-errors",
+    "evaluation-dataset",
+    "audio-benchmark",
+    "project-audio-model-evaluation",
+    "project-tts-data-pipeline"
+  ],
+  "concepts": [
+    "ASR-roundtrip evaluation",
+    "masked false negative",
+    "Context-Dependent Reading Decisions",
+    "CDRD",
+    "CDRD-adjacent",
+    "Chinese news TTS",
+    "reading-risk benchmark",
+    "risk-span audit",
+    "audio-first annotation",
+    "Raw condition",
+    "Structured condition",
+    "span-isolation diagnostic",
+    "surface-correct transcript",
+    "ASR canonicalization",
+    "text normalization",
+    "G2P",
+    "polyphone disambiguation",
+    "Paraformer-zh",
+    "Qwen3-ASR",
+    "MiMo TTS",
+    "CosyVoice Raw audit"
+  ],
+  "status": "read",
+  "created": "2026-08-15",
+  "doi": "10.48550/arXiv.2608.10606",
+  "publication_status": "No formal conference or journal reference found as of 2026-08-15",
+  "bibtex_key": "luo2026asrroundtripevaluationcanmaskc",
+  "summary_model": "Codex GPT-5",
+  "citations": []
+}
